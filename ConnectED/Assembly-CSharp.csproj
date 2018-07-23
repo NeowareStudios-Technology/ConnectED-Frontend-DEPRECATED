@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\ScrollRectSnap.cs" />
     <Compile Include="Assets\Scripts\spriteSwitcher.cs" />
     <Compile Include="Assets\Scripts\SwitchScene.cs" />
+    <Compile Include="Assets\SignUpController.cs" />
     <None Include="Assets\FacebookSDK\link.xml" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>E:/Unity/ConnectED1/ConnectED/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
