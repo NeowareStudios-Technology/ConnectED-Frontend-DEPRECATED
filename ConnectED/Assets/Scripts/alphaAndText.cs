@@ -28,4 +28,16 @@ public class alphaAndText : MonoBehaviour {
         else
             t.color = primary;
     }
+	public void Update()
+	{
+        if (this.GetComponent<spriteSwitcher>())
+        {
+            if (t.color == primary && this.GetComponent<spriteSwitcher>().pressed)
+            {
+                t.color = secondary;
+            }
+            else if(!this.GetComponent<spriteSwitcher>().pressed)
+				t.color = primary;
+        }
+	}
 }

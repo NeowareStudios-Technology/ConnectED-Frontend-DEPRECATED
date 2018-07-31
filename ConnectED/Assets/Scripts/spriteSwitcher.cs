@@ -45,9 +45,11 @@ public class spriteSwitcher : MonoBehaviour {
     public void turnOff()
     {
         this.GetComponent<Image>().sprite = offImage;
+        pressed = false;
     }
     public void turnOn()
     {
         this.GetComponent<Image>().sprite = onImage;
+        pressed = true;
     }
 }

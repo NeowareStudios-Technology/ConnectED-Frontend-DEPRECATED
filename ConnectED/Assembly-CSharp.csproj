@@ -77,12 +77,14 @@
     <Compile Include="Assets\Scripts\EventCreationController.cs" />
     <Compile Include="Assets\Scripts\FBinit.cs" />
     <Compile Include="Assets\Scripts\FBscript.cs" />
+    <Compile Include="Assets\Scripts\Jsonparser.cs" />
     <Compile Include="Assets\Scripts\lerpMachine.cs" />
     <Compile Include="Assets\Scripts\ScrollSnapRect.cs" />
     <Compile Include="Assets\Scripts\SignUpController.cs" />
+    <Compile Include="Assets\Scripts\slidertext.cs" />
     <Compile Include="Assets\Scripts\spriteSwitcher.cs" />
     <Compile Include="Assets\Scripts\SwitchScene.cs" />
-    <Compile Include="Assets\slidertext.cs" />
+    <Compile Include="Assets\timeOfDay.cs" />
     <None Include="Assets\FacebookSDK\link.xml" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

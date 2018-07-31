@@ -194,6 +194,7 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Facebook.Unity.Example.LogView
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Facebook.Unity.Example.ConsoleBase
 6e39fa4c539887fc168eb8456a191638 Assembly-CSharp.dll:.spriteSwitcher
+609f5fdc3677f269ddb1e0fcc1837c05 Assembly-CSharp.dll:.slidertext
 a858948cf98b5b33fc1301a21c301601 Assembly-CSharp.dll:.lerpMachine
 05524b8f659e7bfe5756d1335fec24ba Facebook.Unity.dll:Facebook.Unity.Mobile.Android.AndroidFacebookGameObject
 05524b8f659e7bfe5756d1335fec24ba Facebook.Unity.dll:Facebook.Unity.Mobile.Android.AndroidFacebookLoader
@@ -333,4 +334,5 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 01e6f145049f3a676df6dc247eabf176 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-609f5fdc3677f269ddb1e0fcc1837c05 Assembly-CSharp.dll:.slidertext
+c466b514b196faa6fa8534cb103476f3 Assembly-CSharp.dll:.Jsonparser
+cc91632a3a29538d58e030953f57d7f3 Assembly-CSharp.dll:.timeOfDay
