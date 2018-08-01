@@ -12,7 +12,6 @@ public class Jsonparser : MonoBehaviour {
     public InputField password;
     public Text firstname;
     public Text lastname;
-    public string[] skills;
     public float lat = 0;
     public float lon = 0;
     public GameObject mon;
@@ -25,6 +24,7 @@ public class Jsonparser : MonoBehaviour {
     public timeOfDay timeDay;
     public returnPressed education;
     public returnPressedFields interests;
+    public returnPressedFields skills;
 
 
     private string path;
@@ -64,10 +64,13 @@ public class Jsonparser : MonoBehaviour {
 
         yield break;
     }
-	// Use this for initialization
+    // Use this for initialization
+
+    void Start() { StartCoroutine(StartLocationService()); }
+
+
 	public void CreateProfile()
     {
-        StartCoroutine(StartLocationService());
         path = Application.streamingAssetsPath + "/Profile.json";
         jsonString = File.ReadAllText(path);
         Profile profile = JsonUtility.FromJson<Profile>(jsonString);
@@ -79,6 +82,7 @@ public class Jsonparser : MonoBehaviour {
         profile.time_day = timeDay.setTime();
         profile.education = education.Check();
         profile.interests = interests.returnFields();
+        profile.skills = skills.returnFields();
         profile.mon = mon.GetComponent<spriteSwitcher>().pressed;
         profile.tue = tue.GetComponent<spriteSwitcher>().pressed;
         profile.wed = wed.GetComponent<spriteSwitcher>().pressed;

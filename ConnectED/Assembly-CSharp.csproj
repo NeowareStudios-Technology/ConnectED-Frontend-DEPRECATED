@@ -71,8 +71,7 @@
     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\GraphRequest.cs" />
     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\MainMenu.cs" />
     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\Pay.cs" />
-    <Compile Include="Assets\returnPressed.cs" />
-    <Compile Include="Assets\returnPressedFields.cs" />
+    <Compile Include="Assets\pictureGrabber.cs" />
     <Compile Include="Assets\Scripts\alphaAndText.cs" />
     <Compile Include="Assets\Scripts\animationController.cs" />
     <Compile Include="Assets\Scripts\APImanager.cs" />
@@ -81,12 +80,14 @@
     <Compile Include="Assets\Scripts\FBscript.cs" />
     <Compile Include="Assets\Scripts\Jsonparser.cs" />
     <Compile Include="Assets\Scripts\lerpMachine.cs" />
+    <Compile Include="Assets\Scripts\returnPressed.cs" />
+    <Compile Include="Assets\Scripts\returnPressedFields.cs" />
     <Compile Include="Assets\Scripts\ScrollSnapRect.cs" />
     <Compile Include="Assets\Scripts\SignUpController.cs" />
     <Compile Include="Assets\Scripts\slidertext.cs" />
     <Compile Include="Assets\Scripts\spriteSwitcher.cs" />
     <Compile Include="Assets\Scripts\SwitchScene.cs" />
-    <Compile Include="Assets\timeOfDay.cs" />
+    <Compile Include="Assets\Scripts\timeOfDay.cs" />
     <None Include="Assets\FacebookSDK\link.xml" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>E:/Unity/ConnectED1/ConnectED/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
@@ -334,6 +335,12 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{F0AE9DC3-A4A8-AFE7-A618-ACF68168029D}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
