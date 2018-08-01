@@ -11,7 +11,9 @@ public class SignUpController : MonoBehaviour {
     public GameObject ProfilePic;
     public GameObject Schedule;
     public GameObject Fields;
+    public GameObject Education;
     public Animator a;
+    public Jsonparser signup;
 
     public int current = 1;
 
@@ -61,6 +63,14 @@ public class SignUpController : MonoBehaviour {
         }
         if(current == 7)
         {
+            Fields.SetActive(false);
+            Education.SetActive(true);
+            current++;
+            return;
+        }
+        if(current == 8)
+        {
+            signup.CreateProfile();
             a.SetTrigger("SignupOver");
         }
     }

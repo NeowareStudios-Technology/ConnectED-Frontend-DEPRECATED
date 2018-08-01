@@ -9,14 +9,12 @@ using System.Text;
 public class Jsonparser : MonoBehaviour {
 
     public Text email; 
-    public Text password;
+    public InputField password;
     public Text firstname;
     public Text lastname;
-    public Text education;
-    public string[] interests;
     public string[] skills;
-    public float lat;
-    public float lon;
+    public float lat = 0;
+    public float lon = 0;
     public GameObject mon;
     public GameObject tue;
     public GameObject wed;
@@ -25,6 +23,8 @@ public class Jsonparser : MonoBehaviour {
     public GameObject sat;
     public GameObject sun;
     public timeOfDay timeDay;
+    public returnPressed education;
+    public returnPressedFields interests;
 
 
     private string path;
@@ -32,11 +32,6 @@ public class Jsonparser : MonoBehaviour {
     private string db = "https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/profiles";
     //Post
     private IEnumerator coroutine;
-
-	public void Start()
-	{
-        StartCoroutine(StartLocationService());
-	}
 
     private IEnumerator StartLocationService()
     {
@@ -72,6 +67,7 @@ public class Jsonparser : MonoBehaviour {
 	// Use this for initialization
 	public void CreateProfile()
     {
+        StartCoroutine(StartLocationService());
         path = Application.streamingAssetsPath + "/Profile.json";
         jsonString = File.ReadAllText(path);
         Profile profile = JsonUtility.FromJson<Profile>(jsonString);
@@ -81,6 +77,8 @@ public class Jsonparser : MonoBehaviour {
         profile.email = email.text;
         profile.passwrd = password.text;
         profile.time_day = timeDay.setTime();
+        profile.education = education.Check();
+        profile.interests = interests.returnFields();
         profile.mon = mon.GetComponent<spriteSwitcher>().pressed;
         profile.tue = tue.GetComponent<spriteSwitcher>().pressed;
         profile.wed = wed.GetComponent<spriteSwitcher>().pressed;
@@ -92,13 +90,13 @@ public class Jsonparser : MonoBehaviour {
         profile.lon = lon;
         string newProfile = JsonUtility.ToJson(profile);
         Debug.Log(newProfile);
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(newProfile);
-        UnityWebRequest www = UnityWebRequest.Post(db, newProfile);
-        www.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
-        www.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        www.SetRequestHeader("Content-Type", "application/json");
-        coroutine = Post(www);
-        StartCoroutine(coroutine);
+        //byte[] bodyRaw = Encoding.UTF8.GetBytes(newProfile);
+        //UnityWebRequest www = UnityWebRequest.Post(db, newProfile);
+        //www.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+        //www.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        //www.SetRequestHeader("Content-Type", "application/json");
+        //coroutine = Post(www);
+       // StartCoroutine(coroutine);
     }
 
 
