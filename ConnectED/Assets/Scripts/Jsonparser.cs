@@ -28,6 +28,7 @@ public class Jsonparser : MonoBehaviour {
     public returnPressedFields interests;
     public returnPressedFields skills;
     public RawImage profilePic;
+    public Profile profile;
 
 
     private string path;
@@ -76,13 +77,15 @@ public class Jsonparser : MonoBehaviour {
     {
         path = Application.streamingAssetsPath + "/Profile.json";
         jsonString = File.ReadAllText(path);
-        Profile profile = JsonUtility.FromJson<Profile>(jsonString);
+        profile = JsonUtility.FromJson<Profile>(jsonString);
 
 
         profile.first_name = firstname.text;
         profile.last_name = lastname.text;
         profile.email = email.text;
+        PlayerPrefs.SetString("email", email.text);
         profile.passwrd = password.text;
+        PlayerPrefs.SetString("password", password.text);
         profile.time_day = timeDay.setTime();
         profile.education = education.Check();
         profile.interests = interests.returnFields();
@@ -121,16 +124,6 @@ public class Jsonparser : MonoBehaviour {
         coroutine = Post(www);
         StartCoroutine(coroutine);
     }
-
-
-    //public Texture2D imageLoader()
-    //{
-    //    Texture2D i;
-	//
-    //    i = Convert.FromBase64String();
-    //    return i;
-    //    
-    //}
 
 
     private IEnumerator Post(UnityWebRequest www){
