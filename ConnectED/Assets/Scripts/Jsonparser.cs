@@ -115,14 +115,14 @@ public class Jsonparser : MonoBehaviour {
             Debug.Log(profile.photo);
             //read in with texture2d.loadimage(bytedata);
         }
-        string newProfile = JsonUtility.ToJson(profile);
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(newProfile);
-        UnityWebRequest www = UnityWebRequest.Post(db, newProfile);
-        www.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
-        www.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        www.SetRequestHeader("Content-Type", "application/json");
-        coroutine = Post(www);
-        StartCoroutine(coroutine);
+        //string newProfile = JsonUtility.ToJson(profile);
+        //byte[] bodyRaw = Encoding.UTF8.GetBytes(newProfile);
+        //UnityWebRequest www = UnityWebRequest.Post(db, newProfile);
+        //www.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+        //www.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        //www.SetRequestHeader("Content-Type", "application/json");
+        //coroutine = Post(www);
+        //StartCoroutine(coroutine);
     }
 
 
