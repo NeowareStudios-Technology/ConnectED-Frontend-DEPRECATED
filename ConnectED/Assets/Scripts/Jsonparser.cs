@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEditor;
 using System.IO;
 using System.Text;
+using System;
 
 public class Jsonparser : MonoBehaviour {
 
@@ -25,6 +27,7 @@ public class Jsonparser : MonoBehaviour {
     public returnPressed education;
     public returnPressedFields interests;
     public returnPressedFields skills;
+    public RawImage profilePic;
 
 
     private string path;
@@ -74,7 +77,8 @@ public class Jsonparser : MonoBehaviour {
         path = Application.streamingAssetsPath + "/Profile.json";
         jsonString = File.ReadAllText(path);
         Profile profile = JsonUtility.FromJson<Profile>(jsonString);
-        Debug.Log(profile.first_name);
+
+
         profile.first_name = firstname.text;
         profile.last_name = lastname.text;
         profile.email = email.text;
@@ -92,18 +96,41 @@ public class Jsonparser : MonoBehaviour {
         profile.sun = sun.GetComponent<spriteSwitcher>().pressed;
         profile.lat = lat;
         profile.lon = lon;
+        if (profilePic.color.a == 1)
+        {
+            RenderTexture tmp = RenderTexture.GetTemporary(profilePic.texture.width, profilePic.texture.height, 0, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);
+            Graphics.Blit(profilePic.texture, tmp);
+            RenderTexture previous = RenderTexture.active;
+            RenderTexture.active = tmp;
+            Texture2D myTexture2D = new Texture2D(profilePic.texture.width, profilePic.texture.height);
+            myTexture2D.ReadPixels(new Rect(0, 0, tmp.width, tmp.height), 0, 0);
+            myTexture2D.Apply();
+            RenderTexture.active = previous;
+            RenderTexture.ReleaseTemporary(tmp);
+            //https://support.unity3d.com/hc/en-us/articles/206486626-How-can-I-get-pixels-from-unreadable-textures-
+            profile.photo = Convert.ToBase64String(myTexture2D.EncodeToJPG());
+            Debug.Log(profile.photo);
+            //read in with texture2d.loadimage(bytedata);
+        }
         string newProfile = JsonUtility.ToJson(profile);
-        Debug.Log(newProfile);
-        //byte[] bodyRaw = Encoding.UTF8.GetBytes(newProfile);
-        //UnityWebRequest www = UnityWebRequest.Post(db, newProfile);
-        //www.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
-        //www.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        //www.SetRequestHeader("Content-Type", "application/json");
-        //coroutine = Post(www);
-       // StartCoroutine(coroutine);
+        byte[] bodyRaw = Encoding.UTF8.GetBytes(newProfile);
+        UnityWebRequest www = UnityWebRequest.Post(db, newProfile);
+        www.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+        www.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        www.SetRequestHeader("Content-Type", "application/json");
+        coroutine = Post(www);
+        StartCoroutine(coroutine);
     }
 
 
+    //public Texture2D imageLoader()
+    //{
+    //    Texture2D i;
+	//
+    //    i = Convert.FromBase64String();
+    //    return i;
+    //    
+    //}
 
 
     private IEnumerator Post(UnityWebRequest www){
@@ -135,4 +162,5 @@ public class Profile
     public bool sat;
     public bool sun;
     public string time_day;
+    public string photo;
 }
