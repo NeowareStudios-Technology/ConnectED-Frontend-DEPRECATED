@@ -82,7 +82,7 @@ public class Jsonparser : MonoBehaviour {
 
         profile.first_name = firstname.text;
         profile.last_name = lastname.text;
-        profile.email = WWW.EscapeURL(email.text);
+        profile.email = email.text;
         PlayerPrefs.SetString("email", email.text);
         profile.passwrd = password.text;
         PlayerPrefs.SetString("password", password.text);

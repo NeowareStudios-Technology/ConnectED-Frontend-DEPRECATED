@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using System.Text;
 
 public class getProfileinfo : MonoBehaviour {
 
-    public Profile profile;
+    private Profile profile;
     public Profile otherProfile;
-    public string jsonString;
+    private string jsonString;
     private Coroutine getOtherProfile;
     public Jsonparser j;
 
@@ -19,7 +20,7 @@ public class getProfileinfo : MonoBehaviour {
     public void SetPicture()
     {
         Texture2D tex = null;
-        tex.LoadImage(System.Convert.FromBase64String(j.profile.photo));
+        tex.LoadRawTextureData(System.Convert.FromBase64String(profile.photo));
            
         this.gameObject.GetComponent<RawImage>().texture = tex;
     }
@@ -35,21 +36,23 @@ public class getProfileinfo : MonoBehaviour {
         
         using (UnityWebRequest www = UnityWebRequest.Get("https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/profiles/" + email + "?passwrd=" + password + "&email=" + email))
         {
+
             yield return www.SendWebRequest();
             if (www.isNetworkError || www.isHttpError)
             {
                 Debug.Log(www.error);
+                Debug.Log(www.downloadHandler.text);
             }
             else
             {
-                Debug.Log(www.downloadHandler.text);
-
+                Debug.Log(www.responseCode);
                 byte[] results = www.downloadHandler.data;
                 jsonString = "";
-                jsonString = System.Convert.ToString(results);
+                jsonString = Encoding.UTF8.GetString(results);
                 profile = JsonUtility.FromJson<Profile>(jsonString);
-                j.profile = profile;
-                Debug.Log(profile);
+                Debug.Log(jsonString);
+                //j.profile = profile;
+                //j.profile.photo = profile.photo;
             }
         };
     }
