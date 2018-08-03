@@ -661,7 +661,7 @@ PlayerSettings:
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
     UNet: 1
-  facebookSdkVersion: pluginIncompatible
+  facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: cb0cd87e-7811-49e8-b8d4-252c76bfc1eb
   projectName: ConnectED

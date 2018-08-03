@@ -12,29 +12,18 @@ public class getProfileinfo : MonoBehaviour {
     private string jsonString;
     private Coroutine getOtherProfile;
     public Jsonparser j;
+    public Login l;
 
-    public void GetmyProfile()
+    public void GetmyProfile(string email,string password)
     {
-        StartCoroutine("GetProfile");
+        StartCoroutine(GetProfile(email,password));
     }
-    public void SetPicture()
-    {
-        Texture2D tex = new Texture2D(200,200);
-        byte[] img = System.Convert.FromBase64String(profile.photo);
-        Debug.Log(img);
-        tex.LoadRawTextureData(img);
-            
-        this.gameObject.GetComponent<RawImage>().texture = tex;
-    }
-
-    IEnumerator GetProfile()
-    {
-        string email = PlayerPrefs.GetString("email");
-        string password = PlayerPrefs.GetString("password");
     
-        
-            password = "a";
-            email = WWW.EscapeURL("Unique@email");
+
+    IEnumerator GetProfile(string email, string password)
+    {
+        email = WWW.EscapeURL(email);
+        password = WWW.EscapeURL(password);
         
         using (UnityWebRequest www = UnityWebRequest.Get("https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/profiles/" + email + "?passwrd=" + password + "&email=" + email))
         {
@@ -56,7 +45,8 @@ public class getProfileinfo : MonoBehaviour {
                 //j.profile = profile;
                 //j.profile.photo = profile.photo;
                 j.SetProfile(profile);
-                SetPicture();
+                if(l)
+                    l.Continue();
             }
         };
     }
@@ -84,5 +74,14 @@ public class getProfileinfo : MonoBehaviour {
                 otherProfile = JsonUtility.FromJson<Profile>(jsonString);
             }
         };
+    }
+    public void SetPicture()
+    {
+        Texture2D tex = new Texture2D(200, 200);
+        byte[] img = System.Convert.FromBase64String(j.profile.photo);
+        Debug.Log(img);
+        tex.LoadImage(img, false);
+
+        this.gameObject.GetComponent<RawImage>().texture = tex;
     }
 }
