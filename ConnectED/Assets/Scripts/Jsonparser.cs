@@ -82,7 +82,7 @@ public class Jsonparser : MonoBehaviour {
 
         profile.first_name = firstname.text;
         profile.last_name = lastname.text;
-        profile.email = email.text;
+        profile.email = WWW.EscapeURL(email.text);
         PlayerPrefs.SetString("email", email.text);
         profile.passwrd = password.text;
         PlayerPrefs.SetString("password", password.text);
@@ -115,14 +115,14 @@ public class Jsonparser : MonoBehaviour {
             Debug.Log(profile.photo);
             //read in with texture2d.loadimage(bytedata);
         }
-        //string newProfile = JsonUtility.ToJson(profile);
-        //byte[] bodyRaw = Encoding.UTF8.GetBytes(newProfile);
-        //UnityWebRequest www = UnityWebRequest.Post(db, newProfile);
-        //www.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
-        //www.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        //www.SetRequestHeader("Content-Type", "application/json");
-        //coroutine = Post(www);
-        //StartCoroutine(coroutine);
+        string newProfile = JsonUtility.ToJson(profile);
+        byte[] bodyRaw = Encoding.UTF8.GetBytes(newProfile);
+        UnityWebRequest www = UnityWebRequest.Post(db, newProfile);
+        www.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+        www.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        www.SetRequestHeader("Content-Type", "application/json");
+        coroutine = Post(www);
+        StartCoroutine(coroutine);
     }
 
 

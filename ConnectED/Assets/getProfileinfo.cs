@@ -31,7 +31,7 @@ public class getProfileinfo : MonoBehaviour {
     
         
             password = "a";
-            email = "Alex@email.com";
+            email = WWW.EscapeURL("Alex@email.com");
         
         using (UnityWebRequest www = UnityWebRequest.Get("https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/profiles/" + email + "?passwrd=" + password + "&email=" + email))
         {
@@ -47,7 +47,9 @@ public class getProfileinfo : MonoBehaviour {
                 byte[] results = www.downloadHandler.data;
                 jsonString = "";
                 jsonString = System.Convert.ToString(results);
-                j.profile = JsonUtility.FromJson<Profile>(jsonString);
+                profile = JsonUtility.FromJson<Profile>(jsonString);
+                j.profile = profile;
+                Debug.Log(profile);
             }
         };
     }
