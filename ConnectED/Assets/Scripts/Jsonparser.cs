@@ -29,11 +29,14 @@ public class Jsonparser : MonoBehaviour {
     public returnPressedFields skills;
     public RawImage profilePic;
     public Profile profile;
+    public Auth0 auth;
     public bool profileSet = false;
-
+    public Animator a;
+    public Login l;
     private string path;
     private string jsonString;
-    private string db = "https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/profiles";
+    private string dbauthosignup = "https://connected-app.auth0.com/dbconnections/signup";
+    private string dbprofiles = "https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/profiles";
     //Post
     private IEnumerator coroutine;
 
@@ -70,7 +73,16 @@ public class Jsonparser : MonoBehaviour {
     }
     // Use this for initialization
 
-    void Start() { StartCoroutine(StartLocationService()); }
+    void Start() {
+        StartCoroutine(StartLocationService());
+        auth.client_id = "jW2cYQtmtOwLNUHFpg9BzVSvCRfezOai";
+        auth.connection ="Username-Password-Authentication";
+        if (PlayerPrefs.GetString("email", "email") != "email" && PlayerPrefs.GetString("password", "password") != "password")
+        {
+            l.StartLoginProcess();
+            a.enabled = true;
+        }
+    }
 
 
 	public void CreateProfile()
@@ -99,6 +111,8 @@ public class Jsonparser : MonoBehaviour {
         profile.sun = sun.GetComponent<spriteSwitcher>().pressed;
         profile.lat = lat;
         profile.lon = lon;
+        auth.email = email.text;
+        auth.password = password.text;
         if (profilePic.color.a == 1)
         {
             RenderTexture tmp = RenderTexture.GetTemporary(profilePic.texture.width, profilePic.texture.height, 0, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);
@@ -115,13 +129,23 @@ public class Jsonparser : MonoBehaviour {
             Debug.Log(profile.photo);
             //read in with texture2d.loadimage(bytedata);
         }
-        string newProfile = JsonUtility.ToJson(profile);
+        //create a autho profile
+        string newProfile = JsonUtility.ToJson(auth);
         byte[] bodyRaw = Encoding.UTF8.GetBytes(newProfile);
-        UnityWebRequest www = UnityWebRequest.Post(db, newProfile);
+        UnityWebRequest www = UnityWebRequest.Post(dbauthosignup, newProfile);
         www.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
         www.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
         www.SetRequestHeader("Content-Type", "application/json");
         coroutine = Post(www);
+        StartCoroutine(coroutine);
+        //create a profile
+        string ourProfile = JsonUtility.ToJson(profile);
+        byte[] bodyRaw2 = Encoding.UTF8.GetBytes(newProfile);
+        UnityWebRequest www2 = UnityWebRequest.Post(dbprofiles, ourProfile);
+        www.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw2);
+        www.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        www.SetRequestHeader("Content-Type", "application/json");
+        coroutine = Post(www2);
         StartCoroutine(coroutine);
     }
 
@@ -135,10 +159,17 @@ public class Jsonparser : MonoBehaviour {
     {
         profile = p;
         profileSet = true;
-        Debug.Log(profile.photo);
     }
 }
 
+[System.Serializable]
+public class Auth0
+{
+    public string client_id;
+    public string email;
+    public string password;
+    public string connection;
+}
 
 
 [System.Serializable]
