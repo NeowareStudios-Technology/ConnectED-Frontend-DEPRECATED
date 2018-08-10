@@ -16,7 +16,6 @@ public class returnPressed : MonoBehaviour {
                 s = s + this.gameObject.transform.GetChild(i).GetChild(0).GetComponent<Text>().text;
             }
         }
-        Debug.Log(s);
         return s;
     }
 }

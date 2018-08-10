@@ -1,0 +1,37 @@
+{
+  "client": [
+    {
+      "services": {
+        "appinvite_service": {
+          "status": 1
+        }, 
+        "analytics_service": {
+          "status": 0
+        }
+      }, 
+      "oauth_client": [
+        {
+          "client_id": "32366828803-dr3snqlrtbcthalg32cb0g4dv7uuvgms.apps.googleusercontent.com"
+        }
+      ], 
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvfXZrSYIle7K1UnEy36FM2J4tYA5ACWc"
+        }
+      ], 
+      "client_info": {
+        "mobilesdk_app_id": "1:32366828803:ios:6118fd79cf09072a", 
+        "android_client_info": {
+          "package_name": "com.lwa.connected"
+        }
+      }
+    }
+  ], 
+  "configuration_version": "1", 
+  "project_info": {
+    "storage_bucket": "fleet-fortress-211105.appspot.com", 
+    "project_id": "fleet-fortress-211105", 
+    "firebase_url": "https://fleet-fortress-211105.firebaseio.com", 
+    "project_number": "32366828803"
+  }
+}

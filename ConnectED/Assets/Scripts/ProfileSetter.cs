@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class ProfileSetter : MonoBehaviour {
 
     public Jsonparser j;
+    public getProfileinfo g;
     public RawImage p;
     public Text name;
     public Text Interest1;
@@ -18,6 +19,7 @@ public class ProfileSetter : MonoBehaviour {
 
     public void setProfile()
     {
+        g.GetmyProfile();
         SetPicture();
         name.text = j.profile.first_name + " " + j.profile.last_name;
         set = true;
