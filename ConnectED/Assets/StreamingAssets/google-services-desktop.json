@@ -1,37 +1,42 @@
 {
+  "project_info": {
+    "project_number": "32366828803",
+    "firebase_url": "https://fleet-fortress-211105.firebaseio.com",
+    "project_id": "fleet-fortress-211105",
+    "storage_bucket": "fleet-fortress-211105.appspot.com"
+  },
   "client": [
     {
-      "services": {
-        "appinvite_service": {
-          "status": 1
-        }, 
-        "analytics_service": {
-          "status": 0
-        }
-      }, 
-      "oauth_client": [
-        {
-          "client_id": "32366828803-dr3snqlrtbcthalg32cb0g4dv7uuvgms.apps.googleusercontent.com"
-        }
-      ], 
-      "api_key": [
-        {
-          "current_key": "AIzaSyAvfXZrSYIle7K1UnEy36FM2J4tYA5ACWc"
-        }
-      ], 
       "client_info": {
-        "mobilesdk_app_id": "1:32366828803:ios:6118fd79cf09072a", 
+        "mobilesdk_app_id": "1:32366828803:android:6118fd79cf09072a",
         "android_client_info": {
           "package_name": "com.lwa.connected"
         }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32366828803-g14dan8j9m1dhises6namb5vpebopgpd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN0Wdhz69OG_f9EoDzFk1uNPrK6qY3lBY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
       }
     }
-  ], 
-  "configuration_version": "1", 
-  "project_info": {
-    "storage_bucket": "fleet-fortress-211105.appspot.com", 
-    "project_id": "fleet-fortress-211105", 
-    "firebase_url": "https://fleet-fortress-211105.firebaseio.com", 
-    "project_number": "32366828803"
-  }
+  ],
+  "configuration_version": "1"
 }

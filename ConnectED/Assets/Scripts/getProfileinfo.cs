@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using System.Text;
-using Firebase;
-using Firebase.Auth;
-using Firebase.Unity.Editor;
+//using Firebase;
+//using Firebase.Auth;
+//using Firebase.Unity.Editor;
 
 public class getProfileinfo : MonoBehaviour {
 
@@ -26,8 +26,8 @@ public class getProfileinfo : MonoBehaviour {
 
     IEnumerator GetProfile()
     {
-		FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
-        Firebase.Auth.FirebaseUser user = auth.CurrentUser;
+		//FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+        //Firebase.Auth.FirebaseUser user = auth.CurrentUser;
 
 
         Debug.Log("Getting profile with "+PlayerPrefs.GetString("email", "email"));

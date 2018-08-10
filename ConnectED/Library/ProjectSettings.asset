@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 0
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: ConnectED
   productName: ConnectED
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -61,7 +61,7 @@ PlayerSettings:
   allowedAutorotateToLandscapeRight: 0
   allowedAutorotateToLandscapeLeft: 0
   useOSAutorotation: 1
-  use32BitDisplayBuffer: 1
+  use32BitDisplayBuffer: 0
   preserveFramebufferAlpha: 0
   disableDepthAndStencilBuffers: 0
   androidBlitType: 0
@@ -81,7 +81,7 @@ PlayerSettings:
   resizableWindow: 0
   useMacAppStoreValidation: 0
   macAppStoreCategory: public.app-category.games
-  gpuSkinning: 1
+  gpuSkinning: 0
   graphicsJobs: 0
   xboxPIXTextureCapture: 0
   xboxEnableAvatar: 0
@@ -117,7 +117,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.1
+  bundleVersion: 1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -142,7 +142,7 @@ PlayerSettings:
     oculus:
       sharedDepthBuffer: 0
       dashSupport: 0
-  protectGraphicsMemory: 0
+  protectGraphicsMemory: 1
   useHDRDisplay: 0
   m_ColorGamuts: 00000000
   targetPixelDensity: 30
@@ -153,7 +153,7 @@ PlayerSettings:
     Android: com.lwa.connected
     iOS: com.lwa.connected
   buildNumber: {}
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -166,7 +166,7 @@ PlayerSettings:
   CreateWallpaper: 0
   APKExpansionFiles: 0
   keepLoadedShadersAlive: 0
-  StripUnusedMeshComponents: 1
+  StripUnusedMeshComponents: 0
   VertexChannelCompressionMask: 4054
   iPhoneSdkVersion: 988
   iOSTargetOSVersionString: 8.0
@@ -243,8 +243,8 @@ PlayerSettings:
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
-  AndroidTVCompatibility: 1
-  AndroidIsGame: 1
+  AndroidTVCompatibility: 0
+  AndroidIsGame: 0
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
@@ -326,7 +326,7 @@ PlayerSettings:
     m_StaticBatching: 1
     m_DynamicBatching: 0
   - m_BuildTarget: Android
-    m_StaticBatching: 1
+    m_StaticBatching: 0
     m_DynamicBatching: 0
   - m_BuildTarget: iPhone
     m_StaticBatching: 1
@@ -358,7 +358,7 @@ PlayerSettings:
   openGLRequireES31AEP: 0
   m_TemplateCustomTags: {}
   mobileMTRendering:
-    Android: 1
+    Android: 0
     iPhone: 1
     tvOS: 1
   m_BuildTargetGroupLightmapEncodingQuality: []
@@ -484,6 +484,7 @@ PlayerSettings:
   switchAllowsRuntimeAddOnContentInstall: 0
   switchDataLossConfirmation: 0
   switchSupportedNpadStyles: 3
+  switchNativeFsCacheSize: 32
   switchSocketConfigEnabled: 0
   switchTcpInitialSendBufferSize: 32
   switchTcpInitialReceiveBufferSize: 64
