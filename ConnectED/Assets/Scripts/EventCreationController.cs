@@ -9,15 +9,11 @@ public class EventCreationController : MonoBehaviour {
     public GameObject LeadersAndTags;
     public GameObject EventSettings;
     public GameObject EventSubmission;
-
+    public EventCreator evcr;
     public void Next()
     {
-        if(Fields.activeSelf)
-        {
-            Fields.SetActive(false);
-            EventSetup.SetActive(true);
-            return;
-        }
+        
+
         if (EventSetup.activeSelf)
         {
             EventSetup.SetActive(false);
@@ -34,9 +30,15 @@ public class EventCreationController : MonoBehaviour {
         {
             EventSettings.SetActive(false);
             EventSubmission.SetActive(true);
+            evcr.initEvent();
             return;
         }
     }
+
+    public void GetFields(){
+        Fields.SetActive(true);
+    }
+
     public void Back()
     {
         if (EventSetup.activeSelf)
@@ -66,8 +68,8 @@ public class EventCreationController : MonoBehaviour {
     }
     public void setNew()
     {
-        Fields.SetActive(true);
-        EventSetup.SetActive(false);
+        Fields.SetActive(false);
+        EventSetup.SetActive(true);
         LeadersAndTags.SetActive(false);
         EventSettings.SetActive(false);
         EventSubmission.SetActive(false);

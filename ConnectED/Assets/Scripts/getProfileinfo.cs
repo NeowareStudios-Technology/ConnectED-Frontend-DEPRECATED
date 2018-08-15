@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using System.Text;
-//using Firebase;
-//using Firebase.Auth;
-//using Firebase.Unity.Editor;
+using Firebase;
+using Firebase.Auth;
+using Firebase.Unity.Editor;
 
 public class getProfileinfo : MonoBehaviour {
 
@@ -26,13 +26,13 @@ public class getProfileinfo : MonoBehaviour {
 
     IEnumerator GetProfile()
     {
-		//FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
-        //Firebase.Auth.FirebaseUser user = auth.CurrentUser;
+		FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+        FirebaseUser user = auth.CurrentUser;
 
 
         Debug.Log("Getting profile with "+PlayerPrefs.GetString("email", "email"));
 		//using (UnityWebRequest www = UnityWebRequest.Get("https://webhook.site/8e284497-5145-481d-8a18-0883dfd599e5"))
-        using (UnityWebRequest www = UnityWebRequest.Get("https://fleet-fortress-211105.appspot.com/_ah/api/connected/v4.4.0/profiles/" + PlayerPrefs.GetString("email", "email")))
+        using (UnityWebRequest www = UnityWebRequest.Get("https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/profiles/" + PlayerPrefs.GetString("email", "email").ToLower()))
         {
             
 
@@ -43,6 +43,7 @@ public class getProfileinfo : MonoBehaviour {
             yield return www.SendWebRequest();
             if (www.isNetworkError || www.isHttpError)
             {
+                Debug.Log(www.responseCode);
                 Debug.Log(www.url);
                 Debug.Log(www.GetRequestHeader("Authorization"));
                 Debug.Log(www.GetRequestHeader("Content-Type"));
@@ -52,15 +53,13 @@ public class getProfileinfo : MonoBehaviour {
             else
             {
                 Debug.Log(www.responseCode);
-                Debug.Log(www.downloadHandler.text);
-                //byte[] results = www.downloadHandler.data;
-                //jsonString = "";
-                //jsonString = Encoding.UTF8.GetString(results);
-                //profile = JsonUtility.FromJson<Profile>(jsonString);
-                //Debug.Log(jsonString);
-                //j.SetProfile(profile);
-                //if(l)
-                //    l.Continue();
+                byte[] results = www.downloadHandler.data;
+                jsonString = "";
+                jsonString = Encoding.UTF8.GetString(results);
+                profile = JsonUtility.FromJson<Profile>(jsonString);
+                j.SetProfile(profile);
+                if(l)
+                    l.Continue();
             }
         };
     }

@@ -7,7 +7,7 @@ public class ProfileSetter : MonoBehaviour {
     public Jsonparser j;
     public getProfileinfo g;
     public RawImage p;
-    public Text name;
+    public Text username;
     public Text Interest1;
     public Text Interest2;
     public Text Interest3;
@@ -19,9 +19,8 @@ public class ProfileSetter : MonoBehaviour {
 
     public void setProfile()
     {
-        g.GetmyProfile();
         SetPicture();
-        name.text = j.profile.first_name + " " + j.profile.last_name;
+        username.text = j.profile.first_name + " " + j.profile.last_name;
         set = true;
         if (j.profile.interests == null)
         {
@@ -90,10 +89,12 @@ public class ProfileSetter : MonoBehaviour {
     public void SetPicture()
     {
         Texture2D tex = new Texture2D(200, 200);
-        byte[] img = System.Convert.FromBase64String(j.profile.photo);
-        Debug.Log(img);
-        tex.LoadImage(img, false);
+        if (j.profile.photo != null)
+        {
+            byte[] img = System.Convert.FromBase64String(j.profile.photo);
+            tex.LoadImage(img, false);
 
-        p.texture = tex;
+            p.texture = tex;
+        }
     }
 }

@@ -1,15 +1,18 @@
 ﻿<Properties StartupConfiguration="{A4FE120D-5677-0BE6-89B0-DE97FDD27F5C}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/Android/AndroidManifest.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EventSpawner.cs">
     <Files>
-      <File FileName="Assets/Scripts/spriteSwitcher.cs" Line="48" Column="25" />
-      <File FileName="Assets/Scripts/Jsonparser.cs" Line="100" Column="48" />
-      <File FileName="Assets/Scripts/alphaAndText.cs" Line="21" Column="35" />
-      <File FileName="Assets/Scripts/getProfileinfo.cs" Line="34" Column="5" />
-      <File FileName="Assets/Scripts/Login.cs" Line="74" Column="43" />
-      <File FileName="Assets/Scripts/returnPressed.cs" Line="18" Column="10" />
-      <File FileName="Assets/Scripts/ProfileSetter.cs" Line="94" Column="1" />
-      <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="20" Column="9" />
+      <File FileName="Assets/Scripts/Jsonparser.cs" Line="46" Column="107" />
+      <File FileName="Assets/Scripts/getProfileinfo.cs" Line="100" Column="2" />
+      <File FileName="Assets/Scripts/Login.cs" Line="116" Column="1" />
+      <File FileName="Assets/Scripts/ProfileSetter.cs" Line="23" Column="1" />
+      <File FileName="Assets/EventInitializer.cs" Line="13" Column="22" />
+      <File FileName="Assets/Scripts/EventCreationController.cs" Line="72" Column="36" />
+      <File FileName="Assets/EventCreator.cs" Line="28" Column="19" />
+      <File FileName="Assets/EventTagger.cs" Line="18" Column="27" />
+      <File FileName="Assets/FieldsController.cs" Line="18" Column="6" />
+      <File FileName="Assets/EventSpawner.cs" Line="24" Column="5" />
+      <File FileName="Assets/FieldsReturner.cs" Line="14" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

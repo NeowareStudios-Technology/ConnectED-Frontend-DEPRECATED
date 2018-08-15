@@ -7,9 +7,9 @@ using UnityEditor;
 using System.IO;
 using System.Text;
 using System;
-//using Firebase;
-//using Firebase.Auth;
-//using Firebase.Unity.Editor;
+using Firebase;
+using Firebase.Auth;
+using Firebase.Unity.Editor;
 
 public class Jsonparser : MonoBehaviour {
 
@@ -34,11 +34,12 @@ public class Jsonparser : MonoBehaviour {
     public returnPressedFields skills;
     public RawImage profilePic;
     public Profile profile;
-   // protected Firebase.Auth.FirebaseAuth auth;
-   // protected Firebase.Auth.FirebaseAuth otherAuth;
+    protected Firebase.Auth.FirebaseAuth auth;
+    protected Firebase.Auth.FirebaseAuth otherAuth;
     public bool profileSet = false;
     public Animator a;
     public Login l;
+    public ProfileSetter setter;
     public GameObject s;
     private string path;
     private string jsonString;
@@ -81,33 +82,59 @@ public class Jsonparser : MonoBehaviour {
 
     void Start() {
         //firebase init
-        //Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
-        //{
-        //    var dependencyStatus = task.Result;
-        //    if (dependencyStatus == Firebase.DependencyStatus.Available)
-        //    {
-        //        Debug.Log("Firebase OK!");
-        //    }
-        //    else
-        //    {
-        //        UnityEngine.Debug.LogError(System.String.Format(
-        //          "Could not resolve all Firebase dependencies: {0}", dependencyStatus));
-        //        // Firebase Unity SDK is not safe to use here.
-        //    }
-        //});
-        //FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://fleet-fortress-211105.firebaseio.com/");
-        //auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+        Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
+        {
+            var dependencyStatus = task.Result;
+            if (dependencyStatus == Firebase.DependencyStatus.Available)
+            {
+                Debug.Log("Firebase OK!");
+            }
+            else
+            {
+                UnityEngine.Debug.LogError(System.String.Format(
+                  "Could not resolve all Firebase dependencies: {0}", dependencyStatus));
+                // Firebase Unity SDK is not safe to use here.
+            }
+        });
+        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://fleet-fortress-211105.firebaseio.com/");
+        auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
 
         StartCoroutine(StartLocationService());
         if (PlayerPrefs.GetString("email", "email") != "email" && PlayerPrefs.GetString("password", "password") != "password")
         {
             l.StartLoginProcess();
-            s.SetActive(true);
-            a.enabled = true;
         }
     }
 
 	public void CreateProfile()
+    {
+        
+        auth.CreateUserWithEmailAndPasswordAsync(email.text, password.text).ContinueWith(task => {
+            if (task.IsCanceled)
+            {
+                Debug.LogError("CreateUserWithEmailAndPasswordAsync was canceled.");
+                return;
+            }
+            if (task.IsFaulted)
+            {
+                Debug.LogError("CreateUserWithEmailAndPasswordAsync encountered an error: " + task.Exception);
+                return;
+            }
+        
+            // Firebase user has been created.
+            Firebase.Auth.FirebaseUser newUser = task.Result;
+            Debug.LogFormat("Firebase user created successfully: {0} ({1})",
+                newUser.DisplayName, newUser.UserId);
+            UserID = newUser.UserId;
+            l.GetInitialToken(auth);
+        });
+
+
+        //create a profile
+
+    }
+
+    public void SignUp()
     {
         path = Application.streamingAssetsPath + "/Profile.json";
         jsonString = File.ReadAllText(path);
@@ -133,24 +160,7 @@ public class Jsonparser : MonoBehaviour {
         profile.sun = sun.GetComponent<spriteSwitcher>().pressed;
         profile.lat = lat;
         profile.lon = lon;
-        //auth.CreateUserWithEmailAndPasswordAsync(email.text, password.text).ContinueWith(task => {
-        //    if (task.IsCanceled)
-        //    {
-        //        Debug.LogError("CreateUserWithEmailAndPasswordAsync was canceled.");
-        //        return;
-        //    }
-        //    if (task.IsFaulted)
-        //    {
-        //        Debug.LogError("CreateUserWithEmailAndPasswordAsync encountered an error: " + task.Exception);
-        //        return;
-        //    }
-        //
-        //    // Firebase user has been created.
-        //    Firebase.Auth.FirebaseUser newUser = task.Result;
-        //    Debug.LogFormat("Firebase user created successfully: {0} ({1})",
-        //        newUser.DisplayName, newUser.UserId);
-        //    UserID = newUser.UserId;
-        //});
+
         if (profilePic.color.a == 1)
         {
             RenderTexture tmp = RenderTexture.GetTemporary(profilePic.texture.width, profilePic.texture.height, 0, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);
@@ -167,24 +177,18 @@ public class Jsonparser : MonoBehaviour {
             Debug.Log(profile.photo);
             //read in with texture2d.loadimage(bytedata);
         }
-        //create a autho profile
-        //string newProfile = JsonUtility.ToJson(auth);
-        //byte[] bodyRaw = Encoding.UTF8.GetBytes(newProfile);
-        //UnityWebRequest www = UnityWebRequest.Post(dbauthosignup, newProfile);
-        //www.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
-        //www.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        //www.SetRequestHeader("Content-Type", "application/json");
-        //coroutine = Post(www);
-        //StartCoroutine(coroutine);
-        //create a profile
-       //string ourProfile = JsonUtility.ToJson(profile);
-       //byte[] bodyRaw2 = Encoding.UTF8.GetBytes(ourProfile);
-       //UnityWebRequest www2 = UnityWebRequest.Post(dbprofiles, ourProfile);
-       //www2.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw2);
-       //www2.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-       //www2.SetRequestHeader("Content-Type", "application/json");
-       //coroutine = Post(www2);
-       //StartCoroutine(coroutine);
+
+        string t = "Bearer " + token;
+
+        string ourProfile = JsonUtility.ToJson(profile);
+        byte[] bodyRaw2 = Encoding.UTF8.GetBytes(ourProfile);
+        UnityWebRequest www2 = UnityWebRequest.Post(dbprofiles, ourProfile);
+        www2.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw2);
+        www2.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        www2.SetRequestHeader("Authorization", t);
+        www2.SetRequestHeader("Content-Type", "application/json");
+        coroutine = Post(www2);
+        StartCoroutine(coroutine);
     }
 
 
@@ -192,10 +196,15 @@ public class Jsonparser : MonoBehaviour {
         yield return www.SendWebRequest();
 
         Debug.Log("Status Code: " + www.responseCode);
+        Debug.Log(www.error);
+        Debug.Log(www.uploadHandler.data);
+        Debug.Log(www.downloadHandler.data);
+        Debug.Log(www.GetRequestHeader("Authorization"));
     }
     public void SetProfile(Profile p)
     {
         profile = p;
+        setter.setProfile();
         profileSet = true;
     }
 }
