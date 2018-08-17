@@ -35,8 +35,8 @@ extern const uint32_t RaycastHit_get_collider_m1464180279_MetadataUsageId;
 
 
 
-#ifndef U3CMODULEU3E_T692745541_H
-#define U3CMODULEU3E_T692745541_H
+#ifndef U3CMODULEU3E_T692745540_H
+#define U3CMODULEU3E_T692745540_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -44,7 +44,7 @@ extern const uint32_t RaycastHit_get_collider_m1464180279_MetadataUsageId;
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t692745541 
+struct  U3CModuleU3E_t692745540 
 {
 public:
 
@@ -54,7 +54,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CMODULEU3E_T692745541_H
+#endif // U3CMODULEU3E_T692745540_H
 #ifndef RUNTIMEOBJECT_H
 #define RUNTIMEOBJECT_H
 #ifdef __clang__

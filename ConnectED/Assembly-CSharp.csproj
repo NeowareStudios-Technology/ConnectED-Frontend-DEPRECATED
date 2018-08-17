@@ -61,16 +61,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EventCreator.cs" />
-    <Compile Include="Assets\EventInitializer.cs" />
-    <Compile Include="Assets\EventSpawner.cs" />
-    <Compile Include="Assets\EventTagger.cs" />
-    <Compile Include="Assets\FieldsController.cs" />
-    <Compile Include="Assets\FieldsReturner.cs" />
     <Compile Include="Assets\Scripts\alphaAndText.cs" />
     <Compile Include="Assets\Scripts\animationController.cs" />
     <Compile Include="Assets\Scripts\APImanager.cs" />
     <Compile Include="Assets\Scripts\EventCreationController.cs" />
+    <Compile Include="Assets\Scripts\EventCreator.cs" />
+    <Compile Include="Assets\Scripts\EventInitializer.cs" />
+    <Compile Include="Assets\Scripts\EventSpawner.cs" />
+    <Compile Include="Assets\Scripts\EventTagger.cs" />
+    <Compile Include="Assets\Scripts\FieldsController.cs" />
+    <Compile Include="Assets\Scripts\FieldsReturner.cs" />
     <Compile Include="Assets\Scripts\getProfileinfo.cs" />
     <Compile Include="Assets\Scripts\Jsonparser.cs" />
     <Compile Include="Assets\Scripts\lerpMachine.cs" />

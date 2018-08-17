@@ -7,7 +7,7 @@ public class pictureGrabber : MonoBehaviour {
     public RawImage image;
     public void pick()
     {
-        PickImage(400);
+        PickImage(1600);
     }
     private void PickImage(int maxSize)
     {
@@ -37,8 +37,8 @@ public class pictureGrabber : MonoBehaviour {
                     //https://support.unity3d.com/hc/en-us/articles/206486626-How-can-I-get-pixels-from-unreadable-textures-
                     //read in with texture2d.loadimage(bytedata);
 
-                Color[] c = myTexture2D.GetPixels(myTexture2D.width / 2 - 100, myTexture2D.height / 2 - 100, 200, 200);
-                Texture2D m2Texture = new Texture2D(200, 200);
+                Color[] c = myTexture2D.GetPixels(myTexture2D.width / 2 - 200, myTexture2D.height / 2 - 200, 400, 400);
+                Texture2D m2Texture = new Texture2D(300, 300);
                 m2Texture.SetPixels(c);
                 m2Texture.Apply();
                 texture = m2Texture;

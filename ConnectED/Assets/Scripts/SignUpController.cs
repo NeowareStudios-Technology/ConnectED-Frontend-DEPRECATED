@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SignUpController : MonoBehaviour {
 
     public GameObject Email;
+    public InputField Ema;
     public GameObject Password;
+    public InputField Pass;
+    public InputField rePass;
     public GameObject rePassword;
     public GameObject Name;
+    public InputField first;
+    public InputField last;
     public GameObject ProfilePic;
     public GameObject Schedule;
     public GameObject Fields;
@@ -22,6 +28,8 @@ public class SignUpController : MonoBehaviour {
     {
         if(current == 1)
         {
+            if (Ema.text == null || Ema.text.Length < 10 )
+                return;
             Email.SetActive(false);
             Password.SetActive(true);
             current++;
@@ -29,6 +37,8 @@ public class SignUpController : MonoBehaviour {
         }
         if(current == 2)
         {
+            if (Pass.text.Length < 6)
+                return;
             Password.SetActive(false);
             rePassword.SetActive(true);
             current++;
@@ -36,6 +46,8 @@ public class SignUpController : MonoBehaviour {
         }
         if(current == 3)
         {
+            if (rePass.text != Pass.text)
+                return;
             rePassword.SetActive(false);
             Name.SetActive(true);
             current++;
@@ -43,6 +55,8 @@ public class SignUpController : MonoBehaviour {
         }
         if(current == 4)
         {
+            if (first.text == "" || last.text == "" || first.text == null || last.text == null)
+                return;
             Name.SetActive(false);
             ProfilePic.SetActive(true);
             current++;

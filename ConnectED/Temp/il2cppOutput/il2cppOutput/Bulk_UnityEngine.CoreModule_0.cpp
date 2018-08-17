@@ -897,6 +897,7 @@ extern String_t* _stringLiteral2227937992;
 extern String_t* _stringLiteral2230413967;
 extern String_t* _stringLiteral2231172943;
 extern String_t* _stringLiteral2329817743;
+extern String_t* _stringLiteral2475671027;
 extern String_t* _stringLiteral2664163362;
 extern String_t* _stringLiteral2678398999;
 extern String_t* _stringLiteral2833503317;
@@ -906,6 +907,7 @@ extern String_t* _stringLiteral291496430;
 extern String_t* _stringLiteral2932524041;
 extern String_t* _stringLiteral3092135949;
 extern String_t* _stringLiteral3100565393;
+extern String_t* _stringLiteral3143606250;
 extern String_t* _stringLiteral3155606;
 extern String_t* _stringLiteral316747530;
 extern String_t* _stringLiteral3184621405;
@@ -1048,6 +1050,8 @@ extern const RuntimeMethod* MonoBehaviour_StopCoroutine_m615723318_RuntimeMethod
 extern const RuntimeMethod* MonoBehaviour_StopCoroutine_m907039165_RuntimeMethod_var;
 extern const RuntimeMethod* NoAllocHelpers_SafeLength_TisInt32_t2950945753_m1263070609_RuntimeMethod_var;
 extern const RuntimeMethod* Object_CheckNullArgument_m4237608654_RuntimeMethod_var;
+extern const RuntimeMethod* Object_Instantiate_m3403600534_RuntimeMethod_var;
+extern const RuntimeMethod* Object_Instantiate_m4029422268_RuntimeMethod_var;
 extern const RuntimeMethod* PlayerConnectionInternal_UnityEngine_IPlayerEditorConnectionNative_SendMessage_m389985885_RuntimeMethod_var;
 extern const RuntimeMethod* PlayerConnection_MessageCallbackInternal_m1914517467_RuntimeMethod_var;
 extern const RuntimeMethod* PlayerConnection_Register_m2197766869_RuntimeMethod_var;
@@ -1260,6 +1264,8 @@ extern const uint32_t Object_CompareBaseObjects_m2405226032_MetadataUsageId;
 extern const uint32_t Object_DestroyImmediate_m3193525861_MetadataUsageId;
 extern const uint32_t Object_Destroy_m565254235_MetadataUsageId;
 extern const uint32_t Object_Equals_m4262027856_MetadataUsageId;
+extern const uint32_t Object_Instantiate_m3403600534_MetadataUsageId;
+extern const uint32_t Object_Instantiate_m4029422268_MetadataUsageId;
 extern const uint32_t Object_IsNativeObjectAlive_m3095908075_MetadataUsageId;
 extern const uint32_t Object_ToString_m3272709752_MetadataUsageId;
 extern const uint32_t Object__cctor_m2398773973_MetadataUsageId;
@@ -4539,26 +4545,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // SYSTEMINFO_T3561985952_H
-#ifndef TIME_T2420636075_H
-#define TIME_T2420636075_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Time
-struct  Time_t2420636075  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // TIME_T2420636075_H
 #ifndef YIELDINSTRUCTION_T403091072_H
 #define YIELDINSTRUCTION_T403091072_H
 #ifdef __clang__
@@ -19185,6 +19171,14 @@ extern "C" IL2CPP_METHOD_ATTR intptr_t Object_GetCachedPtr_m151292858 (Object_t6
 extern "C" IL2CPP_METHOD_ATTR String_t* Object_GetName_m4137306623 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___obj0, const RuntimeMethod* method);
 // System.Void UnityEngine.Object::SetName(UnityEngine.Object,System.String)
 extern "C" IL2CPP_METHOD_ATTR void Object_SetName_m2427214136 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___obj0, String_t* ___name1, const RuntimeMethod* method);
+// System.Void UnityEngine.Object::CheckNullArgument(System.Object,System.String)
+extern "C" IL2CPP_METHOD_ATTR void Object_CheckNullArgument_m4237608654 (RuntimeObject * __this /* static, unused */, RuntimeObject * ___arg0, String_t* ___message1, const RuntimeMethod* method);
+// UnityEngine.Object UnityEngine.Object::Internal_CloneSingle(UnityEngine.Object)
+extern "C" IL2CPP_METHOD_ATTR Object_t631007953 * Object_Internal_CloneSingle_m1021157572 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___data0, const RuntimeMethod* method);
+// UnityEngine.Object UnityEngine.Object::Instantiate(UnityEngine.Object)
+extern "C" IL2CPP_METHOD_ATTR Object_t631007953 * Object_Instantiate_m3403600534 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___original0, const RuntimeMethod* method);
+// UnityEngine.Object UnityEngine.Object::Internal_CloneSingleWithParent(UnityEngine.Object,UnityEngine.Transform,System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR Object_t631007953 * Object_Internal_CloneSingleWithParent_m2666483490 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___data0, Transform_t3600365921 * ___parent1, bool ___worldPositionStays2, const RuntimeMethod* method);
 // System.Void UnityEngine.Object::Destroy(UnityEngine.Object,System.Single)
 extern "C" IL2CPP_METHOD_ATTR void Object_Destroy_m3118546832 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___obj0, float ___t1, const RuntimeMethod* method);
 // System.Void UnityEngine.Object::DestroyImmediate(UnityEngine.Object,System.Boolean)
@@ -36054,6 +36048,114 @@ extern "C" IL2CPP_METHOD_ATTR void Object_set_name_m291480324 (Object_t631007953
 		return;
 	}
 }
+// UnityEngine.Object UnityEngine.Object::Instantiate(UnityEngine.Object)
+extern "C" IL2CPP_METHOD_ATTR Object_t631007953 * Object_Instantiate_m3403600534 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___original0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Object_Instantiate_m3403600534_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Object_t631007953 * V_0 = NULL;
+	Object_t631007953 * V_1 = NULL;
+	{
+		Object_t631007953 * L_0 = ___original0;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_CheckNullArgument_m4237608654(NULL /*static, unused*/, L_0, _stringLiteral2475671027, /*hidden argument*/NULL);
+		Object_t631007953 * L_1 = ___original0;
+		Object_t631007953 * L_2 = Object_Internal_CloneSingle_m1021157572(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		Object_t631007953 * L_3 = V_0;
+		bool L_4 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_3, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_4)
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		UnityException_t3598173660 * L_5 = (UnityException_t3598173660 *)il2cpp_codegen_object_new(UnityException_t3598173660_il2cpp_TypeInfo_var);
+		UnityException__ctor_m872329880(L_5, _stringLiteral3143606250, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, NULL, Object_Instantiate_m3403600534_RuntimeMethod_var);
+	}
+
+IL_002a:
+	{
+		Object_t631007953 * L_6 = V_0;
+		V_1 = L_6;
+		goto IL_0031;
+	}
+
+IL_0031:
+	{
+		Object_t631007953 * L_7 = V_1;
+		return L_7;
+	}
+}
+// UnityEngine.Object UnityEngine.Object::Instantiate(UnityEngine.Object,UnityEngine.Transform,System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR Object_t631007953 * Object_Instantiate_m4029422268 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___original0, Transform_t3600365921 * ___parent1, bool ___instantiateInWorldSpace2, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Object_Instantiate_m4029422268_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Object_t631007953 * V_0 = NULL;
+	Object_t631007953 * V_1 = NULL;
+	{
+		Transform_t3600365921 * L_0 = ___parent1;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_1 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		Object_t631007953 * L_2 = ___original0;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_t631007953 * L_3 = Object_Instantiate_m3403600534(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+		V_0 = L_3;
+		goto IL_004b;
+	}
+
+IL_0019:
+	{
+		Object_t631007953 * L_4 = ___original0;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_CheckNullArgument_m4237608654(NULL /*static, unused*/, L_4, _stringLiteral2475671027, /*hidden argument*/NULL);
+		Object_t631007953 * L_5 = ___original0;
+		Transform_t3600365921 * L_6 = ___parent1;
+		bool L_7 = ___instantiateInWorldSpace2;
+		Object_t631007953 * L_8 = Object_Internal_CloneSingleWithParent_m2666483490(NULL /*static, unused*/, L_5, L_6, L_7, /*hidden argument*/NULL);
+		V_1 = L_8;
+		Object_t631007953 * L_9 = V_1;
+		bool L_10 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_9, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_10)
+		{
+			goto IL_0044;
+		}
+	}
+	{
+		UnityException_t3598173660 * L_11 = (UnityException_t3598173660 *)il2cpp_codegen_object_new(UnityException_t3598173660_il2cpp_TypeInfo_var);
+		UnityException__ctor_m872329880(L_11, _stringLiteral3143606250, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_11, NULL, Object_Instantiate_m4029422268_RuntimeMethod_var);
+	}
+
+IL_0044:
+	{
+		Object_t631007953 * L_12 = V_1;
+		V_0 = L_12;
+		goto IL_004b;
+	}
+
+IL_004b:
+	{
+		Object_t631007953 * L_13 = V_0;
+		return L_13;
+	}
+}
 // System.Void UnityEngine.Object::Destroy(UnityEngine.Object,System.Single)
 extern "C" IL2CPP_METHOD_ATTR void Object_Destroy_m3118546832 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___obj0, float ___t1, const RuntimeMethod* method)
 {
@@ -36237,6 +36339,16 @@ extern "C" IL2CPP_METHOD_ATTR Object_t631007953 * Object_Internal_CloneSingle_m1
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Object_Internal_CloneSingle_m1021157572_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Object::Internal_CloneSingle(UnityEngine.Object)");
 	Object_t631007953 * retVal = _il2cpp_icall_func(___data0);
+	return retVal;
+}
+// UnityEngine.Object UnityEngine.Object::Internal_CloneSingleWithParent(UnityEngine.Object,UnityEngine.Transform,System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR Object_t631007953 * Object_Internal_CloneSingleWithParent_m2666483490 (RuntimeObject * __this /* static, unused */, Object_t631007953 * ___data0, Transform_t3600365921 * ___parent1, bool ___worldPositionStays2, const RuntimeMethod* method)
+{
+	typedef Object_t631007953 * (*Object_Internal_CloneSingleWithParent_m2666483490_ftn) (Object_t631007953 *, Transform_t3600365921 *, bool);
+	static Object_Internal_CloneSingleWithParent_m2666483490_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Object_Internal_CloneSingleWithParent_m2666483490_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Object::Internal_CloneSingleWithParent(UnityEngine.Object,UnityEngine.Transform,System.Boolean)");
+	Object_t631007953 * retVal = _il2cpp_icall_func(___data0, ___parent1, ___worldPositionStays2);
 	return retVal;
 }
 // System.String UnityEngine.Object::ToString(UnityEngine.Object)
@@ -46699,70 +46811,6 @@ IL_001e:
 	{
 		return;
 	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Single UnityEngine.Time::get_deltaTime()
-extern "C" IL2CPP_METHOD_ATTR float Time_get_deltaTime_m372706562 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
-{
-	typedef float (*Time_get_deltaTime_m372706562_ftn) ();
-	static Time_get_deltaTime_m372706562_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Time_get_deltaTime_m372706562_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Time::get_deltaTime()");
-	float retVal = _il2cpp_icall_func();
-	return retVal;
-}
-// System.Single UnityEngine.Time::get_unscaledTime()
-extern "C" IL2CPP_METHOD_ATTR float Time_get_unscaledTime_m3457564332 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
-{
-	typedef float (*Time_get_unscaledTime_m3457564332_ftn) ();
-	static Time_get_unscaledTime_m3457564332_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Time_get_unscaledTime_m3457564332_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Time::get_unscaledTime()");
-	float retVal = _il2cpp_icall_func();
-	return retVal;
-}
-// System.Single UnityEngine.Time::get_unscaledDeltaTime()
-extern "C" IL2CPP_METHOD_ATTR float Time_get_unscaledDeltaTime_m4270080131 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
-{
-	typedef float (*Time_get_unscaledDeltaTime_m4270080131_ftn) ();
-	static Time_get_unscaledDeltaTime_m4270080131_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Time_get_unscaledDeltaTime_m4270080131_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Time::get_unscaledDeltaTime()");
-	float retVal = _il2cpp_icall_func();
-	return retVal;
-}
-// System.Single UnityEngine.Time::get_realtimeSinceStartup()
-extern "C" IL2CPP_METHOD_ATTR float Time_get_realtimeSinceStartup_m3141794964 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
-{
-	typedef float (*Time_get_realtimeSinceStartup_m3141794964_ftn) ();
-	static Time_get_realtimeSinceStartup_m3141794964_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Time_get_realtimeSinceStartup_m3141794964_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Time::get_realtimeSinceStartup()");
-	float retVal = _il2cpp_icall_func();
-	return retVal;
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

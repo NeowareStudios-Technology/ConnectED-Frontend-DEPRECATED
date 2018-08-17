@@ -201,21 +201,15 @@ public class Jsonparser : MonoBehaviour {
         Debug.Log(www.downloadHandler.data);
         Debug.Log(www.GetRequestHeader("Authorization"));
     }
+    public EventSpawner eventSpawner;
     public void SetProfile(Profile p)
     {
         profile = p;
         setter.setProfile();
         profileSet = true;
-    }
-}
+        eventSpawner.populateEvents();
 
-[System.Serializable]
-public class Auth0
-{
-    public string client_id;
-    public string email;
-    public string password;
-    public string connection;
+    }
 }
 
 

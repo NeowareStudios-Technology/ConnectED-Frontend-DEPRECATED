@@ -7,6 +7,7 @@ public class EventCreationController : MonoBehaviour {
     public GameObject Fields;
     public GameObject EventSetup;
     public GameObject LeadersAndTags;
+    public GameObject Address;
     public GameObject EventSettings;
     public GameObject EventSubmission;
     public EventCreator evcr;
@@ -17,6 +18,12 @@ public class EventCreationController : MonoBehaviour {
         if (EventSetup.activeSelf)
         {
             EventSetup.SetActive(false);
+            Address.SetActive(true);
+            return;
+        }
+        if (Address.activeSelf)
+        {
+            Address.SetActive(false);
             LeadersAndTags.SetActive(true);
             return;
         }
@@ -47,10 +54,16 @@ public class EventCreationController : MonoBehaviour {
             Fields.SetActive(true);
             return;
         }
+        if (Address.activeSelf)
+        {
+            Address.SetActive(false);
+            EventSetup.SetActive(true);
+            return;
+        }
         if (LeadersAndTags.activeSelf)
         {
             LeadersAndTags.SetActive(false);
-            EventSetup.SetActive(true);
+            Address.SetActive(true);
             return;
         }
         if (EventSettings.activeSelf)

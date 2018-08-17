@@ -1,18 +1,18 @@
 ﻿<Properties StartupConfiguration="{A4FE120D-5677-0BE6-89B0-DE97FDD27F5C}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EventSpawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ProfileEdit.cs">
     <Files>
-      <File FileName="Assets/Scripts/Jsonparser.cs" Line="46" Column="107" />
-      <File FileName="Assets/Scripts/getProfileinfo.cs" Line="100" Column="2" />
+      <File FileName="Assets/Scripts/Jsonparser.cs" Line="164" Column="9" />
+      <File FileName="Assets/Scripts/getProfileinfo.cs" Line="6" Column="19" />
       <File FileName="Assets/Scripts/Login.cs" Line="116" Column="1" />
-      <File FileName="Assets/Scripts/ProfileSetter.cs" Line="23" Column="1" />
-      <File FileName="Assets/EventInitializer.cs" Line="13" Column="22" />
+      <File FileName="Assets/Scripts/ProfileSetter.cs" Line="92" Column="68" />
       <File FileName="Assets/Scripts/EventCreationController.cs" Line="72" Column="36" />
-      <File FileName="Assets/EventCreator.cs" Line="28" Column="19" />
-      <File FileName="Assets/EventTagger.cs" Line="18" Column="27" />
-      <File FileName="Assets/FieldsController.cs" Line="18" Column="6" />
-      <File FileName="Assets/EventSpawner.cs" Line="24" Column="5" />
-      <File FileName="Assets/FieldsReturner.cs" Line="14" Column="9" />
+      <File FileName="Assets/Scripts/EventInitializer.cs" Line="33" Column="67" />
+      <File FileName="Assets/Scripts/EventSpawner.cs" Line="116" Column="34" />
+      <File FileName="Assets/Scripts/EventCreator.cs" Line="49" Column="50" />
+      <File FileName="Assets/Scripts/pictureGrabber.cs" Line="45" Column="41" />
+      <File FileName="Assets/Scripts/SignUpController.cs" Line="59" Column="24" />
+      <File FileName="Assets/Scripts/ProfileEdit.cs" Line="16" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

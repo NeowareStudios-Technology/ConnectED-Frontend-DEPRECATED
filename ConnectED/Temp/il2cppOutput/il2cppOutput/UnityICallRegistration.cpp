@@ -1190,10 +1190,6 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Networking.UnityWebRequest
 
-		//System.Boolean UnityEngine.Networking.UnityWebRequest::get_isDone()
-		void Register_UnityEngine_Networking_UnityWebRequest_get_isDone();
-		Register_UnityEngine_Networking_UnityWebRequest_get_isDone();
-
 		//System.Boolean UnityEngine.Networking.UnityWebRequest::get_isHttpError()
 		void Register_UnityEngine_Networking_UnityWebRequest_get_isHttpError();
 		Register_UnityEngine_Networking_UnityWebRequest_get_isHttpError();
@@ -1337,6 +1333,10 @@ void RegisterAllStrippedInternalCalls()
 		//UnityEngine.Object UnityEngine.Object::Internal_CloneSingle(UnityEngine.Object)
 		void Register_UnityEngine_Object_Internal_CloneSingle();
 		Register_UnityEngine_Object_Internal_CloneSingle();
+
+		//UnityEngine.Object UnityEngine.Object::Internal_CloneSingleWithParent(UnityEngine.Object,UnityEngine.Transform,System.Boolean)
+		void Register_UnityEngine_Object_Internal_CloneSingleWithParent();
+		Register_UnityEngine_Object_Internal_CloneSingleWithParent();
 
 	//End Registrations for type : UnityEngine.Object
 

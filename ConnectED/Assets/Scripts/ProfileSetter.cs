@@ -89,7 +89,7 @@ public class ProfileSetter : MonoBehaviour {
     public void SetPicture()
     {
         Texture2D tex = new Texture2D(200, 200);
-        if (j.profile.photo != null)
+        if (j.profile.photo != null && j.profile.photo.Length > 300)
         {
             byte[] img = System.Convert.FromBase64String(j.profile.photo);
             tex.LoadImage(img, false);
