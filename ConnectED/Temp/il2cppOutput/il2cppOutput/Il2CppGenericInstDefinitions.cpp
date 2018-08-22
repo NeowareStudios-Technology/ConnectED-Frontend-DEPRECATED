@@ -520,10 +520,11 @@ extern const Il2CppType AnimationTriggers_t2532145056_0_0_0;
 extern const Il2CppType Animator_t434523843_0_0_0;
 extern const Il2CppType NGMediaReceiveCallbackiOS_t840779778_0_0_0;
 extern const Il2CppType NGMediaSaveCallbackiOS_t2373647639_0_0_0;
+extern const Il2CppType spriteSwitcher_t2594934744_0_0_0;
+extern const Il2CppType DetailChanger_t1745436171_0_0_0;
 extern const Il2CppType Event_t3739346240_0_0_0;
 extern const Il2CppType EventInitializer_t1217167430_0_0_0;
 extern const Il2CppType prefill_t1646751602_0_0_0;
-extern const Il2CppType spriteSwitcher_t2594934744_0_0_0;
 extern const Il2CppType FieldsController_t1403175110_0_0_0;
 extern const Il2CppType Profile_t2655093077_0_0_0;
 extern const Il2CppType IEnumerable_1_t1615002100_gp_0_0_0_0;
@@ -1961,14 +1962,16 @@ static const RuntimeType* GenInst_NGMediaReceiveCallbackiOS_t840779778_0_0_0_Typ
 extern const Il2CppGenericInst GenInst_NGMediaReceiveCallbackiOS_t840779778_0_0_0 = { 1, GenInst_NGMediaReceiveCallbackiOS_t840779778_0_0_0_Types };
 static const RuntimeType* GenInst_NGMediaSaveCallbackiOS_t2373647639_0_0_0_Types[] = { (&NGMediaSaveCallbackiOS_t2373647639_0_0_0) };
 extern const Il2CppGenericInst GenInst_NGMediaSaveCallbackiOS_t2373647639_0_0_0 = { 1, GenInst_NGMediaSaveCallbackiOS_t2373647639_0_0_0_Types };
+static const RuntimeType* GenInst_spriteSwitcher_t2594934744_0_0_0_Types[] = { (&spriteSwitcher_t2594934744_0_0_0) };
+extern const Il2CppGenericInst GenInst_spriteSwitcher_t2594934744_0_0_0 = { 1, GenInst_spriteSwitcher_t2594934744_0_0_0_Types };
+static const RuntimeType* GenInst_DetailChanger_t1745436171_0_0_0_Types[] = { (&DetailChanger_t1745436171_0_0_0) };
+extern const Il2CppGenericInst GenInst_DetailChanger_t1745436171_0_0_0 = { 1, GenInst_DetailChanger_t1745436171_0_0_0_Types };
 static const RuntimeType* GenInst_Event_t3739346240_0_0_0_Types[] = { (&Event_t3739346240_0_0_0) };
 extern const Il2CppGenericInst GenInst_Event_t3739346240_0_0_0 = { 1, GenInst_Event_t3739346240_0_0_0_Types };
 static const RuntimeType* GenInst_EventInitializer_t1217167430_0_0_0_Types[] = { (&EventInitializer_t1217167430_0_0_0) };
 extern const Il2CppGenericInst GenInst_EventInitializer_t1217167430_0_0_0 = { 1, GenInst_EventInitializer_t1217167430_0_0_0_Types };
 static const RuntimeType* GenInst_prefill_t1646751602_0_0_0_Types[] = { (&prefill_t1646751602_0_0_0) };
 extern const Il2CppGenericInst GenInst_prefill_t1646751602_0_0_0 = { 1, GenInst_prefill_t1646751602_0_0_0_Types };
-static const RuntimeType* GenInst_spriteSwitcher_t2594934744_0_0_0_Types[] = { (&spriteSwitcher_t2594934744_0_0_0) };
-extern const Il2CppGenericInst GenInst_spriteSwitcher_t2594934744_0_0_0 = { 1, GenInst_spriteSwitcher_t2594934744_0_0_0_Types };
 static const RuntimeType* GenInst_FieldsController_t1403175110_0_0_0_Types[] = { (&FieldsController_t1403175110_0_0_0) };
 extern const Il2CppGenericInst GenInst_FieldsController_t1403175110_0_0_0 = { 1, GenInst_FieldsController_t1403175110_0_0_0_Types };
 static const RuntimeType* GenInst_Profile_t2655093077_0_0_0_Types[] = { (&Profile_t2655093077_0_0_0) };
@@ -2449,7 +2452,7 @@ static const RuntimeType* GenInst_List_1_t3009893961_0_0_0_Types[] = { (&List_1_
 extern const Il2CppGenericInst GenInst_List_1_t3009893961_0_0_0 = { 1, GenInst_List_1_t3009893961_0_0_0_Types };
 static const RuntimeType* GenInst_ObjectPool_1_t892185599_gp_0_0_0_0_Types[] = { (&ObjectPool_1_t892185599_gp_0_0_0_0) };
 extern const Il2CppGenericInst GenInst_ObjectPool_1_t892185599_gp_0_0_0_0 = { 1, GenInst_ObjectPool_1_t892185599_gp_0_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[863] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[864] = 
 {
 	&GenInst_RuntimeObject_0_0_0,
 	&GenInst_Int32_t2950945753_0_0_0,
@@ -3070,10 +3073,11 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[863] =
 	&GenInst_Animator_t434523843_0_0_0,
 	&GenInst_NGMediaReceiveCallbackiOS_t840779778_0_0_0,
 	&GenInst_NGMediaSaveCallbackiOS_t2373647639_0_0_0,
+	&GenInst_spriteSwitcher_t2594934744_0_0_0,
+	&GenInst_DetailChanger_t1745436171_0_0_0,
 	&GenInst_Event_t3739346240_0_0_0,
 	&GenInst_EventInitializer_t1217167430_0_0_0,
 	&GenInst_prefill_t1646751602_0_0_0,
-	&GenInst_spriteSwitcher_t2594934744_0_0_0,
 	&GenInst_FieldsController_t1403175110_0_0_0,
 	&GenInst_Profile_t2655093077_0_0_0,
 	&GenInst_Boolean_t97287965_0_0_0_Boolean_t97287965_0_0_0,

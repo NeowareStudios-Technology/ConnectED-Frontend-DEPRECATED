@@ -443,6 +443,7 @@
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.79.0.txt" />
     <None Include="Assets\Plugins\Android\Firebase\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\Firebase\res\values\google-services.xml" />
     <None Include="Assets\Plugins\NativeGallery\README.txt" />
     <None Include="Assets\StreamingAssets\HTML.txt" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />

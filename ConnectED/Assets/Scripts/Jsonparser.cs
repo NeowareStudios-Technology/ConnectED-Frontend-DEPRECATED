@@ -40,7 +40,7 @@ public class Jsonparser : MonoBehaviour {
     public Animator a;
     public Login l;
     public ProfileSetter setter;
-    public GameObject s;
+    public GameObject alreadyin;
     private string path;
     private string jsonString;
     private string dbprofiles = "https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/profiles";
@@ -102,6 +102,7 @@ public class Jsonparser : MonoBehaviour {
         StartCoroutine(StartLocationService());
         if (PlayerPrefs.GetString("email", "email") != "email" && PlayerPrefs.GetString("password", "password") != "password")
         {
+            alreadyin.SetActive(true);
             l.StartLoginProcess();
         }
     }

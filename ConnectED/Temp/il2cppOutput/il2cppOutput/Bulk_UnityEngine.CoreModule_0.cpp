@@ -18757,6 +18757,8 @@ extern "C" IL2CPP_METHOD_ATTR GUIElement_t3567083079 * GUILayer_HitTest_Injected
 extern "C" IL2CPP_METHOD_ATTR void GameObject_Internal_CreateGameObject_m2533291801 (RuntimeObject * __this /* static, unused */, GameObject_t1113636619 * ___self0, String_t* ___name1, const RuntimeMethod* method);
 // UnityEngine.Component UnityEngine.GameObject::AddComponent(System.Type)
 extern "C" IL2CPP_METHOD_ATTR Component_t1923634451 * GameObject_AddComponent_m136524825 (GameObject_t1113636619 * __this, Type_t * ___componentType0, const RuntimeMethod* method);
+// UnityEngine.GameObject UnityEngine.GameObject::FindGameObjectWithTag(System.String)
+extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * GameObject_FindGameObjectWithTag_m2129039296 (RuntimeObject * __this /* static, unused */, String_t* ___tag0, const RuntimeMethod* method);
 // UnityEngine.Component UnityEngine.GameObject::Internal_AddComponentWithType(System.Type)
 extern "C" IL2CPP_METHOD_ATTR Component_t1923634451 * GameObject_Internal_AddComponentWithType_m3797731663 (GameObject_t1113636619 * __this, Type_t * ___componentType0, const RuntimeMethod* method);
 // System.IntPtr UnityEngine.Gradient::Init()
@@ -29839,6 +29841,23 @@ extern "C" IL2CPP_METHOD_ATTR RuntimeArray * GameObject_GetComponentsInternal_m4
 	RuntimeArray * retVal = _il2cpp_icall_func(__this, ___type0, ___useSearchTypeAsArrayReturnType1, ___recursive2, ___includeInactive3, ___reverse4, ___resultList5);
 	return retVal;
 }
+// UnityEngine.GameObject UnityEngine.GameObject::FindWithTag(System.String)
+extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * GameObject_FindWithTag_m981614592 (RuntimeObject * __this /* static, unused */, String_t* ___tag0, const RuntimeMethod* method)
+{
+	GameObject_t1113636619 * V_0 = NULL;
+	{
+		String_t* L_0 = ___tag0;
+		GameObject_t1113636619 * L_1 = GameObject_FindGameObjectWithTag_m2129039296(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		GameObject_t1113636619 * L_2 = V_0;
+		return L_2;
+	}
+}
 // UnityEngine.Component UnityEngine.GameObject::Internal_AddComponentWithType(System.Type)
 extern "C" IL2CPP_METHOD_ATTR Component_t1923634451 * GameObject_Internal_AddComponentWithType_m3797731663 (GameObject_t1113636619 * __this, Type_t * ___componentType0, const RuntimeMethod* method)
 {
@@ -29922,6 +29941,16 @@ extern "C" IL2CPP_METHOD_ATTR bool GameObject_get_activeInHierarchy_m2006396688 
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (GameObject_get_activeInHierarchy_m2006396688_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::get_activeInHierarchy()");
 	bool retVal = _il2cpp_icall_func(__this);
+	return retVal;
+}
+// UnityEngine.GameObject UnityEngine.GameObject::FindGameObjectWithTag(System.String)
+extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * GameObject_FindGameObjectWithTag_m2129039296 (RuntimeObject * __this /* static, unused */, String_t* ___tag0, const RuntimeMethod* method)
+{
+	typedef GameObject_t1113636619 * (*GameObject_FindGameObjectWithTag_m2129039296_ftn) (String_t*);
+	static GameObject_FindGameObjectWithTag_m2129039296_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GameObject_FindGameObjectWithTag_m2129039296_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::FindGameObjectWithTag(System.String)");
+	GameObject_t1113636619 * retVal = _il2cpp_icall_func(___tag0);
 	return retVal;
 }
 // System.Void UnityEngine.GameObject::SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions)

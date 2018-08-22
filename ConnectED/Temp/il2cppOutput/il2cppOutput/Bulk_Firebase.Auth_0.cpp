@@ -304,6 +304,10 @@ struct FutureBase_t1024553797;
 struct FutureString_t4072148675;
 // Firebase.FutureString/SWIG_CompletionDelegate
 struct SWIG_CompletionDelegate_t3186567461;
+// Firebase.FutureVoid
+struct FutureVoid_t983301800;
+// Firebase.FutureVoid/SWIG_CompletionDelegate
+struct SWIG_CompletionDelegate_t2224793779;
 // Firebase.InitializationException
 struct InitializationException_t1111396117;
 // Firebase.Platform.Default.BaseAuthService
@@ -370,6 +374,8 @@ struct Transform_1_t2011406813;
 struct Dictionary_2_t2168025419;
 // System.Collections.Generic.Dictionary`2<System.Int32,Firebase.FutureString/Action>
 struct Dictionary_2_t1596674066;
+// System.Collections.Generic.Dictionary`2<System.Int32,Firebase.FutureVoid/Action>
+struct Dictionary_2_t133523557;
 // System.Collections.Generic.Dictionary`2<System.Int32,System.Object>
 struct Dictionary_2_t1968819495;
 // System.Collections.Generic.Dictionary`2<System.IntPtr,Firebase.Unity.FirebaseAuthService/UserRefreshState>
@@ -506,6 +512,7 @@ extern RuntimeClass* FirebaseException_t627220627_il2cpp_TypeInfo_var;
 extern RuntimeClass* FirebaseHandler_t2087675187_il2cpp_TypeInfo_var;
 extern RuntimeClass* FirebaseUser_t4237635511_il2cpp_TypeInfo_var;
 extern RuntimeClass* FutureString_t4072148675_il2cpp_TypeInfo_var;
+extern RuntimeClass* FutureVoid_t983301800_il2cpp_TypeInfo_var;
 extern RuntimeClass* Future_User_t1455245928_il2cpp_TypeInfo_var;
 extern RuntimeClass* IOException_t4088381929_il2cpp_TypeInfo_var;
 extern RuntimeClass* IndexOutOfRangeException_t1578797820_il2cpp_TypeInfo_var;
@@ -668,6 +675,8 @@ extern const uint32_t FirebaseAuth_get_CurrentUser_m3915863574_MetadataUsageId;
 extern const uint32_t FirebaseAuth_get_DefaultInstance_m236605690_MetadataUsageId;
 extern const uint32_t FirebaseUser_Dispose_m590215956_MetadataUsageId;
 extern const uint32_t FirebaseUser_TokenAsync_m1960073769_MetadataUsageId;
+extern const uint32_t FirebaseUser_UpdateEmailAsync_m1496729830_MetadataUsageId;
+extern const uint32_t FirebaseUser_UpdatePasswordAsync_m2741390156_MetadataUsageId;
 extern const uint32_t FirebaseUser_getCPtr_m1424584513_MetadataUsageId;
 extern const uint32_t FirebaseUser_get_DisplayName_m1864675456_MetadataUsageId;
 extern const uint32_t FirebaseUser_get_UserId_m502665137_MetadataUsageId;
@@ -5009,6 +5018,94 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // FUTURESTRING_T4072148675_H
+#ifndef FUTUREVOID_T983301800_H
+#define FUTUREVOID_T983301800_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// Firebase.FutureVoid
+struct  FutureVoid_t983301800  : public FutureBase_t1024553797
+{
+public:
+	// System.Runtime.InteropServices.HandleRef Firebase.FutureVoid::swigCPtr
+	HandleRef_t3745784362  ___swigCPtr_2;
+	// System.IntPtr Firebase.FutureVoid::callbackData
+	intptr_t ___callbackData_6;
+	// Firebase.FutureVoid/SWIG_CompletionDelegate Firebase.FutureVoid::SWIG_CompletionCB
+	SWIG_CompletionDelegate_t2224793779 * ___SWIG_CompletionCB_7;
+
+public:
+	inline static int32_t get_offset_of_swigCPtr_2() { return static_cast<int32_t>(offsetof(FutureVoid_t983301800, ___swigCPtr_2)); }
+	inline HandleRef_t3745784362  get_swigCPtr_2() const { return ___swigCPtr_2; }
+	inline HandleRef_t3745784362 * get_address_of_swigCPtr_2() { return &___swigCPtr_2; }
+	inline void set_swigCPtr_2(HandleRef_t3745784362  value)
+	{
+		___swigCPtr_2 = value;
+	}
+
+	inline static int32_t get_offset_of_callbackData_6() { return static_cast<int32_t>(offsetof(FutureVoid_t983301800, ___callbackData_6)); }
+	inline intptr_t get_callbackData_6() const { return ___callbackData_6; }
+	inline intptr_t* get_address_of_callbackData_6() { return &___callbackData_6; }
+	inline void set_callbackData_6(intptr_t value)
+	{
+		___callbackData_6 = value;
+	}
+
+	inline static int32_t get_offset_of_SWIG_CompletionCB_7() { return static_cast<int32_t>(offsetof(FutureVoid_t983301800, ___SWIG_CompletionCB_7)); }
+	inline SWIG_CompletionDelegate_t2224793779 * get_SWIG_CompletionCB_7() const { return ___SWIG_CompletionCB_7; }
+	inline SWIG_CompletionDelegate_t2224793779 ** get_address_of_SWIG_CompletionCB_7() { return &___SWIG_CompletionCB_7; }
+	inline void set_SWIG_CompletionCB_7(SWIG_CompletionDelegate_t2224793779 * value)
+	{
+		___SWIG_CompletionCB_7 = value;
+		Il2CppCodeGenWriteBarrier((&___SWIG_CompletionCB_7), value);
+	}
+};
+
+struct FutureVoid_t983301800_StaticFields
+{
+public:
+	// System.Collections.Generic.Dictionary`2<System.Int32,Firebase.FutureVoid/Action> Firebase.FutureVoid::Callbacks
+	Dictionary_2_t133523557 * ___Callbacks_3;
+	// System.Int32 Firebase.FutureVoid::CallbackIndex
+	int32_t ___CallbackIndex_4;
+	// System.Object Firebase.FutureVoid::CallbackLock
+	RuntimeObject * ___CallbackLock_5;
+
+public:
+	inline static int32_t get_offset_of_Callbacks_3() { return static_cast<int32_t>(offsetof(FutureVoid_t983301800_StaticFields, ___Callbacks_3)); }
+	inline Dictionary_2_t133523557 * get_Callbacks_3() const { return ___Callbacks_3; }
+	inline Dictionary_2_t133523557 ** get_address_of_Callbacks_3() { return &___Callbacks_3; }
+	inline void set_Callbacks_3(Dictionary_2_t133523557 * value)
+	{
+		___Callbacks_3 = value;
+		Il2CppCodeGenWriteBarrier((&___Callbacks_3), value);
+	}
+
+	inline static int32_t get_offset_of_CallbackIndex_4() { return static_cast<int32_t>(offsetof(FutureVoid_t983301800_StaticFields, ___CallbackIndex_4)); }
+	inline int32_t get_CallbackIndex_4() const { return ___CallbackIndex_4; }
+	inline int32_t* get_address_of_CallbackIndex_4() { return &___CallbackIndex_4; }
+	inline void set_CallbackIndex_4(int32_t value)
+	{
+		___CallbackIndex_4 = value;
+	}
+
+	inline static int32_t get_offset_of_CallbackLock_5() { return static_cast<int32_t>(offsetof(FutureVoid_t983301800_StaticFields, ___CallbackLock_5)); }
+	inline RuntimeObject * get_CallbackLock_5() const { return ___CallbackLock_5; }
+	inline RuntimeObject ** get_address_of_CallbackLock_5() { return &___CallbackLock_5; }
+	inline void set_CallbackLock_5(RuntimeObject * value)
+	{
+		___CallbackLock_5 = value;
+		Il2CppCodeGenWriteBarrier((&___CallbackLock_5), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUTUREVOID_T983301800_H
 #ifndef ACTION_T1264377477_H
 #define ACTION_T1264377477_H
 #ifdef __clang__
@@ -5563,6 +5660,14 @@ extern "C" IL2CPP_METHOD_ATTR intptr_t AuthUtilPINVOKE_Firebase_Auth_FirebaseUse
 extern "C" IL2CPP_METHOD_ATTR void FutureString__ctor_m2115360400 (FutureString_t4072148675 * __this, intptr_t p0, bool p1, const RuntimeMethod* method);
 // System.Threading.Tasks.Task`1<System.String> Firebase.FutureString::GetTask(Firebase.FutureString)
 extern "C" IL2CPP_METHOD_ATTR Task_1_t3252990864 * FutureString_GetTask_m2289068801 (RuntimeObject * __this /* static, unused */, FutureString_t4072148675 * p0, const RuntimeMethod* method);
+// System.IntPtr Firebase.Auth.AuthUtilPINVOKE::Firebase_Auth_FirebaseUser_UpdateEmail(System.Runtime.InteropServices.HandleRef,System.String)
+extern "C" IL2CPP_METHOD_ATTR intptr_t AuthUtilPINVOKE_Firebase_Auth_FirebaseUser_UpdateEmail_m2973520679 (RuntimeObject * __this /* static, unused */, HandleRef_t3745784362  ___jarg10, String_t* ___jarg21, const RuntimeMethod* method);
+// System.Void Firebase.FutureVoid::.ctor(System.IntPtr,System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void FutureVoid__ctor_m3140861867 (FutureVoid_t983301800 * __this, intptr_t p0, bool p1, const RuntimeMethod* method);
+// System.Threading.Tasks.Task Firebase.FutureVoid::GetTask(Firebase.FutureVoid)
+extern "C" IL2CPP_METHOD_ATTR Task_t3187275312 * FutureVoid_GetTask_m4275693369 (RuntimeObject * __this /* static, unused */, FutureVoid_t983301800 * p0, const RuntimeMethod* method);
+// System.IntPtr Firebase.Auth.AuthUtilPINVOKE::Firebase_Auth_FirebaseUser_UpdatePassword(System.Runtime.InteropServices.HandleRef,System.String)
+extern "C" IL2CPP_METHOD_ATTR intptr_t AuthUtilPINVOKE_Firebase_Auth_FirebaseUser_UpdatePassword_m2082049040 (RuntimeObject * __this /* static, unused */, HandleRef_t3745784362  ___jarg10, String_t* ___jarg21, const RuntimeMethod* method);
 // System.String Firebase.Auth.AuthUtilPINVOKE::Firebase_Auth_FirebaseUser_DisplayName_get(System.Runtime.InteropServices.HandleRef)
 extern "C" IL2CPP_METHOD_ATTR String_t* AuthUtilPINVOKE_Firebase_Auth_FirebaseUser_DisplayName_get_m2334642060 (RuntimeObject * __this /* static, unused */, HandleRef_t3745784362  ___jarg10, const RuntimeMethod* method);
 // System.String Firebase.Auth.AuthUtilPINVOKE::Firebase_Auth_FirebaseUser_UserId_get(System.Runtime.InteropServices.HandleRef)
@@ -6041,6 +6146,52 @@ extern "C" IL2CPP_METHOD_ATTR intptr_t AuthUtilPINVOKE_Firebase_Auth_FirebaseUse
 
 	// Native function invocation
 	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(Firebase_Auth_FirebaseUser_Token)(____jarg10_marshaled, static_cast<int32_t>(___jarg21));
+
+	return returnValue;
+}
+extern "C" intptr_t DEFAULT_CALL Firebase_Auth_FirebaseUser_UpdateEmail(void*, char*);
+// System.IntPtr Firebase.Auth.AuthUtilPINVOKE::Firebase_Auth_FirebaseUser_UpdateEmail(System.Runtime.InteropServices.HandleRef,System.String)
+extern "C" IL2CPP_METHOD_ATTR intptr_t AuthUtilPINVOKE_Firebase_Auth_FirebaseUser_UpdateEmail_m2973520679 (RuntimeObject * __this /* static, unused */, HandleRef_t3745784362  ___jarg10, String_t* ___jarg21, const RuntimeMethod* method)
+{
+	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) (void*, char*);
+
+	// Marshaling of parameter '___jarg10' to native representation
+	void* ____jarg10_marshaled = NULL;
+	____jarg10_marshaled = (void*)___jarg10.get_handle_1();
+
+	// Marshaling of parameter '___jarg21' to native representation
+	char* ____jarg21_marshaled = NULL;
+	____jarg21_marshaled = il2cpp_codegen_marshal_string(___jarg21);
+
+	// Native function invocation
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(Firebase_Auth_FirebaseUser_UpdateEmail)(____jarg10_marshaled, ____jarg21_marshaled);
+
+	// Marshaling cleanup of parameter '___jarg21' native representation
+	il2cpp_codegen_marshal_free(____jarg21_marshaled);
+	____jarg21_marshaled = NULL;
+
+	return returnValue;
+}
+extern "C" intptr_t DEFAULT_CALL Firebase_Auth_FirebaseUser_UpdatePassword(void*, char*);
+// System.IntPtr Firebase.Auth.AuthUtilPINVOKE::Firebase_Auth_FirebaseUser_UpdatePassword(System.Runtime.InteropServices.HandleRef,System.String)
+extern "C" IL2CPP_METHOD_ATTR intptr_t AuthUtilPINVOKE_Firebase_Auth_FirebaseUser_UpdatePassword_m2082049040 (RuntimeObject * __this /* static, unused */, HandleRef_t3745784362  ___jarg10, String_t* ___jarg21, const RuntimeMethod* method)
+{
+	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) (void*, char*);
+
+	// Marshaling of parameter '___jarg10' to native representation
+	void* ____jarg10_marshaled = NULL;
+	____jarg10_marshaled = (void*)___jarg10.get_handle_1();
+
+	// Marshaling of parameter '___jarg21' to native representation
+	char* ____jarg21_marshaled = NULL;
+	____jarg21_marshaled = il2cpp_codegen_marshal_string(___jarg21);
+
+	// Native function invocation
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(Firebase_Auth_FirebaseUser_UpdatePassword)(____jarg10_marshaled, ____jarg21_marshaled);
+
+	// Marshaling cleanup of parameter '___jarg21' native representation
+	il2cpp_codegen_marshal_free(____jarg21_marshaled);
+	____jarg21_marshaled = NULL;
 
 	return returnValue;
 }
@@ -9707,6 +9858,54 @@ extern "C" IL2CPP_METHOD_ATTR Task_1_t3252990864 * FirebaseUser_TokenAsync_m1960
 		Task_1_t3252990864 * L_4 = FutureString_GetTask_m2289068801(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
 		V_0 = L_4;
 		Task_1_t3252990864 * L_5 = V_0;
+		return L_5;
+	}
+}
+// System.Threading.Tasks.Task Firebase.Auth.FirebaseUser::UpdateEmailAsync(System.String)
+extern "C" IL2CPP_METHOD_ATTR Task_t3187275312 * FirebaseUser_UpdateEmailAsync_m1496729830 (FirebaseUser_t4237635511 * __this, String_t* ___email0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (FirebaseUser_UpdateEmailAsync_m1496729830_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Task_t3187275312 * V_0 = NULL;
+	{
+		HandleRef_t3745784362  L_0 = __this->get_swigCPtr_1();
+		String_t* L_1 = ___email0;
+		IL2CPP_RUNTIME_CLASS_INIT(AuthUtilPINVOKE_t590481425_il2cpp_TypeInfo_var);
+		intptr_t L_2 = AuthUtilPINVOKE_Firebase_Auth_FirebaseUser_UpdateEmail_m2973520679(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		FutureVoid_t983301800 * L_3 = (FutureVoid_t983301800 *)il2cpp_codegen_object_new(FutureVoid_t983301800_il2cpp_TypeInfo_var);
+		FutureVoid__ctor_m3140861867(L_3, L_2, (bool)1, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(FutureVoid_t983301800_il2cpp_TypeInfo_var);
+		Task_t3187275312 * L_4 = FutureVoid_GetTask_m4275693369(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
+		V_0 = L_4;
+		Task_t3187275312 * L_5 = V_0;
+		return L_5;
+	}
+}
+// System.Threading.Tasks.Task Firebase.Auth.FirebaseUser::UpdatePasswordAsync(System.String)
+extern "C" IL2CPP_METHOD_ATTR Task_t3187275312 * FirebaseUser_UpdatePasswordAsync_m2741390156 (FirebaseUser_t4237635511 * __this, String_t* ___password0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (FirebaseUser_UpdatePasswordAsync_m2741390156_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Task_t3187275312 * V_0 = NULL;
+	{
+		HandleRef_t3745784362  L_0 = __this->get_swigCPtr_1();
+		String_t* L_1 = ___password0;
+		IL2CPP_RUNTIME_CLASS_INIT(AuthUtilPINVOKE_t590481425_il2cpp_TypeInfo_var);
+		intptr_t L_2 = AuthUtilPINVOKE_Firebase_Auth_FirebaseUser_UpdatePassword_m2082049040(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		FutureVoid_t983301800 * L_3 = (FutureVoid_t983301800 *)il2cpp_codegen_object_new(FutureVoid_t983301800_il2cpp_TypeInfo_var);
+		FutureVoid__ctor_m3140861867(L_3, L_2, (bool)1, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(FutureVoid_t983301800_il2cpp_TypeInfo_var);
+		Task_t3187275312 * L_4 = FutureVoid_GetTask_m4275693369(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
+		V_0 = L_4;
+		Task_t3187275312 * L_5 = V_0;
 		return L_5;
 	}
 }

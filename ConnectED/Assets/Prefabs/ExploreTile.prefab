@@ -871,6 +871,7 @@ MonoBehaviour:
   Miles: {fileID: 114715928080410314}
   Availability: {fileID: 114001674962574840}
   Time: {fileID: 114630818681928742}
+  button: {fileID: 114465755674532400}
 --- !u!114 &114761511579006142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1057,10 +1058,10 @@ RectTransform:
   m_Father: {fileID: 224623692215893568}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.0742205, y: 0.12061246}
-  m_AnchorMax: {x: 0.74885315, y: 0.21776749}
-  m_AnchoredPosition: {x: 20, y: 8}
-  m_SizeDelta: {x: -0.19999695, y: -1.329895}
+  m_AnchorMin: {x: 0.102000006, y: 0.14149612}
+  m_AnchorMax: {x: 0.6257657, y: 0.21776749}
+  m_AnchoredPosition: {x: -5.400009, y: -2}
+  m_SizeDelta: {x: -17.099998, y: -7.1870003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224142950060877374
 RectTransform:

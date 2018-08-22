@@ -12,9 +12,9 @@ public class EventCreator : MonoBehaviour
     
     public InputField title;
     public InputField description;
-    public InputField date;
-    public InputField startTime;
-    public InputField endTime;
+    public Dropdown month;
+    public Dropdown day;
+    public Dropdown year;
     public InputField city;
     public InputField State;
     public InputField Street;
@@ -35,34 +35,53 @@ public class EventCreator : MonoBehaviour
     public bool indoor;
     public bool outdoor;
     public Jsonparser j;
+    public timeUpdater st;
+    public timeUpdater en;
     public returnPressedFields f;
 	private IEnumerator coroutine;
     private string dbevents = "https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/events";
 
-
+    public string[] getDate()
+    {
+        string s;
+		s = (year.value + 2018).ToString();
+        s += "-";
+        if (month.value < 9)
+            s += '0' + (month.value + 1).ToString();
+        else
+            s += (month.value + 1).ToString();
+		Debug.Log(s);
+        s += "-";
+        if(day.value < 9)
+            s += '0' + (day.value + 1).ToString();
+        else
+            s += (day.value + 1).ToString();
+        Debug.Log(s);
+        return new string[] {s};
+    }
     public void initEvent()
     {
         Event e = new Event();
         if(NumberofVolunteers.text != "" || NumberofVolunteers.text !=null)
         e.capacity = int.Parse(NumberofVolunteers.text);
         e.city = city.text;
-        e.date = new string[] { "2018-09-20" };
-        e.day = new string[] { "mon", "tue", "wed" };
+        e.date = getDate();
+        e.day = new string[] { "10"};
         e.e_desc = description.text;
         e.e_title = title.text;
         e.education = "";
-        e.end = new string[] { "16:00"};
+        e.end = en.time();
         e.env = "b";
         e.interests = f.returnFields();
         e.privacy = "o";
         e.qr = "";
         e.req_skills = new string[] { "" };
-        e.start = new string[] { "14:00" };
+        e.start = st.time();
         e.state = State.text;
         e.street = Street.text;
         e.zip_code = zipcode.text;
 
-        if (image.color.a == 1)
+        if (image.texture != null && image.color.a == 1)
         {
             RenderTexture tmp = RenderTexture.GetTemporary(image.texture.width, image.texture.height, 0, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);
             Graphics.Blit(image.texture, tmp);
@@ -77,9 +96,10 @@ public class EventCreator : MonoBehaviour
             e.e_photo = Convert.ToBase64String(myTexture2D.EncodeToJPG());
             //read in with texture2d.loadimage(bytedata);
         }
-
+        Debug.Log(e.e_title);
         string t = "Bearer " + j.token;
         string newEvent = JsonUtility.ToJson(e);
+        Debug.Log(newEvent);
         byte[] bodyRaw2 = Encoding.UTF8.GetBytes(newEvent);
         UnityWebRequest www2 = UnityWebRequest.Post(dbevents, newEvent);
         www2.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw2);
@@ -100,6 +120,11 @@ public class EventCreator : MonoBehaviour
         Debug.Log(www.uploadHandler.data);
         Debug.Log(www.downloadHandler.data);
         Debug.Log(www.GetRequestHeader("Authorization"));
+        if(www.responseCode.ToString() == "503"){
+            Debug.Log("try again: make event");
+            initEvent();
+        }
+            
     }
 
 }

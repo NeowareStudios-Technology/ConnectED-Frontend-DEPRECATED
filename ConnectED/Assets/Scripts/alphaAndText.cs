@@ -20,6 +20,12 @@ public class alphaAndText : MonoBehaviour {
         if (i.color == Color.clear ||i.color.a == 0)
             i.color = Color.white;
     }
+    public void alphaOne()
+    {
+        Color tmp = i.color;
+        tmp.a = 1f;
+        i.color = tmp;
+    }
     public void textColor()
     {
         if (t.color == primary)

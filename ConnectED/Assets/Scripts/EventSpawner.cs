@@ -17,6 +17,7 @@ public class EventSpawner : MonoBehaviour {
     public string getEventurl = "https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/events/";
     public string jsonString;
     public ScrollSnapRect scroll;
+    public GameObject Details;
     private prefill prefill;
     private Event Event;
     public Jsonparser j;
@@ -53,7 +54,7 @@ public class EventSpawner : MonoBehaviour {
                 Debug.Log(www.downloadHandler.text);
                 if (www.responseCode.ToString() == "503")
                 {
-                    Debug.Log("Trying again");
+                    Debug.Log("Trying again : get prefill");
                     populateEvents();
                 }
             }
@@ -109,6 +110,7 @@ public class EventSpawner : MonoBehaviour {
                     GameObject newEvent = Instantiate(prefabEvent, container.transform);
                     Instantiate(dotPrefab, dotContainer.transform);
                     newEvent.GetComponent<EventInitializer>().GetEvent(Event,prefill.distances[i]);
+                    newEvent.GetComponent<EventInitializer>().button.onClick.AddListener(() =>Details.GetComponent<Animator>().SetBool("Show",true));
                 }
             };
         }

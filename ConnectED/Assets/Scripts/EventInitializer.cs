@@ -12,8 +12,17 @@ public class EventInitializer : MonoBehaviour {
     public Text Miles;
     public Text Availability;
     public Text Time;
-	// Use this for initialization
-	
+    public Button button;
+    // Use this for initialization
+
+
+    public void deets()
+    {
+        button.onClick.AddListener(() => GameObject.FindWithTag("Details").GetComponent<DetailChanger>().setDetails(e));
+    }
+
+
+
     public void GetEvent(Event a,float f)
     {
         e = a;
@@ -25,7 +34,7 @@ public class EventInitializer : MonoBehaviour {
             Day.text = GetDay(e.date[0]);
         Miles.text = Mathf.Round(f).ToString() + " Miles away";
         Availability.text = e.num_attendees + " / "+e.capacity.ToString();
-        Time.text = e.start[0];
+        Time.text = GetTime(e.start[0]);
         if(e.e_photo.Length > 300){
             Texture2D tex = new Texture2D(200, 200);
 
@@ -36,8 +45,26 @@ public class EventInitializer : MonoBehaviour {
                 image.texture = tex;
 
         }
+
+        deets();
             
     }
+    public string GetTime(string s){
+       
+        string hour = s.Substring(0, 2);
+		string ending = s.Substring(2);
+
+            int ihour = int.Parse(hour);
+            ihour = ihour - 12;
+        if (ihour < 1)
+            return (ihour + 12).ToString() + ending + "am";
+        else
+            return ihour.ToString() + ending + "pm";
+
+    }
+            
+
+
     public string GetMonth(string s){
         string m = s.Substring(0, 2);
         switch(m)

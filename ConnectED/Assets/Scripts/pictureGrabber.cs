@@ -38,7 +38,7 @@ public class pictureGrabber : MonoBehaviour {
                     //read in with texture2d.loadimage(bytedata);
 
                 Color[] c = myTexture2D.GetPixels(myTexture2D.width / 2 - 200, myTexture2D.height / 2 - 200, 400, 400);
-                Texture2D m2Texture = new Texture2D(300, 300);
+                Texture2D m2Texture = new Texture2D(400, 400);
                 m2Texture.SetPixels(c);
                 m2Texture.Apply();
                 texture = m2Texture;

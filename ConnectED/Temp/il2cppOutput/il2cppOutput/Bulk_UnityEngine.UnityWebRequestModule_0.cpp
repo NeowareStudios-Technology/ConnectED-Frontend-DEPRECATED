@@ -233,6 +233,7 @@ extern const uint32_t UnityWebRequest_InternalSetCustomMethod_m3670745235_Metada
 extern const uint32_t UnityWebRequest_InternalSetMethod_m287631745_MetadataUsageId;
 extern const uint32_t UnityWebRequest_InternalSetUrl_m1036291515_MetadataUsageId;
 extern const uint32_t UnityWebRequest_Post_m4211532029_MetadataUsageId;
+extern const uint32_t UnityWebRequest_Put_m3448334644_MetadataUsageId;
 extern const uint32_t UnityWebRequest_SetRequestHeader_m2927335855_MetadataUsageId;
 extern const uint32_t UnityWebRequest_SetupPost_m862219238_MetadataUsageId;
 extern const uint32_t UnityWebRequest_set_downloadHandler_m970510352_MetadataUsageId;
@@ -3256,14 +3257,14 @@ extern "C" IL2CPP_METHOD_ATTR int32_t UnityWebRequest_SetDownloadHandler_m263709
 extern "C" IL2CPP_METHOD_ATTR void DownloadHandlerBuffer__ctor_m914761499 (DownloadHandlerBuffer_t2928496527 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Networking.UnityWebRequest::.ctor(System.String,System.String,UnityEngine.Networking.DownloadHandler,UnityEngine.Networking.UploadHandler)
 extern "C" IL2CPP_METHOD_ATTR void UnityWebRequest__ctor_m3895125645 (UnityWebRequest_t463507806 * __this, String_t* ___url0, String_t* ___method1, DownloadHandler_t2937767557 * ___downloadHandler2, UploadHandler_t2993558019 * ___uploadHandler3, const RuntimeMethod* method);
+// System.Void UnityEngine.Networking.UploadHandlerRaw::.ctor(System.Byte[])
+extern "C" IL2CPP_METHOD_ATTR void UploadHandlerRaw__ctor_m1397254157 (UploadHandlerRaw_t25761545 * __this, ByteU5BU5D_t4116647657* ___data0, const RuntimeMethod* method);
 // System.Void UnityEngine.Networking.UnityWebRequest::.ctor(System.String,System.String)
 extern "C" IL2CPP_METHOD_ATTR void UnityWebRequest__ctor_m2386773268 (UnityWebRequest_t463507806 * __this, String_t* ___url0, String_t* ___method1, const RuntimeMethod* method);
 // System.Void UnityEngine.Networking.UnityWebRequest::SetupPost(UnityEngine.Networking.UnityWebRequest,System.String)
 extern "C" IL2CPP_METHOD_ATTR void UnityWebRequest_SetupPost_m862219238 (RuntimeObject * __this /* static, unused */, UnityWebRequest_t463507806 * ___request0, String_t* ___postData1, const RuntimeMethod* method);
 // System.String UnityEngine.WWWTranscoder::DataEncode(System.String,System.Text.Encoding)
 extern "C" IL2CPP_METHOD_ATTR String_t* WWWTranscoder_DataEncode_m692723224 (RuntimeObject * __this /* static, unused */, String_t* ___toEncode0, Encoding_t1523322056 * ___e1, const RuntimeMethod* method);
-// System.Void UnityEngine.Networking.UploadHandlerRaw::.ctor(System.Byte[])
-extern "C" IL2CPP_METHOD_ATTR void UploadHandlerRaw__ctor_m1397254157 (UploadHandlerRaw_t25761545 * __this, ByteU5BU5D_t4116647657* ___data0, const RuntimeMethod* method);
 // System.Void UnityEngine.Networking.UploadHandler::set_contentType(System.String)
 extern "C" IL2CPP_METHOD_ATTR void UploadHandler_set_contentType_m2709466885 (UploadHandler_t2993558019 * __this, String_t* ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.AsyncOperation::.ctor()
@@ -5127,6 +5128,42 @@ IL_001a:
 	{
 		UnityWebRequest_t463507806 * L_4 = V_1;
 		return L_4;
+	}
+}
+// UnityEngine.Networking.UnityWebRequest UnityEngine.Networking.UnityWebRequest::Put(System.String,System.String)
+extern "C" IL2CPP_METHOD_ATTR UnityWebRequest_t463507806 * UnityWebRequest_Put_m3448334644 (RuntimeObject * __this /* static, unused */, String_t* ___uri0, String_t* ___bodyData1, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UnityWebRequest_Put_m3448334644_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	UnityWebRequest_t463507806 * V_0 = NULL;
+	UnityWebRequest_t463507806 * V_1 = NULL;
+	{
+		String_t* L_0 = ___uri0;
+		DownloadHandlerBuffer_t2928496527 * L_1 = (DownloadHandlerBuffer_t2928496527 *)il2cpp_codegen_object_new(DownloadHandlerBuffer_t2928496527_il2cpp_TypeInfo_var);
+		DownloadHandlerBuffer__ctor_m914761499(L_1, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Encoding_t1523322056_il2cpp_TypeInfo_var);
+		Encoding_t1523322056 * L_2 = Encoding_get_UTF8_m1008486739(NULL /*static, unused*/, /*hidden argument*/NULL);
+		String_t* L_3 = ___bodyData1;
+		NullCheck(L_2);
+		ByteU5BU5D_t4116647657* L_4 = VirtFuncInvoker1< ByteU5BU5D_t4116647657*, String_t* >::Invoke(10 /* System.Byte[] System.Text.Encoding::GetBytes(System.String) */, L_2, L_3);
+		UploadHandlerRaw_t25761545 * L_5 = (UploadHandlerRaw_t25761545 *)il2cpp_codegen_object_new(UploadHandlerRaw_t25761545_il2cpp_TypeInfo_var);
+		UploadHandlerRaw__ctor_m1397254157(L_5, L_4, /*hidden argument*/NULL);
+		UnityWebRequest_t463507806 * L_6 = (UnityWebRequest_t463507806 *)il2cpp_codegen_object_new(UnityWebRequest_t463507806_il2cpp_TypeInfo_var);
+		UnityWebRequest__ctor_m3895125645(L_6, L_0, _stringLiteral1131442134, L_1, L_5, /*hidden argument*/NULL);
+		V_0 = L_6;
+		UnityWebRequest_t463507806 * L_7 = V_0;
+		V_1 = L_7;
+		goto IL_0029;
+	}
+
+IL_0029:
+	{
+		UnityWebRequest_t463507806 * L_8 = V_1;
+		return L_8;
 	}
 }
 // UnityEngine.Networking.UnityWebRequest UnityEngine.Networking.UnityWebRequest::Post(System.String,System.String)

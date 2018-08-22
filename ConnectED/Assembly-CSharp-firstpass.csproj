@@ -66,6 +66,7 @@
     <Compile Include="Assets\Plugins\NativeGallery\iOS\NGMediaReceiveCallbackiOS.cs" />
     <Compile Include="Assets\Plugins\NativeGallery\iOS\NGMediaSaveCallbackiOS.cs" />
     <Compile Include="Assets\Plugins\NativeGallery\NativeGallery.cs" />
+    <None Include="Assets\Plugins\Android\Firebase\res\values\google-services.xml" />
     <None Include="Assets\Plugins\Android\Firebase\AndroidManifest.xml" />
     <None Include="Assets\Plugins\NativeGallery\README.txt" />
     <Reference Include="UnityEditor.StandardEvents">

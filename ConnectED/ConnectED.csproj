@@ -336,6 +336,12 @@
     <Compile Include="Assets\Scripts\animationController.cs" />
     <Compile Include="Assets\Scripts\APImanager.cs" />
     <Compile Include="Assets\Scripts\EventCreationController.cs" />
+    <Compile Include="Assets\Scripts\EventCreator.cs" />
+    <Compile Include="Assets\Scripts\EventInitializer.cs" />
+    <Compile Include="Assets\Scripts\EventSpawner.cs" />
+    <Compile Include="Assets\Scripts\EventTagger.cs" />
+    <Compile Include="Assets\Scripts\FieldsController.cs" />
+    <Compile Include="Assets\Scripts\FieldsReturner.cs" />
     <Compile Include="Assets\Scripts\getProfileinfo.cs" />
     <Compile Include="Assets\Scripts\Jsonparser.cs" />
     <Compile Include="Assets\Scripts\lerpMachine.cs" />
@@ -362,6 +368,7 @@
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.79.0.txt" />
     <None Include="Assets\Plugins\Android\Firebase\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\Firebase\res\values\google-services.xml" />
     <None Include="Assets\Plugins\NativeGallery\README.txt" />
     <None Include="Assets\StreamingAssets\HTML.txt" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />

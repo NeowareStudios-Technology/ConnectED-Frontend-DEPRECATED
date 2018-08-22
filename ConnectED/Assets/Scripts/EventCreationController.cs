@@ -37,6 +37,10 @@ public class EventCreationController : MonoBehaviour {
         {
             EventSettings.SetActive(false);
             EventSubmission.SetActive(true);
+            return;
+        }
+        if (EventSubmission.activeSelf)
+        {
             evcr.initEvent();
             return;
         }

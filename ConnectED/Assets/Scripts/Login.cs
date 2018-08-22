@@ -39,11 +39,15 @@ public class Login : MonoBehaviour {
             if (task.IsCanceled)
             {
                 Debug.LogError("SignInWithEmailAndPasswordAsync was canceled.");
+                PlayerPrefs.DeleteAll();
+                j.alreadyin.SetActive(false);
                 return;
             }
             if (task.IsFaulted)
             {
                 Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
+				PlayerPrefs.DeleteAll();
+                j.alreadyin.SetActive(false);
                 return;
             }
         
@@ -53,13 +57,13 @@ public class Login : MonoBehaviour {
             j.UserID = newUser.UserId;
             GetToken(auth);
 
+			Debug.Log("Logging in: "+e + " " + p);
+            EventPanel.enabled = true;
         });
 
 
-	
-        Debug.Log("Logging in: "+e + " " + p);
+    
 
-        EventPanel.enabled = true;
 
     }
 
