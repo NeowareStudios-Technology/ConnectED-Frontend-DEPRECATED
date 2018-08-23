@@ -43,7 +43,7 @@ public class calendarPopulator : MonoBehaviour
         setMonth(ref nov, 30, "November");
         setMonth(ref dec, 31, "December");
         currentMonth = aug;
-        contentHeight = this.gameObject.GetComponent<RectTransform>().rect.height;
+        contentHeight = this.gameObject.GetComponent<RectTransform>().sizeDelta.y;
         populate();
     }
 
@@ -68,7 +68,8 @@ public class calendarPopulator : MonoBehaviour
         count++;
         if (count < 15)
         {
-            calendarContainer.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(calendarContainer.gameObject.GetComponent<RectTransform>().rect.width,contentHeight * count);
+            RectTransform rt = calendarContainer.gameObject.GetComponent<RectTransform>();
+            rt.sizeDelta = new Vector2 (rt.sizeDelta.x, contentHeight * count);
             Debug.Log("Finished " + currentMonth.monthName);
             switch (currentMonth.monthName)
             {
