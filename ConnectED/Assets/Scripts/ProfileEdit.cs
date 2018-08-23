@@ -110,11 +110,14 @@ public class ProfileEdit : MonoBehaviour {
         Debug.Log(www.uploadHandler.data);
         Debug.Log(www.downloadHandler.data);
         Debug.Log(www.GetRequestHeader("Authorization"));
-       // if(www.responseCode.ToString() == "200")
-       //{
-       //    if (EmailCheck && Email.text != j.profile.email)
-       //        changeEmail();
-       //}
+        if(www.responseCode.ToString() == "200")
+       {
+
+            this.gameObject.GetComponent<Animator>().SetTrigger("EditExit");
+            this.gameObject.GetComponent<Animator>().ResetTrigger("Edit");
+           //if (EmailCheck && Email.text != j.profile.email)
+           //    changeEmail();
+       }
     }
 
     //public void changeEmail()

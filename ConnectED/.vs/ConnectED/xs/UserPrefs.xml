@@ -1,22 +1,15 @@
 ﻿<Properties StartupConfiguration="{A4FE120D-5677-0BE6-89B0-DE97FDD27F5C}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/loadingRotation.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/dayInfo.cs">
     <Files>
       <File FileName="Assets/Scripts/EventInitializer.cs" Line="61" Column="13" />
       <File FileName="Assets/Scripts/EventSpawner.cs" Line="108" Column="1" />
       <File FileName="Assets/Scripts/EventCreator.cs" Line="40" Column="34" />
       <File FileName="Assets/Scripts/pictureGrabber.cs" Line="41" Column="59" />
-      <File FileName="Assets/DetailChanger.cs" Line="24" Column="44" />
       <File FileName="Assets/Scripts/ProfileSetter.cs" Line="91" Column="9" />
-      <File FileName="Assets/TeamCreation.cs" Line="28" Column="28" />
-      <File FileName="Assets/Scripts/Login.cs" Line="50" Column="46" />
-      <File FileName="Assets/Scripts/Jsonparser.cs" Line="101" Column="1" />
-      <File FileName="Assets/timeUpdater.cs" Line="33" Column="1" />
-      <File FileName="Assets/Scripts/EventCreationController.cs" Line="43" Column="10" />
-      <File FileName="Assets/dateDayUpdater.cs" Line="20" Column="20" />
-      <File FileName="Assets/Scripts/ProfileEdit.cs" Line="113" Column="10" />
       <File FileName="Assets/Scripts/ScrollSnapRect.cs" Line="65" Column="20" />
-      <File FileName="Assets/loadingRotation.cs" Line="10" Column="28" />
+      <File FileName="Assets/calendarPopulator.cs" Line="9" Column="28" />
+      <File FileName="Assets/dayInfo.cs" Line="7" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

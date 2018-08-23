@@ -61,13 +61,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\dateDayUpdater.cs" />
-    <Compile Include="Assets\DetailChanger.cs" />
-    <Compile Include="Assets\EditScheduleController.cs" />
-    <Compile Include="Assets\loadingRotation.cs" />
+    <Compile Include="Assets\calendarPopulator.cs" />
+    <Compile Include="Assets\dayInfo.cs" />
     <Compile Include="Assets\Scripts\alphaAndText.cs" />
     <Compile Include="Assets\Scripts\animationController.cs" />
     <Compile Include="Assets\Scripts\APImanager.cs" />
+    <Compile Include="Assets\Scripts\dateDayUpdater.cs" />
+    <Compile Include="Assets\Scripts\DetailChanger.cs" />
+    <Compile Include="Assets\Scripts\EditScheduleController.cs" />
     <Compile Include="Assets\Scripts\EventCreationController.cs" />
     <Compile Include="Assets\Scripts\EventCreator.cs" />
     <Compile Include="Assets\Scripts\EventInitializer.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\Scripts\getProfileinfo.cs" />
     <Compile Include="Assets\Scripts\Jsonparser.cs" />
     <Compile Include="Assets\Scripts\lerpMachine.cs" />
+    <Compile Include="Assets\Scripts\loadingRotation.cs" />
     <Compile Include="Assets\Scripts\Login.cs" />
     <Compile Include="Assets\Scripts\Logout.cs" />
     <Compile Include="Assets\Scripts\pictureGrabber.cs" />
@@ -90,9 +92,9 @@
     <Compile Include="Assets\Scripts\slidertext.cs" />
     <Compile Include="Assets\Scripts\spriteSwitcher.cs" />
     <Compile Include="Assets\Scripts\SwitchScene.cs" />
+    <Compile Include="Assets\Scripts\TeamCreation.cs" />
     <Compile Include="Assets\Scripts\timeOfDay.cs" />
-    <Compile Include="Assets\TeamCreation.cs" />
-    <Compile Include="Assets\timeUpdater.cs" />
+    <Compile Include="Assets\Scripts\timeUpdater.cs" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\Plugins\link.xml" />
     <None Include="Assets\StreamingAssets\HTML.txt" />
