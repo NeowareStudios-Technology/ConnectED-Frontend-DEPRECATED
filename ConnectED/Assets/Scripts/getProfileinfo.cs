@@ -32,7 +32,7 @@ public class getProfileinfo : MonoBehaviour {
 
         Debug.Log("Getting profile with "+PlayerPrefs.GetString("email", "email"));
 		//using (UnityWebRequest www = UnityWebRequest.Get("https://webhook.site/8e284497-5145-481d-8a18-0883dfd599e5"))
-        using (UnityWebRequest www = UnityWebRequest.Get("https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/profiles/" + PlayerPrefs.GetString("email", "email").ToLower()))
+        using (UnityWebRequest www = UnityWebRequest.Get("https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles/" + PlayerPrefs.GetString("email", "email").ToLower()))
         {
             
 
@@ -70,7 +70,7 @@ public class getProfileinfo : MonoBehaviour {
         string email = PlayerPrefs.GetString("email");
         string password = PlayerPrefs.GetString("password");
 
-        using (UnityWebRequest www = UnityWebRequest.Get("https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/profiles/" + "&email_to_get=" + other + "?passwrd=" + password + "&email=" + email))
+        using (UnityWebRequest www = UnityWebRequest.Get("https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles/" + "&email_to_get=" + other + "?passwrd=" + password + "&email=" + email))
         {
             yield return www.SendWebRequest();
             if (www.isNetworkError || www.isHttpError)

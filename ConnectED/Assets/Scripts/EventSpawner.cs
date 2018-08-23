@@ -13,8 +13,8 @@ public class EventSpawner : MonoBehaviour {
     public GameObject dotContainer;
     public GameObject prefabEvent;
     public GameObject dotPrefab;
-    public string prefillurl = "https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/events/prefill";
-    public string getEventurl = "https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/events/";
+    public string prefillurl = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/events/prefill";
+    public string getEventurl = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/events/";
     public string jsonString;
     public ScrollSnapRect scroll;
     public GameObject Details;

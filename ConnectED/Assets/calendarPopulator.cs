@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class calendarPopulator : MonoBehaviour
 {
-    private int calendarSpacer = 3;
     public GameObject calendarPrefab;
     public GameObject newCalendarDot;
     public GameObject calendarContainer;

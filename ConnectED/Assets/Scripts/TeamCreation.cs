@@ -18,7 +18,7 @@ public class TeamCreation : MonoBehaviour {
     private Team team;
     private IEnumerator coroutine;
     public Jsonparser j;
-    public string dbteams ="https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/teams";
+    public string dbteams ="https://connected-dev-214119.appspot.com/_ah/api/connected/v1/teams";
 	// Use this for initialization
     public void makeTeam()
     {

@@ -43,7 +43,7 @@ public class Jsonparser : MonoBehaviour {
     public GameObject alreadyin;
     private string path;
     private string jsonString;
-    private string dbprofiles = "https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/profiles";
+    private string dbprofiles = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles";
     //Post
     private IEnumerator coroutine;
 
@@ -96,7 +96,7 @@ public class Jsonparser : MonoBehaviour {
                 // Firebase Unity SDK is not safe to use here.
             }
         });
-        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://fleet-fortress-211105.firebaseio.com/");
+        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://connected-dev-214119.firebaseio.com/");
         auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
 
         StartCoroutine(StartLocationService());

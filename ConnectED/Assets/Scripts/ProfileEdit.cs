@@ -37,7 +37,7 @@ public class ProfileEdit : MonoBehaviour {
     public returnPressedFields r;
     public returnPressedFields s;
     private IEnumerator coroutine;
-    public string dbProfilePut = "https://fleet-fortress-211105.appspot.com/_ah/api/connected/v1/profiles";
+    public string dbProfilePut = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles";
     protected Firebase.Auth.FirebaseAuth auth;
     public void GetProfile()
     {
