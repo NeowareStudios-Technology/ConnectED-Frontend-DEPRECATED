@@ -137,6 +137,10 @@ public class Event
     public string[] date;
     public string[] day;
     public string e_desc;
+    public double e_lat;
+    public double e_lon;
+    public string e_organizer;
+    public string e_orig_title;
     public string e_photo;
     public string e_title;
     public string education;

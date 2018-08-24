@@ -7,4 +7,5 @@ public class dayInfo : MonoBehaviour {
     public string dayNumber;
     public string Month;
     public string Year;
+    public bool marked = false;
 }

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Firebase;
+using Firebase.Auth;
+using UnityEngine.Networking;
+using System.Text;
 
 public class calendarPopulator : MonoBehaviour
 {
@@ -28,10 +32,13 @@ public class calendarPopulator : MonoBehaviour
     public Month oct = new Month();
     public Month nov = new Month();
     public Month dec = new Month();
+    public Month[] calendar;
     public Month currentMonth;
     public float contentHeight;
-    public void Start()
+    public Event[] dates;
+    public void StartCalendar(Event[] a)
     {
+        setEventsInCalendar(a);
         setMonth(ref jan, 31, "January");
         setMonth(ref feb, 28, "February");
         setMonth(ref mar, 31, "March");
@@ -44,12 +51,13 @@ public class calendarPopulator : MonoBehaviour
         setMonth(ref oct, 31, "October");
         setMonth(ref nov, 30, "November");
         setMonth(ref dec, 31, "December");
+        calendar = new Month[] { jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec };
         currentMonth = aug;
         contentHeight = this.gameObject.GetComponent<RectTransform>().sizeDelta.y;
         populate();
     }
 
-    public void setYearMonth(string s,string m)
+    public void setYearMonth(string s, string m)
     {
         yearMonth.text = s;
         changeMonthColor(m);
@@ -81,18 +89,19 @@ public class calendarPopulator : MonoBehaviour
                 newCalendarDot.GetComponent<Rigidbody2D>().isKinematic = true;
                 newCalendarDot.AddComponent<firstOfMonthTrigger>();
                 newCalendarDot.GetComponent<firstOfMonthTrigger>().p = this;
+                newCalendarDot.tag = "1";
             }
         }
         count++;
         if (count < 15)
         {
             RectTransform rt = calendarContainer.gameObject.GetComponent<RectTransform>();
-            rt.sizeDelta = new Vector2 (rt.sizeDelta.x, contentHeight * count);
+            rt.sizeDelta = new Vector2(rt.sizeDelta.x, contentHeight * count);
             //Debug.Log("Finished " + currentMonth.monthName);
             switch (currentMonth.monthName)
             {
                 case "January":
-                   
+
                     currentMonth = feb;
                     populate();
                     break;
@@ -149,14 +158,17 @@ public class calendarPopulator : MonoBehaviour
         calendarContainer.transform.parent.gameObject.AddComponent<ContentSizeFitter>();
         calendarContainer.transform.parent.gameObject.GetComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
         monthTrigger.SetActive(true);
+        eventTrigger();
     }
     public Color grey;
     public Color white;
+    public Color brightWhite;
+    public Color blue;
     public void changeMonthColor(string s)
     {
         for (int i = 0; i < calendarContainer.transform.childCount; i++)
         {
-            if (calendarContainer.transform.GetChild(i).GetComponent<dayInfo>() != null)
+            if (calendarContainer.transform.GetChild(i).GetComponent<dayInfo>() != null && !calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().marked)
             {
 
                 if (calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Month != s)
@@ -164,8 +176,269 @@ public class calendarPopulator : MonoBehaviour
                     calendarContainer.transform.GetChild(i).GetChild(0).GetComponent<Text>().color = grey;
                 }
                 else
+                {
                     calendarContainer.transform.GetChild(i).GetChild(0).GetComponent<Text>().color = white;
+                }
             }
         }
     }
+
+
+    public void setEventsInCalendar(Event[] e)
+    {
+        dates = new Event[e.Length];
+        dates = e;
+
+        instantiateCalendarButtons();
+
+    }
+    public GameObject calendarButtonPrefab;
+    private GameObject newCalendarButton;
+    public GameObject calendarDotPrefab;
+    public GameObject calendarButtonContainerPrefab;
+    private GameObject newCalendarButtonContainerPrefab;
+    public GameObject calendarButtonPanel;
+    public GameObject calendarButtonDotContainer;
+    public void instantiateCalendarButtons()
+    {
+        newCalendarButtonContainerPrefab = Instantiate(calendarButtonContainerPrefab, calendarButtonPanel.transform);
+        Instantiate(calendarDotPrefab, calendarButtonDotContainer.transform);
+        for (int i = 0; i < dates.Length; i++)
+        {
+            if(newCalendarButtonContainerPrefab.transform.childCount == 2)
+            {
+                newCalendarButtonContainerPrefab = Instantiate(calendarButtonContainerPrefab, calendarButtonPanel.transform); 
+				Instantiate(calendarDotPrefab, calendarButtonDotContainer.transform);
+            }
+            newCalendarButton = Instantiate(calendarButtonPrefab, newCalendarButtonContainerPrefab.transform);
+            newCalendarButton.GetComponent<CalendarEventButton>().setCalendarEvent(dates[i]);
+        }
+
+        calendarButtonPanel.transform.parent.GetComponent<ScrollSnapRect>().enabled = true;
+        calendarButtonPanel.transform.parent.GetComponent<ScrollSnapRect>().Refresh();
+
+    }
+
+    public void eventTrigger()
+    {
+        string[] eventDays = new string[dates.Length];
+        int goodEvent = 0;
+        for (int i = 0; i < dates.Length; i++)
+        {
+            if (PlayerPrefs.GetString("email") == dates[i].e_organizer)
+            {
+                eventDays[goodEvent] = dates[i].date[0];
+                goodEvent++;
+            }
+        }
+        string[] temp = new string[goodEvent];
+        for (int i = 0; i < goodEvent; i++)
+            temp[i] = eventDays[i];
+
+        setEventDate(temp);
+    }
+
+
+    public void setEventDate(string[] allEvents)
+    {
+        int currentEvent = 0;
+        string month = allEvents[0].Substring(0, 2);
+        string day = allEvents[0].Substring(3, 2);
+        string year = allEvents[0].Substring(6, 4);
+        Debug.Log(month + day + year);
+        Debug.Log("Setting Event " + allEvents);
+        Debug.Log("Child count " + calendarContainer.transform.childCount);
+        int inc = 1;
+        for (int i = 3; i < calendarContainer.transform.childCount; i = i + inc)
+        {
+            if (i == 2)
+            {
+                inc = 1;
+            }
+            if (calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Month == calendar[int.Parse(month) - 1].monthName)
+            {
+                // if same day and year
+                if (calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().dayNumber == day && year == calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Year)
+                {
+                    Debug.Log("Setting day for event " + month + "/" + day);
+                    calendarContainer.transform.GetChild(i).GetChild(0).GetComponent<Text>().color = blue;
+                    calendarContainer.transform.GetChild(i).GetComponent<Image>().color = brightWhite;
+                    calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().marked = true;
+
+
+                    currentEvent++;
+                    if (currentEvent == allEvents.Length)
+                    {
+                        return;
+                    }
+                    month = allEvents[currentEvent].Substring(0, 2);
+                    day = allEvents[currentEvent].Substring(3, 2);
+                    year = allEvents[currentEvent].Substring(6, 4);
+
+                    //if the day is less the month is the same and the year is less or the same
+                    //if (int.Parse(day) < int.Parse(calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().dayNumber) && month == calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Month && int.Parse(year) <= int.Parse(calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Year))
+                    //{
+                    //    Debug.Log(month+day+year +" vs "+ calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Month + calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().dayNumber + calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Year);
+                    //    Debug.Log("inc is neg");
+                    //    inc = -1;
+                    //}
+                    ////if the month and year is lower
+                    //if (getMonthNumber(month) < getMonthNumber(calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Month) && int.Parse(year) <= int.Parse(calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Year))
+                    //{
+                    //    Debug.Log("inc is neg");
+                    //    inc = -1;
+                    //}
+                    //else
+                    //{
+                    //    Debug.Log("inc is pos");
+                    //    inc = 1;
+                    //}
+                }
+
+            }
+            if (i == calendarContainer.transform.childCount - 4)
+            {
+                Debug.Log("Reverse");
+                inc = -1;
+            }
+
+        }
+    }
+    
+
+    public int getMonthNumber(string m)
+    {
+        switch (m)
+        {
+            case "January":
+                return 1;
+            case "February":
+                return 2;
+            case "March":
+                return 3;
+            case "April":
+                return 4;
+            case "May":
+                return 5;
+            case "June":
+                return 6;
+            case "July":
+                return 7;
+            case "August":
+                return 8;
+            case "September":
+                return 9;
+            case "October":
+                return 10;
+            case "November":
+                return 11;
+            case "December":
+                return 12;
+        }
+
+        return 1;
+    }
+
+
+    private string prefillurl = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/events/prefill/dates";
+    private Jsonparser j;
+    private string jsonString;
+    timePrefill prefill;
+    public void populateEvents()
+    {
+        j = GameObject.FindWithTag("Player").GetComponent<Jsonparser>();
+        StartCoroutine(prefillLister());
+    }
+    IEnumerator prefillLister()
+    {
+        int retry = 0;
+        FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+        FirebaseUser user = auth.CurrentUser;
+
+
+        Debug.Log("Prefilling events by date");
+        //using (UnityWebRequest www = UnityWebRequest.Get("https://webhook.site/8e284497-5145-481d-8a18-0883dfd599e5"))
+        using (UnityWebRequest www = UnityWebRequest.Get(prefillurl))
+        {
+
+
+
+            www.SetRequestHeader("Authorization", "Bearer " + j.token);
+            www.SetRequestHeader("Content-Type", "application/json");
+
+            yield return www.SendWebRequest();
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.responseCode);
+                Debug.Log(www.url);
+                Debug.Log(www.GetRequestHeader("Authorization"));
+                Debug.Log(www.GetRequestHeader("Content-Type"));
+                Debug.Log(www.error);
+                Debug.Log(www.downloadHandler.text);
+                if (www.responseCode.ToString() == "503" & retry < 3)
+                {
+                    Debug.Log("Trying again : get prefill");
+                    populateEvents();
+                }
+            }
+            else
+            {
+                Debug.Log(www.responseCode);
+                byte[] results = www.downloadHandler.data;
+                jsonString = "";
+                jsonString = Encoding.UTF8.GetString(results);
+                Debug.Log(jsonString);
+                prefill = JsonUtility.FromJson<timePrefill>(jsonString);
+                StartCoroutine(Populator());
+            }
+        };
+    }
+    private Event[] allEvents;
+    private string getEventurl = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/events/";
+
+
+    IEnumerator Populator()
+    {
+        FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+        FirebaseUser user = auth.CurrentUser;
+        allEvents = new Event[prefill.events.Length];
+        Event e;
+        for (int i = 0; i < prefill.events.Length; i++)
+        {
+            string[] trueURL = prefill.events[i].Split('_');
+            //using (UnityWebRequest www = UnityWebRequest.Get("https://webhook.site/8e284497-5145-481d-8a18-0883dfd599e5"))
+            using (UnityWebRequest www = UnityWebRequest.Get(getEventurl + trueURL[1]))
+            {
+
+
+
+                www.SetRequestHeader("Authorization", "Bearer " + j.token);
+                www.SetRequestHeader("Content-Type", "application/json");
+
+                yield return www.SendWebRequest();
+                if (www.isNetworkError || www.isHttpError)
+                {
+                    Debug.Log(www.responseCode);
+                    Debug.Log(www.url);
+                    Debug.Log(www.GetRequestHeader("Authorization"));
+                    Debug.Log(www.GetRequestHeader("Content-Type"));
+                    Debug.Log(www.error);
+                    Debug.Log(www.downloadHandler.text);
+                }
+                else
+                {
+                    Debug.Log(www.responseCode);
+                    byte[] results = www.downloadHandler.data;
+                    jsonString = "";
+                    jsonString = Encoding.UTF8.GetString(results);
+                    Debug.Log(jsonString);
+                    e = JsonUtility.FromJson<Event>(jsonString);
+
+                    allEvents[i] = e;
+                }
+            };
+        }
+    }
+
+
 }

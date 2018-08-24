@@ -20,10 +20,13 @@ public class EventSpawner : MonoBehaviour {
     public GameObject Details;
     private prefill prefill;
     private Event Event;
+    private Event[] allEvents;
     public Jsonparser j;
     public GameObject Loading;
+    public calendarPopulator calPop;
     public void populateEvents()
     {
+        calPop.populateEvents();
         StartCoroutine(prefillLister());
     }
 
@@ -78,8 +81,7 @@ public class EventSpawner : MonoBehaviour {
     {
         FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
         FirebaseUser user = auth.CurrentUser;
-
-
+        allEvents = new Event[prefill.events.Length];
         for (int i = 0; i < prefill.events.Length; i++)
         {
             //using (UnityWebRequest www = UnityWebRequest.Get("https://webhook.site/8e284497-5145-481d-8a18-0883dfd599e5"))
@@ -109,6 +111,8 @@ public class EventSpawner : MonoBehaviour {
                     jsonString = Encoding.UTF8.GetString(results);
                     Debug.Log(jsonString);
                     Event = JsonUtility.FromJson<Event>(jsonString);
+                   
+                    allEvents[i] = Event;
                     GameObject newEvent = Instantiate(prefabEvent, container.transform);
                     Instantiate(dotPrefab, dotContainer.transform);
                     newEvent.GetComponent<EventInitializer>().GetEvent(Event,prefill.distances[i]);
@@ -119,11 +123,20 @@ public class EventSpawner : MonoBehaviour {
         //refresh here
         Loading.SetActive(false);
         scroll.Refresh();
+		calPop.StartCalendar(allEvents);
     }
 }
 [System.Serializable]
 public class prefill
 {
     public int[] distances;
+    public string[] events;
+}
+
+
+
+
+public class timePrefill
+{
     public string[] events;
 }
