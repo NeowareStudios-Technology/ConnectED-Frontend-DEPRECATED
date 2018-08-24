@@ -49,9 +49,10 @@ public class calendarPopulator : MonoBehaviour
         populate();
     }
 
-    public void setYearMonth(string s)
+    public void setYearMonth(string s,string m)
     {
         yearMonth.text = s;
+        changeMonthColor(m);
     }
 
     public void setMonth(ref Month m, int totalDays, string monthName)
@@ -148,5 +149,23 @@ public class calendarPopulator : MonoBehaviour
         calendarContainer.transform.parent.gameObject.AddComponent<ContentSizeFitter>();
         calendarContainer.transform.parent.gameObject.GetComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
         monthTrigger.SetActive(true);
+    }
+    public Color grey;
+    public Color white;
+    public void changeMonthColor(string s)
+    {
+        for (int i = 0; i < calendarContainer.transform.childCount; i++)
+        {
+            if (calendarContainer.transform.GetChild(i).GetComponent<dayInfo>() != null)
+            {
+
+                if (calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Month != s)
+                {
+                    calendarContainer.transform.GetChild(i).GetChild(0).GetComponent<Text>().color = grey;
+                }
+                else
+                    calendarContainer.transform.GetChild(i).GetChild(0).GetComponent<Text>().color = white;
+            }
+        }
     }
 }

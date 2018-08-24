@@ -1,8 +1,15 @@
 ﻿<Properties StartupConfiguration="{A4FE120D-5677-0BE6-89B0-DE97FDD27F5C}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/calendarPopulator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Login.cs">
     <Files>
-      <File FileName="Assets/calendarPopulator.cs" Line="7" Column="2" />
+      <File FileName="Assets/Scripts/Jsonparser.cs" Line="86" Column="60" />
+      <File FileName="Assets/Scripts/dayInfo.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/calendarPopulator.cs" Line="162" Column="95" />
+      <File FileName="Assets/Scripts/firstOfMonthTrigger.cs" Line="14" Column="64" />
+      <File FileName="Assets/Scripts/ProfileEdit.cs" Line="40" Column="63" />
+      <File FileName="Assets/Scripts/ScrollSnapRect.cs" Line="338" Column="1" />
+      <File FileName="Assets/Scripts/EventSpawner.cs" Line="56" Column="1" />
+      <File FileName="Assets/Scripts/Login.cs" Line="8" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

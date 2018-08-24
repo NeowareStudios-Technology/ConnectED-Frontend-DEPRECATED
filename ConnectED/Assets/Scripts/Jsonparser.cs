@@ -81,6 +81,10 @@ public class Jsonparser : MonoBehaviour {
     // Use this for initialization
 
     void Start() {
+
+
+        System.DateTime DateTime = new DateTime(2018, 8, 24);
+        Debug.Log(DateTime.DayOfWeek);
         //firebase init
         Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {

@@ -11,6 +11,6 @@ public class firstOfMonthTrigger : MonoBehaviour {
     {
         info = GetComponent<dayInfo>();
         Debug.Log("Changing day to: " + info.Month);
-        p.setYearMonth(info.Year +"\n"+info.Month);
+        p.setYearMonth(info.Year + "\n" + info.Month,info.Month);
     }
 }

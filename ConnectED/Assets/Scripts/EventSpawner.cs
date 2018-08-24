@@ -27,6 +27,8 @@ public class EventSpawner : MonoBehaviour {
         StartCoroutine(prefillLister());
     }
 
+    public int retry = 0;
+
     IEnumerator prefillLister()
     {
         FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
@@ -52,7 +54,7 @@ public class EventSpawner : MonoBehaviour {
                 Debug.Log(www.GetRequestHeader("Content-Type"));
                 Debug.Log(www.error);
                 Debug.Log(www.downloadHandler.text);
-                if (www.responseCode.ToString() == "503")
+                if (www.responseCode.ToString() == "503" & retry < 3)
                 {
                     Debug.Log("Trying again : get prefill");
                     populateEvents();
