@@ -36,9 +36,8 @@ public class calendarPopulator : MonoBehaviour
     public Month currentMonth;
     public float contentHeight;
     public Event[] dates;
-    public void StartCalendar(Event[] a)
+    public void StartCalendar()
     {
-        setEventsInCalendar(a);
         setMonth(ref jan, 31, "January");
         setMonth(ref feb, 28, "February");
         setMonth(ref mar, 31, "March");
@@ -158,12 +157,19 @@ public class calendarPopulator : MonoBehaviour
         calendarContainer.transform.parent.gameObject.AddComponent<ContentSizeFitter>();
         calendarContainer.transform.parent.gameObject.GetComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
         monthTrigger.SetActive(true);
-        eventTrigger();
     }
+
+	public Color blue;
+
+    public void show()
+    {
+        GetComponent<Image>().color = blue;
+        GetComponent<Image>().raycastTarget = true;
+    }
+
     public Color grey;
     public Color white;
     public Color brightWhite;
-    public Color blue;
     public void changeMonthColor(string s)
     {
         for (int i = 0; i < calendarContainer.transform.childCount; i++)
@@ -184,11 +190,9 @@ public class calendarPopulator : MonoBehaviour
     }
 
 
-    public void setEventsInCalendar(Event[] e)
+    public void setEventsInCalendar()
     {
-        dates = new Event[e.Length];
-        dates = e;
-
+        
         instantiateCalendarButtons();
 
     }
@@ -225,17 +229,17 @@ public class calendarPopulator : MonoBehaviour
         int goodEvent = 0;
         for (int i = 0; i < dates.Length; i++)
         {
-            if (PlayerPrefs.GetString("email") == dates[i].e_organizer)
-            {
+            //if (PlayerPrefs.GetString("email") == dates[i].e_organizer)
+            //{
                 eventDays[goodEvent] = dates[i].date[0];
                 goodEvent++;
-            }
+            //}
         }
         string[] temp = new string[goodEvent];
         for (int i = 0; i < goodEvent; i++)
             temp[i] = eventDays[i];
 
-        setEventDate(temp);
+        setEventDate(eventDays);
     }
 
 
@@ -249,59 +253,58 @@ public class calendarPopulator : MonoBehaviour
         Debug.Log("Setting Event " + allEvents);
         Debug.Log("Child count " + calendarContainer.transform.childCount);
         int inc = 1;
-        for (int i = 3; i < calendarContainer.transform.childCount; i = i + inc)
+        for (int i = 0; i < calendarContainer.transform.childCount; i = i + inc)
         {
-            if (i == 2)
+            if (calendarContainer.transform.GetChild(i).GetComponent<dayInfo>() == null)
+            { Debug.Log("spacer"); }
+            else
             {
-                inc = 1;
-            }
-            if (calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Month == calendar[int.Parse(month) - 1].monthName)
-            {
-                // if same day and year
-                if (calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().dayNumber == day && year == calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Year)
+                if (calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Month == calendar[int.Parse(month) - 1].monthName)
                 {
-                    Debug.Log("Setting day for event " + month + "/" + day);
-                    calendarContainer.transform.GetChild(i).GetChild(0).GetComponent<Text>().color = blue;
-                    calendarContainer.transform.GetChild(i).GetComponent<Image>().color = brightWhite;
-                    calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().marked = true;
-
-
-                    currentEvent++;
-                    if (currentEvent == allEvents.Length)
+                    // if same day and year
+                    if (calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().dayNumber == int.Parse(day).ToString() && year == calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Year)
                     {
-                        return;
-                    }
-                    month = allEvents[currentEvent].Substring(0, 2);
-                    day = allEvents[currentEvent].Substring(3, 2);
-                    year = allEvents[currentEvent].Substring(6, 4);
+                        Debug.Log("Setting day for event " + month + "/" + day);
+                        calendarContainer.transform.GetChild(i).GetChild(0).GetComponent<Text>().color = blue;
+                        calendarContainer.transform.GetChild(i).GetComponent<Image>().color = brightWhite;
+                        calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().marked = true;
 
-                    //if the day is less the month is the same and the year is less or the same
-                    //if (int.Parse(day) < int.Parse(calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().dayNumber) && month == calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Month && int.Parse(year) <= int.Parse(calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Year))
-                    //{
-                    //    Debug.Log(month+day+year +" vs "+ calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Month + calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().dayNumber + calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Year);
-                    //    Debug.Log("inc is neg");
-                    //    inc = -1;
-                    //}
-                    ////if the month and year is lower
-                    //if (getMonthNumber(month) < getMonthNumber(calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Month) && int.Parse(year) <= int.Parse(calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Year))
-                    //{
-                    //    Debug.Log("inc is neg");
-                    //    inc = -1;
-                    //}
-                    //else
-                    //{
-                    //    Debug.Log("inc is pos");
-                    //    inc = 1;
-                    //}
+
+                        currentEvent++;
+                        if (currentEvent == allEvents.Length)
+                        {
+                            return;
+                        }
+                        month = allEvents[currentEvent].Substring(0, 2);
+                        day = allEvents[currentEvent].Substring(3, 2);
+                        year = allEvents[currentEvent].Substring(6, 4);
+
+                        //if the day is less the month is the same and the year is less or the same
+                        //if (int.Parse(day) < int.Parse(calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().dayNumber) && month == calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Month && int.Parse(year) <= int.Parse(calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Year))
+                        //{
+                        //    Debug.Log(month+day+year +" vs "+ calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Month + calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().dayNumber + calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Year);
+                        //    Debug.Log("inc is neg");
+                        //    inc = -1;
+                        //}
+                        ////if the month and year is lower
+                        //if (getMonthNumber(month) < getMonthNumber(calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Month) && int.Parse(year) <= int.Parse(calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Year))
+                        //{
+                        //    Debug.Log("inc is neg");
+                        //    inc = -1;
+                        //}
+                        //else
+                        //{
+                        //    Debug.Log("inc is pos");
+                        //    inc = 1;
+                        //}
+                    }
+
                 }
 
-            }
-            if (i == calendarContainer.transform.childCount - 4)
-            {
-                Debug.Log("Reverse");
-                inc = -1;
-            }
 
+
+
+            }
         }
     }
     
@@ -407,7 +410,7 @@ public class calendarPopulator : MonoBehaviour
         {
             string[] trueURL = prefill.events[i].Split('_');
             //using (UnityWebRequest www = UnityWebRequest.Get("https://webhook.site/8e284497-5145-481d-8a18-0883dfd599e5"))
-            using (UnityWebRequest www = UnityWebRequest.Get(getEventurl + trueURL[1]))
+            using (UnityWebRequest www = UnityWebRequest.Get(getEventurl + trueURL[0]+"/"+trueURL[1]))
             {
 
 
@@ -435,6 +438,12 @@ public class calendarPopulator : MonoBehaviour
                     e = JsonUtility.FromJson<Event>(jsonString);
 
                     allEvents[i] = e;
+                    if(i == prefill.events.Length - 1){
+                        dates = new Event[allEvents.Length];
+                        dates = allEvents;
+                        setEventsInCalendar();
+                        eventTrigger();
+                    }
                 }
             };
         }

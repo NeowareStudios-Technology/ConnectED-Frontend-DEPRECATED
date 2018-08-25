@@ -26,7 +26,6 @@ public class EventSpawner : MonoBehaviour {
     public calendarPopulator calPop;
     public void populateEvents()
     {
-        calPop.populateEvents();
         StartCoroutine(prefillLister());
     }
 
@@ -85,6 +84,7 @@ public class EventSpawner : MonoBehaviour {
         for (int i = 0; i < prefill.events.Length; i++)
         {
             //using (UnityWebRequest www = UnityWebRequest.Get("https://webhook.site/8e284497-5145-481d-8a18-0883dfd599e5"))
+            Debug.Log(prefill.events[i]);
             using (UnityWebRequest www = UnityWebRequest.Get(getEventurl + prefill.events[i]))
             {
 
@@ -120,10 +120,11 @@ public class EventSpawner : MonoBehaviour {
                 }
             };
         }
+        calPop.populateEvents();
+        calPop.StartCalendar();
         //refresh here
         Loading.SetActive(false);
         scroll.Refresh();
-		calPop.StartCalendar(allEvents);
     }
 }
 [System.Serializable]
