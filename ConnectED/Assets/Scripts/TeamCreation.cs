@@ -15,6 +15,8 @@ public class TeamCreation : MonoBehaviour {
     public InputField leader1;
     public InputField leader2;
     public InputField leader3;
+    public Text city;
+    public Text state;
     private Team team;
     private IEnumerator coroutine;
     public Jsonparser j;
@@ -26,7 +28,8 @@ public class TeamCreation : MonoBehaviour {
         team.t_desc = TeamDesc.text;
         team.t_name = TeamName.text;
         team.t_privacy = "o";
-
+        team.t_city = city.text;
+        team.t_state = state.text;
         if (image.color.a == 1)
         {
             RenderTexture tmp = RenderTexture.GetTemporary(image.texture.width, image.texture.height, 0, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);
@@ -61,7 +64,6 @@ public class TeamCreation : MonoBehaviour {
 
         Debug.Log("Status Code: " + www.responseCode);
         Debug.Log(www.error);
-        Debug.Log(www.uploadHandler.data);
         Debug.Log(www.downloadHandler.data);
         Debug.Log(www.GetRequestHeader("Authorization"));
         if (www.responseCode.ToString() == "503")

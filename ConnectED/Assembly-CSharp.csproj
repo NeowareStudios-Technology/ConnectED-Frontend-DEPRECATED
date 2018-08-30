@@ -111,6 +111,7 @@
     <Compile Include="Assets\Scripts\timeOfDay.cs" />
     <Compile Include="Assets\Scripts\timeUpdater.cs" />
     <Compile Include="Assets\teamInitializer.cs" />
+    <Compile Include="Assets\TeamPageInit.cs" />
     <Compile Include="Assets\TeamsGet.cs" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\Plugins\link.xml" />

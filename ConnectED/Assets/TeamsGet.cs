@@ -114,12 +114,28 @@ public class TeamsGet : MonoBehaviour {
         }
         instantiateTeams(allTeams);
     }
+    public GameObject teamsPage;
 
     public void instantiateTeams(Team[] teams)
     {
         for (int i = 0; i < teams.Length; i++){
-            
+            if(newTeamContainer == null || newTeamContainer.transform.childCount == 2){
+                newTeamContainer = Instantiate(TeamContainer, SuggestedTeams.transform.GetChild(0));
+            }
+            if (newTeamContainer.transform.childCount < 2)
+            {
+                currentTeam = Instantiate(TeamPrefab, newTeamContainer.transform);
+                currentTeam.GetComponent<teamInitializer>().setTeamButton(teams[i],teamsPage);
+            }
         }
+        if (newTeamContainer.transform.childCount == 1)
+            Instantiate(EmptyTeam, newTeamContainer.transform);
+        SuggestedTeams.GetComponent<ScrollSnapRect>().enabled = true;
+        SuggestedTeams.GetComponent<ScrollSnapRect>().Refresh();
+        gameObject.GetComponent<Image>().raycastTarget = true;
+        gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        gameObject.GetComponent<Image>().color = Color.white;
+        gameObject.SetActive(false);
     }
 
 }

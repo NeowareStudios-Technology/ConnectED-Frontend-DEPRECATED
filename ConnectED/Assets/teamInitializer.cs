@@ -15,10 +15,28 @@ public class teamInitializer : MonoBehaviour {
     public Text teamMembers;
     public Button button;
 
-    public void setTeamButton(Team t)
+    public void setTeamButton(Team t, GameObject teamPage)
     {
         team = t;
         teamName.text = t.t_name;
+        teamMembers.text = t.t_member_mum.ToString() + " Members" ;
+
+        if (t.t_photo.Length > 300)
+        {
+            Texture2D tex = new Texture2D(200, 200);
+
+
+            byte[] img = System.Convert.FromBase64String(t.t_photo);
+            tex.LoadImage(img, false);
+
+            pic.texture = tex;
+
+        }
+        GetComponent<Button>().onClick.AddListener(() => teamPage.SetActive(true));
+        GetComponent<Button>().onClick.AddListener(() => teamPage.GetComponent<Image>().color = Color.white);
+        GetComponent<Button>().onClick.AddListener(() => teamPage.transform.GetChild(0).gameObject.SetActive(true));
+        GetComponent<Button>().onClick.AddListener(() => teamPage.GetComponent<TeamPageInit>().setTeamPage(t));
+
     }
 
 }
