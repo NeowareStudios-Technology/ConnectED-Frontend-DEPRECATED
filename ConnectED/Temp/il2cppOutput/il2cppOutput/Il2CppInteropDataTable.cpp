@@ -477,6 +477,14 @@ extern "C" void ContactFilter2D_t3805203441_marshal_pinvoke(void* managedStructu
 extern "C" void ContactFilter2D_t3805203441_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
 extern "C" void ContactFilter2D_t3805203441_marshal_pinvoke_cleanup(void* marshaledStructure);
 extern const RuntimeType ContactFilter2D_t3805203441_0_0_0;
+extern "C" void Collision_t4262080450_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
+extern "C" void Collision_t4262080450_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
+extern "C" void Collision_t4262080450_marshal_pinvoke_cleanup(void* marshaledStructure);
+extern const RuntimeType Collision_t4262080450_0_0_0;
+extern "C" void ControllerColliderHit_t240592346_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
+extern "C" void ControllerColliderHit_t240592346_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
+extern "C" void ControllerColliderHit_t240592346_marshal_pinvoke_cleanup(void* marshaledStructure);
+extern const RuntimeType ControllerColliderHit_t240592346_0_0_0;
 extern "C" void DelegatePInvokeWrapper_WillRenderCanvases_t3309123499();
 extern const RuntimeType WillRenderCanvases_t3309123499_0_0_0;
 extern "C" void DelegatePInvokeWrapper_SessionStateChanged_t3163629820();
@@ -551,6 +559,12 @@ extern "C" void DelegatePInvokeWrapper_Action_t1244810226();
 extern const RuntimeType Action_t1244810226_0_0_0;
 extern "C" void DelegatePInvokeWrapper_SWIG_CompletionDelegate_t2224793779();
 extern const RuntimeType SWIG_CompletionDelegate_t2224793779_0_0_0;
+extern "C" void DelegatePInvokeWrapper_EasyWebCamStartedDelegate_t3632458601();
+extern const RuntimeType EasyWebCamStartedDelegate_t3632458601_0_0_0;
+extern "C" void DelegatePInvokeWrapper_EasyWebCamStopedDelegate_t3449998840();
+extern const RuntimeType EasyWebCamStopedDelegate_t3449998840_0_0_0;
+extern "C" void DelegatePInvokeWrapper_EasyWebCamUpdateDelegate_t3486667909();
+extern const RuntimeType EasyWebCamUpdateDelegate_t3486667909_0_0_0;
 extern "C" void DelegatePInvokeWrapper_ExceptionArgumentDelegate_t1357866714();
 extern const RuntimeType ExceptionArgumentDelegate_t1357866714_0_0_0;
 extern "C" void DelegatePInvokeWrapper_ExceptionDelegate_t3683244484();
@@ -613,7 +627,9 @@ extern "C" void DelegatePInvokeWrapper_MediaPickMultipleCallback_t2483155519();
 extern const RuntimeType MediaPickMultipleCallback_t2483155519_0_0_0;
 extern "C" void DelegatePInvokeWrapper_MediaSaveCallback_t1711154875();
 extern const RuntimeType MediaSaveCallback_t1711154875_0_0_0;
-extern Il2CppInteropData g_Il2CppInteropData[182] = 
+extern "C" void DelegatePInvokeWrapper_QRScanFinished_t794343061();
+extern const RuntimeType QRScanFinished_t794343061_0_0_0;
+extern Il2CppInteropData g_Il2CppInteropData[188] = 
 {
 	{ NULL, Context_t1744531130_marshal_pinvoke, Context_t1744531130_marshal_pinvoke_back, Context_t1744531130_marshal_pinvoke_cleanup, NULL, NULL, &Context_t1744531130_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Context */,
 	{ NULL, Escape_t3294788190_marshal_pinvoke, Escape_t3294788190_marshal_pinvoke_back, Escape_t3294788190_marshal_pinvoke_cleanup, NULL, NULL, &Escape_t3294788190_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Escape */,
@@ -747,6 +763,8 @@ extern Il2CppInteropData g_Il2CppInteropData[182] =
 	{ NULL, GUIStyle_t3956901511_marshal_pinvoke, GUIStyle_t3956901511_marshal_pinvoke_back, GUIStyle_t3956901511_marshal_pinvoke_cleanup, NULL, NULL, &GUIStyle_t3956901511_0_0_0 } /* UnityEngine.GUIStyle */,
 	{ NULL, GUIStyleState_t1397964415_marshal_pinvoke, GUIStyleState_t1397964415_marshal_pinvoke_back, GUIStyleState_t1397964415_marshal_pinvoke_cleanup, NULL, NULL, &GUIStyleState_t1397964415_0_0_0 } /* UnityEngine.GUIStyleState */,
 	{ NULL, ContactFilter2D_t3805203441_marshal_pinvoke, ContactFilter2D_t3805203441_marshal_pinvoke_back, ContactFilter2D_t3805203441_marshal_pinvoke_cleanup, NULL, NULL, &ContactFilter2D_t3805203441_0_0_0 } /* UnityEngine.ContactFilter2D */,
+	{ NULL, Collision_t4262080450_marshal_pinvoke, Collision_t4262080450_marshal_pinvoke_back, Collision_t4262080450_marshal_pinvoke_cleanup, NULL, NULL, &Collision_t4262080450_0_0_0 } /* UnityEngine.Collision */,
+	{ NULL, ControllerColliderHit_t240592346_marshal_pinvoke, ControllerColliderHit_t240592346_marshal_pinvoke_back, ControllerColliderHit_t240592346_marshal_pinvoke_cleanup, NULL, NULL, &ControllerColliderHit_t240592346_0_0_0 } /* UnityEngine.ControllerColliderHit */,
 	{ DelegatePInvokeWrapper_WillRenderCanvases_t3309123499, NULL, NULL, NULL, NULL, NULL, &WillRenderCanvases_t3309123499_0_0_0 } /* UnityEngine.Canvas/WillRenderCanvases */,
 	{ DelegatePInvokeWrapper_SessionStateChanged_t3163629820, NULL, NULL, NULL, NULL, NULL, &SessionStateChanged_t3163629820_0_0_0 } /* UnityEngine.Analytics.AnalyticsSessionInfo/SessionStateChanged */,
 	{ NULL, CustomEventData_t317522481_marshal_pinvoke, CustomEventData_t317522481_marshal_pinvoke_back, CustomEventData_t317522481_marshal_pinvoke_cleanup, NULL, NULL, &CustomEventData_t317522481_0_0_0 } /* UnityEngine.Analytics.CustomEventData */,
@@ -772,6 +790,9 @@ extern Il2CppInteropData g_Il2CppInteropData[182] =
 	{ DelegatePInvokeWrapper_SWIG_CompletionDelegate_t3186567461, NULL, NULL, NULL, NULL, NULL, &SWIG_CompletionDelegate_t3186567461_0_0_0 } /* Firebase.FutureString/SWIG_CompletionDelegate */,
 	{ DelegatePInvokeWrapper_Action_t1244810226, NULL, NULL, NULL, NULL, NULL, &Action_t1244810226_0_0_0 } /* Firebase.FutureVoid/Action */,
 	{ DelegatePInvokeWrapper_SWIG_CompletionDelegate_t2224793779, NULL, NULL, NULL, NULL, NULL, &SWIG_CompletionDelegate_t2224793779_0_0_0 } /* Firebase.FutureVoid/SWIG_CompletionDelegate */,
+	{ DelegatePInvokeWrapper_EasyWebCamStartedDelegate_t3632458601, NULL, NULL, NULL, NULL, NULL, &EasyWebCamStartedDelegate_t3632458601_0_0_0 } /* TBEasyWebCam.CallBack.EasyWebCamStartedDelegate */,
+	{ DelegatePInvokeWrapper_EasyWebCamStopedDelegate_t3449998840, NULL, NULL, NULL, NULL, NULL, &EasyWebCamStopedDelegate_t3449998840_0_0_0 } /* TBEasyWebCam.CallBack.EasyWebCamStopedDelegate */,
+	{ DelegatePInvokeWrapper_EasyWebCamUpdateDelegate_t3486667909, NULL, NULL, NULL, NULL, NULL, &EasyWebCamUpdateDelegate_t3486667909_0_0_0 } /* TBEasyWebCam.CallBack.EasyWebCamUpdateDelegate */,
 	{ DelegatePInvokeWrapper_ExceptionArgumentDelegate_t1357866714, NULL, NULL, NULL, NULL, NULL, &ExceptionArgumentDelegate_t1357866714_0_0_0 } /* Firebase.Auth.AuthUtilPINVOKE/SWIGExceptionHelper/ExceptionArgumentDelegate */,
 	{ DelegatePInvokeWrapper_ExceptionDelegate_t3683244484, NULL, NULL, NULL, NULL, NULL, &ExceptionDelegate_t3683244484_0_0_0 } /* Firebase.Auth.AuthUtilPINVOKE/SWIGExceptionHelper/ExceptionDelegate */,
 	{ DelegatePInvokeWrapper_SWIGStringDelegate_t3506210183, NULL, NULL, NULL, NULL, NULL, &SWIGStringDelegate_t3506210183_0_0_0 } /* Firebase.Auth.AuthUtilPINVOKE/SWIGStringHelper/SWIGStringDelegate */,
@@ -796,5 +817,6 @@ extern Il2CppInteropData g_Il2CppInteropData[182] =
 	{ DelegatePInvokeWrapper_MediaPickCallback_t2468098299, NULL, NULL, NULL, NULL, NULL, &MediaPickCallback_t2468098299_0_0_0 } /* NativeGallery/MediaPickCallback */,
 	{ DelegatePInvokeWrapper_MediaPickMultipleCallback_t2483155519, NULL, NULL, NULL, NULL, NULL, &MediaPickMultipleCallback_t2483155519_0_0_0 } /* NativeGallery/MediaPickMultipleCallback */,
 	{ DelegatePInvokeWrapper_MediaSaveCallback_t1711154875, NULL, NULL, NULL, NULL, NULL, &MediaSaveCallback_t1711154875_0_0_0 } /* NativeGallery/MediaSaveCallback */,
+	{ DelegatePInvokeWrapper_QRScanFinished_t794343061, NULL, NULL, NULL, NULL, NULL, &QRScanFinished_t794343061_0_0_0 } /* QRCodeDecodeController/QRScanFinished */,
 	NULL,
 };

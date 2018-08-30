@@ -8,6 +8,9 @@ TagManager:
   - monthTrigger
   - MonthText
   - 1
+  - QR
+  - QRPage
+  - Decoder
   layers:
   - Default
   - TransparentFX

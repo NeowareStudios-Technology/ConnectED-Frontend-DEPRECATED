@@ -716,8 +716,8 @@ extern const uint32_t U3CRefreshExpiredTokensU3Ec__AnonStorey1_U3CU3Em__0_m40674
 struct ObjectU5BU5D_t2843939325;
 
 
-#ifndef U3CMODULEU3E_T692745549_H
-#define U3CMODULEU3E_T692745549_H
+#ifndef U3CMODULEU3E_T692745550_H
+#define U3CMODULEU3E_T692745550_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -725,7 +725,7 @@ struct ObjectU5BU5D_t2843939325;
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t692745549 
+struct  U3CModuleU3E_t692745550 
 {
 public:
 
@@ -735,7 +735,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CMODULEU3E_T692745549_H
+#endif // U3CMODULEU3E_T692745550_H
 #ifndef RUNTIMEOBJECT_H
 #define RUNTIMEOBJECT_H
 #ifdef __clang__

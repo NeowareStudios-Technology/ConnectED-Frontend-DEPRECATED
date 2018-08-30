@@ -1,16 +1,16 @@
-﻿
+﻿#if UNITY_IOS
 using UnityEditor;
 using UnityEditor.Callbacks;
 using System.IO;
-using UnityEditor.iOS;
 using UnityEditor.iOS.Xcode;
+#endif
 
 public class NGPostProcessBuild 
 {
 	private const bool ENABLED = true;
 
-	private const string PHOTO_LIBRARY_USAGE_DESCRIPTION = "Load photos from phone";
-	private const bool MINIMUM_TARGET_8_OR_ABOVE = true;
+	private const string PHOTO_LIBRARY_USAGE_DESCRIPTION = "Save media to Photos";
+	private const bool MINIMUM_TARGET_8_OR_ABOVE = false;
 
 #if UNITY_IOS
 #pragma warning disable 0162

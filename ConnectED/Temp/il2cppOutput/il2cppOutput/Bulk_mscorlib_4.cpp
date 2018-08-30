@@ -41930,6 +41930,35 @@ IL_000e:
 		return G_B3_0;
 	}
 }
+// System.Int16 System.Math::Min(System.Int16,System.Int16)
+extern "C" IL2CPP_METHOD_ATTR int16_t Math_Min_m2080903136 (RuntimeObject * __this /* static, unused */, int16_t ___val10, int16_t ___val21, const RuntimeMethod* method)
+{
+	int16_t G_B3_0 = 0;
+	{
+		int16_t L_0 = ___val10;
+		int16_t L_1 = ___val21;
+		if ((((int32_t)L_0) >= ((int32_t)L_1)))
+		{
+			goto IL_000d;
+		}
+	}
+	{
+		int16_t L_2 = ___val10;
+		G_B3_0 = L_2;
+		goto IL_000e;
+	}
+
+IL_000d:
+	{
+		int16_t L_3 = ___val21;
+		G_B3_0 = L_3;
+	}
+
+IL_000e:
+	{
+		return G_B3_0;
+	}
+}
 // System.Decimal System.Math::Round(System.Decimal)
 extern "C" IL2CPP_METHOD_ATTR Decimal_t2948259380  Math_Round_m3018379666 (RuntimeObject * __this /* static, unused */, Decimal_t2948259380  ___d0, const RuntimeMethod* method)
 {

@@ -200,9 +200,14 @@ public class calendarPopulator : MonoBehaviour
     private GameObject newCalendarButton;
     public GameObject calendarDotPrefab;
     public GameObject calendarButtonContainerPrefab;
+    public GameObject emptyCalendarButton;
     private GameObject newCalendarButtonContainerPrefab;
     public GameObject calendarButtonPanel;
     public GameObject calendarButtonDotContainer;
+    public GameObject opportunityButtonPanel;
+    public GameObject opportunityButtonContainer;
+    public GameObject opportunityDotContainer;
+    public GameObject myOpportunities;
     public void instantiateCalendarButtons()
     {
         newCalendarButtonContainerPrefab = Instantiate(calendarButtonContainerPrefab, calendarButtonPanel.transform);
@@ -216,11 +221,54 @@ public class calendarPopulator : MonoBehaviour
             }
             newCalendarButton = Instantiate(calendarButtonPrefab, newCalendarButtonContainerPrefab.transform);
             newCalendarButton.GetComponent<CalendarEventButton>().setCalendarEvent(dates[i]);
+            if(dates[i].e_organizer == PlayerPrefs.GetString("email"))
+            {
+                Debug.Log("Match Found");
+                addToOpportunities(newCalendarButton,i);
+            }
+            //newCalendarButton.GetComponent<CalendarEventButton>().j = j;
+            
         }
-
+        handleOpportunities();
+        if(newCalendarButtonContainerPrefab.transform.childCount == 1)
+            Instantiate(emptyCalendarButton, newCalendarButtonContainerPrefab.transform);
         calendarButtonPanel.transform.parent.GetComponent<ScrollSnapRect>().enabled = true;
         calendarButtonPanel.transform.parent.GetComponent<ScrollSnapRect>().Refresh();
 
+    }
+
+    public GameObject newButtonObj;
+    public void addToOpportunities( GameObject o, int i)
+    {
+        if (opportunityButtonContainer == null){
+            opportunityButtonContainer = Instantiate(calendarButtonContainerPrefab,opportunityButtonPanel.transform);
+            Instantiate(calendarDotPrefab, opportunityDotContainer.transform);
+        }
+        if (opportunityButtonContainer.transform.childCount < 2)
+        {
+            newButtonObj = Instantiate(o, opportunityButtonContainer.transform);
+            newButtonObj.GetComponent<CalendarEventButton>().setCalendarEvent(dates[i]);
+            myOpportunities.GetComponent<ScrollSnapRect>().enabled = true;
+            myOpportunities.GetComponent<ScrollSnapRect>().Refresh();
+            return;
+        }
+		if(opportunityButtonContainer.transform.childCount == 2)
+        {
+            opportunityButtonContainer = Instantiate(calendarButtonContainerPrefab, opportunityButtonPanel.transform);
+            Instantiate(calendarDotPrefab, opportunityDotContainer.transform);
+            newButtonObj = Instantiate(o, opportunityButtonContainer.transform);
+            newButtonObj.GetComponent<CalendarEventButton>().setCalendarEvent(dates[i]);
+            Debug.Log("Opportunity has 2 children");
+			myOpportunities.GetComponent<ScrollSnapRect>().enabled = true;
+			myOpportunities.GetComponent<ScrollSnapRect>().Refresh();
+            return;
+        }
+    }
+
+    public void handleOpportunities()
+    {
+        if(opportunityButtonContainer.transform.childCount == 1)
+            Instantiate(emptyCalendarButton, opportunityButtonContainer.transform);
     }
 
     public void eventTrigger()
@@ -275,6 +323,8 @@ public class calendarPopulator : MonoBehaviour
                         {
                             return;
                         }
+						if (allEvents[currentEvent].Substring(0, 2) == month && allEvents[currentEvent].Substring(3, 2) == day && allEvents[currentEvent].Substring(6, 4) == year)
+							currentEvent++;
                         month = allEvents[currentEvent].Substring(0, 2);
                         day = allEvents[currentEvent].Substring(3, 2);
                         year = allEvents[currentEvent].Substring(6, 4);

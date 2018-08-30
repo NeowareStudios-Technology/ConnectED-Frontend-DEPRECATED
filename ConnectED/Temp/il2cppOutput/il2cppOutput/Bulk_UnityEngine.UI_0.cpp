@@ -1220,8 +1220,8 @@ extern const RuntimeMethod* List_1_get_Item_m2082190616_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m2113769949_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m2586869798_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m3306164819_RuntimeMethod_var;
-extern const RuntimeMethod* List_1_get_Item_m3346958548_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m3461017032_RuntimeMethod_var;
+extern const RuntimeMethod* List_1_get_Item_m3556493447_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m3661891091_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m3701861842_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m3743125852_RuntimeMethod_var;
@@ -1590,8 +1590,8 @@ struct RaycastHitU5BU5D_t1690781147;
 struct Vector3U5BU5D_t1718750761;
 
 
-#ifndef U3CMODULEU3E_T692745551_H
-#define U3CMODULEU3E_T692745551_H
+#ifndef U3CMODULEU3E_T692745553_H
+#define U3CMODULEU3E_T692745553_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -1599,7 +1599,7 @@ struct Vector3U5BU5D_t1718750761;
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t692745551 
+struct  U3CModuleU3E_t692745553 
 {
 public:
 
@@ -1609,7 +1609,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CMODULEU3E_T692745551_H
+#endif // U3CMODULEU3E_T692745553_H
 #ifndef RUNTIMEOBJECT_H
 #define RUNTIMEOBJECT_H
 #ifdef __clang__
@@ -18814,7 +18814,7 @@ inline void List_1_AddRange_m682775554 (List_1_t447389798 * __this, RuntimeObjec
 	((  void (*) (List_1_t447389798 *, RuntimeObject*, const RuntimeMethod*))List_1_AddRange_m3709462088_gshared)(__this, p0, method);
 }
 // !0 System.Collections.Generic.List`1<System.String>::get_Item(System.Int32)
-inline String_t* List_1_get_Item_m3346958548 (List_1_t3319525431 * __this, int32_t p0, const RuntimeMethod* method)
+inline String_t* List_1_get_Item_m3556493447 (List_1_t3319525431 * __this, int32_t p0, const RuntimeMethod* method)
 {
 	return ((  String_t* (*) (List_1_t3319525431 *, int32_t, const RuntimeMethod*))List_1_get_Item_m2287542950_gshared)(__this, p0, method);
 }
@@ -38724,7 +38724,7 @@ IL_0008:
 		List_1_t3319525431 * L_1 = ___options0;
 		int32_t L_2 = V_0;
 		NullCheck(L_1);
-		String_t* L_3 = List_1_get_Item_m3346958548(L_1, L_2, /*hidden argument*/List_1_get_Item_m3346958548_RuntimeMethod_var);
+		String_t* L_3 = List_1_get_Item_m3556493447(L_1, L_2, /*hidden argument*/List_1_get_Item_m3556493447_RuntimeMethod_var);
 		OptionData_t3270282352 * L_4 = (OptionData_t3270282352 *)il2cpp_codegen_object_new(OptionData_t3270282352_il2cpp_TypeInfo_var);
 		OptionData__ctor_m2696491456(L_4, L_3, /*hidden argument*/NULL);
 		NullCheck(L_0);

@@ -285,6 +285,12 @@
     <Reference Include="Unity.Tasks">
       <HintPath>/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/Assets/Parse/Plugins/Unity.Tasks.dll</HintPath>
     </Reference>
+    <Reference Include="EasyWebCamLib">
+      <HintPath>/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/Assets/QRcode/Plugins/EasyWebCamLib.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCode">
+      <HintPath>/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/Assets/QRcode/Plugins/QRCode.dll</HintPath>
+    </Reference>
     <Reference Include="Firebase.Auth">
       <HintPath>/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
     </Reference>

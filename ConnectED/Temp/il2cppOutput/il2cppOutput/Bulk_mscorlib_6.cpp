@@ -38665,6 +38665,16 @@ extern "C" IL2CPP_METHOD_ATTR String_t* Win32Resource_ToString_m1615154437 (Win3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void System.Runtime.CompilerServices.CompilationRelaxationsAttribute::.ctor(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void CompilationRelaxationsAttribute__ctor_m72043333 (CompilationRelaxationsAttribute_t1721442111 * __this, int32_t ___relaxations0, const RuntimeMethod* method)
+{
+	{
+		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
+		int32_t L_0 = ___relaxations0;
+		__this->set_relax_0(L_0);
+		return;
+	}
+}
 // System.Void System.Runtime.CompilerServices.CompilationRelaxationsAttribute::.ctor(System.Runtime.CompilerServices.CompilationRelaxations)
 extern "C" IL2CPP_METHOD_ATTR void CompilationRelaxationsAttribute__ctor_m2313138045 (CompilationRelaxationsAttribute_t1721442111 * __this, int32_t ___relaxations0, const RuntimeMethod* method)
 {

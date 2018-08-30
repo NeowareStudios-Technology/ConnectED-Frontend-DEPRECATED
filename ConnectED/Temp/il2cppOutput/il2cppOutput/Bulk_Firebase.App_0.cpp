@@ -27403,7 +27403,7 @@ extern "C" IL2CPP_METHOD_ATTR void StringStringMap_Finalize_m3648095369 (StringS
 IL_0000:
 	try
 	{ // begin try (depth: 1)
-		VirtActionInvoker0::Invoke(17 /* System.Void Firebase.StringStringMap::Dispose() */, __this);
+		VirtActionInvoker0::Invoke(20 /* System.Void Firebase.StringStringMap::Dispose() */, __this);
 		IL2CPP_LEAVE(0x12, FINALLY_000b);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
@@ -32197,7 +32197,7 @@ extern "C" IL2CPP_METHOD_ATTR void VariantVariantMap_Finalize_m251921510 (Varian
 IL_0000:
 	try
 	{ // begin try (depth: 1)
-		VirtActionInvoker0::Invoke(17 /* System.Void Firebase.VariantVariantMap::Dispose() */, __this);
+		VirtActionInvoker0::Invoke(20 /* System.Void Firebase.VariantVariantMap::Dispose() */, __this);
 		IL2CPP_LEAVE(0x12, FINALLY_000b);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)

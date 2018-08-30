@@ -32884,6 +32884,33 @@ IL_0025:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void System.Security.Permissions.SecurityPermissionAttribute::set_SerializationFormatter(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void SecurityPermissionAttribute_set_SerializationFormatter_m1861697955 (SecurityPermissionAttribute_t2256310021 * __this, bool ___value0, const RuntimeMethod* method)
+{
+	{
+		bool L_0 = ___value0;
+		if (!L_0)
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		int32_t L_1 = __this->get_m_Flags_2();
+		__this->set_m_Flags_2(((int32_t)((int32_t)L_1|(int32_t)((int32_t)128))));
+		goto IL_002f;
+	}
+
+IL_001d:
+	{
+		int32_t L_2 = __this->get_m_Flags_2();
+		__this->set_m_Flags_2(((int32_t)((int32_t)L_2&(int32_t)((int32_t)-129))));
+	}
+
+IL_002f:
+	{
+		return;
+	}
+}
 // System.Void System.Security.Permissions.SecurityPermissionAttribute::set_SkipVerification(System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void SecurityPermissionAttribute_set_SkipVerification_m4061350763 (SecurityPermissionAttribute_t2256310021 * __this, bool ___value0, const RuntimeMethod* method)
 {

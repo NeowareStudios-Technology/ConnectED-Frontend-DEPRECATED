@@ -62,6 +62,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CalendarEventButton.cs" />
+    <Compile Include="Assets\QRcode\Plugins\Loom\Loom.cs" />
+    <Compile Include="Assets\QRcode\Scripts\CameraPlaneController.cs" />
+    <Compile Include="Assets\QRcode\Scripts\DecodeByStaticPic.cs" />
+    <Compile Include="Assets\QRcode\Scripts\DeviceCamera.cs" />
+    <Compile Include="Assets\QRcode\Scripts\DeviceCameraController.cs" />
+    <Compile Include="Assets\QRcode\Scripts\EasyWebCam.cs" />
+    <Compile Include="Assets\QRcode\Scripts\GalleryController.cs" />
+    <Compile Include="Assets\QRcode\Scripts\QRCodeDecodeController.cs" />
+    <Compile Include="Assets\QRcode\Scripts\QRCodeEncodeController.cs" />
+    <Compile Include="Assets\QRcode\Scripts\QRDecodeTest.cs" />
+    <Compile Include="Assets\QRcode\Scripts\QREncodeTest.cs" />
+    <Compile Include="Assets\QRcode\Scripts\TextureScale.cs" />
+    <Compile Include="Assets\QRcode\Scripts\Utility.cs" />
     <Compile Include="Assets\Scripts\alphaAndText.cs" />
     <Compile Include="Assets\Scripts\animationController.cs" />
     <Compile Include="Assets\Scripts\APImanager.cs" />
@@ -97,10 +110,14 @@
     <Compile Include="Assets\Scripts\TeamCreation.cs" />
     <Compile Include="Assets\Scripts\timeOfDay.cs" />
     <Compile Include="Assets\Scripts\timeUpdater.cs" />
+    <Compile Include="Assets\teamInitializer.cs" />
+    <Compile Include="Assets\TeamsGet.cs" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\Plugins\link.xml" />
+    <None Include="Assets\QRcode\CamMat\WebCam.shader" />
     <None Include="Assets\StreamingAssets\HTML.txt" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
+    <None Include="Assets\QRcode\Plugins\Android\AndroidManifest.xml" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -316,6 +333,12 @@
     </Reference>
     <Reference Include="Unity.Tasks">
       <HintPath>/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/Assets/Parse/Plugins/Unity.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyWebCamLib">
+      <HintPath>/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/Assets/QRcode/Plugins/EasyWebCamLib.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCode">
+      <HintPath>/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/Assets/QRcode/Plugins/QRCode.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Auth">
       <HintPath>/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>

@@ -32,6 +32,7 @@ public class EventCreator : MonoBehaviour
     public InputField SkillOne;
     public InputField SkillTwo;
     public InputField SkillThree;
+    public string qr;
     public bool indoor;
     public bool outdoor;
     public Jsonparser j;
@@ -59,6 +60,8 @@ public class EventCreator : MonoBehaviour
         Debug.Log(s);
         return new string[] {s};
     }
+
+    public QREncodeTest QREncode;
     public void initEvent()
     {
         Event e = new Event();
@@ -80,7 +83,7 @@ public class EventCreator : MonoBehaviour
         e.state = State.text;
         e.street = Street.text;
         e.zip_code = zipcode.text;
-
+        e.qr = QREncode.Encode(PlayerPrefs.GetString("email")+"/"+e.e_title.Replace(" ","+"));
         if (image.texture != null && image.color.a == 1)
         {
             RenderTexture tmp = RenderTexture.GetTemporary(image.texture.width, image.texture.height, 0, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);
@@ -132,6 +135,7 @@ public class EventCreator : MonoBehaviour
 [System.Serializable]
 public class Event
 {
+    public string[] attendees;
     public int capacity;
     public string city;
     public string[] date;
@@ -146,7 +150,9 @@ public class Event
     public string education;
     public string[] end;
     public string env;
+    public int funds_raised;
     public string[] interests;
+    public int is_registered;
 	public int num_attendees;
 	public int num_pending_attendees;
     public string privacy;

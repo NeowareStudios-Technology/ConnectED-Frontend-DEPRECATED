@@ -1206,6 +1206,7 @@ extern const uint32_t BitArray__ctor_m52841262_MetadataUsageId;
 extern const uint32_t BitConverter_DoubleToInt64Bits_m3574395137_MetadataUsageId;
 extern const uint32_t BitConverter_GetBytes_m2120707223_MetadataUsageId;
 extern const uint32_t BitConverter_GetBytes_m3693159656_MetadataUsageId;
+extern const uint32_t BitConverter_GetBytes_m692533364_MetadataUsageId;
 extern const uint32_t BitConverter_PutBytes_m2614286581_MetadataUsageId;
 extern const uint32_t BitConverter_ToInt64_m349022421_MetadataUsageId;
 extern const uint32_t BitConverter_ToString_m3439099539_MetadataUsageId;
@@ -12508,6 +12509,8 @@ extern "C" IL2CPP_METHOD_ATTR int16_t Convert_ToInt16_m4174308322 (RuntimeObject
 extern "C" IL2CPP_METHOD_ATTR int16_t Convert_ToInt16_m1223489986 (RuntimeObject * __this /* static, unused */, RuntimeObject * ___value0, RuntimeObject* ___provider1, const RuntimeMethod* method);
 // System.Int32 System.Decimal::op_Explicit(System.Decimal)
 extern "C" IL2CPP_METHOD_ATTR int32_t Decimal_op_Explicit_m1842265407 (RuntimeObject * __this /* static, unused */, Decimal_t2948259380  ___value0, const RuntimeMethod* method);
+// System.Int32 System.Int32::Parse(System.String)
+extern "C" IL2CPP_METHOD_ATTR int32_t Int32_Parse_m1033611559 (RuntimeObject * __this /* static, unused */, String_t* ___s0, const RuntimeMethod* method);
 // System.Int32 System.Int32::Parse(System.String,System.IFormatProvider)
 extern "C" IL2CPP_METHOD_ATTR int32_t Int32_Parse_m2087562008 (RuntimeObject * __this /* static, unused */, String_t* ___s0, RuntimeObject* ___provider1, const RuntimeMethod* method);
 // System.Int32 System.Convert::ToInt32(System.Object,System.IFormatProvider)
@@ -13890,6 +13893,21 @@ IL_0019:
 	{
 		ByteU5BU5D_t4116647657* L_9 = V_0;
 		return L_9;
+	}
+}
+// System.Byte[] System.BitConverter::GetBytes(System.Single)
+extern "C" IL2CPP_METHOD_ATTR ByteU5BU5D_t4116647657* BitConverter_GetBytes_m692533364 (RuntimeObject * __this /* static, unused */, float ___value0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (BitConverter_GetBytes_m692533364_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(BitConverter_t3118986983_il2cpp_TypeInfo_var);
+		ByteU5BU5D_t4116647657* L_0 = BitConverter_GetBytes_m2120707223(NULL /*static, unused*/, (uint8_t*)(uint8_t*)(&___value0), 4, /*hidden argument*/NULL);
+		return L_0;
 	}
 }
 // System.Byte[] System.BitConverter::GetBytes(System.Double)
@@ -34451,6 +34469,27 @@ extern "C" IL2CPP_METHOD_ATTR int32_t Convert_ToInt32_m1085744762 (RuntimeObject
 	{
 		int16_t L_0 = ___value0;
 		return L_0;
+	}
+}
+// System.Int32 System.Convert::ToInt32(System.String)
+extern "C" IL2CPP_METHOD_ATTR int32_t Convert_ToInt32_m1758051682 (RuntimeObject * __this /* static, unused */, String_t* ___value0, const RuntimeMethod* method)
+{
+	{
+		String_t* L_0 = ___value0;
+		if (L_0)
+		{
+			goto IL_0008;
+		}
+	}
+	{
+		return 0;
+	}
+
+IL_0008:
+	{
+		String_t* L_1 = ___value0;
+		int32_t L_2 = Int32_Parse_m1033611559(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
+		return L_2;
 	}
 }
 // System.Int32 System.Convert::ToInt32(System.String,System.IFormatProvider)

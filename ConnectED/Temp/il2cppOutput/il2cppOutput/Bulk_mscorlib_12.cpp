@@ -730,6 +730,7 @@ extern String_t* _stringLiteral2922588279;
 extern String_t* _stringLiteral2941213349;
 extern String_t* _stringLiteral2978567720;
 extern String_t* _stringLiteral3007017632;
+extern String_t* _stringLiteral3019320178;
 extern String_t* _stringLiteral3042149515;
 extern String_t* _stringLiteral3148232910;
 extern String_t* _stringLiteral3169577870;
@@ -849,6 +850,7 @@ extern const RuntimeMethod* StringBuilder_set_Chars_m3548656617_RuntimeMethod_va
 extern const RuntimeMethod* StringBuilder_set_Length_m1410065908_RuntimeMethod_var;
 extern const RuntimeMethod* ThreadPool_QueueUserWorkItem_m1526970260_RuntimeMethod_var;
 extern const RuntimeMethod* ThreadPool_RegisterWaitForSingleObject_m3828286853_RuntimeMethod_var;
+extern const RuntimeMethod* Thread_Sleep_m483098292_RuntimeMethod_var;
 extern const RuntimeMethod* Thread_Start_m2860771284_RuntimeMethod_var;
 extern const RuntimeMethod* Thread__ctor_m2201781645_RuntimeMethod_var;
 extern const RuntimeMethod* Thread__ctor_m777188137_RuntimeMethod_var;
@@ -1046,6 +1048,7 @@ extern const uint32_t ThreadPool_RegisterWaitForSingleObject_m3828286853_Metadat
 extern const uint32_t ThreadStateException__ctor_m3372575002_MetadataUsageId;
 extern const uint32_t Thread_GetNewManagedId_m2361425608_MetadataUsageId;
 extern const uint32_t Thread_ResetAbort_m2418149112_MetadataUsageId;
+extern const uint32_t Thread_Sleep_m483098292_MetadataUsageId;
 extern const uint32_t Thread_Start_m2860771284_MetadataUsageId;
 extern const uint32_t Thread__cctor_m817723615_MetadataUsageId;
 extern const uint32_t Thread__ctor_m2201781645_MetadataUsageId;
@@ -8804,6 +8807,35 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // THREADINTERRUPTEDEXCEPTION_T3240955163_H
+#ifndef THREADPRIORITY_T1551740086_H
+#define THREADPRIORITY_T1551740086_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Threading.ThreadPriority
+struct  ThreadPriority_t1551740086 
+{
+public:
+	// System.Int32 System.Threading.ThreadPriority::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(ThreadPriority_t1551740086, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // THREADPRIORITY_T1551740086_H
 #ifndef THREADSTATE_T2533302383_H
 #define THREADSTATE_T2533302383_H
 #ifdef __clang__
@@ -11946,12 +11978,14 @@ extern "C" IL2CPP_METHOD_ATTR String_t* Environment_get_NewLine_m3211016485 (Run
 extern "C" IL2CPP_METHOD_ATTR StringBuilder_t * StringBuilder_AppendFormat_m4227532852 (StringBuilder_t * __this, RuntimeObject* ___provider0, String_t* ___format1, ObjectU5BU5D_t2843939325* ___args2, const RuntimeMethod* method);
 // System.Text.StringBuilder System.String::FormatHelper(System.Text.StringBuilder,System.IFormatProvider,System.String,System.Object[])
 extern "C" IL2CPP_METHOD_ATTR StringBuilder_t * String_FormatHelper_m3913915042 (RuntimeObject * __this /* static, unused */, StringBuilder_t * ___result0, RuntimeObject* ___provider1, String_t* ___format2, ObjectU5BU5D_t2843939325* ___args3, const RuntimeMethod* method);
+// System.String System.String::CreateString(System.Char[])
+extern "C" IL2CPP_METHOD_ATTR String_t* String_CreateString_m2818852475 (String_t* __this, CharU5BU5D_t3528271667* ___val0, const RuntimeMethod* method);
+// System.Text.StringBuilder System.Text.StringBuilder::Insert(System.Int32,System.String)
+extern "C" IL2CPP_METHOD_ATTR StringBuilder_t * StringBuilder_Insert_m3039182437 (StringBuilder_t * __this, int32_t ___index0, String_t* ___value1, const RuntimeMethod* method);
 // System.Void System.ArgumentOutOfRangeException::.ctor(System.String)
 extern "C" IL2CPP_METHOD_ATTR void ArgumentOutOfRangeException__ctor_m3628145864 (ArgumentOutOfRangeException_t777629997 * __this, String_t* ___paramName0, const RuntimeMethod* method);
 // System.Boolean System.String::op_Inequality(System.String,System.String)
 extern "C" IL2CPP_METHOD_ATTR bool String_op_Inequality_m215368492 (RuntimeObject * __this /* static, unused */, String_t* ___a0, String_t* ___b1, const RuntimeMethod* method);
-// System.Text.StringBuilder System.Text.StringBuilder::Insert(System.Int32,System.String)
-extern "C" IL2CPP_METHOD_ATTR StringBuilder_t * StringBuilder_Insert_m3039182437 (StringBuilder_t * __this, int32_t ___index0, String_t* ___value1, const RuntimeMethod* method);
 // System.Void System.Text.UTF32Encoding::.ctor(System.Boolean,System.Boolean,System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void UTF32Encoding__ctor_m3417652600 (UTF32Encoding_t312252005 * __this, bool ___bigEndian0, bool ___byteOrderMark1, bool ___throwOnInvalidCharacters2, const RuntimeMethod* method);
 // System.Text.EncoderFallback System.Text.EncoderFallback::get_ExceptionFallback()
@@ -12174,6 +12208,8 @@ extern "C" IL2CPP_METHOD_ATTR Thread_t2300836069 * Thread_CurrentThread_internal
 extern "C" IL2CPP_METHOD_ATTR AppDomain_t1571427825 * AppDomain_get_CurrentDomain_m182766250 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Void System.Threading.Thread::ResetAbort_internal()
 extern "C" IL2CPP_METHOD_ATTR void Thread_ResetAbort_internal_m743805153 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+// System.Void System.Threading.Thread::Sleep_internal(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void Thread_Sleep_internal_m1616472779 (RuntimeObject * __this /* static, unused */, int32_t ___ms0, const RuntimeMethod* method);
 // System.Globalization.CultureInfo System.Globalization.CultureInfo::get_InvariantCulture()
 extern "C" IL2CPP_METHOD_ATTR CultureInfo_t4157843068 * CultureInfo_get_InvariantCulture_m3532445182 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Globalization.CultureInfo System.Threading.Thread::GetCachedCurrentCulture()
@@ -16226,6 +16262,17 @@ extern "C" IL2CPP_METHOD_ATTR StringBuilder_t * StringBuilder_AppendFormat_m2403
 		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject *)L_7);
 		StringBuilder_t * L_8 = StringBuilder_AppendFormat_m4227532852(__this, (RuntimeObject*)NULL, L_0, L_6, /*hidden argument*/NULL);
 		return L_8;
+	}
+}
+// System.Text.StringBuilder System.Text.StringBuilder::Insert(System.Int32,System.Char[])
+extern "C" IL2CPP_METHOD_ATTR StringBuilder_t * StringBuilder_Insert_m1210076372 (StringBuilder_t * __this, int32_t ___index0, CharU5BU5D_t3528271667* ___value1, const RuntimeMethod* method)
+{
+	{
+		int32_t L_0 = ___index0;
+		CharU5BU5D_t3528271667* L_1 = ___value1;
+		String_t* L_2 = String_CreateString_m2818852475(NULL, L_1, /*hidden argument*/NULL);
+		StringBuilder_t * L_3 = StringBuilder_Insert_m3039182437(__this, L_0, L_2, /*hidden argument*/NULL);
+		return L_3;
 	}
 }
 // System.Text.StringBuilder System.Text.StringBuilder::Insert(System.Int32,System.String)
@@ -28817,6 +28864,43 @@ extern "C" IL2CPP_METHOD_ATTR void Thread_ResetAbort_m2418149112 (RuntimeObject 
 		return;
 	}
 }
+// System.Void System.Threading.Thread::Sleep_internal(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void Thread_Sleep_internal_m1616472779 (RuntimeObject * __this /* static, unused */, int32_t ___ms0, const RuntimeMethod* method)
+{
+	typedef void (*Thread_Sleep_internal_m1616472779_ftn) (int32_t);
+	using namespace il2cpp::icalls;
+	 ((Thread_Sleep_internal_m1616472779_ftn)mscorlib::System::Threading::Thread::Sleep_internal) (___ms0);
+}
+// System.Void System.Threading.Thread::Sleep(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void Thread_Sleep_m483098292 (RuntimeObject * __this /* static, unused */, int32_t ___millisecondsTimeout0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Thread_Sleep_m483098292_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___millisecondsTimeout0;
+		if ((((int32_t)L_0) >= ((int32_t)(-1))))
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		ArgumentOutOfRangeException_t777629997 * L_1 = (ArgumentOutOfRangeException_t777629997 *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t777629997_il2cpp_TypeInfo_var);
+		ArgumentOutOfRangeException__ctor_m282481429(L_1, _stringLiteral3648076086, _stringLiteral3019320178, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, NULL, Thread_Sleep_m483098292_RuntimeMethod_var);
+	}
+
+IL_0017:
+	{
+		int32_t L_2 = ___millisecondsTimeout0;
+		IL2CPP_RUNTIME_CLASS_INIT(Thread_t2300836069_il2cpp_TypeInfo_var);
+		Thread_Sleep_internal_m1616472779(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.IntPtr System.Threading.Thread::Thread_internal(System.MulticastDelegate)
 extern "C" IL2CPP_METHOD_ATTR intptr_t Thread_Thread_internal_m4184414727 (Thread_t2300836069 * __this, MulticastDelegate_t * ___start0, const RuntimeMethod* method)
 {
@@ -29235,6 +29319,13 @@ extern "C" IL2CPP_METHOD_ATTR void Thread_set_Name_m3537838048 (Thread_t23008360
 	{
 		String_t* L_0 = ___value0;
 		Thread_SetName_internal_m3162565917(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void System.Threading.Thread::set_Priority(System.Threading.ThreadPriority)
+extern "C" IL2CPP_METHOD_ATTR void Thread_set_Priority_m383432495 (Thread_t2300836069 * __this, int32_t ___value0, const RuntimeMethod* method)
+{
+	{
 		return;
 	}
 }
@@ -29744,6 +29835,14 @@ extern "C" IL2CPP_METHOD_ATTR RegisteredWaitHandle_t1529538454 * ThreadPool_Regi
 		return L_5;
 	}
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

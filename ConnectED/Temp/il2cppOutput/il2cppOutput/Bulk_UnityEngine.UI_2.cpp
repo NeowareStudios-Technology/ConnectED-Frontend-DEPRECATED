@@ -448,8 +448,8 @@ extern const RuntimeMethod* List_1_Add_m2996644200_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_Add_m3298024076_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_Add_m697420525_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_Add_m873450360_RuntimeMethod_var;
-extern const RuntimeMethod* List_1_Clear_m2154023298_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_Clear_m2188935509_RuntimeMethod_var;
+extern const RuntimeMethod* List_1_Clear_m2950620218_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_Clear_m3048681609_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_Clear_m3097985365_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_Clear_m4187652437_RuntimeMethod_var;
@@ -467,9 +467,9 @@ extern const RuntimeMethod* List_1_get_Capacity_m3666274724_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Count_m124153205_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Count_m1547299620_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Count_m1565416845_RuntimeMethod_var;
+extern const RuntimeMethod* List_1_get_Count_m2471577121_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Count_m2805001068_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Count_m3208757669_RuntimeMethod_var;
-extern const RuntimeMethod* List_1_get_Count_m361000296_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Count_m576380744_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m1176857673_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m1378751541_RuntimeMethod_var;
@@ -8194,11 +8194,11 @@ extern "C" IL2CPP_METHOD_ATTR void List_1_Clear_m2188935509_gshared (List_1_t362
 // System.Void System.Collections.Generic.List`1<UnityEngine.Vector4>::Clear()
 extern "C" IL2CPP_METHOD_ATTR void List_1_Clear_m4187652437_gshared (List_1_t496136383 * __this, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<System.Int32>::Clear()
-extern "C" IL2CPP_METHOD_ATTR void List_1_Clear_m2154023298_gshared (List_1_t128053199 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void List_1_Clear_m2950620218_gshared (List_1_t128053199 * __this, const RuntimeMethod* method);
 // System.Int32 System.Collections.Generic.List`1<UnityEngine.Vector3>::get_Count()
 extern "C" IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m576380744_gshared (List_1_t899420910 * __this, const RuntimeMethod* method);
 // System.Int32 System.Collections.Generic.List`1<System.Int32>::get_Count()
-extern "C" IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m361000296_gshared (List_1_t128053199 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m2471577121_gshared (List_1_t128053199 * __this, const RuntimeMethod* method);
 // !0 System.Collections.Generic.List`1<UnityEngine.Vector3>::get_Item(System.Int32)
 extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  List_1_get_Item_m200663048_gshared (List_1_t899420910 * __this, int32_t p0, const RuntimeMethod* method);
 // !0 System.Collections.Generic.List`1<UnityEngine.Color32>::get_Item(System.Int32)
@@ -9129,9 +9129,9 @@ inline void List_1_Clear_m4187652437 (List_1_t496136383 * __this, const RuntimeM
 	((  void (*) (List_1_t496136383 *, const RuntimeMethod*))List_1_Clear_m4187652437_gshared)(__this, method);
 }
 // System.Void System.Collections.Generic.List`1<System.Int32>::Clear()
-inline void List_1_Clear_m2154023298 (List_1_t128053199 * __this, const RuntimeMethod* method)
+inline void List_1_Clear_m2950620218 (List_1_t128053199 * __this, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t128053199 *, const RuntimeMethod*))List_1_Clear_m2154023298_gshared)(__this, method);
+	((  void (*) (List_1_t128053199 *, const RuntimeMethod*))List_1_Clear_m2950620218_gshared)(__this, method);
 }
 // System.Int32 System.Collections.Generic.List`1<UnityEngine.Vector3>::get_Count()
 inline int32_t List_1_get_Count_m576380744 (List_1_t899420910 * __this, const RuntimeMethod* method)
@@ -9139,9 +9139,9 @@ inline int32_t List_1_get_Count_m576380744 (List_1_t899420910 * __this, const Ru
 	return ((  int32_t (*) (List_1_t899420910 *, const RuntimeMethod*))List_1_get_Count_m576380744_gshared)(__this, method);
 }
 // System.Int32 System.Collections.Generic.List`1<System.Int32>::get_Count()
-inline int32_t List_1_get_Count_m361000296 (List_1_t128053199 * __this, const RuntimeMethod* method)
+inline int32_t List_1_get_Count_m2471577121 (List_1_t128053199 * __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (List_1_t128053199 *, const RuntimeMethod*))List_1_get_Count_m361000296_gshared)(__this, method);
+	return ((  int32_t (*) (List_1_t128053199 *, const RuntimeMethod*))List_1_get_Count_m2471577121_gshared)(__this, method);
 }
 // !0 System.Collections.Generic.List`1<UnityEngine.Vector3>::get_Item(System.Int32)
 inline Vector3_t3722313464  List_1_get_Item_m200663048 (List_1_t899420910 * __this, int32_t p0, const RuntimeMethod* method)
@@ -18787,7 +18787,7 @@ extern "C" IL2CPP_METHOD_ATTR void VertexHelper_Clear_m627349662 (VertexHelper_t
 		List_1_Clear_m4187652437(L_7, /*hidden argument*/List_1_Clear_m4187652437_RuntimeMethod_var);
 		List_1_t128053199 * L_8 = __this->get_m_Indices_8();
 		NullCheck(L_8);
-		List_1_Clear_m2154023298(L_8, /*hidden argument*/List_1_Clear_m2154023298_RuntimeMethod_var);
+		List_1_Clear_m2950620218(L_8, /*hidden argument*/List_1_Clear_m2950620218_RuntimeMethod_var);
 		return;
 	}
 }
@@ -18828,7 +18828,7 @@ extern "C" IL2CPP_METHOD_ATTR int32_t VertexHelper_get_currentIndexCount_m291673
 	{
 		List_1_t128053199 * L_0 = __this->get_m_Indices_8();
 		NullCheck(L_0);
-		int32_t L_1 = List_1_get_Count_m361000296(L_0, /*hidden argument*/List_1_get_Count_m361000296_RuntimeMethod_var);
+		int32_t L_1 = List_1_get_Count_m2471577121(L_0, /*hidden argument*/List_1_get_Count_m2471577121_RuntimeMethod_var);
 		V_0 = L_1;
 		goto IL_0012;
 	}

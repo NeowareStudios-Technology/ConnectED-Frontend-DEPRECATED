@@ -1188,6 +1188,7 @@ extern const RuntimeType* StreamingContext_t3711869237_0_0_0_var;
 extern const RuntimeType* StringU5BU5D_t1281789340_0_0_0_var;
 extern const RuntimeType* String_t_0_0_0_var;
 extern const RuntimeType* TimeSpan_t881159249_0_0_0_var;
+extern const RuntimeType* UInt16_t2177724958_0_0_0_var;
 extern const RuntimeType* UInt32_t2560061978_0_0_0_var;
 extern const RuntimeType* UInt64_t4134040092_0_0_0_var;
 extern const uint32_t AsymmetricAlgorithm_Create_m300007837_MetadataUsageId;
@@ -1449,6 +1450,7 @@ extern const uint32_t SerializationInfo_AddValue_m1927057880_MetadataUsageId;
 extern const uint32_t SerializationInfo_AddValue_m2020653395_MetadataUsageId;
 extern const uint32_t SerializationInfo_AddValue_m2780248522_MetadataUsageId;
 extern const uint32_t SerializationInfo_AddValue_m2872281893_MetadataUsageId;
+extern const uint32_t SerializationInfo_AddValue_m3212294485_MetadataUsageId;
 extern const uint32_t SerializationInfo_AddValue_m3427199315_MetadataUsageId;
 extern const uint32_t SerializationInfo_AddValue_m3594631505_MetadataUsageId;
 extern const uint32_t SerializationInfo_AddValue_m3906743584_MetadataUsageId;
@@ -26288,6 +26290,27 @@ extern "C" IL2CPP_METHOD_ATTR void SerializationInfo_AddValue_m2780248522 (Seria
 		int16_t L_2 = L_1;
 		RuntimeObject * L_3 = Box(Int16_t2552820387_il2cpp_TypeInfo_var, &L_2);
 		RuntimeTypeHandle_t3027515415  L_4 = { reinterpret_cast<intptr_t> (Int16_t2552820387_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_5 = Type_GetTypeFromHandle_m1620074514(NULL /*static, unused*/, L_4, /*hidden argument*/NULL);
+		SerializationInfo_AddValue_m3906743584(__this, L_0, L_3, L_5, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void System.Runtime.Serialization.SerializationInfo::AddValue(System.String,System.UInt16)
+extern "C" IL2CPP_METHOD_ATTR void SerializationInfo_AddValue_m3212294485 (SerializationInfo_t950877179 * __this, String_t* ___name0, uint16_t ___value1, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (SerializationInfo_AddValue_m3212294485_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___name0;
+		uint16_t L_1 = ___value1;
+		uint16_t L_2 = L_1;
+		RuntimeObject * L_3 = Box(UInt16_t2177724958_il2cpp_TypeInfo_var, &L_2);
+		RuntimeTypeHandle_t3027515415  L_4 = { reinterpret_cast<intptr_t> (UInt16_t2177724958_0_0_0_var) };
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
 		Type_t * L_5 = Type_GetTypeFromHandle_m1620074514(NULL /*static, unused*/, L_4, /*hidden argument*/NULL);
 		SerializationInfo_AddValue_m3906743584(__this, L_0, L_3, L_5, /*hidden argument*/NULL);

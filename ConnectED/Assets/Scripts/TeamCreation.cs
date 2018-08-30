@@ -75,9 +75,18 @@ public class TeamCreation : MonoBehaviour {
 [System.Serializable]
 public class Team
 {
-    public int t_capacity;
-    public string t_desc;
+	public int funds_raised;
+    public int is_registered;
+	public string t_city;
+	public string t_desc;
+    public int t_hours;
+    public int t_member_mum;
+    public string[] t_members;
     public string t_name;
+	public string t_organizer;
+    public string t_orig_name;
+    public int t_pending_member_num;
     public string t_photo;
     public string t_privacy;
+    public string t_state;
 }

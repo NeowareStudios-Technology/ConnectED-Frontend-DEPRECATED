@@ -16,6 +16,7 @@ public class Login : MonoBehaviour {
     public InputField Password;
     public Jsonparser j;
     public getProfileinfo info;
+    public TeamsGet TeamsGet;
     public void StartLoginProcess()
     {
             string e = email.text;
@@ -85,7 +86,7 @@ public class Login : MonoBehaviour {
  
           j.token = task.Result;
           Debug.Log(j.token);
-
+          TeamsGet.getTeams();
             info.GetmyProfile();
           // Send token to your backend via HTTPS
           // ...

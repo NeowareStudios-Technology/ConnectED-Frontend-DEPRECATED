@@ -227,6 +227,9 @@ extern "C" void DEFAULT_CALL ReversePInvokeWrapper_CleanupNotifier_PerformCleanu
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_FirebaseApp_LogMessage_m439117050(int32_t ___logLevel0, char* ___message1);
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_FutureString_SWIG_CompletionDispatcher_m2507986095(int32_t ___key0);
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_FutureVoid_SWIG_CompletionDispatcher_m180493621(int32_t ___key0);
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_EasyWebCamBase_EasyWebCamStarted_m2267316720();
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_EasyWebCamBase_EasyWebCamUpdate_m3201891160();
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_EasyWebCamBase_EasyWebCamStoped_m279443148();
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_SWIGExceptionHelper_SetPendingApplicationException_m4103441096(char* ___message0);
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_SWIGExceptionHelper_SetPendingArithmeticException_m4283099985(char* ___message0);
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_SWIGExceptionHelper_SetPendingDivideByZeroException_m256175683(char* ___message0);
@@ -245,7 +248,7 @@ extern "C" char* DEFAULT_CALL ReversePInvokeWrapper_SWIGStringHelper_CreateStrin
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_FirebaseAuth_StateChangedFunction_m3953799837(intptr_t ___appCPtr0);
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_FirebaseAuth_IdTokenChangedFunction_m3469931091(intptr_t ___appCPtr0);
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_Future_User_SWIG_CompletionDispatcher_m2723325741(int32_t ___key0);
-extern const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[39] = 
+extern const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[42] = 
 {
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_DeflateStream_UnmanagedRead_m4002292959),
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_DeflateStream_UnmanagedWrite_m3688808850),
@@ -268,6 +271,9 @@ extern const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[39] =
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_FirebaseApp_LogMessage_m439117050),
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_FutureString_SWIG_CompletionDispatcher_m2507986095),
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_FutureVoid_SWIG_CompletionDispatcher_m180493621),
+	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_EasyWebCamBase_EasyWebCamStarted_m2267316720),
+	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_EasyWebCamBase_EasyWebCamUpdate_m3201891160),
+	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_EasyWebCamBase_EasyWebCamStoped_m279443148),
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_SWIGExceptionHelper_SetPendingApplicationException_m4103441096),
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_SWIGExceptionHelper_SetPendingArithmeticException_m4283099985),
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_SWIGExceptionHelper_SetPendingDivideByZeroException_m256175683),

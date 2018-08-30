@@ -273,6 +273,10 @@ struct AudioSpatializerExtensionDefinition_t597896186;
 struct AudioSpatializerExtensionDefinitionU5BU5D_t143577823;
 // UnityEngine.Behaviour
 struct Behaviour_t1437897464;
+// UnityEngine.Color32[]
+struct Color32U5BU5D_t3850468773;
+// UnityEngine.Color[]
+struct ColorU5BU5D_t941916413;
 // UnityEngine.Experimental.Audio.AudioSampleProvider
 struct AudioSampleProvider_t3950279772;
 // UnityEngine.Experimental.Audio.AudioSampleProvider/ConsumeSampleFramesNativeFunction
@@ -283,6 +287,10 @@ struct SampleFramesHandler_t3208670351;
 struct Object_t631007953;
 // UnityEngine.ScriptableObject
 struct ScriptableObject_t2528358522;
+// UnityEngine.Texture
+struct Texture_t3661962703;
+// UnityEngine.WebCamTexture
+struct WebCamTexture_t1514609158;
 
 extern RuntimeClass* AudioExtensionManager_t3220897493_il2cpp_TypeInfo_var;
 extern RuntimeClass* AudioListenerExtension_t3242956547_il2cpp_TypeInfo_var;
@@ -303,6 +311,7 @@ extern RuntimeClass* UInt32_t2560061978_il2cpp_TypeInfo_var;
 extern String_t* _stringLiteral3450517380;
 extern String_t* _stringLiteral3452614530;
 extern String_t* _stringLiteral4035105846;
+extern String_t* _stringLiteral757602046;
 extern const RuntimeMethod* Enumerator_Dispose_m3198901590_RuntimeMethod_var;
 extern const RuntimeMethod* Enumerator_Dispose_m405442337_RuntimeMethod_var;
 extern const RuntimeMethod* Enumerator_MoveNext_m1000499844_RuntimeMethod_var;
@@ -343,9 +352,12 @@ extern const uint32_t AudioSource_AddSpatializerExtension_m2560794359_MetadataUs
 extern const uint32_t ConsumeSampleFramesNativeFunction_BeginInvoke_m342678987_MetadataUsageId;
 extern const uint32_t PCMSetPositionCallback_BeginInvoke_m2701134198_MetadataUsageId;
 extern const uint32_t SampleFramesHandler_BeginInvoke_m2992664336_MetadataUsageId;
+extern const uint32_t WebCamTexture__ctor_m3710713058_MetadataUsageId;
 
 struct SingleU5BU5D_t1444911251;
 struct StringU5BU5D_t1281789340;
+struct Color32U5BU5D_t3850468773;
+struct ColorU5BU5D_t941916413;
 
 
 #ifndef U3CMODULEU3E_T692745531_H
@@ -1353,6 +1365,188 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // VOID_T1185182177_H
+#ifndef COLOR_T2555686324_H
+#define COLOR_T2555686324_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Color
+struct  Color_t2555686324 
+{
+public:
+	// System.Single UnityEngine.Color::r
+	float ___r_0;
+	// System.Single UnityEngine.Color::g
+	float ___g_1;
+	// System.Single UnityEngine.Color::b
+	float ___b_2;
+	// System.Single UnityEngine.Color::a
+	float ___a_3;
+
+public:
+	inline static int32_t get_offset_of_r_0() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___r_0)); }
+	inline float get_r_0() const { return ___r_0; }
+	inline float* get_address_of_r_0() { return &___r_0; }
+	inline void set_r_0(float value)
+	{
+		___r_0 = value;
+	}
+
+	inline static int32_t get_offset_of_g_1() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___g_1)); }
+	inline float get_g_1() const { return ___g_1; }
+	inline float* get_address_of_g_1() { return &___g_1; }
+	inline void set_g_1(float value)
+	{
+		___g_1 = value;
+	}
+
+	inline static int32_t get_offset_of_b_2() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___b_2)); }
+	inline float get_b_2() const { return ___b_2; }
+	inline float* get_address_of_b_2() { return &___b_2; }
+	inline void set_b_2(float value)
+	{
+		___b_2 = value;
+	}
+
+	inline static int32_t get_offset_of_a_3() { return static_cast<int32_t>(offsetof(Color_t2555686324, ___a_3)); }
+	inline float get_a_3() const { return ___a_3; }
+	inline float* get_address_of_a_3() { return &___a_3; }
+	inline void set_a_3(float value)
+	{
+		___a_3 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // COLOR_T2555686324_H
+#ifndef COLOR32_T2600501292_H
+#define COLOR32_T2600501292_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Color32
+struct  Color32_t2600501292 
+{
+public:
+	union
+	{
+		#pragma pack(push, tp, 1)
+		struct
+		{
+			// System.Int32 UnityEngine.Color32::rgba
+			int32_t ___rgba_0;
+		};
+		#pragma pack(pop, tp)
+		struct
+		{
+			int32_t ___rgba_0_forAlignmentOnly;
+		};
+		#pragma pack(push, tp, 1)
+		struct
+		{
+			// System.Byte UnityEngine.Color32::r
+			uint8_t ___r_1;
+		};
+		#pragma pack(pop, tp)
+		struct
+		{
+			uint8_t ___r_1_forAlignmentOnly;
+		};
+		#pragma pack(push, tp, 1)
+		struct
+		{
+			char ___g_2_OffsetPadding[1];
+			// System.Byte UnityEngine.Color32::g
+			uint8_t ___g_2;
+		};
+		#pragma pack(pop, tp)
+		struct
+		{
+			char ___g_2_OffsetPadding_forAlignmentOnly[1];
+			uint8_t ___g_2_forAlignmentOnly;
+		};
+		#pragma pack(push, tp, 1)
+		struct
+		{
+			char ___b_3_OffsetPadding[2];
+			// System.Byte UnityEngine.Color32::b
+			uint8_t ___b_3;
+		};
+		#pragma pack(pop, tp)
+		struct
+		{
+			char ___b_3_OffsetPadding_forAlignmentOnly[2];
+			uint8_t ___b_3_forAlignmentOnly;
+		};
+		#pragma pack(push, tp, 1)
+		struct
+		{
+			char ___a_4_OffsetPadding[3];
+			// System.Byte UnityEngine.Color32::a
+			uint8_t ___a_4;
+		};
+		#pragma pack(pop, tp)
+		struct
+		{
+			char ___a_4_OffsetPadding_forAlignmentOnly[3];
+			uint8_t ___a_4_forAlignmentOnly;
+		};
+	};
+
+public:
+	inline static int32_t get_offset_of_rgba_0() { return static_cast<int32_t>(offsetof(Color32_t2600501292, ___rgba_0)); }
+	inline int32_t get_rgba_0() const { return ___rgba_0; }
+	inline int32_t* get_address_of_rgba_0() { return &___rgba_0; }
+	inline void set_rgba_0(int32_t value)
+	{
+		___rgba_0 = value;
+	}
+
+	inline static int32_t get_offset_of_r_1() { return static_cast<int32_t>(offsetof(Color32_t2600501292, ___r_1)); }
+	inline uint8_t get_r_1() const { return ___r_1; }
+	inline uint8_t* get_address_of_r_1() { return &___r_1; }
+	inline void set_r_1(uint8_t value)
+	{
+		___r_1 = value;
+	}
+
+	inline static int32_t get_offset_of_g_2() { return static_cast<int32_t>(offsetof(Color32_t2600501292, ___g_2)); }
+	inline uint8_t get_g_2() const { return ___g_2; }
+	inline uint8_t* get_address_of_g_2() { return &___g_2; }
+	inline void set_g_2(uint8_t value)
+	{
+		___g_2 = value;
+	}
+
+	inline static int32_t get_offset_of_b_3() { return static_cast<int32_t>(offsetof(Color32_t2600501292, ___b_3)); }
+	inline uint8_t get_b_3() const { return ___b_3; }
+	inline uint8_t* get_address_of_b_3() { return &___b_3; }
+	inline void set_b_3(uint8_t value)
+	{
+		___b_3 = value;
+	}
+
+	inline static int32_t get_offset_of_a_4() { return static_cast<int32_t>(offsetof(Color32_t2600501292, ___a_4)); }
+	inline uint8_t get_a_4() const { return ___a_4; }
+	inline uint8_t* get_address_of_a_4() { return &___a_4; }
+	inline void set_a_4(uint8_t value)
+	{
+		___a_4 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // COLOR32_T2600501292_H
 #ifndef PROPERTYNAME_T3749835189_H
 #define PROPERTYNAME_T3749835189_H
 #ifdef __clang__
@@ -2203,6 +2397,26 @@ struct ScriptableObject_t2528358522_marshaled_com : public Object_t631007953_mar
 {
 };
 #endif // SCRIPTABLEOBJECT_T2528358522_H
+#ifndef TEXTURE_T3661962703_H
+#define TEXTURE_T3661962703_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Texture
+struct  Texture_t3661962703  : public Object_t631007953
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // TEXTURE_T3661962703_H
 #ifndef ASYNCCALLBACK_T3962456242_H
 #define ASYNCCALLBACK_T3962456242_H
 #ifdef __clang__
@@ -2413,6 +2627,26 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // SAMPLEFRAMESHANDLER_T3208670351_H
+#ifndef WEBCAMTEXTURE_T1514609158_H
+#define WEBCAMTEXTURE_T1514609158_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.WebCamTexture
+struct  WebCamTexture_t1514609158  : public Texture_t3661962703
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // WEBCAMTEXTURE_T1514609158_H
 #ifndef AUDIOBEHAVIOUR_T2879336574_H
 #define AUDIOBEHAVIOUR_T2879336574_H
 #ifdef __clang__
@@ -2574,6 +2808,76 @@ public:
 	{
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
+// UnityEngine.Color[]
+struct ColorU5BU5D_t941916413  : public RuntimeArray
+{
+public:
+	ALIGN_FIELD (8) Color_t2555686324  m_Items[1];
+
+public:
+	inline Color_t2555686324  GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Color_t2555686324 * GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Color_t2555686324  value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline Color_t2555686324  GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Color_t2555686324 * GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Color_t2555686324  value)
+	{
+		m_Items[index] = value;
+	}
+};
+// UnityEngine.Color32[]
+struct Color32U5BU5D_t3850468773  : public RuntimeArray
+{
+public:
+	ALIGN_FIELD (8) Color32_t2600501292  m_Items[1];
+
+public:
+	inline Color32_t2600501292  GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Color32_t2600501292 * GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Color32_t2600501292  value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline Color32_t2600501292  GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Color32_t2600501292 * GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Color32_t2600501292  value)
+	{
+		m_Items[index] = value;
 	}
 };
 
@@ -2819,6 +3123,18 @@ extern "C" IL2CPP_METHOD_ATTR void GC_SuppressFinalize_m1177400158 (RuntimeObjec
 extern "C" IL2CPP_METHOD_ATTR void SampleFramesHandler_Invoke_m544261268 (SampleFramesHandler_t3208670351 * __this, AudioSampleProvider_t3950279772 * ___provider0, uint32_t ___sampleFrameCount1, const RuntimeMethod* method);
 // System.UInt32 UnityEngine.Experimental.Audio.AudioSampleProvider/ConsumeSampleFramesNativeFunction::Invoke(System.UInt32,System.IntPtr,System.UInt32)
 extern "C" IL2CPP_METHOD_ATTR uint32_t ConsumeSampleFramesNativeFunction_Invoke_m1773312795 (ConsumeSampleFramesNativeFunction_t1497769677 * __this, uint32_t ___providerId0, intptr_t ___interleavedSampleFrames1, uint32_t ___sampleFrameCount2, const RuntimeMethod* method);
+// System.Void UnityEngine.Texture::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void Texture__ctor_m3554519797 (Texture_t3661962703 * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.WebCamTexture::Internal_CreateWebCamTexture(UnityEngine.WebCamTexture,System.String,System.Int32,System.Int32,System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void WebCamTexture_Internal_CreateWebCamTexture_m2861130443 (RuntimeObject * __this /* static, unused */, WebCamTexture_t1514609158 * ___self0, String_t* ___scriptingDevice1, int32_t ___requestedWidth2, int32_t ___requestedHeight3, int32_t ___maxFramerate4, const RuntimeMethod* method);
+// System.Void UnityEngine.WebCamTexture::INTERNAL_CALL_Play(UnityEngine.WebCamTexture)
+extern "C" IL2CPP_METHOD_ATTR void WebCamTexture_INTERNAL_CALL_Play_m701961556 (RuntimeObject * __this /* static, unused */, WebCamTexture_t1514609158 * ___self0, const RuntimeMethod* method);
+// System.Void UnityEngine.WebCamTexture::INTERNAL_CALL_Stop(UnityEngine.WebCamTexture)
+extern "C" IL2CPP_METHOD_ATTR void WebCamTexture_INTERNAL_CALL_Stop_m2114762857 (RuntimeObject * __this /* static, unused */, WebCamTexture_t1514609158 * ___self0, const RuntimeMethod* method);
+// UnityEngine.Color[] UnityEngine.WebCamTexture::GetPixels(System.Int32,System.Int32,System.Int32,System.Int32)
+extern "C" IL2CPP_METHOD_ATTR ColorU5BU5D_t941916413* WebCamTexture_GetPixels_m2594249981 (WebCamTexture_t1514609158 * __this, int32_t ___x0, int32_t ___y1, int32_t ___blockWidth2, int32_t ___blockHeight3, const RuntimeMethod* method);
+// UnityEngine.Color32[] UnityEngine.WebCamTexture::GetPixels32(UnityEngine.Color32[])
+extern "C" IL2CPP_METHOD_ATTR Color32U5BU5D_t3850468773* WebCamTexture_GetPixels32_m3450959033 (WebCamTexture_t1514609158 * __this, Color32U5BU5D_t3850468773* ___colors0, const RuntimeMethod* method);
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -5804,6 +6120,141 @@ extern "C" IL2CPP_METHOD_ATTR RuntimeObject* SampleFramesHandler_BeginInvoke_m29
 extern "C" IL2CPP_METHOD_ATTR void SampleFramesHandler_EndInvoke_m3715791887 (SampleFramesHandler_t3208670351 * __this, RuntimeObject* ___result0, const RuntimeMethod* method)
 {
 	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void UnityEngine.WebCamTexture::.ctor(System.Int32,System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void WebCamTexture__ctor_m3710713058 (WebCamTexture_t1514609158 * __this, int32_t ___requestedWidth0, int32_t ___requestedHeight1, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (WebCamTexture__ctor_m3710713058_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Texture__ctor_m3554519797(__this, /*hidden argument*/NULL);
+		int32_t L_0 = ___requestedWidth0;
+		int32_t L_1 = ___requestedHeight1;
+		WebCamTexture_Internal_CreateWebCamTexture_m2861130443(NULL /*static, unused*/, __this, _stringLiteral757602046, L_0, L_1, 0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.WebCamTexture::Internal_CreateWebCamTexture(UnityEngine.WebCamTexture,System.String,System.Int32,System.Int32,System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void WebCamTexture_Internal_CreateWebCamTexture_m2861130443 (RuntimeObject * __this /* static, unused */, WebCamTexture_t1514609158 * ___self0, String_t* ___scriptingDevice1, int32_t ___requestedWidth2, int32_t ___requestedHeight3, int32_t ___maxFramerate4, const RuntimeMethod* method)
+{
+	typedef void (*WebCamTexture_Internal_CreateWebCamTexture_m2861130443_ftn) (WebCamTexture_t1514609158 *, String_t*, int32_t, int32_t, int32_t);
+	static WebCamTexture_Internal_CreateWebCamTexture_m2861130443_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (WebCamTexture_Internal_CreateWebCamTexture_m2861130443_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.WebCamTexture::Internal_CreateWebCamTexture(UnityEngine.WebCamTexture,System.String,System.Int32,System.Int32,System.Int32)");
+	_il2cpp_icall_func(___self0, ___scriptingDevice1, ___requestedWidth2, ___requestedHeight3, ___maxFramerate4);
+}
+// System.Void UnityEngine.WebCamTexture::Play()
+extern "C" IL2CPP_METHOD_ATTR void WebCamTexture_Play_m3866603461 (WebCamTexture_t1514609158 * __this, const RuntimeMethod* method)
+{
+	{
+		WebCamTexture_INTERNAL_CALL_Play_m701961556(NULL /*static, unused*/, __this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.WebCamTexture::INTERNAL_CALL_Play(UnityEngine.WebCamTexture)
+extern "C" IL2CPP_METHOD_ATTR void WebCamTexture_INTERNAL_CALL_Play_m701961556 (RuntimeObject * __this /* static, unused */, WebCamTexture_t1514609158 * ___self0, const RuntimeMethod* method)
+{
+	typedef void (*WebCamTexture_INTERNAL_CALL_Play_m701961556_ftn) (WebCamTexture_t1514609158 *);
+	static WebCamTexture_INTERNAL_CALL_Play_m701961556_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (WebCamTexture_INTERNAL_CALL_Play_m701961556_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.WebCamTexture::INTERNAL_CALL_Play(UnityEngine.WebCamTexture)");
+	_il2cpp_icall_func(___self0);
+}
+// System.Void UnityEngine.WebCamTexture::Stop()
+extern "C" IL2CPP_METHOD_ATTR void WebCamTexture_Stop_m3471034432 (WebCamTexture_t1514609158 * __this, const RuntimeMethod* method)
+{
+	{
+		WebCamTexture_INTERNAL_CALL_Stop_m2114762857(NULL /*static, unused*/, __this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.WebCamTexture::INTERNAL_CALL_Stop(UnityEngine.WebCamTexture)
+extern "C" IL2CPP_METHOD_ATTR void WebCamTexture_INTERNAL_CALL_Stop_m2114762857 (RuntimeObject * __this /* static, unused */, WebCamTexture_t1514609158 * ___self0, const RuntimeMethod* method)
+{
+	typedef void (*WebCamTexture_INTERNAL_CALL_Stop_m2114762857_ftn) (WebCamTexture_t1514609158 *);
+	static WebCamTexture_INTERNAL_CALL_Stop_m2114762857_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (WebCamTexture_INTERNAL_CALL_Stop_m2114762857_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.WebCamTexture::INTERNAL_CALL_Stop(UnityEngine.WebCamTexture)");
+	_il2cpp_icall_func(___self0);
+}
+// System.Boolean UnityEngine.WebCamTexture::get_isPlaying()
+extern "C" IL2CPP_METHOD_ATTR bool WebCamTexture_get_isPlaying_m3525118025 (WebCamTexture_t1514609158 * __this, const RuntimeMethod* method)
+{
+	typedef bool (*WebCamTexture_get_isPlaying_m3525118025_ftn) (WebCamTexture_t1514609158 *);
+	static WebCamTexture_get_isPlaying_m3525118025_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (WebCamTexture_get_isPlaying_m3525118025_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.WebCamTexture::get_isPlaying()");
+	bool retVal = _il2cpp_icall_func(__this);
+	return retVal;
+}
+// UnityEngine.Color[] UnityEngine.WebCamTexture::GetPixels()
+extern "C" IL2CPP_METHOD_ATTR ColorU5BU5D_t941916413* WebCamTexture_GetPixels_m2308263178 (WebCamTexture_t1514609158 * __this, const RuntimeMethod* method)
+{
+	ColorU5BU5D_t941916413* V_0 = NULL;
+	{
+		int32_t L_0 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, __this);
+		int32_t L_1 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, __this);
+		ColorU5BU5D_t941916413* L_2 = WebCamTexture_GetPixels_m2594249981(__this, 0, 0, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		goto IL_001b;
+	}
+
+IL_001b:
+	{
+		ColorU5BU5D_t941916413* L_3 = V_0;
+		return L_3;
+	}
+}
+// UnityEngine.Color[] UnityEngine.WebCamTexture::GetPixels(System.Int32,System.Int32,System.Int32,System.Int32)
+extern "C" IL2CPP_METHOD_ATTR ColorU5BU5D_t941916413* WebCamTexture_GetPixels_m2594249981 (WebCamTexture_t1514609158 * __this, int32_t ___x0, int32_t ___y1, int32_t ___blockWidth2, int32_t ___blockHeight3, const RuntimeMethod* method)
+{
+	typedef ColorU5BU5D_t941916413* (*WebCamTexture_GetPixels_m2594249981_ftn) (WebCamTexture_t1514609158 *, int32_t, int32_t, int32_t, int32_t);
+	static WebCamTexture_GetPixels_m2594249981_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (WebCamTexture_GetPixels_m2594249981_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.WebCamTexture::GetPixels(System.Int32,System.Int32,System.Int32,System.Int32)");
+	ColorU5BU5D_t941916413* retVal = _il2cpp_icall_func(__this, ___x0, ___y1, ___blockWidth2, ___blockHeight3);
+	return retVal;
+}
+// UnityEngine.Color32[] UnityEngine.WebCamTexture::GetPixels32(UnityEngine.Color32[])
+extern "C" IL2CPP_METHOD_ATTR Color32U5BU5D_t3850468773* WebCamTexture_GetPixels32_m3450959033 (WebCamTexture_t1514609158 * __this, Color32U5BU5D_t3850468773* ___colors0, const RuntimeMethod* method)
+{
+	typedef Color32U5BU5D_t3850468773* (*WebCamTexture_GetPixels32_m3450959033_ftn) (WebCamTexture_t1514609158 *, Color32U5BU5D_t3850468773*);
+	static WebCamTexture_GetPixels32_m3450959033_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (WebCamTexture_GetPixels32_m3450959033_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.WebCamTexture::GetPixels32(UnityEngine.Color32[])");
+	Color32U5BU5D_t3850468773* retVal = _il2cpp_icall_func(__this, ___colors0);
+	return retVal;
+}
+// UnityEngine.Color32[] UnityEngine.WebCamTexture::GetPixels32()
+extern "C" IL2CPP_METHOD_ATTR Color32U5BU5D_t3850468773* WebCamTexture_GetPixels32_m3622054777 (WebCamTexture_t1514609158 * __this, const RuntimeMethod* method)
+{
+	Color32U5BU5D_t3850468773* V_0 = NULL;
+	Color32U5BU5D_t3850468773* V_1 = NULL;
+	{
+		V_0 = (Color32U5BU5D_t3850468773*)NULL;
+		Color32U5BU5D_t3850468773* L_0 = V_0;
+		Color32U5BU5D_t3850468773* L_1 = WebCamTexture_GetPixels32_m3450959033(__this, L_0, /*hidden argument*/NULL);
+		V_1 = L_1;
+		goto IL_0010;
+	}
+
+IL_0010:
+	{
+		Color32U5BU5D_t3850468773* L_2 = V_1;
+		return L_2;
+	}
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

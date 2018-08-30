@@ -530,6 +530,64 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // COOKIEPARSER_T2349142305_H
+#ifndef CREDENTIALCACHE_T3101173682_H
+#define CREDENTIALCACHE_T3101173682_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Net.CredentialCache
+struct  CredentialCache_t3101173682  : public RuntimeObject
+{
+public:
+	// System.Collections.Hashtable System.Net.CredentialCache::cache
+	Hashtable_t1853889766 * ___cache_1;
+	// System.Collections.Hashtable System.Net.CredentialCache::cacheForHost
+	Hashtable_t1853889766 * ___cacheForHost_2;
+
+public:
+	inline static int32_t get_offset_of_cache_1() { return static_cast<int32_t>(offsetof(CredentialCache_t3101173682, ___cache_1)); }
+	inline Hashtable_t1853889766 * get_cache_1() const { return ___cache_1; }
+	inline Hashtable_t1853889766 ** get_address_of_cache_1() { return &___cache_1; }
+	inline void set_cache_1(Hashtable_t1853889766 * value)
+	{
+		___cache_1 = value;
+		Il2CppCodeGenWriteBarrier((&___cache_1), value);
+	}
+
+	inline static int32_t get_offset_of_cacheForHost_2() { return static_cast<int32_t>(offsetof(CredentialCache_t3101173682, ___cacheForHost_2)); }
+	inline Hashtable_t1853889766 * get_cacheForHost_2() const { return ___cacheForHost_2; }
+	inline Hashtable_t1853889766 ** get_address_of_cacheForHost_2() { return &___cacheForHost_2; }
+	inline void set_cacheForHost_2(Hashtable_t1853889766 * value)
+	{
+		___cacheForHost_2 = value;
+		Il2CppCodeGenWriteBarrier((&___cacheForHost_2), value);
+	}
+};
+
+struct CredentialCache_t3101173682_StaticFields
+{
+public:
+	// System.Net.NetworkCredential System.Net.CredentialCache::empty
+	NetworkCredential_t3282608323 * ___empty_0;
+
+public:
+	inline static int32_t get_offset_of_empty_0() { return static_cast<int32_t>(offsetof(CredentialCache_t3101173682_StaticFields, ___empty_0)); }
+	inline NetworkCredential_t3282608323 * get_empty_0() const { return ___empty_0; }
+	inline NetworkCredential_t3282608323 ** get_address_of_empty_0() { return &___empty_0; }
+	inline void set_empty_0(NetworkCredential_t3282608323 * value)
+	{
+		___empty_0 = value;
+		Il2CppCodeGenWriteBarrier((&___empty_0), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // CREDENTIALCACHE_T3101173682_H
 #ifndef CREDENTIALCACHEFORHOSTKEY_T3132413229_H
 #define CREDENTIALCACHEFORHOSTKEY_T3132413229_H
 #ifdef __clang__
@@ -3521,309 +3579,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // RESPONSESTREAM_T3810703494_H
-#ifndef WEBCONNECTIONSTREAM_T2170064850_H
-#define WEBCONNECTIONSTREAM_T2170064850_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Net.WebConnectionStream
-struct  WebConnectionStream_t2170064850  : public Stream_t1273022909
-{
-public:
-	// System.Boolean System.Net.WebConnectionStream::isRead
-	bool ___isRead_2;
-	// System.Net.WebConnection System.Net.WebConnectionStream::cnc
-	WebConnection_t3982808322 * ___cnc_3;
-	// System.Net.HttpWebRequest System.Net.WebConnectionStream::request
-	HttpWebRequest_t1669436515 * ___request_4;
-	// System.Byte[] System.Net.WebConnectionStream::readBuffer
-	ByteU5BU5D_t4116647657* ___readBuffer_5;
-	// System.Int32 System.Net.WebConnectionStream::readBufferOffset
-	int32_t ___readBufferOffset_6;
-	// System.Int32 System.Net.WebConnectionStream::readBufferSize
-	int32_t ___readBufferSize_7;
-	// System.Int32 System.Net.WebConnectionStream::contentLength
-	int32_t ___contentLength_8;
-	// System.Int32 System.Net.WebConnectionStream::totalRead
-	int32_t ___totalRead_9;
-	// System.Int64 System.Net.WebConnectionStream::totalWritten
-	int64_t ___totalWritten_10;
-	// System.Boolean System.Net.WebConnectionStream::nextReadCalled
-	bool ___nextReadCalled_11;
-	// System.Int32 System.Net.WebConnectionStream::pendingReads
-	int32_t ___pendingReads_12;
-	// System.Int32 System.Net.WebConnectionStream::pendingWrites
-	int32_t ___pendingWrites_13;
-	// System.Threading.ManualResetEvent System.Net.WebConnectionStream::pending
-	ManualResetEvent_t451242010 * ___pending_14;
-	// System.Boolean System.Net.WebConnectionStream::allowBuffering
-	bool ___allowBuffering_15;
-	// System.Boolean System.Net.WebConnectionStream::sendChunked
-	bool ___sendChunked_16;
-	// System.IO.MemoryStream System.Net.WebConnectionStream::writeBuffer
-	MemoryStream_t94973147 * ___writeBuffer_17;
-	// System.Boolean System.Net.WebConnectionStream::requestWritten
-	bool ___requestWritten_18;
-	// System.Byte[] System.Net.WebConnectionStream::headers
-	ByteU5BU5D_t4116647657* ___headers_19;
-	// System.Boolean System.Net.WebConnectionStream::disposed
-	bool ___disposed_20;
-	// System.Boolean System.Net.WebConnectionStream::headersSent
-	bool ___headersSent_21;
-	// System.Object System.Net.WebConnectionStream::locker
-	RuntimeObject * ___locker_22;
-	// System.Boolean System.Net.WebConnectionStream::initRead
-	bool ___initRead_23;
-	// System.Boolean System.Net.WebConnectionStream::read_eof
-	bool ___read_eof_24;
-	// System.Boolean System.Net.WebConnectionStream::complete_request_written
-	bool ___complete_request_written_25;
-	// System.Int32 System.Net.WebConnectionStream::read_timeout
-	int32_t ___read_timeout_26;
-	// System.Int32 System.Net.WebConnectionStream::write_timeout
-	int32_t ___write_timeout_27;
-
-public:
-	inline static int32_t get_offset_of_isRead_2() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___isRead_2)); }
-	inline bool get_isRead_2() const { return ___isRead_2; }
-	inline bool* get_address_of_isRead_2() { return &___isRead_2; }
-	inline void set_isRead_2(bool value)
-	{
-		___isRead_2 = value;
-	}
-
-	inline static int32_t get_offset_of_cnc_3() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___cnc_3)); }
-	inline WebConnection_t3982808322 * get_cnc_3() const { return ___cnc_3; }
-	inline WebConnection_t3982808322 ** get_address_of_cnc_3() { return &___cnc_3; }
-	inline void set_cnc_3(WebConnection_t3982808322 * value)
-	{
-		___cnc_3 = value;
-		Il2CppCodeGenWriteBarrier((&___cnc_3), value);
-	}
-
-	inline static int32_t get_offset_of_request_4() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___request_4)); }
-	inline HttpWebRequest_t1669436515 * get_request_4() const { return ___request_4; }
-	inline HttpWebRequest_t1669436515 ** get_address_of_request_4() { return &___request_4; }
-	inline void set_request_4(HttpWebRequest_t1669436515 * value)
-	{
-		___request_4 = value;
-		Il2CppCodeGenWriteBarrier((&___request_4), value);
-	}
-
-	inline static int32_t get_offset_of_readBuffer_5() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___readBuffer_5)); }
-	inline ByteU5BU5D_t4116647657* get_readBuffer_5() const { return ___readBuffer_5; }
-	inline ByteU5BU5D_t4116647657** get_address_of_readBuffer_5() { return &___readBuffer_5; }
-	inline void set_readBuffer_5(ByteU5BU5D_t4116647657* value)
-	{
-		___readBuffer_5 = value;
-		Il2CppCodeGenWriteBarrier((&___readBuffer_5), value);
-	}
-
-	inline static int32_t get_offset_of_readBufferOffset_6() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___readBufferOffset_6)); }
-	inline int32_t get_readBufferOffset_6() const { return ___readBufferOffset_6; }
-	inline int32_t* get_address_of_readBufferOffset_6() { return &___readBufferOffset_6; }
-	inline void set_readBufferOffset_6(int32_t value)
-	{
-		___readBufferOffset_6 = value;
-	}
-
-	inline static int32_t get_offset_of_readBufferSize_7() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___readBufferSize_7)); }
-	inline int32_t get_readBufferSize_7() const { return ___readBufferSize_7; }
-	inline int32_t* get_address_of_readBufferSize_7() { return &___readBufferSize_7; }
-	inline void set_readBufferSize_7(int32_t value)
-	{
-		___readBufferSize_7 = value;
-	}
-
-	inline static int32_t get_offset_of_contentLength_8() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___contentLength_8)); }
-	inline int32_t get_contentLength_8() const { return ___contentLength_8; }
-	inline int32_t* get_address_of_contentLength_8() { return &___contentLength_8; }
-	inline void set_contentLength_8(int32_t value)
-	{
-		___contentLength_8 = value;
-	}
-
-	inline static int32_t get_offset_of_totalRead_9() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___totalRead_9)); }
-	inline int32_t get_totalRead_9() const { return ___totalRead_9; }
-	inline int32_t* get_address_of_totalRead_9() { return &___totalRead_9; }
-	inline void set_totalRead_9(int32_t value)
-	{
-		___totalRead_9 = value;
-	}
-
-	inline static int32_t get_offset_of_totalWritten_10() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___totalWritten_10)); }
-	inline int64_t get_totalWritten_10() const { return ___totalWritten_10; }
-	inline int64_t* get_address_of_totalWritten_10() { return &___totalWritten_10; }
-	inline void set_totalWritten_10(int64_t value)
-	{
-		___totalWritten_10 = value;
-	}
-
-	inline static int32_t get_offset_of_nextReadCalled_11() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___nextReadCalled_11)); }
-	inline bool get_nextReadCalled_11() const { return ___nextReadCalled_11; }
-	inline bool* get_address_of_nextReadCalled_11() { return &___nextReadCalled_11; }
-	inline void set_nextReadCalled_11(bool value)
-	{
-		___nextReadCalled_11 = value;
-	}
-
-	inline static int32_t get_offset_of_pendingReads_12() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___pendingReads_12)); }
-	inline int32_t get_pendingReads_12() const { return ___pendingReads_12; }
-	inline int32_t* get_address_of_pendingReads_12() { return &___pendingReads_12; }
-	inline void set_pendingReads_12(int32_t value)
-	{
-		___pendingReads_12 = value;
-	}
-
-	inline static int32_t get_offset_of_pendingWrites_13() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___pendingWrites_13)); }
-	inline int32_t get_pendingWrites_13() const { return ___pendingWrites_13; }
-	inline int32_t* get_address_of_pendingWrites_13() { return &___pendingWrites_13; }
-	inline void set_pendingWrites_13(int32_t value)
-	{
-		___pendingWrites_13 = value;
-	}
-
-	inline static int32_t get_offset_of_pending_14() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___pending_14)); }
-	inline ManualResetEvent_t451242010 * get_pending_14() const { return ___pending_14; }
-	inline ManualResetEvent_t451242010 ** get_address_of_pending_14() { return &___pending_14; }
-	inline void set_pending_14(ManualResetEvent_t451242010 * value)
-	{
-		___pending_14 = value;
-		Il2CppCodeGenWriteBarrier((&___pending_14), value);
-	}
-
-	inline static int32_t get_offset_of_allowBuffering_15() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___allowBuffering_15)); }
-	inline bool get_allowBuffering_15() const { return ___allowBuffering_15; }
-	inline bool* get_address_of_allowBuffering_15() { return &___allowBuffering_15; }
-	inline void set_allowBuffering_15(bool value)
-	{
-		___allowBuffering_15 = value;
-	}
-
-	inline static int32_t get_offset_of_sendChunked_16() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___sendChunked_16)); }
-	inline bool get_sendChunked_16() const { return ___sendChunked_16; }
-	inline bool* get_address_of_sendChunked_16() { return &___sendChunked_16; }
-	inline void set_sendChunked_16(bool value)
-	{
-		___sendChunked_16 = value;
-	}
-
-	inline static int32_t get_offset_of_writeBuffer_17() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___writeBuffer_17)); }
-	inline MemoryStream_t94973147 * get_writeBuffer_17() const { return ___writeBuffer_17; }
-	inline MemoryStream_t94973147 ** get_address_of_writeBuffer_17() { return &___writeBuffer_17; }
-	inline void set_writeBuffer_17(MemoryStream_t94973147 * value)
-	{
-		___writeBuffer_17 = value;
-		Il2CppCodeGenWriteBarrier((&___writeBuffer_17), value);
-	}
-
-	inline static int32_t get_offset_of_requestWritten_18() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___requestWritten_18)); }
-	inline bool get_requestWritten_18() const { return ___requestWritten_18; }
-	inline bool* get_address_of_requestWritten_18() { return &___requestWritten_18; }
-	inline void set_requestWritten_18(bool value)
-	{
-		___requestWritten_18 = value;
-	}
-
-	inline static int32_t get_offset_of_headers_19() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___headers_19)); }
-	inline ByteU5BU5D_t4116647657* get_headers_19() const { return ___headers_19; }
-	inline ByteU5BU5D_t4116647657** get_address_of_headers_19() { return &___headers_19; }
-	inline void set_headers_19(ByteU5BU5D_t4116647657* value)
-	{
-		___headers_19 = value;
-		Il2CppCodeGenWriteBarrier((&___headers_19), value);
-	}
-
-	inline static int32_t get_offset_of_disposed_20() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___disposed_20)); }
-	inline bool get_disposed_20() const { return ___disposed_20; }
-	inline bool* get_address_of_disposed_20() { return &___disposed_20; }
-	inline void set_disposed_20(bool value)
-	{
-		___disposed_20 = value;
-	}
-
-	inline static int32_t get_offset_of_headersSent_21() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___headersSent_21)); }
-	inline bool get_headersSent_21() const { return ___headersSent_21; }
-	inline bool* get_address_of_headersSent_21() { return &___headersSent_21; }
-	inline void set_headersSent_21(bool value)
-	{
-		___headersSent_21 = value;
-	}
-
-	inline static int32_t get_offset_of_locker_22() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___locker_22)); }
-	inline RuntimeObject * get_locker_22() const { return ___locker_22; }
-	inline RuntimeObject ** get_address_of_locker_22() { return &___locker_22; }
-	inline void set_locker_22(RuntimeObject * value)
-	{
-		___locker_22 = value;
-		Il2CppCodeGenWriteBarrier((&___locker_22), value);
-	}
-
-	inline static int32_t get_offset_of_initRead_23() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___initRead_23)); }
-	inline bool get_initRead_23() const { return ___initRead_23; }
-	inline bool* get_address_of_initRead_23() { return &___initRead_23; }
-	inline void set_initRead_23(bool value)
-	{
-		___initRead_23 = value;
-	}
-
-	inline static int32_t get_offset_of_read_eof_24() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___read_eof_24)); }
-	inline bool get_read_eof_24() const { return ___read_eof_24; }
-	inline bool* get_address_of_read_eof_24() { return &___read_eof_24; }
-	inline void set_read_eof_24(bool value)
-	{
-		___read_eof_24 = value;
-	}
-
-	inline static int32_t get_offset_of_complete_request_written_25() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___complete_request_written_25)); }
-	inline bool get_complete_request_written_25() const { return ___complete_request_written_25; }
-	inline bool* get_address_of_complete_request_written_25() { return &___complete_request_written_25; }
-	inline void set_complete_request_written_25(bool value)
-	{
-		___complete_request_written_25 = value;
-	}
-
-	inline static int32_t get_offset_of_read_timeout_26() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___read_timeout_26)); }
-	inline int32_t get_read_timeout_26() const { return ___read_timeout_26; }
-	inline int32_t* get_address_of_read_timeout_26() { return &___read_timeout_26; }
-	inline void set_read_timeout_26(int32_t value)
-	{
-		___read_timeout_26 = value;
-	}
-
-	inline static int32_t get_offset_of_write_timeout_27() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850, ___write_timeout_27)); }
-	inline int32_t get_write_timeout_27() const { return ___write_timeout_27; }
-	inline int32_t* get_address_of_write_timeout_27() { return &___write_timeout_27; }
-	inline void set_write_timeout_27(int32_t value)
-	{
-		___write_timeout_27 = value;
-	}
-};
-
-struct WebConnectionStream_t2170064850_StaticFields
-{
-public:
-	// System.Byte[] System.Net.WebConnectionStream::crlf
-	ByteU5BU5D_t4116647657* ___crlf_1;
-
-public:
-	inline static int32_t get_offset_of_crlf_1() { return static_cast<int32_t>(offsetof(WebConnectionStream_t2170064850_StaticFields, ___crlf_1)); }
-	inline ByteU5BU5D_t4116647657* get_crlf_1() const { return ___crlf_1; }
-	inline ByteU5BU5D_t4116647657** get_address_of_crlf_1() { return &___crlf_1; }
-	inline void set_crlf_1(ByteU5BU5D_t4116647657* value)
-	{
-		___crlf_1 = value;
-		Il2CppCodeGenWriteBarrier((&___crlf_1), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // WEBCONNECTIONSTREAM_T2170064850_H
 #ifndef WEBRESPONSE_T229922639_H
 #define WEBRESPONSE_T229922639_H
 #ifdef __clang__
@@ -9171,8 +8926,15 @@ public:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1500 = { sizeof (CredentialCacheKey_t2246994596), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1500[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1500 = { sizeof (CredentialCache_t3101173682), -1, sizeof(CredentialCache_t3101173682_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1500[3] = 
+{
+	CredentialCache_t3101173682_StaticFields::get_offset_of_empty_0(),
+	CredentialCache_t3101173682::get_offset_of_cache_1(),
+	CredentialCache_t3101173682::get_offset_of_cacheForHost_2(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1501 = { sizeof (CredentialCacheKey_t2246994596), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1501[5] = 
 {
 	CredentialCacheKey_t2246994596::get_offset_of_uriPrefix_0(),
 	CredentialCacheKey_t2246994596::get_offset_of_authType_1(),
@@ -9180,25 +8942,25 @@ extern const int32_t g_FieldOffsetTable1500[5] =
 	CredentialCacheKey_t2246994596::get_offset_of_len_3(),
 	CredentialCacheKey_t2246994596::get_offset_of_hash_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1501 = { sizeof (CredentialCacheForHostKey_t3132413229), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1501[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1502 = { sizeof (CredentialCacheForHostKey_t3132413229), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1502[4] = 
 {
 	CredentialCacheForHostKey_t3132413229::get_offset_of_host_0(),
 	CredentialCacheForHostKey_t3132413229::get_offset_of_port_1(),
 	CredentialCacheForHostKey_t3132413229::get_offset_of_authType_2(),
 	CredentialCacheForHostKey_t3132413229::get_offset_of_hash_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1502 = { sizeof (DecompressionMethods_t1612219745)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1502[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1503 = { sizeof (DecompressionMethods_t1612219745)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1503[4] = 
 {
 	DecompressionMethods_t1612219745::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1503 = { sizeof (DefaultCertificatePolicy_t3607119947), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1504 = { sizeof (DigestHeaderParser_t341650829), -1, sizeof(DigestHeaderParser_t341650829_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1504[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1504 = { sizeof (DefaultCertificatePolicy_t3607119947), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1505 = { sizeof (DigestHeaderParser_t341650829), -1, sizeof(DigestHeaderParser_t341650829_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1505[5] = 
 {
 	DigestHeaderParser_t341650829::get_offset_of_header_0(),
 	DigestHeaderParser_t341650829::get_offset_of_length_1(),
@@ -9206,8 +8968,8 @@ extern const int32_t g_FieldOffsetTable1504[5] =
 	DigestHeaderParser_t341650829_StaticFields::get_offset_of_keywords_3(),
 	DigestHeaderParser_t341650829::get_offset_of_values_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1505 = { sizeof (DigestSession_t1433627624), -1, sizeof(DigestSession_t1433627624_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1505[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1506 = { sizeof (DigestSession_t1433627624), -1, sizeof(DigestSession_t1433627624_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1506[6] = 
 {
 	DigestSession_t1433627624_StaticFields::get_offset_of_rng_0(),
 	DigestSession_t1433627624::get_offset_of_lastUse_1(),
@@ -9216,36 +8978,36 @@ extern const int32_t g_FieldOffsetTable1505[6] =
 	DigestSession_t1433627624::get_offset_of_parser_4(),
 	DigestSession_t1433627624::get_offset_of__cnonce_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1506 = { sizeof (DigestClient_t660790528), -1, sizeof(DigestClient_t660790528_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1506[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1507 = { sizeof (DigestClient_t660790528), -1, sizeof(DigestClient_t660790528_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1507[1] = 
 {
 	DigestClient_t660790528_StaticFields::get_offset_of_cache_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1507 = { sizeof (Dns_t384099571), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1508 = { sizeof (GetHostByNameCallback_t3190253673), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1509 = { sizeof (ResolveCallback_t3109944030), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1510 = { sizeof (GetHostEntryNameCallback_t131649245), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1511 = { sizeof (GetHostEntryIPCallback_t2549854718), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1512 = { sizeof (GetHostAddressesCallback_t559770561), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1513 = { sizeof (DownloadDataCompletedEventArgs_t1352343852), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1513[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1508 = { sizeof (Dns_t384099571), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1509 = { sizeof (GetHostByNameCallback_t3190253673), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1510 = { sizeof (ResolveCallback_t3109944030), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1511 = { sizeof (GetHostEntryNameCallback_t131649245), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1512 = { sizeof (GetHostEntryIPCallback_t2549854718), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1513 = { sizeof (GetHostAddressesCallback_t559770561), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1514 = { sizeof (DownloadDataCompletedEventArgs_t1352343852), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1514[1] = 
 {
 	DownloadDataCompletedEventArgs_t1352343852::get_offset_of_result_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1514 = { sizeof (DownloadProgressChangedEventArgs_t2828131725), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1514[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1515 = { sizeof (DownloadProgressChangedEventArgs_t2828131725), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1515[2] = 
 {
 	DownloadProgressChangedEventArgs_t2828131725::get_offset_of_received_3(),
 	DownloadProgressChangedEventArgs_t2828131725::get_offset_of_total_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1515 = { sizeof (DownloadStringCompletedEventArgs_t3792188068), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1515[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1516 = { sizeof (DownloadStringCompletedEventArgs_t3792188068), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1516[1] = 
 {
 	DownloadStringCompletedEventArgs_t3792188068::get_offset_of_result_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1516 = { sizeof (EndPoint_t982345378), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1517 = { sizeof (EndPointListener_t2984434924), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1517[8] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1517 = { sizeof (EndPoint_t982345378), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1518 = { sizeof (EndPointListener_t2984434924), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1518[8] = 
 {
 	EndPointListener_t2984434924::get_offset_of_endpoint_0(),
 	EndPointListener_t2984434924::get_offset_of_sock_1(),
@@ -9256,13 +9018,13 @@ extern const int32_t g_FieldOffsetTable1517[8] =
 	EndPointListener_t2984434924::get_offset_of_key_6(),
 	EndPointListener_t2984434924::get_offset_of_secure_7(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1518 = { sizeof (EndPointManager_t1428684201), -1, sizeof(EndPointManager_t1428684201_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1518[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1519 = { sizeof (EndPointManager_t1428684201), -1, sizeof(EndPointManager_t1428684201_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1519[1] = 
 {
 	EndPointManager_t1428684201_StaticFields::get_offset_of_ip_to_endpoints_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1519 = { sizeof (FileWebRequest_t591858885), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1519[15] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1520 = { sizeof (FileWebRequest_t591858885), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1520[15] = 
 {
 	FileWebRequest_t591858885::get_offset_of_uri_6(),
 	FileWebRequest_t591858885::get_offset_of_webHeaders_7(),
@@ -9280,16 +9042,16 @@ extern const int32_t g_FieldOffsetTable1519[15] =
 	FileWebRequest_t591858885::get_offset_of_requesting_19(),
 	FileWebRequest_t591858885::get_offset_of_asyncResponding_20(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1520 = { sizeof (FileWebStream_t586107972), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1520[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1521 = { sizeof (FileWebStream_t586107972), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1521[1] = 
 {
 	FileWebStream_t586107972::get_offset_of_webRequest_15(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1521 = { sizeof (GetRequestStreamCallback_t1154006112), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1522 = { sizeof (GetResponseCallback_t2326689408), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1523 = { sizeof (FileWebRequestCreator_t1781329382), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1524 = { sizeof (FileWebResponse_t544571260), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1524[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1522 = { sizeof (GetRequestStreamCallback_t1154006112), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1523 = { sizeof (GetResponseCallback_t2326689408), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1524 = { sizeof (FileWebRequestCreator_t1781329382), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1525 = { sizeof (FileWebResponse_t544571260), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1525[5] = 
 {
 	FileWebResponse_t544571260::get_offset_of_responseUri_1(),
 	FileWebResponse_t544571260::get_offset_of_fileStream_2(),
@@ -9297,8 +9059,8 @@ extern const int32_t g_FieldOffsetTable1524[5] =
 	FileWebResponse_t544571260::get_offset_of_webHeaders_4(),
 	FileWebResponse_t544571260::get_offset_of_disposed_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1525 = { sizeof (FtpAsyncResult_t3265664217), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1525[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1526 = { sizeof (FtpAsyncResult_t3265664217), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1526[9] = 
 {
 	FtpAsyncResult_t3265664217::get_offset_of_response_0(),
 	FtpAsyncResult_t3265664217::get_offset_of_waitHandle_1(),
@@ -9310,8 +9072,8 @@ extern const int32_t g_FieldOffsetTable1525[9] =
 	FtpAsyncResult_t3265664217::get_offset_of_synch_7(),
 	FtpAsyncResult_t3265664217::get_offset_of_locker_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1526 = { sizeof (FtpDataStream_t1366729715), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1526[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1527 = { sizeof (FtpDataStream_t1366729715), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1527[5] = 
 {
 	FtpDataStream_t1366729715::get_offset_of_request_1(),
 	FtpDataStream_t1366729715::get_offset_of_networkStream_2(),
@@ -9319,17 +9081,17 @@ extern const int32_t g_FieldOffsetTable1526[5] =
 	FtpDataStream_t1366729715::get_offset_of_isRead_4(),
 	FtpDataStream_t1366729715::get_offset_of_totalRead_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1527 = { sizeof (WriteDelegate_t2016697242), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1528 = { sizeof (ReadDelegate_t4266946825), sizeof(Il2CppMethodPointer), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1529 = { sizeof (FtpRequestCreator_t2926281497), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1530 = { sizeof (FtpStatus_t2376455776), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1530[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1528 = { sizeof (WriteDelegate_t2016697242), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1529 = { sizeof (ReadDelegate_t4266946825), sizeof(Il2CppMethodPointer), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1530 = { sizeof (FtpRequestCreator_t2926281497), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1531 = { sizeof (FtpStatus_t2376455776), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1531[2] = 
 {
 	FtpStatus_t2376455776::get_offset_of_statusCode_0(),
 	FtpStatus_t2376455776::get_offset_of_statusDescription_1(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1531 = { sizeof (FtpStatusCode_t58879933)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1531[38] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1532 = { sizeof (FtpStatusCode_t58879933)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1532[38] = 
 {
 	FtpStatusCode_t58879933::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -9370,8 +9132,8 @@ extern const int32_t g_FieldOffsetTable1531[38] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1532 = { sizeof (FtpWebRequest_t1577818305), -1, sizeof(FtpWebRequest_t1577818305_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1532[44] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1533 = { sizeof (FtpWebRequest_t1577818305), -1, sizeof(FtpWebRequest_t1577818305_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1533[44] = 
 {
 	0,
 	0,
@@ -9418,8 +9180,8 @@ extern const int32_t g_FieldOffsetTable1532[44] =
 	FtpWebRequest_t1577818305_StaticFields::get_offset_of_U3CU3Ef__switchU24map5_48(),
 	FtpWebRequest_t1577818305_StaticFields::get_offset_of_U3CU3Ef__switchU24map6_49(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1533 = { sizeof (RequestState_t4091696808)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1533[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1534 = { sizeof (RequestState_t4091696808)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1534[10] = 
 {
 	RequestState_t4091696808::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -9432,8 +9194,8 @@ extern const int32_t g_FieldOffsetTable1533[10] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1534 = { sizeof (FtpWebResponse_t3940763575), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1534[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1535 = { sizeof (FtpWebResponse_t3940763575), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1535[12] = 
 {
 	FtpWebResponse_t3940763575::get_offset_of_stream_1(),
 	FtpWebResponse_t3940763575::get_offset_of_uri_2(),
@@ -9448,14 +9210,14 @@ extern const int32_t g_FieldOffsetTable1534[12] =
 	FtpWebResponse_t3940763575::get_offset_of_request_11(),
 	FtpWebResponse_t3940763575::get_offset_of_contentLength_12(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1535 = { sizeof (GlobalProxySelection_t1166292522), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1536 = { sizeof (EmptyWebProxy_t3036161737), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1536[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1536 = { sizeof (GlobalProxySelection_t1166292522), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1537 = { sizeof (EmptyWebProxy_t3036161737), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1537[1] = 
 {
 	EmptyWebProxy_t3036161737::get_offset_of_credentials_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1537 = { sizeof (HttpConnection_t269576101), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1537[19] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1538 = { sizeof (HttpConnection_t269576101), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1538[19] = 
 {
 	0,
 	HttpConnection_t269576101::get_offset_of_sock_1(),
@@ -9477,23 +9239,23 @@ extern const int32_t g_FieldOffsetTable1537[19] =
 	HttpConnection_t269576101::get_offset_of_line_state_17(),
 	HttpConnection_t269576101::get_offset_of_position_18(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1538 = { sizeof (InputState_t4051538957)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1538[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1539 = { sizeof (InputState_t4051538957)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1539[3] = 
 {
 	InputState_t4051538957::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1539 = { sizeof (LineState_t768597569)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1539[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1540 = { sizeof (LineState_t768597569)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1540[4] = 
 {
 	LineState_t768597569::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1540 = { sizeof (HttpListener_t988452056), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1540[11] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1541 = { sizeof (HttpListener_t988452056), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1541[11] = 
 {
 	HttpListener_t988452056::get_offset_of_auth_schemes_0(),
 	HttpListener_t988452056::get_offset_of_prefixes_1(),
@@ -9507,13 +9269,13 @@ extern const int32_t g_FieldOffsetTable1540[11] =
 	HttpListener_t988452056::get_offset_of_ctx_queue_9(),
 	HttpListener_t988452056::get_offset_of_wait_queue_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1541 = { sizeof (HttpListenerBasicIdentity_t3019963659), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1541[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1542 = { sizeof (HttpListenerBasicIdentity_t3019963659), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1542[1] = 
 {
 	HttpListenerBasicIdentity_t3019963659::get_offset_of_password_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1542 = { sizeof (HttpListenerContext_t424880822), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1542[7] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1543 = { sizeof (HttpListenerContext_t424880822), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1543[7] = 
 {
 	HttpListenerContext_t424880822::get_offset_of_request_0(),
 	HttpListenerContext_t424880822::get_offset_of_response_1(),
@@ -9523,15 +9285,15 @@ extern const int32_t g_FieldOffsetTable1542[7] =
 	HttpListenerContext_t424880822::get_offset_of_err_status_5(),
 	HttpListenerContext_t424880822::get_offset_of_Listener_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1543 = { sizeof (HttpListenerException_t1795897741), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1544 = { sizeof (HttpListenerPrefixCollection_t2963430373), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1544[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1544 = { sizeof (HttpListenerException_t1795897741), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1545 = { sizeof (HttpListenerPrefixCollection_t2963430373), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1545[2] = 
 {
 	HttpListenerPrefixCollection_t2963430373::get_offset_of_prefixes_0(),
 	HttpListenerPrefixCollection_t2963430373::get_offset_of_listener_1(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1545 = { sizeof (HttpListenerRequest_t630699488), -1, sizeof(HttpListenerRequest_t630699488_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1545[21] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1546 = { sizeof (HttpListenerRequest_t630699488), -1, sizeof(HttpListenerRequest_t630699488_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1546[21] = 
 {
 	HttpListenerRequest_t630699488::get_offset_of_accept_types_0(),
 	HttpListenerRequest_t630699488::get_offset_of_content_encoding_1(),
@@ -9555,8 +9317,8 @@ extern const int32_t g_FieldOffsetTable1545[21] =
 	HttpListenerRequest_t630699488_StaticFields::get_offset_of_separators_19(),
 	HttpListenerRequest_t630699488_StaticFields::get_offset_of_U3CU3Ef__switchU24map7_20(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1546 = { sizeof (HttpListenerResponse_t3502667045), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1546[17] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1547 = { sizeof (HttpListenerResponse_t3502667045), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1547[17] = 
 {
 	HttpListenerResponse_t3502667045::get_offset_of_disposed_0(),
 	HttpListenerResponse_t3502667045::get_offset_of_content_encoding_1(),
@@ -9576,9 +9338,9 @@ extern const int32_t g_FieldOffsetTable1546[17] =
 	HttpListenerResponse_t3502667045::get_offset_of_HeadersSent_15(),
 	HttpListenerResponse_t3502667045::get_offset_of_force_close_chunked_16(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1547 = { sizeof (HttpRequestCreator_t1984314013), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1548 = { sizeof (HttpRequestHeader_t4258090762)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1548[42] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1548 = { sizeof (HttpRequestCreator_t1984314013), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1549 = { sizeof (HttpRequestHeader_t4258090762)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1549[42] = 
 {
 	HttpRequestHeader_t4258090762::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -9623,8 +9385,8 @@ extern const int32_t g_FieldOffsetTable1548[42] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1549 = { sizeof (HttpResponseHeader_t1526164768)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1549[31] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1550 = { sizeof (HttpResponseHeader_t1526164768)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1550[31] = 
 {
 	HttpResponseHeader_t1526164768::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -9658,8 +9420,8 @@ extern const int32_t g_FieldOffsetTable1549[31] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1550 = { sizeof (HttpStatusCode_t3035121829)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1550[47] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1551 = { sizeof (HttpStatusCode_t3035121829)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1551[47] = 
 {
 	HttpStatusCode_t3035121829::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -9709,8 +9471,8 @@ extern const int32_t g_FieldOffsetTable1550[47] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1551 = { sizeof (HttpStreamAsyncResult_t1178010344), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1551[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1552 = { sizeof (HttpStreamAsyncResult_t1178010344), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1552[10] = 
 {
 	HttpStreamAsyncResult_t1178010344::get_offset_of_locker_0(),
 	HttpStreamAsyncResult_t1178010344::get_offset_of_handle_1(),
@@ -9723,15 +9485,15 @@ extern const int32_t g_FieldOffsetTable1551[10] =
 	HttpStreamAsyncResult_t1178010344::get_offset_of_SynchRead_8(),
 	HttpStreamAsyncResult_t1178010344::get_offset_of_Error_9(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1552 = { sizeof (HttpUtility_t2559916872), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1553 = { sizeof (HttpVersion_t346520293), -1, sizeof(HttpVersion_t346520293_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1553[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1553 = { sizeof (HttpUtility_t2559916872), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1554 = { sizeof (HttpVersion_t346520293), -1, sizeof(HttpVersion_t346520293_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1554[2] = 
 {
 	HttpVersion_t346520293_StaticFields::get_offset_of_Version10_0(),
 	HttpVersion_t346520293_StaticFields::get_offset_of_Version11_1(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1554 = { sizeof (HttpWebRequest_t1669436515), -1, sizeof(HttpWebRequest_t1669436515_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1554[52] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1555 = { sizeof (HttpWebRequest_t1669436515), -1, sizeof(HttpWebRequest_t1669436515_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1555[52] = 
 {
 	HttpWebRequest_t1669436515::get_offset_of_requestUri_6(),
 	HttpWebRequest_t1669436515::get_offset_of_actualUri_7(),
@@ -9786,8 +9548,8 @@ extern const int32_t g_FieldOffsetTable1554[52] =
 	HttpWebRequest_t1669436515::get_offset_of_readWriteTimeout_56(),
 	HttpWebRequest_t1669436515::get_offset_of_unsafe_auth_blah_57(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1555 = { sizeof (HttpWebResponse_t3286585418), -1, sizeof(HttpWebResponse_t3286585418_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1555[14] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1556 = { sizeof (HttpWebResponse_t3286585418), -1, sizeof(HttpWebResponse_t3286585418_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1556[14] = 
 {
 	HttpWebResponse_t3286585418::get_offset_of_uri_1(),
 	HttpWebResponse_t3286585418::get_offset_of_webHeaders_2(),
@@ -9804,20 +9566,20 @@ extern const int32_t g_FieldOffsetTable1555[14] =
 	HttpWebResponse_t3286585418::get_offset_of_cookieExpiresFormats_13(),
 	HttpWebResponse_t3286585418_StaticFields::get_offset_of_U3CU3Ef__switchU24map8_14(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1556 = { sizeof (CookieParser_t2349142305), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1556[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1557 = { sizeof (CookieParser_t2349142305), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1557[3] = 
 {
 	CookieParser_t2349142305::get_offset_of_header_0(),
 	CookieParser_t2349142305::get_offset_of_pos_1(),
 	CookieParser_t2349142305::get_offset_of_length_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1557 = { 0, -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1558 = { 0, -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1559 = { 0, -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1560 = { 0, -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1561 = { 0, -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1562 = { sizeof (IPAddress_t241777590), -1, sizeof(IPAddress_t241777590_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1562[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1562 = { 0, -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1563 = { sizeof (IPAddress_t241777590), -1, sizeof(IPAddress_t241777590_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1563[12] = 
 {
 	IPAddress_t241777590::get_offset_of_m_Address_0(),
 	IPAddress_t241777590::get_offset_of_m_Family_1(),
@@ -9832,23 +9594,23 @@ extern const int32_t g_FieldOffsetTable1562[12] =
 	IPAddress_t241777590_StaticFields::get_offset_of_IPv6None_10(),
 	IPAddress_t241777590::get_offset_of_m_HashCode_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1563 = { sizeof (IPEndPoint_t3791887218), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1563[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1564 = { sizeof (IPEndPoint_t3791887218), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1564[4] = 
 {
 	0,
 	0,
 	IPEndPoint_t3791887218::get_offset_of_address_2(),
 	IPEndPoint_t3791887218::get_offset_of_port_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1564 = { sizeof (IPHostEntry_t263743900), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1564[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1565 = { sizeof (IPHostEntry_t263743900), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1565[3] = 
 {
 	IPHostEntry_t263743900::get_offset_of_addressList_0(),
 	IPHostEntry_t263743900::get_offset_of_aliases_1(),
 	IPHostEntry_t263743900::get_offset_of_hostName_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1565 = { sizeof (IPv6Address_t2709566769), -1, sizeof(IPv6Address_t2709566769_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1565[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1566 = { sizeof (IPv6Address_t2709566769), -1, sizeof(IPv6Address_t2709566769_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1566[5] = 
 {
 	IPv6Address_t2709566769::get_offset_of_address_0(),
 	IPv6Address_t2709566769::get_offset_of_prefixLength_1(),
@@ -9856,11 +9618,11 @@ extern const int32_t g_FieldOffsetTable1565[5] =
 	IPv6Address_t2709566769_StaticFields::get_offset_of_Loopback_3(),
 	IPv6Address_t2709566769_StaticFields::get_offset_of_Unspecified_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1566 = { 0, -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1567 = { 0, -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1568 = { 0, -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1569 = { sizeof (ListenerAsyncResult_t871495091), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1569[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1569 = { 0, -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1570 = { sizeof (ListenerAsyncResult_t871495091), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1570[9] = 
 {
 	ListenerAsyncResult_t871495091::get_offset_of_handle_0(),
 	ListenerAsyncResult_t871495091::get_offset_of_synch_1(),
@@ -9872,8 +9634,8 @@ extern const int32_t g_FieldOffsetTable1569[9] =
 	ListenerAsyncResult_t871495091::get_offset_of_locker_7(),
 	ListenerAsyncResult_t871495091::get_offset_of_forward_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1570 = { sizeof (ListenerPrefix_t3570496559), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1570[7] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1571 = { sizeof (ListenerPrefix_t3570496559), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1571[7] = 
 {
 	ListenerPrefix_t3570496559::get_offset_of_original_0(),
 	ListenerPrefix_t3570496559::get_offset_of_host_1(),
@@ -9883,47 +9645,47 @@ extern const int32_t g_FieldOffsetTable1570[7] =
 	ListenerPrefix_t3570496559::get_offset_of_addresses_5(),
 	ListenerPrefix_t3570496559::get_offset_of_Listener_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1571 = { sizeof (MonoHttpDate_t4033147742), -1, sizeof(MonoHttpDate_t4033147742_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1571[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1572 = { sizeof (MonoHttpDate_t4033147742), -1, sizeof(MonoHttpDate_t4033147742_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1572[4] = 
 {
 	MonoHttpDate_t4033147742_StaticFields::get_offset_of_rfc1123_date_0(),
 	MonoHttpDate_t4033147742_StaticFields::get_offset_of_rfc850_date_1(),
 	MonoHttpDate_t4033147742_StaticFields::get_offset_of_asctime_date_2(),
 	MonoHttpDate_t4033147742_StaticFields::get_offset_of_formats_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1572 = { sizeof (NetConfig_t2828594564), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1572[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1573 = { sizeof (NetConfig_t2828594564), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1573[2] = 
 {
 	NetConfig_t2828594564::get_offset_of_ipv6Enabled_0(),
 	NetConfig_t2828594564::get_offset_of_MaxResponseHeadersLength_1(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1573 = { sizeof (NetworkAccess_t3596492016)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1573[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1574 = { sizeof (NetworkAccess_t3596492016)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1574[3] = 
 {
 	NetworkAccess_t3596492016::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1574 = { sizeof (NetworkCredential_t3282608323), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1574[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1575 = { sizeof (NetworkCredential_t3282608323), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1575[3] = 
 {
 	NetworkCredential_t3282608323::get_offset_of_userName_0(),
 	NetworkCredential_t3282608323::get_offset_of_password_1(),
 	NetworkCredential_t3282608323::get_offset_of_domain_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1575 = { sizeof (OpenReadCompletedEventArgs_t3114398403), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1575[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1576 = { sizeof (OpenReadCompletedEventArgs_t3114398403), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1576[1] = 
 {
 	OpenReadCompletedEventArgs_t3114398403::get_offset_of_result_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1576 = { sizeof (OpenWriteCompletedEventArgs_t217345581), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1576[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1577 = { sizeof (OpenWriteCompletedEventArgs_t217345581), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1577[1] = 
 {
 	OpenWriteCompletedEventArgs_t217345581::get_offset_of_result_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1577 = { sizeof (ProtocolViolationException_t4144007430), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1578 = { sizeof (RequestStream_t762880582), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1578[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1578 = { sizeof (ProtocolViolationException_t4144007430), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1579 = { sizeof (RequestStream_t762880582), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1579[6] = 
 {
 	RequestStream_t762880582::get_offset_of_buffer_1(),
 	RequestStream_t762880582::get_offset_of_offset_2(),
@@ -9932,8 +9694,8 @@ extern const int32_t g_FieldOffsetTable1578[6] =
 	RequestStream_t762880582::get_offset_of_disposed_5(),
 	RequestStream_t762880582::get_offset_of_stream_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1579 = { sizeof (ResponseStream_t3810703494), -1, sizeof(ResponseStream_t3810703494_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1579[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1580 = { sizeof (ResponseStream_t3810703494), -1, sizeof(ResponseStream_t3810703494_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1580[6] = 
 {
 	ResponseStream_t3810703494::get_offset_of_response_1(),
 	ResponseStream_t3810703494::get_offset_of_ignore_errors_2(),
@@ -9942,15 +9704,15 @@ extern const int32_t g_FieldOffsetTable1579[6] =
 	ResponseStream_t3810703494::get_offset_of_stream_5(),
 	ResponseStream_t3810703494_StaticFields::get_offset_of_crlf_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1580 = { sizeof (SecurityProtocolType_t2721465497)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1580[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1581 = { sizeof (SecurityProtocolType_t2721465497)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1581[3] = 
 {
 	SecurityProtocolType_t2721465497::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1581 = { sizeof (ServicePoint_t2786966844), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1581[17] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1582 = { sizeof (ServicePoint_t2786966844), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1582[17] = 
 {
 	ServicePoint_t2786966844::get_offset_of_uri_0(),
 	ServicePoint_t2786966844::get_offset_of_connectionLimit_1(),
@@ -9970,8 +9732,8 @@ extern const int32_t g_FieldOffsetTable1581[17] =
 	ServicePoint_t2786966844::get_offset_of_useNagle_15(),
 	ServicePoint_t2786966844::get_offset_of_endPointCallback_16(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1582 = { sizeof (ServicePointManager_t170559685), -1, sizeof(ServicePointManager_t170559685_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1582[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1583 = { sizeof (ServicePointManager_t170559685), -1, sizeof(ServicePointManager_t170559685_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1583[12] = 
 {
 	0,
 	0,
@@ -9986,27 +9748,27 @@ extern const int32_t g_FieldOffsetTable1582[12] =
 	ServicePointManager_t170559685_StaticFields::get_offset_of_useNagle_10(),
 	ServicePointManager_t170559685_StaticFields::get_offset_of_server_cert_cb_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1583 = { sizeof (SPKey_t3654231119), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1583[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1584 = { sizeof (SPKey_t3654231119), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1584[2] = 
 {
 	SPKey_t3654231119::get_offset_of_uri_0(),
 	SPKey_t3654231119::get_offset_of_use_connect_1(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1584 = { sizeof (ChainValidationHelper_t320539540), -1, sizeof(ChainValidationHelper_t320539540_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1584[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1585 = { sizeof (ChainValidationHelper_t320539540), -1, sizeof(ChainValidationHelper_t320539540_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1585[4] = 
 {
 	ChainValidationHelper_t320539540::get_offset_of_sender_0(),
 	ChainValidationHelper_t320539540::get_offset_of_host_1(),
 	ChainValidationHelper_t320539540_StaticFields::get_offset_of_is_macosx_2(),
 	ChainValidationHelper_t320539540_StaticFields::get_offset_of_s_flags_3(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1585 = { sizeof (SocketAddress_t3739769427), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1585[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1586 = { sizeof (SocketAddress_t3739769427), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1586[1] = 
 {
 	SocketAddress_t3739769427::get_offset_of_data_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1586 = { sizeof (TransportType_t4086112859)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1586[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1587 = { sizeof (TransportType_t4086112859)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1587[6] = 
 {
 	TransportType_t4086112859::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -10015,36 +9777,36 @@ extern const int32_t g_FieldOffsetTable1586[6] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1587 = { sizeof (UploadDataCompletedEventArgs_t3263315353), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1587[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1588 = { sizeof (UploadDataCompletedEventArgs_t3263315353), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1588[1] = 
 {
 	UploadDataCompletedEventArgs_t3263315353::get_offset_of_result_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1588 = { sizeof (UploadFileCompletedEventArgs_t4191568555), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1588[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1589 = { sizeof (UploadFileCompletedEventArgs_t4191568555), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1589[1] = 
 {
 	UploadFileCompletedEventArgs_t4191568555::get_offset_of_result_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1589 = { sizeof (UploadProgressChangedEventArgs_t1971263489), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1589[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1590 = { sizeof (UploadProgressChangedEventArgs_t1971263489), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1590[4] = 
 {
 	UploadProgressChangedEventArgs_t1971263489::get_offset_of_received_3(),
 	UploadProgressChangedEventArgs_t1971263489::get_offset_of_sent_4(),
 	UploadProgressChangedEventArgs_t1971263489::get_offset_of_total_recv_5(),
 	UploadProgressChangedEventArgs_t1971263489::get_offset_of_total_send_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1590 = { sizeof (UploadStringCompletedEventArgs_t1649479841), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1590[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1591 = { sizeof (UploadStringCompletedEventArgs_t1649479841), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1591[1] = 
 {
 	UploadStringCompletedEventArgs_t1649479841::get_offset_of_result_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1591 = { sizeof (UploadValuesCompletedEventArgs_t3455240456), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1591[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1592 = { sizeof (UploadValuesCompletedEventArgs_t3455240456), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1592[1] = 
 {
 	UploadValuesCompletedEventArgs_t3455240456::get_offset_of_result_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1592 = { sizeof (WebAsyncResult_t3421962937), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1592[17] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1593 = { sizeof (WebAsyncResult_t3421962937), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1593[17] = 
 {
 	WebAsyncResult_t3421962937::get_offset_of_handle_0(),
 	WebAsyncResult_t3421962937::get_offset_of_synch_1(),
@@ -10064,8 +9826,8 @@ extern const int32_t g_FieldOffsetTable1592[17] =
 	WebAsyncResult_t3421962937::get_offset_of_EndCalled_15(),
 	WebAsyncResult_t3421962937::get_offset_of_AsyncWriteAll_16(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1593 = { sizeof (WebClient_t3506796782), -1, sizeof(WebClient_t3506796782_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1593[24] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1594 = { sizeof (WebClient_t3506796782), -1, sizeof(WebClient_t3506796782_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1594[24] = 
 {
 	WebClient_t3506796782_StaticFields::get_offset_of_urlEncodedCType_4(),
 	WebClient_t3506796782_StaticFields::get_offset_of_hexBytes_5(),
@@ -10092,8 +9854,8 @@ extern const int32_t g_FieldOffsetTable1593[24] =
 	WebClient_t3506796782::get_offset_of_UploadStringCompleted_26(),
 	WebClient_t3506796782::get_offset_of_UploadValuesCompleted_27(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1594 = { sizeof (ReadState_t245281014)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable1594[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1595 = { sizeof (ReadState_t245281014)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable1595[5] = 
 {
 	ReadState_t245281014::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -10101,8 +9863,8 @@ extern const int32_t g_FieldOffsetTable1594[5] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1595 = { sizeof (WebConnection_t3982808322), -1, sizeof(WebConnection_t3982808322_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1595[32] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1596 = { sizeof (WebConnection_t3982808322), -1, sizeof(WebConnection_t3982808322_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable1596[32] = 
 {
 	WebConnection_t3982808322::get_offset_of_sPoint_0(),
 	WebConnection_t3982808322::get_offset_of_nstream_1(),
@@ -10137,13 +9899,13 @@ extern const int32_t g_FieldOffsetTable1595[32] =
 	WebConnection_t3982808322_StaticFields::get_offset_of_piTrustFailure_30(),
 	WebConnection_t3982808322_StaticFields::get_offset_of_method_GetSecurityPolicyFromNonMainThread_31(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1596 = { sizeof (AbortHelper_t1490877826), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1596[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1597 = { sizeof (AbortHelper_t1490877826), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1597[1] = 
 {
 	AbortHelper_t1490877826::get_offset_of_Connection_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1597 = { sizeof (WebConnectionData_t3835660455), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1597[7] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1598 = { sizeof (WebConnectionData_t3835660455), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1598[7] = 
 {
 	WebConnectionData_t3835660455::get_offset_of_request_0(),
 	WebConnectionData_t3835660455::get_offset_of_StatusCode_1(),
@@ -10153,45 +9915,14 @@ extern const int32_t g_FieldOffsetTable1597[7] =
 	WebConnectionData_t3835660455::get_offset_of_stream_5(),
 	WebConnectionData_t3835660455::get_offset_of_Challenge_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1598 = { sizeof (WebConnectionGroup_t1712379988), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable1598[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1599 = { sizeof (WebConnectionGroup_t1712379988), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable1599[5] = 
 {
 	WebConnectionGroup_t1712379988::get_offset_of_sPoint_0(),
 	WebConnectionGroup_t1712379988::get_offset_of_name_1(),
 	WebConnectionGroup_t1712379988::get_offset_of_connections_2(),
 	WebConnectionGroup_t1712379988::get_offset_of_rnd_3(),
 	WebConnectionGroup_t1712379988::get_offset_of_queue_4(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1599 = { sizeof (WebConnectionStream_t2170064850), -1, sizeof(WebConnectionStream_t2170064850_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1599[27] = 
-{
-	WebConnectionStream_t2170064850_StaticFields::get_offset_of_crlf_1(),
-	WebConnectionStream_t2170064850::get_offset_of_isRead_2(),
-	WebConnectionStream_t2170064850::get_offset_of_cnc_3(),
-	WebConnectionStream_t2170064850::get_offset_of_request_4(),
-	WebConnectionStream_t2170064850::get_offset_of_readBuffer_5(),
-	WebConnectionStream_t2170064850::get_offset_of_readBufferOffset_6(),
-	WebConnectionStream_t2170064850::get_offset_of_readBufferSize_7(),
-	WebConnectionStream_t2170064850::get_offset_of_contentLength_8(),
-	WebConnectionStream_t2170064850::get_offset_of_totalRead_9(),
-	WebConnectionStream_t2170064850::get_offset_of_totalWritten_10(),
-	WebConnectionStream_t2170064850::get_offset_of_nextReadCalled_11(),
-	WebConnectionStream_t2170064850::get_offset_of_pendingReads_12(),
-	WebConnectionStream_t2170064850::get_offset_of_pendingWrites_13(),
-	WebConnectionStream_t2170064850::get_offset_of_pending_14(),
-	WebConnectionStream_t2170064850::get_offset_of_allowBuffering_15(),
-	WebConnectionStream_t2170064850::get_offset_of_sendChunked_16(),
-	WebConnectionStream_t2170064850::get_offset_of_writeBuffer_17(),
-	WebConnectionStream_t2170064850::get_offset_of_requestWritten_18(),
-	WebConnectionStream_t2170064850::get_offset_of_headers_19(),
-	WebConnectionStream_t2170064850::get_offset_of_disposed_20(),
-	WebConnectionStream_t2170064850::get_offset_of_headersSent_21(),
-	WebConnectionStream_t2170064850::get_offset_of_locker_22(),
-	WebConnectionStream_t2170064850::get_offset_of_initRead_23(),
-	WebConnectionStream_t2170064850::get_offset_of_read_eof_24(),
-	WebConnectionStream_t2170064850::get_offset_of_complete_request_written_25(),
-	WebConnectionStream_t2170064850::get_offset_of_read_timeout_26(),
-	WebConnectionStream_t2170064850::get_offset_of_write_timeout_27(),
 };
 #ifdef __clang__
 #pragma clang diagnostic pop

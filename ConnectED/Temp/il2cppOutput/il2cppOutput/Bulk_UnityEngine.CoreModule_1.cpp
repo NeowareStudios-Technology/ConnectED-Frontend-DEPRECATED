@@ -253,6 +253,8 @@ struct ReapplyDrivenProperties_t1258266594;
 struct Sprite_t280657092;
 // UnityEngine.Texture
 struct Texture_t3661962703;
+// UnityEngine.Texture2DArray
+struct Texture2DArray_t4044506685;
 // UnityEngine.Texture3D
 struct Texture3D_t1884131049;
 // UnityEngine.TooltipAttribute
@@ -334,6 +336,7 @@ extern String_t* _stringLiteral2104486960;
 extern String_t* _stringLiteral2119111978;
 extern String_t* _stringLiteral2662230418;
 extern String_t* _stringLiteral2738543532;
+extern String_t* _stringLiteral3269353644;
 extern String_t* _stringLiteral3481154761;
 extern String_t* _stringLiteral3595826494;
 extern String_t* _stringLiteral3651359435;
@@ -346,6 +349,7 @@ extern const RuntimeMethod* Queue_1_Enqueue_m1592503047_RuntimeMethod_var;
 extern const RuntimeMethod* Queue_1__ctor_m1971992302_RuntimeMethod_var;
 extern const RuntimeMethod* Queue_1_get_Count_m3368911732_RuntimeMethod_var;
 extern const RuntimeMethod* SpriteAtlasManager_Register_m2413332465_RuntimeMethod_var;
+extern const RuntimeMethod* Texture2DArray_Internal_Create_m2217927355_RuntimeMethod_var;
 extern const RuntimeMethod* Texture3D_Internal_Create_m4250388922_RuntimeMethod_var;
 extern const RuntimeMethod* UnhandledExceptionHandler_HandleUnhandledException_m2430609357_RuntimeMethod_var;
 extern const RuntimeMethod* Vector2_get_Item_m3559215723_RuntimeMethod_var;
@@ -361,6 +365,7 @@ extern const uint32_t SpriteAtlasManager_RequestAtlas_m455709951_MetadataUsageId
 extern const uint32_t SpriteAtlasManager__cctor_m3642741753_MetadataUsageId;
 extern const uint32_t SpriteAtlasManager_add_atlasRegistered_m2226734943_MetadataUsageId;
 extern const uint32_t SpriteAtlasManager_remove_atlasRegistered_m1470818068_MetadataUsageId;
+extern const uint32_t Texture2DArray_Internal_Create_m2217927355_MetadataUsageId;
 extern const uint32_t Texture3D_Internal_Create_m4250388922_MetadataUsageId;
 extern const uint32_t TouchScreenKeyboard_Destroy_m267768093_MetadataUsageId;
 extern const uint32_t TouchScreenKeyboard_Open_m3609399077_MetadataUsageId;
@@ -370,6 +375,7 @@ extern const uint32_t TrackedReference_Equals_m1342350606_MetadataUsageId;
 extern const uint32_t TrackedReference_op_Equality_m3702354772_MetadataUsageId;
 extern const uint32_t Transform_GetEnumerator_m2717073726_MetadataUsageId;
 extern const uint32_t Transform_get_forward_m747522392_MetadataUsageId;
+extern const uint32_t Transform_set_localEulerAngles_m4202601546_MetadataUsageId;
 extern const uint32_t Transform_set_parent_m786917804_MetadataUsageId;
 extern const uint32_t TypeInferenceRuleAttribute__ctor_m3137488504_MetadataUsageId;
 extern const uint32_t UnhandledExceptionHandler_HandleUnhandledException_m2430609357_MetadataUsageId;
@@ -410,6 +416,7 @@ extern const uint32_t Vector3_get_back_m4077847766_MetadataUsageId;
 extern const uint32_t Vector3_get_down_m3781355428_MetadataUsageId;
 extern const uint32_t Vector3_get_forward_m3100859705_MetadataUsageId;
 extern const uint32_t Vector3_get_left_m2428419009_MetadataUsageId;
+extern const uint32_t Vector3_get_magnitude_m27958459_MetadataUsageId;
 extern const uint32_t Vector3_get_normalized_m2454957984_MetadataUsageId;
 extern const uint32_t Vector3_get_one_m1629952498_MetadataUsageId;
 extern const uint32_t Vector3_get_right_m1913784872_MetadataUsageId;
@@ -6091,6 +6098,26 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // UNHANDLEDEXCEPTIONEVENTHANDLER_T3101989324_H
+#ifndef TEXTURE2DARRAY_T4044506685_H
+#define TEXTURE2DARRAY_T4044506685_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Texture2DArray
+struct  Texture2DArray_t4044506685  : public Texture_t3661962703
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // TEXTURE2DARRAY_T4044506685_H
 #ifndef TEXTURE3D_T1884131049_H
 #define TEXTURE3D_T1884131049_H
 #ifdef __clang__
@@ -6308,16 +6335,22 @@ extern "C" IL2CPP_METHOD_ATTR WorkRequest_t1354518612  Queue_1_Dequeue_m97996797
 extern "C" IL2CPP_METHOD_ATTR void Texture__ctor_m3554519797 (Texture_t3661962703 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Texture::ValidateFormat(UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.FormatUsage)
 extern "C" IL2CPP_METHOD_ATTR bool Texture_ValidateFormat_m3925257631 (Texture_t3661962703 * __this, int32_t ___format0, int32_t ___usage1, const RuntimeMethod* method);
-// System.Void UnityEngine.Texture3D::Internal_Create(UnityEngine.Texture3D,System.Int32,System.Int32,System.Int32,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.TextureCreationFlags)
-extern "C" IL2CPP_METHOD_ATTR void Texture3D_Internal_Create_m4250388922 (RuntimeObject * __this /* static, unused */, Texture3D_t1884131049 * ___mono0, int32_t ___w1, int32_t ___h2, int32_t ___d3, int32_t ___format4, int32_t ___flags5, const RuntimeMethod* method);
+// System.Void UnityEngine.Texture2DArray::Internal_Create(UnityEngine.Texture2DArray,System.Int32,System.Int32,System.Int32,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.TextureCreationFlags)
+extern "C" IL2CPP_METHOD_ATTR void Texture2DArray_Internal_Create_m2217927355 (RuntimeObject * __this /* static, unused */, Texture2DArray_t4044506685 * ___mono0, int32_t ___w1, int32_t ___h2, int32_t ___d3, int32_t ___format4, int32_t ___flags5, const RuntimeMethod* method);
 // UnityEngine.Experimental.Rendering.GraphicsFormat UnityEngine.Experimental.Rendering.GraphicsFormatUtility::GetGraphicsFormat(UnityEngine.TextureFormat,System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR int32_t GraphicsFormatUtility_GetGraphicsFormat_m3445248969 (RuntimeObject * __this /* static, unused */, int32_t ___format0, bool ___isSRGB1, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Experimental.Rendering.GraphicsFormatUtility::IsCrunchFormat(UnityEngine.TextureFormat)
 extern "C" IL2CPP_METHOD_ATTR bool GraphicsFormatUtility_IsCrunchFormat_m1697721778 (RuntimeObject * __this /* static, unused */, int32_t ___format0, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Texture3D::Internal_CreateImpl(UnityEngine.Texture3D,System.Int32,System.Int32,System.Int32,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.TextureCreationFlags)
-extern "C" IL2CPP_METHOD_ATTR bool Texture3D_Internal_CreateImpl_m1882516456 (RuntimeObject * __this /* static, unused */, Texture3D_t1884131049 * ___mono0, int32_t ___w1, int32_t ___h2, int32_t ___d3, int32_t ___format4, int32_t ___flags5, const RuntimeMethod* method);
+// System.Void UnityEngine.Texture2DArray::.ctor(System.Int32,System.Int32,System.Int32,UnityEngine.TextureFormat,System.Boolean,System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void Texture2DArray__ctor_m2627654179 (Texture2DArray_t4044506685 * __this, int32_t ___width0, int32_t ___height1, int32_t ___depth2, int32_t ___textureFormat3, bool ___mipChain4, bool ___linear5, const RuntimeMethod* method);
+// System.Boolean UnityEngine.Texture2DArray::Internal_CreateImpl(UnityEngine.Texture2DArray,System.Int32,System.Int32,System.Int32,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.TextureCreationFlags)
+extern "C" IL2CPP_METHOD_ATTR bool Texture2DArray_Internal_CreateImpl_m1122945648 (RuntimeObject * __this /* static, unused */, Texture2DArray_t4044506685 * ___mono0, int32_t ___w1, int32_t ___h2, int32_t ___d3, int32_t ___format4, int32_t ___flags5, const RuntimeMethod* method);
 // System.Void UnityEngine.UnityException::.ctor(System.String)
 extern "C" IL2CPP_METHOD_ATTR void UnityException__ctor_m872329880 (UnityException_t3598173660 * __this, String_t* ___message0, const RuntimeMethod* method);
+// System.Void UnityEngine.Texture3D::Internal_Create(UnityEngine.Texture3D,System.Int32,System.Int32,System.Int32,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.TextureCreationFlags)
+extern "C" IL2CPP_METHOD_ATTR void Texture3D_Internal_Create_m4250388922 (RuntimeObject * __this /* static, unused */, Texture3D_t1884131049 * ___mono0, int32_t ___w1, int32_t ___h2, int32_t ___d3, int32_t ___format4, int32_t ___flags5, const RuntimeMethod* method);
+// System.Boolean UnityEngine.Texture3D::Internal_CreateImpl(UnityEngine.Texture3D,System.Int32,System.Int32,System.Int32,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.TextureCreationFlags)
+extern "C" IL2CPP_METHOD_ATTR bool Texture3D_Internal_CreateImpl_m1882516456 (RuntimeObject * __this /* static, unused */, Texture3D_t1884131049 * ___mono0, int32_t ___w1, int32_t ___h2, int32_t ___d3, int32_t ___format4, int32_t ___flags5, const RuntimeMethod* method);
 // System.Void UnityEngine.PropertyAttribute::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void PropertyAttribute__ctor_m1017741868 (PropertyAttribute_t3677895545 * __this, const RuntimeMethod* method);
 // System.Int32 UnityEngine.Touch::get_fingerId()
@@ -6370,6 +6403,10 @@ extern "C" IL2CPP_METHOD_ATTR void Transform_set_position_Injected_m139451673 (T
 extern "C" IL2CPP_METHOD_ATTR void Transform_get_localPosition_Injected_m2544841678 (Transform_t3600365921 * __this, Vector3_t3722313464 * ___ret0, const RuntimeMethod* method);
 // System.Void UnityEngine.Transform::set_localPosition_Injected(UnityEngine.Vector3&)
 extern "C" IL2CPP_METHOD_ATTR void Transform_set_localPosition_Injected_m2951700666 (Transform_t3600365921 * __this, Vector3_t3722313464 * ___value0, const RuntimeMethod* method);
+// UnityEngine.Quaternion UnityEngine.Quaternion::Euler(UnityEngine.Vector3)
+extern "C" IL2CPP_METHOD_ATTR Quaternion_t2301928331  Quaternion_Euler_m1803555822 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  ___euler0, const RuntimeMethod* method);
+// System.Void UnityEngine.Transform::set_localRotation(UnityEngine.Quaternion)
+extern "C" IL2CPP_METHOD_ATTR void Transform_set_localRotation_m19445462 (Transform_t3600365921 * __this, Quaternion_t2301928331  ___value0, const RuntimeMethod* method);
 // UnityEngine.Quaternion UnityEngine.Transform::get_rotation()
 extern "C" IL2CPP_METHOD_ATTR Quaternion_t2301928331  Transform_get_rotation_m3502953881 (Transform_t3600365921 * __this, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Vector3::get_forward()
@@ -6408,6 +6445,8 @@ extern "C" IL2CPP_METHOD_ATTR void Transform_get_localToWorldMatrix_Injected_m14
 extern "C" IL2CPP_METHOD_ATTR void Transform_TransformPoint_Injected_m4136387841 (Transform_t3600365921 * __this, Vector3_t3722313464 * ___position0, Vector3_t3722313464 * ___ret1, const RuntimeMethod* method);
 // System.Void UnityEngine.Transform::InverseTransformPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
 extern "C" IL2CPP_METHOD_ATTR void Transform_InverseTransformPoint_Injected_m1034693445 (Transform_t3600365921 * __this, Vector3_t3722313464 * ___position0, Vector3_t3722313464 * ___ret1, const RuntimeMethod* method);
+// UnityEngine.Transform UnityEngine.Transform::FindRelativeTransformWithPath(UnityEngine.Transform,System.String,System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * Transform_FindRelativeTransformWithPath_m3437048164 (RuntimeObject * __this /* static, unused */, Transform_t3600365921 * ___transform0, String_t* ___path1, bool ___isActiveOnly2, const RuntimeMethod* method);
 // System.Void UnityEngine.Transform/Enumerator::.ctor(UnityEngine.Transform)
 extern "C" IL2CPP_METHOD_ATTR void Enumerator__ctor_m1351041375 (Enumerator_t3442430665 * __this, Transform_t3600365921 * ___outer0, const RuntimeMethod* method);
 // UnityEngine.Transform UnityEngine.Transform::GetChild(System.Int32)
@@ -6572,6 +6611,8 @@ extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Vector3_get_zero_m1409827619 
 extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Vector3_Normalize_m2941713846 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  ___value0, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Vector3::get_normalized()
 extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Vector3_get_normalized_m2454957984 (Vector3_t3722313464 * __this, const RuntimeMethod* method);
+// System.Single UnityEngine.Vector3::get_magnitude()
+extern "C" IL2CPP_METHOD_ATTR float Vector3_get_magnitude_m27958459 (Vector3_t3722313464 * __this, const RuntimeMethod* method);
 // System.Single UnityEngine.Vector3::get_sqrMagnitude()
 extern "C" IL2CPP_METHOD_ATTR float Vector3_get_sqrMagnitude_m1474274574 (Vector3_t3722313464 * __this, const RuntimeMethod* method);
 // System.Single UnityEngine.Mathf::Min(System.Single,System.Single)
@@ -6632,6 +6673,144 @@ extern "C" IL2CPP_METHOD_ATTR MethodInfo_t * Delegate_get_Method_m3071622864 (De
 extern "C" IL2CPP_METHOD_ATTR Delegate_t1188392813 * Delegate_CreateDelegate_m2396489936 (RuntimeObject * __this /* static, unused */, Type_t * p0, MethodInfo_t * p1, const RuntimeMethod* method);
 // System.Void UnityEngineInternal.TypeInferenceRuleAttribute::.ctor(System.String)
 extern "C" IL2CPP_METHOD_ATTR void TypeInferenceRuleAttribute__ctor_m2736695831 (TypeInferenceRuleAttribute_t254868554 * __this, String_t* ___rule0, const RuntimeMethod* method);
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void UnityEngine.Texture2DArray::.ctor(System.Int32,System.Int32,System.Int32,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.TextureCreationFlags)
+extern "C" IL2CPP_METHOD_ATTR void Texture2DArray__ctor_m1759046501 (Texture2DArray_t4044506685 * __this, int32_t ___width0, int32_t ___height1, int32_t ___depth2, int32_t ___format3, int32_t ___flags4, const RuntimeMethod* method)
+{
+	{
+		Texture__ctor_m3554519797(__this, /*hidden argument*/NULL);
+		int32_t L_0 = ___format3;
+		bool L_1 = Texture_ValidateFormat_m3925257631(__this, L_0, 0, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		int32_t L_2 = ___width0;
+		int32_t L_3 = ___height1;
+		int32_t L_4 = ___depth2;
+		int32_t L_5 = ___format3;
+		int32_t L_6 = ___flags4;
+		Texture2DArray_Internal_Create_m2217927355(NULL /*static, unused*/, __this, L_2, L_3, L_4, L_5, L_6, /*hidden argument*/NULL);
+	}
+
+IL_0022:
+	{
+		return;
+	}
+}
+// System.Void UnityEngine.Texture2DArray::.ctor(System.Int32,System.Int32,System.Int32,UnityEngine.TextureFormat,System.Boolean,System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void Texture2DArray__ctor_m2627654179 (Texture2DArray_t4044506685 * __this, int32_t ___width0, int32_t ___height1, int32_t ___depth2, int32_t ___textureFormat3, bool ___mipChain4, bool ___linear5, const RuntimeMethod* method)
+{
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	{
+		Texture__ctor_m3554519797(__this, /*hidden argument*/NULL);
+		int32_t L_0 = ___textureFormat3;
+		bool L_1 = ___linear5;
+		int32_t L_2 = GraphicsFormatUtility_GetGraphicsFormat_m3445248969(NULL /*static, unused*/, L_0, (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0), /*hidden argument*/NULL);
+		V_0 = L_2;
+		V_1 = 0;
+		bool L_3 = ___mipChain4;
+		if (!L_3)
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		int32_t L_4 = V_1;
+		V_1 = ((int32_t)((int32_t)L_4|(int32_t)1));
+	}
+
+IL_0021:
+	{
+		int32_t L_5 = ___textureFormat3;
+		bool L_6 = GraphicsFormatUtility_IsCrunchFormat_m1697721778(NULL /*static, unused*/, L_5, /*hidden argument*/NULL);
+		if (!L_6)
+		{
+			goto IL_0032;
+		}
+	}
+	{
+		int32_t L_7 = V_1;
+		V_1 = ((int32_t)((int32_t)L_7|(int32_t)((int32_t)64)));
+	}
+
+IL_0032:
+	{
+		int32_t L_8 = ___width0;
+		int32_t L_9 = ___height1;
+		int32_t L_10 = ___depth2;
+		int32_t L_11 = V_0;
+		int32_t L_12 = V_1;
+		Texture2DArray_Internal_Create_m2217927355(NULL /*static, unused*/, __this, L_8, L_9, L_10, L_11, L_12, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Texture2DArray::.ctor(System.Int32,System.Int32,System.Int32,UnityEngine.TextureFormat,System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void Texture2DArray__ctor_m4056612996 (Texture2DArray_t4044506685 * __this, int32_t ___width0, int32_t ___height1, int32_t ___depth2, int32_t ___textureFormat3, bool ___mipChain4, const RuntimeMethod* method)
+{
+	{
+		int32_t L_0 = ___width0;
+		int32_t L_1 = ___height1;
+		int32_t L_2 = ___depth2;
+		int32_t L_3 = ___textureFormat3;
+		bool L_4 = ___mipChain4;
+		Texture2DArray__ctor_m2627654179(__this, L_0, L_1, L_2, L_3, L_4, (bool)0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Boolean UnityEngine.Texture2DArray::Internal_CreateImpl(UnityEngine.Texture2DArray,System.Int32,System.Int32,System.Int32,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.TextureCreationFlags)
+extern "C" IL2CPP_METHOD_ATTR bool Texture2DArray_Internal_CreateImpl_m1122945648 (RuntimeObject * __this /* static, unused */, Texture2DArray_t4044506685 * ___mono0, int32_t ___w1, int32_t ___h2, int32_t ___d3, int32_t ___format4, int32_t ___flags5, const RuntimeMethod* method)
+{
+	typedef bool (*Texture2DArray_Internal_CreateImpl_m1122945648_ftn) (Texture2DArray_t4044506685 *, int32_t, int32_t, int32_t, int32_t, int32_t);
+	static Texture2DArray_Internal_CreateImpl_m1122945648_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Texture2DArray_Internal_CreateImpl_m1122945648_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Texture2DArray::Internal_CreateImpl(UnityEngine.Texture2DArray,System.Int32,System.Int32,System.Int32,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.TextureCreationFlags)");
+	bool retVal = _il2cpp_icall_func(___mono0, ___w1, ___h2, ___d3, ___format4, ___flags5);
+	return retVal;
+}
+// System.Void UnityEngine.Texture2DArray::Internal_Create(UnityEngine.Texture2DArray,System.Int32,System.Int32,System.Int32,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.TextureCreationFlags)
+extern "C" IL2CPP_METHOD_ATTR void Texture2DArray_Internal_Create_m2217927355 (RuntimeObject * __this /* static, unused */, Texture2DArray_t4044506685 * ___mono0, int32_t ___w1, int32_t ___h2, int32_t ___d3, int32_t ___format4, int32_t ___flags5, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Texture2DArray_Internal_Create_m2217927355_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Texture2DArray_t4044506685 * L_0 = ___mono0;
+		int32_t L_1 = ___w1;
+		int32_t L_2 = ___h2;
+		int32_t L_3 = ___d3;
+		int32_t L_4 = ___format4;
+		int32_t L_5 = ___flags5;
+		bool L_6 = Texture2DArray_Internal_CreateImpl_m1122945648(NULL /*static, unused*/, L_0, L_1, L_2, L_3, L_4, L_5, /*hidden argument*/NULL);
+		if (L_6)
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		UnityException_t3598173660 * L_7 = (UnityException_t3598173660 *)il2cpp_codegen_object_new(UnityException_t3598173660_il2cpp_TypeInfo_var);
+		UnityException__ctor_m872329880(L_7, _stringLiteral3269353644, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, NULL, Texture2DArray_Internal_Create_m2217927355_RuntimeMethod_var);
+	}
+
+IL_001e:
+	{
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -6777,6 +6956,16 @@ IL_001e:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Single UnityEngine.Time::get_time()
+extern "C" IL2CPP_METHOD_ATTR float Time_get_time_m2907476221 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+{
+	typedef float (*Time_get_time_m2907476221_ftn) ();
+	static Time_get_time_m2907476221_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Time_get_time_m2907476221_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Time::get_time()");
+	float retVal = _il2cpp_icall_func();
+	return retVal;
+}
 // System.Single UnityEngine.Time::get_deltaTime()
 extern "C" IL2CPP_METHOD_ATTR float Time_get_deltaTime_m372706562 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
@@ -7603,6 +7792,23 @@ extern "C" IL2CPP_METHOD_ATTR void Transform_set_localPosition_m4128471975 (Tran
 		return;
 	}
 }
+// System.Void UnityEngine.Transform::set_localEulerAngles(UnityEngine.Vector3)
+extern "C" IL2CPP_METHOD_ATTR void Transform_set_localEulerAngles_m4202601546 (Transform_t3600365921 * __this, Vector3_t3722313464  ___value0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Transform_set_localEulerAngles_m4202601546_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Vector3_t3722313464  L_0 = ___value0;
+		IL2CPP_RUNTIME_CLASS_INIT(Quaternion_t2301928331_il2cpp_TypeInfo_var);
+		Quaternion_t2301928331  L_1 = Quaternion_Euler_m1803555822(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		Transform_set_localRotation_m19445462(__this, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
 // UnityEngine.Vector3 UnityEngine.Transform::get_forward()
 extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Transform_get_forward_m747522392 (Transform_t3600365921 * __this, const RuntimeMethod* method)
 {
@@ -7845,6 +8051,33 @@ extern "C" IL2CPP_METHOD_ATTR void Transform_SetAsFirstSibling_m253439912 (Trans
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Transform_SetAsFirstSibling_m253439912_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Transform::SetAsFirstSibling()");
 	_il2cpp_icall_func(__this);
+}
+// UnityEngine.Transform UnityEngine.Transform::FindRelativeTransformWithPath(UnityEngine.Transform,System.String,System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * Transform_FindRelativeTransformWithPath_m3437048164 (RuntimeObject * __this /* static, unused */, Transform_t3600365921 * ___transform0, String_t* ___path1, bool ___isActiveOnly2, const RuntimeMethod* method)
+{
+	typedef Transform_t3600365921 * (*Transform_FindRelativeTransformWithPath_m3437048164_ftn) (Transform_t3600365921 *, String_t*, bool);
+	static Transform_FindRelativeTransformWithPath_m3437048164_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Transform_FindRelativeTransformWithPath_m3437048164_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Transform::FindRelativeTransformWithPath(UnityEngine.Transform,System.String,System.Boolean)");
+	Transform_t3600365921 * retVal = _il2cpp_icall_func(___transform0, ___path1, ___isActiveOnly2);
+	return retVal;
+}
+// UnityEngine.Transform UnityEngine.Transform::Find(System.String)
+extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * Transform_Find_m1729760951 (Transform_t3600365921 * __this, String_t* ___n0, const RuntimeMethod* method)
+{
+	Transform_t3600365921 * V_0 = NULL;
+	{
+		String_t* L_0 = ___n0;
+		Transform_t3600365921 * L_1 = Transform_FindRelativeTransformWithPath_m3437048164(NULL /*static, unused*/, __this, L_0, (bool)0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		Transform_t3600365921 * L_2 = V_0;
+		return L_2;
+	}
 }
 // System.Boolean UnityEngine.Transform::IsChildOf(UnityEngine.Transform)
 extern "C" IL2CPP_METHOD_ATTR bool Transform_IsChildOf_m224006092 (Transform_t3600365921 * __this, Transform_t3600365921 * ___parent0, const RuntimeMethod* method)
@@ -10378,6 +10611,40 @@ IL_003b:
 		float L_7 = V_0;
 		return L_7;
 	}
+}
+// System.Single UnityEngine.Vector3::get_magnitude()
+extern "C" IL2CPP_METHOD_ATTR float Vector3_get_magnitude_m27958459 (Vector3_t3722313464 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Vector3_get_magnitude_m27958459_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	{
+		float L_0 = __this->get_x_2();
+		float L_1 = __this->get_x_2();
+		float L_2 = __this->get_y_3();
+		float L_3 = __this->get_y_3();
+		float L_4 = __this->get_z_4();
+		float L_5 = __this->get_z_4();
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
+		float L_6 = sqrtf(((float)il2cpp_codegen_add((float)((float)il2cpp_codegen_add((float)((float)il2cpp_codegen_multiply((float)L_0, (float)L_1)), (float)((float)il2cpp_codegen_multiply((float)L_2, (float)L_3)))), (float)((float)il2cpp_codegen_multiply((float)L_4, (float)L_5)))));
+		V_0 = L_6;
+		goto IL_0035;
+	}
+
+IL_0035:
+	{
+		float L_7 = V_0;
+		return L_7;
+	}
+}
+extern "C"  float Vector3_get_magnitude_m27958459_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
+{
+	Vector3_t3722313464 * _thisAdjusted = reinterpret_cast<Vector3_t3722313464 *>(__this + 1);
+	return Vector3_get_magnitude_m27958459(_thisAdjusted, method);
 }
 // System.Single UnityEngine.Vector3::SqrMagnitude(UnityEngine.Vector3)
 extern "C" IL2CPP_METHOD_ATTR float Vector3_SqrMagnitude_m3025115945 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  ___vector0, const RuntimeMethod* method)

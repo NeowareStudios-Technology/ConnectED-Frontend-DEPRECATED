@@ -14,6 +14,7 @@ public class CalendarEventButton : MonoBehaviour {
     public Text Date;
     public Image qr;
     private Event e;
+    public QRDecodeTest qRDecode;
     public void setCalendarEvent(Event a )
     {
         e = new Event();
@@ -22,6 +23,26 @@ public class CalendarEventButton : MonoBehaviour {
 
         string dateString = dateGetter();
         Date.text = dateString;
+        qRDecode = GameObject.FindWithTag("Decoder").GetComponent<QRDecodeTest>();
+		qrImage = GameObject.FindWithTag("QR");
+        QR = GameObject.FindWithTag("QRPage");
+        if (e.e_photo.Length > 300)
+        {
+            Texture2D tex = new Texture2D(200, 200);
+
+
+            byte[] img = System.Convert.FromBase64String(a.e_photo);
+            tex.LoadImage(img, false);
+
+            pic.texture = tex;
+
+        }
+
+       
+        deets();
+
+
+
     }
     public string dateGetter(){
         string s = "";
@@ -70,8 +91,8 @@ public class CalendarEventButton : MonoBehaviour {
         int d = int.Parse(day);
         switch(d){
             case 1:
-			case 21:
-			case 31:
+            case 21:
+            case 31:
                 s += d.ToString() + "st";
                 break;
             case 22:
@@ -112,10 +133,41 @@ public class CalendarEventButton : MonoBehaviour {
         return s;
     }
 
+    public GameObject QR;
+    public GameObject qrImage;
+ public void deets()
+    {
+        GetComponent<Button>().onClick.AddListener(() => GameObject.FindWithTag("Details").GetComponent<Animator>().SetTrigger("Show"));
+        GetComponent<Button>().onClick.AddListener(() => GameObject.FindWithTag("Details").GetComponent<DetailChanger>().setDetails(e));
+        Button qrb = qr.gameObject.GetComponent<Button>();
 
 
+        if (e.e_organizer == PlayerPrefs.GetString("email"))
+        {
+            qrb.onClick.AddListener(() => setQRImage());
+        }
+        else
+        qrb.onClick.AddListener(() => qRDecode.Play());
+    }
 
-    private string prefillurl = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/events/prefill/dates";
+    public void setQRImage()
+    {
+        qRDecode.QRpage.SetActive(true);
+        if (e.qr.Length > 300)
+        {
+            Texture2D tex = new Texture2D(200, 200);
+
+
+            byte[] img = System.Convert.FromBase64String(e.qr);
+            tex.LoadImage(img, false);
+
+            qRDecode.setQRCode(tex);
+
+        }
+
+    }
+
+    /*private string prefillurl = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/events/prefill/dates";
     private Jsonparser j;
     private string jsonString;
     timePrefill prefill;
@@ -166,5 +218,5 @@ public class CalendarEventButton : MonoBehaviour {
 
             }
         };
-    }
+    }*/
 }
