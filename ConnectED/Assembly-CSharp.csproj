@@ -117,6 +117,7 @@
     <Compile Include="Assets\Scripts\timeUpdater.cs" />
     <Compile Include="Assets\Search.cs" />
     <Compile Include="Assets\searchEventPrefab.cs" />
+    <Compile Include="Assets\searchTeamInitializer.cs" />
     <Compile Include="Assets\SkillsController.cs" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\Plugins\link.xml" />

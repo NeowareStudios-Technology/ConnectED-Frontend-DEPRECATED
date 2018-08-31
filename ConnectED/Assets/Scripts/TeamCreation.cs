@@ -36,7 +36,7 @@ public class TeamCreation : MonoBehaviour {
 
     public void next(){
 
-        if(TeamName.text != null && TeamDesc.text != null){
+        if(TeamName.text != "" && TeamDesc.text != ""){
 
             TeamSetup.SetActive(false);
             Leaders.SetActive(true);

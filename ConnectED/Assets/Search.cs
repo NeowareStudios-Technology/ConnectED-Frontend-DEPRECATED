@@ -31,6 +31,8 @@ public class Search : MonoBehaviour {
 		}
         if(mode == 1)
             searchProfiles(search.text, j.token);
+        if (mode == 2)
+            searchTeams(search.text, j.token);
 
 
     }
@@ -153,6 +155,88 @@ public class Search : MonoBehaviour {
         }
 	}
 
+    private string searchTeamURL = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/teams/search";
+   
+    public void searchTeams(string s, string t)
+    {
+
+        UnityWebRequest www2 = UnityWebRequest.Get(searchTeamURL + "?search_term=" + search.text);
+        www2.SetRequestHeader("Authorization", "Bearer " + t);
+        coroutine = TeamPut(www2);
+        StartCoroutine(coroutine);
+    }
+    public GameObject teamSearchPrefab;
+    private TeamSearch tSearch;
+    private IEnumerator TeamPut(UnityWebRequest www)
+    {
+        yield return www.SendWebRequest();
+
+        Debug.Log("Status Code: " + www.responseCode);
+        Debug.Log(www.error);
+        Debug.Log(www.downloadHandler.text);
+        Debug.Log(www.downloadHandler.data);
+        Debug.Log(www.url);
+        Debug.Log(www.GetRequestHeader("Authorization"));
+        if (www.responseCode == 200)
+        {
+            byte[] results = www.downloadHandler.data;
+            jsonString = "";
+            jsonString = Encoding.UTF8.GetString(results);
+            Debug.Log(jsonString);
+            tSearch = JsonUtility.FromJson<TeamSearch>(jsonString);
+            if (jsonString != "{}")
+            {
+                teamPopulator();
+            }
+        }
+    }
+    public GameObject teamPage;
+    public void teamPopulator()
+    {
+        GameObject newEvent;
+        EventSearch a = new EventSearch();
+        int childKillCount = eventSearchContainer.transform.childCount;
+        for (int i = childKillCount - 1; i >= 0; i--)
+        {
+            Destroy(eventSearchContainer.transform.GetChild(i).gameObject);
+        }
+        for (int i = 0; i < tSearch.name.Length; i++)
+        {
+            newEvent = Instantiate(teamSearchPrefab, eventSearchContainer.transform);
+            newEvent.GetComponent<searchTeamInitializer>().setSearchTeam(tSearch, i, teamPage,this);
+        }
+
+        if (childKillCount > 7)
+        {
+            eventSearchContainer.AddComponent<ContentSizeFitter>();
+            eventSearchContainer.GetComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public InputField leader;
     public void setLeader(string s)
     {
@@ -181,4 +265,11 @@ public class ProfileSearch
     public string[] email;
     public string[] name;
     public string[] pic;
+}
+public class TeamSearch
+{
+    public float[] distance;
+    public string[] name;
+    public string[] pic;
+    public string[] t_id;
 }
