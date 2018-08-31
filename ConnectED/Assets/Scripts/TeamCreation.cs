@@ -20,7 +20,7 @@ public class TeamCreation : MonoBehaviour {
     private Team team;
     private IEnumerator coroutine;
     public Jsonparser j;
-    public string dbteams ="https://connected-dev-214119.appspot.com/_ah/api/connected/v1/teams";
+    private string dbteams ="https://connected-dev-214119.appspot.com/_ah/api/connected/v1/teams";
 	// Use this for initialization
     public void makeTeam()
     {
@@ -44,6 +44,8 @@ public class TeamCreation : MonoBehaviour {
             //https://support.unity3d.com/hc/en-us/articles/206486626-How-can-I-get-pixels-from-unreadable-textures-
             team.t_photo = Convert.ToBase64String(myTexture2D.EncodeToJPG());
             //read in with texture2d.loadimage(bytedata);
+        }else{
+            team.t_photo = "";
         }
 
         string t = "Bearer " + j.token;
@@ -53,7 +55,6 @@ public class TeamCreation : MonoBehaviour {
         www2.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw2);
         www2.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
         www2.SetRequestHeader("Authorization", t);
-        www2.SetRequestHeader("Content-Type", "application/json");
         coroutine = Post(www2);
         StartCoroutine(coroutine);
     }
@@ -64,7 +65,8 @@ public class TeamCreation : MonoBehaviour {
 
         Debug.Log("Status Code: " + www.responseCode);
         Debug.Log(www.error);
-        Debug.Log(www.downloadHandler.data);
+        Debug.Log(www.downloadHandler.text);
+        Debug.Log(www.url);
         Debug.Log(www.GetRequestHeader("Authorization"));
         if (www.responseCode.ToString() == "503")
         {
@@ -82,7 +84,7 @@ public class Team
 	public string t_city;
 	public string t_desc;
     public int t_hours;
-    public int t_member_mum;
+    public int t_member_num;
     public string[] t_members;
     public string t_name;
 	public string t_organizer;

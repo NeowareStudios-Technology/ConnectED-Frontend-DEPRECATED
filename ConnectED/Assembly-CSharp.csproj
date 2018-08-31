@@ -61,7 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CalendarEventButton.cs" />
+    <Compile Include="Assets\PersonSearch.cs" />
     <Compile Include="Assets\QRcode\Plugins\Loom\Loom.cs" />
     <Compile Include="Assets\QRcode\Scripts\CameraPlaneController.cs" />
     <Compile Include="Assets\QRcode\Scripts\DecodeByStaticPic.cs" />
@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\alphaAndText.cs" />
     <Compile Include="Assets\Scripts\animationController.cs" />
     <Compile Include="Assets\Scripts\APImanager.cs" />
+    <Compile Include="Assets\Scripts\CalendarEventButton.cs" />
     <Compile Include="Assets\Scripts\calendarPopulator.cs" />
     <Compile Include="Assets\Scripts\dateDayUpdater.cs" />
     <Compile Include="Assets\Scripts\dayInfo.cs" />
@@ -108,11 +109,12 @@
     <Compile Include="Assets\Scripts\spriteSwitcher.cs" />
     <Compile Include="Assets\Scripts\SwitchScene.cs" />
     <Compile Include="Assets\Scripts\TeamCreation.cs" />
+    <Compile Include="Assets\Scripts\teamInitializer.cs" />
+    <Compile Include="Assets\Scripts\TeamPageInit.cs" />
+    <Compile Include="Assets\Scripts\TeamsGet.cs" />
     <Compile Include="Assets\Scripts\timeOfDay.cs" />
     <Compile Include="Assets\Scripts\timeUpdater.cs" />
-    <Compile Include="Assets\teamInitializer.cs" />
-    <Compile Include="Assets\TeamPageInit.cs" />
-    <Compile Include="Assets\TeamsGet.cs" />
+    <Compile Include="Assets\Search.cs" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\Plugins\link.xml" />
     <None Include="Assets\QRcode\CamMat\WebCam.shader" />

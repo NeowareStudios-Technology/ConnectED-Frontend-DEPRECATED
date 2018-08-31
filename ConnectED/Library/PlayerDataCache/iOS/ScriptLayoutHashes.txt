@@ -58,9 +58,9 @@ a44114bd4fa541174f78b4bb92bacb48 UnityEngine.UI.dll:UnityEngine.EventSystems.Sta
 e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 2d58ca16854b99daea8c45e9c0f367b7 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-9c2d82c8ebfae7d2f668a2417c4cdc29 Assembly-CSharp.dll:.TeamCreation
+f1081ec0cff9540d227ea3fa5e627833 Assembly-CSharp.dll:.TeamCreation
 50b0b141074b216c8b53b1bd467f73c9 Unity.TextMeshPro.dll:TMPro.TMP_InputField
-386164d4e5e00aaabf0736205d179b2d Assembly-CSharp.dll:.DetailChanger
+7b1df707218f266c55c40c2149dab7a0 Assembly-CSharp.dll:.DetailChanger
 53cefe5d98cadefbab750835e70b89c0 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 486cd95c82d8305219c352c06b776e1f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 da2091a04d360891450faf16cdf621f1 UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -211,7 +211,6 @@ a400a88422022ddfc6298012402012e7 Assembly-CSharp.dll:.slidertext
 83126ba68a7475bafda4fe28ad09563e Assembly-CSharp.dll:.lerpMachine
 0ce1126269b1f0059a98de83bce338fc Assembly-CSharp.dll:.EventTagger
 486cd95c82d8305219c352c06b776e1f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
-3ca928c5cf7412a58bb4e1babc8132ec Assembly-CSharp.dll:.TeamsGet
 a4db7e393d087bf7c9faa02c393a27f2 Assembly-CSharp.dll:.returnPressedFields
 486cd95c82d8305219c352c06b776e1f EasyWebCamLib.dll:.RenderListenerUtility
 c988b211892fab8fe03129bd32e2c2f1 Assembly-CSharp.dll:.EventCreator
@@ -250,8 +249,6 @@ e033f131358cea5a0eabf9561e781deb UnityEngine.TestRunner.dll:UnityEngine.TestTool
 70f7dc248db3379548a88e8d4fa049f8 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
-bdc6abd02320922201d57871b89f1fab Assembly-CSharp.dll:.teamInitializer
-a6a21d8ec41f414a3ff01246eeff2cea Assembly-CSharp.dll:.CalendarEventButton
 1a90b221dc803408fbafa883c12bcab4 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 70f7dc248db3379548a88e8d4fa049f8 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
@@ -346,3 +343,9 @@ f351a53a5bb6578f76af7819b5eb8592 Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 ad24de185ef9a605870b931cda4f181e Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
+97f0c182987ebdef7aaa10dc6fa20b31 Assembly-CSharp.dll:.TeamsGet
+a6a21d8ec41f414a3ff01246eeff2cea Assembly-CSharp.dll:.CalendarEventButton
+bdc6abd02320922201d57871b89f1fab Assembly-CSharp.dll:.teamInitializer
+6b058d32d367ff9441fa74fa5f868e7a Assembly-CSharp.dll:.TeamPageInit
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.PersonSearch
+0b3423c1cadb68257a5057ef4a5518b3 Assembly-CSharp.dll:.Search

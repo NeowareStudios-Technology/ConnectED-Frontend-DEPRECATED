@@ -205,6 +205,10 @@ public class Jsonparser : MonoBehaviour {
         Debug.Log(www.uploadHandler.data);
         Debug.Log(www.downloadHandler.data);
         Debug.Log(www.GetRequestHeader("Authorization"));
+        if(www.error == null)
+        {
+            l.StartLoginProcess();
+        }
     }
     public EventSpawner eventSpawner;
     public void SetProfile(Profile p)

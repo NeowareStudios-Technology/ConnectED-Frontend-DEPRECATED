@@ -8,6 +8,7 @@ using System.IO;
 using Firebase;
 using Firebase.Auth;
 using Firebase.Unity.Editor;
+using UnityEngine.SceneManagement;
 
 public class Login : MonoBehaviour {
 
@@ -42,6 +43,7 @@ public class Login : MonoBehaviour {
                 Debug.LogError("SignInWithEmailAndPasswordAsync was canceled.");
                 PlayerPrefs.DeleteAll();
                 j.alreadyin.SetActive(false);
+                SceneManager.LoadScene(0);
                 return;
             }
             if (task.IsFaulted)
@@ -49,6 +51,7 @@ public class Login : MonoBehaviour {
                 Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
 				PlayerPrefs.DeleteAll();
                 j.alreadyin.SetActive(false);
+                SceneManager.LoadScene(0);
                 return;
             }
         
@@ -87,7 +90,7 @@ public class Login : MonoBehaviour {
           j.token = task.Result;
           Debug.Log(j.token);
           TeamsGet.getTeams();
-            info.GetmyProfile();
+          info.GetmyProfile();
           // Send token to your backend via HTTPS
           // ...
       });

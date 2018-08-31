@@ -80,8 +80,11 @@ public class EventSpawner : MonoBehaviour {
     {
         FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
         FirebaseUser user = auth.CurrentUser;
+        int amountOfEvents = 10;
         allEvents = new Event[prefill.events.Length];
-        for (int i = 0; i < prefill.events.Length; i++)
+        if (prefill.events.Length < amountOfEvents)
+            amountOfEvents = prefill.events.Length;
+        for (int i = 0; i < amountOfEvents; i++)
         {
             //using (UnityWebRequest www = UnityWebRequest.Get("https://webhook.site/8e284497-5145-481d-8a18-0883dfd599e5"))
             Debug.Log(prefill.events[i]);

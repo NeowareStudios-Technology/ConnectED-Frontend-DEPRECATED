@@ -229,7 +229,8 @@ public class calendarPopulator : MonoBehaviour
             //newCalendarButton.GetComponent<CalendarEventButton>().j = j;
             
         }
-        handleOpportunities();
+        if(opportunityButtonContainer != null && opportunityButtonContainer.transform.childCount == 1)
+            handleOpportunities();
         if(newCalendarButtonContainerPrefab.transform.childCount == 1)
             Instantiate(emptyCalendarButton, newCalendarButtonContainerPrefab.transform);
         calendarButtonPanel.transform.parent.GetComponent<ScrollSnapRect>().enabled = true;
@@ -323,8 +324,16 @@ public class calendarPopulator : MonoBehaviour
                         {
                             return;
                         }
-						if (allEvents[currentEvent].Substring(0, 2) == month && allEvents[currentEvent].Substring(3, 2) == day && allEvents[currentEvent].Substring(6, 4) == year)
-							currentEvent++;
+                        while (allEvents[currentEvent].Substring(0, 2) == month && allEvents[currentEvent].Substring(3, 2) == day && allEvents[currentEvent].Substring(6, 4) == year)
+                        {
+                            currentEvent++;
+                            if (currentEvent >= allEvents.Length)
+                                return;
+                        }
+                        if (currentEvent == allEvents.Length)
+                        {
+                            return;
+                        }
                         month = allEvents[currentEvent].Substring(0, 2);
                         day = allEvents[currentEvent].Substring(3, 2);
                         year = allEvents[currentEvent].Substring(6, 4);

@@ -139,7 +139,10 @@ public class QRDecodeTest : MonoBehaviour
 		}
 	}
 
-
+    public void setText()
+    {
+        responseText.text = "Exiting \nQR Scan Mode";
+    }
 
 	/// <summary>
 	/// Toggles the torch by click the ui button

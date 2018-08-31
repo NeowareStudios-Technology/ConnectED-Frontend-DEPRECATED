@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 224784226726896120}
   - component: {fileID: 222627071538776232}
   - component: {fileID: 114588480761056996}
-  - component: {fileID: 114123116087922818}
   m_Layer: 5
   m_Name: Empty Team
   m_TagString: Untagged
@@ -29,21 +28,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114123116087922818
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1164013918187098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e84b36ead33f44d01bf2ed5e95a2f496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pic: {fileID: 0}
-  teamName: {fileID: 0}
-  teamMembers: {fileID: 0}
-  button: {fileID: 114588480761056996}
 --- !u!114 &114588480761056996
 MonoBehaviour:
   m_ObjectHideFlags: 1
