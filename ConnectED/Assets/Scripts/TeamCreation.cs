@@ -11,23 +11,57 @@ public class TeamCreation : MonoBehaviour {
     public InputField TeamName;
     public InputField TeamDesc;
     public bool expire;
-    public bool priv;
+    public bool priv = false;
     public InputField leader1;
     public InputField leader2;
     public InputField leader3;
     public Text city;
     public Text state;
     private Team team;
+    public GameObject TeamSetup;
+    public GameObject Leaders;
     private IEnumerator coroutine;
     public Jsonparser j;
     private string dbteams ="https://connected-dev-214119.appspot.com/_ah/api/connected/v1/teams";
 	// Use this for initialization
+
+
+    public void privacy(int i){
+        if (i == 1)
+            priv = false;
+        else
+            priv = true;
+        
+    }
+
+    public void next(){
+
+        if(TeamName.text != null && TeamDesc.text != null){
+
+            TeamSetup.SetActive(false);
+            Leaders.SetActive(true);
+        }
+            
+    }
+
     public void makeTeam()
     {
+
+        if(city.text == null || state.text == null){
+            return;
+        }
+
+		GetComponent<Animator>().ResetTrigger("Team");
+        GetComponent<Animator>().SetTrigger("Hide");
+
+
         team = new Team();
         team.t_desc = TeamDesc.text;
         team.t_name = TeamName.text;
-        team.t_privacy = "o";
+        if(priv)
+            team.t_privacy = "p";
+        else
+            team.t_privacy = "o";
         team.t_city = city.text;
         team.t_state = state.text;
         if (image.color.a == 1)
@@ -59,6 +93,7 @@ public class TeamCreation : MonoBehaviour {
         StartCoroutine(coroutine);
     }
 
+    private string leadersURL = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/teams/";
     private IEnumerator Post(UnityWebRequest www)
     {
         yield return www.SendWebRequest();
@@ -72,6 +107,7 @@ public class TeamCreation : MonoBehaviour {
         {
             Debug.Log("try again :maketeam");
         }
+      
 
     }
 }

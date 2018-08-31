@@ -6,6 +6,7 @@ using Firebase;
 using Firebase.Auth;
 using UnityEngine.Networking;
 using System.Text;
+using UnityEngine.SceneManagement;
 
 public class TeamsGet : MonoBehaviour {
 
@@ -48,6 +49,11 @@ public class TeamsGet : MonoBehaviour {
             if (www.isNetworkError || www.isHttpError)
             {
                 Debug.Log(www.responseCode);
+                if(www.responseCode == 500)
+                {
+                    PlayerPrefs.DeleteAll();
+                    SceneManager.LoadScene(0);
+                }
                 Debug.Log(www.url);
                 Debug.Log(www.GetRequestHeader("Authorization"));
                 Debug.Log(www.GetRequestHeader("Content-Type"));

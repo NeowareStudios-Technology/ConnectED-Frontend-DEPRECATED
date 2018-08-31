@@ -260,3 +260,5 @@
 /Users/alexchatham/Developer/Unity/ConnectED/ConnectED/Temp/bin/Debug/Unity.IvyParser.dll.mdb
 /Users/alexchatham/Developer/Unity/ConnectED/ConnectED/obj/Debug/Assembly-CSharp.dll
 /Users/alexchatham/Developer/Unity/ConnectED/ConnectED/obj/Debug/Assembly-CSharp.pdb
+/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/Temp/bin/Debug/EasyWebCamLib.dll
+/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/Temp/bin/Debug/QRCode.dll

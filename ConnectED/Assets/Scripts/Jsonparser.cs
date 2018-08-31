@@ -227,6 +227,7 @@ public class Profile
 {
     public string first_name;
     public string last_name;
+    public float hours;
     public string email;
     public string passwrd;
     public string education;

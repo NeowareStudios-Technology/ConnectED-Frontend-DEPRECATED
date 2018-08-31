@@ -56,6 +56,7 @@ public class getProfileinfo : MonoBehaviour {
                 byte[] results = www.downloadHandler.data;
                 jsonString = "";
                 jsonString = Encoding.UTF8.GetString(results);
+                Debug.Log(jsonString);
                 profile = JsonUtility.FromJson<Profile>(jsonString);
                 j.SetProfile(profile);
                 if(l)

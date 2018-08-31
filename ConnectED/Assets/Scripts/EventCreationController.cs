@@ -5,6 +5,7 @@ using UnityEngine;
 public class EventCreationController : MonoBehaviour {
 
     public GameObject Fields;
+    public GameObject Skills;
     public GameObject EventSetup;
     public GameObject LeadersAndTags;
     public GameObject Address;
@@ -17,14 +18,20 @@ public class EventCreationController : MonoBehaviour {
 
         if (EventSetup.activeSelf)
         {
-            EventSetup.SetActive(false);
-            Address.SetActive(true);
+            if(evcr.title.text != null && evcr.title.text != "" && evcr.description.text != "" && evcr.NumberofVolunteers.text != ""){
+                
+				EventSetup.SetActive(false);
+				Address.SetActive(true);
+            }
             return;
         }
         if (Address.activeSelf)
         {
-            Address.SetActive(false);
-            LeadersAndTags.SetActive(true);
+            if (evcr.Street.text != "" && evcr.city.text != "" && evcr.State.text != "" && evcr.zipcode.text != "")
+            {
+                Address.SetActive(false);
+                LeadersAndTags.SetActive(true);
+            }
             return;
         }
         if (LeadersAndTags.activeSelf)
@@ -48,6 +55,11 @@ public class EventCreationController : MonoBehaviour {
 
     public void GetFields(){
         Fields.SetActive(true);
+    }
+
+    public void GetSkills()
+    {
+        Skills.SetActive(true);
     }
 
     public void Back()

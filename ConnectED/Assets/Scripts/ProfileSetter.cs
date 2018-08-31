@@ -11,6 +11,7 @@ public class ProfileSetter : MonoBehaviour {
     public Text Interest1;
     public Text Interest2;
     public Text Interest3;
+    public Text hours;
     public Text Skill1;
     public Text Skill2;
     public Text Skill3;
@@ -20,6 +21,7 @@ public class ProfileSetter : MonoBehaviour {
     public void setProfile()
     {
         SetPicture();
+        hours.text = j.profile.hours.ToString();
         username.text = j.profile.first_name + " " + j.profile.last_name;
         set = true;
         if (j.profile.interests == null)

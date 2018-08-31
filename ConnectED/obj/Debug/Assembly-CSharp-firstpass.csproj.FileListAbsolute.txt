@@ -257,3 +257,5 @@
 /Users/alexchatham/Developer/Unity/ConnectED/ConnectED/obj/Debug/Assembly-CSharp-firstpass.csproj.CoreCompileInputs.cache
 /Users/alexchatham/Developer/Unity/ConnectED/ConnectED/obj/Debug/Assembly-CSharp-firstpass.dll
 /Users/alexchatham/Developer/Unity/ConnectED/ConnectED/obj/Debug/Assembly-CSharp-firstpass.pdb
+/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/Temp/bin/Debug/EasyWebCamLib.dll
+/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/Temp/bin/Debug/QRCode.dll

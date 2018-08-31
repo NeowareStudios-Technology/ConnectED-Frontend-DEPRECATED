@@ -28,7 +28,9 @@ public class Search : MonoBehaviour {
         if(mode == 0)
         {
             searchEvents(search.text , j.token );
-        }
+		}
+        if(mode == 1)
+            searchProfiles(search.text, j.token);
 
 
     }
@@ -40,11 +42,14 @@ public class Search : MonoBehaviour {
 
         UnityWebRequest www2 = UnityWebRequest.Get(searchURL+"?search_term="+ search.text);
         www2.SetRequestHeader("Authorization", "Bearer " + t);
-        coroutine = Put(www2);
+        coroutine = eventPut(www2);
         StartCoroutine(coroutine);
     }
-
-    private IEnumerator Put(UnityWebRequest www)
+    private string jsonString;
+    public GameObject eventSearchPrefab;
+    public GameObject eventSearchContainer;
+    private EventSearch eSearch;
+    private IEnumerator eventPut(UnityWebRequest www)
     {
         yield return www.SendWebRequest();
 
@@ -54,10 +59,111 @@ public class Search : MonoBehaviour {
         Debug.Log(www.downloadHandler.data);
         Debug.Log(www.url);
         Debug.Log(www.GetRequestHeader("Authorization"));
+        if(www.responseCode == 200){
+            byte[] results = www.downloadHandler.data;
+            jsonString = "";
+            jsonString = Encoding.UTF8.GetString(results);
+            Debug.Log(jsonString);
+            eSearch = JsonUtility.FromJson<EventSearch>(jsonString);
+            if (jsonString != "{}")
+            {
+                eventPopulator();
+            }
+        }
+    }
+    public void eventPopulator()
+    {
+        GameObject newEvent;
+        EventSearch a = new EventSearch();
+        int childKillCount = eventSearchContainer.transform.childCount;
+        for (int i = childKillCount - 1; i >= 0; i--)
+        {
+            Destroy(eventSearchContainer.transform.GetChild(i).gameObject);
+        }
+        for (int i = 0; i < eSearch.event_ids.Length; i++)
+        {
+            newEvent = Instantiate(eventSearchPrefab, eventSearchContainer.transform);
+            newEvent.GetComponent<searchEventPrefab>().setSearchEvent(eSearch, i);
+        }
 
+        if (childKillCount > 7)
+        {
+            eventSearchContainer.AddComponent<ContentSizeFitter>();
+            eventSearchContainer.GetComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+        }
+    }
+
+    private string searchProfileURL = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles/search";
+    public void searchProfiles(string s, string t)
+    {
+
+        UnityWebRequest www2 = UnityWebRequest.Get(searchProfileURL + "?search_term=" + search.text);
+        www2.SetRequestHeader("Authorization", "Bearer " + t);
+        coroutine = profilePut(www2);
+        StartCoroutine(coroutine);
+    }
+    public GameObject profileSearchPrefab;
+    private ProfileSearch pSearch;
+    private IEnumerator profilePut(UnityWebRequest www)
+    {
+        yield return www.SendWebRequest();
+
+        Debug.Log("Status Code: " + www.responseCode);
+        Debug.Log(www.error);
+        Debug.Log(www.downloadHandler.text);
+        Debug.Log(www.downloadHandler.data);
+        Debug.Log(www.url);
+        Debug.Log(www.GetRequestHeader("Authorization"));
+        if (www.responseCode == 200)
+        {
+            byte[] results = www.downloadHandler.data;
+            jsonString = "";
+            jsonString = Encoding.UTF8.GetString(results);
+            Debug.Log(jsonString);
+            pSearch = JsonUtility.FromJson<ProfileSearch>(jsonString);
+            if (jsonString != "{}")
+            {
+                profilePopulator();
+            }
+        }
     }
 	
-}
+    public void profilePopulator()
+    {
+        GameObject newProfile;
+        ProfileSearch a = new ProfileSearch();
+        int childKillCount = eventSearchContainer.transform.childCount;
+        for (int i = childKillCount - 1; i >= 0; i--)
+        {
+            Destroy(eventSearchContainer.transform.GetChild(i).gameObject);
+        }
+        for (int i = 0; i < pSearch.email.Length; i++)
+        {
+            newProfile = Instantiate(profileSearchPrefab, eventSearchContainer.transform);
+
+            newProfile.GetComponent<profileSearchInitializer>().setSearch(this);
+            newProfile.GetComponent<profileSearchInitializer>().setPic(pSearch.pic[i]);
+            newProfile.GetComponent<profileSearchInitializer>().setNameEmail(pSearch.name[i],pSearch.email[i]);
+        }
+
+        if (childKillCount > 7)
+        {
+            eventSearchContainer.AddComponent<ContentSizeFitter>();
+            eventSearchContainer.GetComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+        }
+	}
+
+    public InputField leader;
+    public void setLeader(string s)
+    {
+        leader.text = s;
+
+        GetComponent<Animator>().ResetTrigger("Searching");
+        GetComponent<Animator>().SetTrigger("SearchingCancel");
+    }
+    }
+
+
 [System.Serializable]
 public class Searcher
 {
@@ -66,6 +172,13 @@ public class Searcher
 public class EventSearch
 {
     public float[] distances;
+    public string[] event_dates;
     public string[] event_ids;
-    public string[] event_titles;
+    public string[] event_pics;
+}
+public class ProfileSearch
+{
+    public string[] email;
+    public string[] name;
+    public string[] pic;
 }

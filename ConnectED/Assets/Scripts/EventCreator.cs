@@ -33,12 +33,12 @@ public class EventCreator : MonoBehaviour
     public InputField SkillTwo;
     public InputField SkillThree;
     public string qr;
-    public bool indoor;
-    public bool outdoor;
+    public string env = null;
     public Jsonparser j;
     public timeUpdater st;
     public timeUpdater en;
     public returnPressedFields f;
+    public returnPressedFields s;
 	private IEnumerator coroutine;
     private string dbevents = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/events";
 
@@ -61,6 +61,34 @@ public class EventCreator : MonoBehaviour
         return new string[] {s};
     }
 
+    public void privacy(int i){
+        if (i == 1)
+            isPrivate = true;
+        else
+            isPrivate = false;
+    }
+
+    public void skillRequired(int i)
+    {
+        if (i == 0)
+            skillsRequired = false;
+        else
+            skillsRequired = true;
+    }
+
+    public void environment(int i)
+    {
+        if(i == 0){
+            env = "i";
+        }
+        if(i == 1){
+            env = "o";
+        }
+        if(i == 2){
+            env = "b";
+        }
+    }
+
     public QREncodeTest QREncode;
     public void initEvent()
     {
@@ -69,16 +97,20 @@ public class EventCreator : MonoBehaviour
         e.capacity = int.Parse(NumberofVolunteers.text);
         e.city = city.text;
         e.date = getDate();
-        e.day = new string[] { "10"};
+        e.day = new string[] { "mon","tue"};
         e.e_desc = description.text;
         e.e_title = title.text;
         e.education = "";
         e.end = en.time();
-        e.env = "b";
+        e.env = env;
         e.interests = f.returnFields();
-        e.privacy = "o";
+        if (isPrivate)
+            e.privacy = "p";
+        else
+            e.privacy = "o";
         e.qr = "";
-        e.req_skills = new string[] { "" };
+        if(skillsRequired)
+            e.req_skills = s.returnFields();
         e.start = st.time();
         e.state = State.text;
         e.street = Street.text;
@@ -113,7 +145,7 @@ public class EventCreator : MonoBehaviour
         StartCoroutine(coroutine);
     }
 
-
+    private string leadersURL = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/events/";
     private IEnumerator Post(UnityWebRequest www)
     {
         yield return www.SendWebRequest();
@@ -127,7 +159,40 @@ public class EventCreator : MonoBehaviour
             Debug.Log("try again: make event");
             initEvent();
         }
-            
+        //if (www.responseCode.ToString() == "200" && LeaderOne.text != "")
+        //{
+        //    Leaders leaders = new Leaders();
+        //    leaders.leaders = new string[3];
+        //    leaders.leaders[0] = LeaderOne.text;
+        //    leaders.leaders[1] = LeaderTwo.text;
+        //    leaders.leaders[2] = LeaderThree.text;
+        //    string newLeaders = JsonUtility.ToJson(leaders);
+        //    UnityWebRequest www2 = UnityWebRequest.Put(leadersURL + title.text.Replace(" ","+")+"/leaders", newLeaders);
+        //    byte[] bodyRaw2 = Encoding.UTF8.GetBytes(newLeaders);
+        //    www2.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw2);
+        //    www2.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        //    www2.SetRequestHeader("Authorization", j.token);
+        //    www2.SetRequestHeader("Content-Type", "application/json");
+        //    coroutine = setLeaders(www2);
+        //    StartCoroutine(coroutine);
+		//
+        //} 
+    }
+    private IEnumerator setLeaders(UnityWebRequest www)
+    {
+        yield return www.SendWebRequest();
+
+        Debug.Log("Status Code: " + www.responseCode);
+        Debug.Log(www.error);
+        Debug.Log(www.uploadHandler.data);
+        Debug.Log(www.downloadHandler.data);
+        Debug.Log(www.downloadHandler.text);
+        Debug.Log(www.GetRequestHeader("Authorization"));
+        if (www.responseCode.ToString() == "503")
+        {
+            Debug.Log("try again: make event");
+            initEvent();
+        }
     }
 
 }
@@ -162,4 +227,7 @@ public class Event
     public string state;
     public string street;
     public string zip_code;
+}
+public class Leaders{
+    public string[] leaders;
 }

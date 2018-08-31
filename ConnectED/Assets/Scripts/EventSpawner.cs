@@ -70,61 +70,71 @@ public class EventSpawner : MonoBehaviour {
                 jsonString = Encoding.UTF8.GetString(results);
 				Debug.Log(jsonString);
                 prefill = JsonUtility.FromJson<prefill>(jsonString);
-
-                StartCoroutine(Populator());
+                if (jsonString != "{}")
+                {
+					StartCoroutine(Populator());
+                }else{
+                    Loading.SetActive(false);
+                    calPop.StartCalendar();
+                }
             }
         };
     }
 
     IEnumerator Populator()
     {
-        FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
-        FirebaseUser user = auth.CurrentUser;
-        int amountOfEvents = 10;
-        allEvents = new Event[prefill.events.Length];
-        if (prefill.events.Length < amountOfEvents)
-            amountOfEvents = prefill.events.Length;
-        for (int i = 0; i < amountOfEvents; i++)
-        {
-            //using (UnityWebRequest www = UnityWebRequest.Get("https://webhook.site/8e284497-5145-481d-8a18-0883dfd599e5"))
-            Debug.Log(prefill.events[i]);
-            using (UnityWebRequest www = UnityWebRequest.Get(getEventurl + prefill.events[i]))
+
+
+
+            FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+            FirebaseUser user = auth.CurrentUser;
+            int amountOfEvents = 10;
+            allEvents = new Event[prefill.events.Length];
+            if (prefill.events.Length < amountOfEvents)
+                amountOfEvents = prefill.events.Length;
+            for (int i = 0; i < amountOfEvents; i++)
             {
-
-
-
-                www.SetRequestHeader("Authorization", "Bearer " + j.token);
-                www.SetRequestHeader("Content-Type", "application/json");
-
-                yield return www.SendWebRequest();
-                if (www.isNetworkError || www.isHttpError)
+                //using (UnityWebRequest www = UnityWebRequest.Get("https://webhook.site/8e284497-5145-481d-8a18-0883dfd599e5"))
+                Debug.Log(prefill.events[i]);
+                using (UnityWebRequest www = UnityWebRequest.Get(getEventurl + prefill.events[i]))
                 {
-                    Debug.Log(www.responseCode);
-                    Debug.Log(www.url);
-                    Debug.Log(www.GetRequestHeader("Authorization"));
-                    Debug.Log(www.GetRequestHeader("Content-Type"));
-                    Debug.Log(www.error);
-                    Debug.Log(www.downloadHandler.text);
-                }
-                else
-                {
-                    Debug.Log(www.responseCode);
-                    byte[] results = www.downloadHandler.data;
-                    jsonString = "";
-                    jsonString = Encoding.UTF8.GetString(results);
-                    Debug.Log(jsonString);
-                    Event = JsonUtility.FromJson<Event>(jsonString);
-                   
-                    allEvents[i] = Event;
-                    GameObject newEvent = Instantiate(prefabEvent, container.transform);
-                    Instantiate(dotPrefab, dotContainer.transform);
-                    newEvent.GetComponent<EventInitializer>().GetEvent(Event,prefill.distances[i]);
-                    newEvent.GetComponent<EventInitializer>().button.onClick.AddListener(() =>Details.GetComponent<Animator>().SetBool("Show",true));
-                }
-            };
-        }
-        calPop.populateEvents();
-        calPop.StartCalendar();
+
+
+
+                    www.SetRequestHeader("Authorization", "Bearer " + j.token);
+                    www.SetRequestHeader("Content-Type", "application/json");
+
+                    yield return www.SendWebRequest();
+                    if (www.isNetworkError || www.isHttpError)
+                    {
+                        Debug.Log(www.responseCode);
+                        Debug.Log(www.url);
+                        Debug.Log(www.GetRequestHeader("Authorization"));
+                        Debug.Log(www.GetRequestHeader("Content-Type"));
+                        Debug.Log(www.error);
+                        Debug.Log(www.downloadHandler.text);
+                    }
+                    else
+                    {
+                        Debug.Log(www.responseCode);
+                        byte[] results = www.downloadHandler.data;
+                        jsonString = "";
+                        jsonString = Encoding.UTF8.GetString(results);
+                        Debug.Log(jsonString);
+                        Event = JsonUtility.FromJson<Event>(jsonString);
+
+                        allEvents[i] = Event;
+                        GameObject newEvent = Instantiate(prefabEvent, container.transform);
+                        Instantiate(dotPrefab, dotContainer.transform);
+                        newEvent.GetComponent<EventInitializer>().GetEvent(Event, prefill.distances[i]);
+                        newEvent.GetComponent<EventInitializer>().button.onClick.AddListener(() => Details.GetComponent<Animator>().SetBool("Show", true));
+                    }
+                };
+            }
+            calPop.populateEvents();
+
+            calPop.StartCalendar();
+
         //refresh here
         Loading.SetActive(false);
         scroll.Refresh();

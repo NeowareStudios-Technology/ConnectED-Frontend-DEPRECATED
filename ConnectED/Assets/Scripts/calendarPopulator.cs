@@ -221,7 +221,7 @@ public class calendarPopulator : MonoBehaviour
             }
             newCalendarButton = Instantiate(calendarButtonPrefab, newCalendarButtonContainerPrefab.transform);
             newCalendarButton.GetComponent<CalendarEventButton>().setCalendarEvent(dates[i]);
-            if(dates[i].e_organizer == PlayerPrefs.GetString("email"))
+            if(dates[i].e_organizer == PlayerPrefs.GetString("email").ToLower())
             {
                 Debug.Log("Match Found");
                 addToOpportunities(newCalendarButton,i);
@@ -299,6 +299,13 @@ public class calendarPopulator : MonoBehaviour
         string day = allEvents[0].Substring(3, 2);
         string year = allEvents[0].Substring(6, 4);
         Debug.Log(month + day + year);
+        while (int.Parse(month) < 8 && int.Parse(year) <= 2018)
+        {
+            currentEvent++;
+            month = allEvents[currentEvent].Substring(0, 2);
+            year = allEvents[currentEvent].Substring(6, 4);
+            day = allEvents[currentEvent].Substring(3, 2);
+        }
         Debug.Log("Setting Event " + allEvents);
         Debug.Log("Child count " + calendarContainer.transform.childCount);
         int inc = 1;
