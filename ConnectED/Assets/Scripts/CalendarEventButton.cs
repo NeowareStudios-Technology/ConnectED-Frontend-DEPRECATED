@@ -19,7 +19,8 @@ public class CalendarEventButton : MonoBehaviour {
     {
         e = new Event();
         e = a;
-        title.text = a.e_title;
+        Debug.Log(a);
+        title.text = e.e_title;
 
         string dateString = dateGetter();
         Date.text = dateString;
@@ -142,7 +143,7 @@ public class CalendarEventButton : MonoBehaviour {
         Button qrb = qr.gameObject.GetComponent<Button>();
 
 
-        if (e.e_organizer == PlayerPrefs.GetString("email"))
+        if (e.e_organizer == PlayerPrefs.GetString("email").ToLower())
         {
             qrb.onClick.AddListener(() => setQRImage());
         }

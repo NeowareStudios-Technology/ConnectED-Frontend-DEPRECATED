@@ -471,6 +471,7 @@ public class calendarPopulator : MonoBehaviour
         FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
         FirebaseUser user = auth.CurrentUser;
         allEvents = new Event[prefill.events.Length];
+        Debug.Log(allEvents.Length);
         Event e;
         for (int i = 0; i < prefill.events.Length; i++)
         {
@@ -493,6 +494,7 @@ public class calendarPopulator : MonoBehaviour
                     Debug.Log(www.GetRequestHeader("Content-Type"));
                     Debug.Log(www.error);
                     Debug.Log(www.downloadHandler.text);
+                   
                 }
                 else
                 {
@@ -504,9 +506,12 @@ public class calendarPopulator : MonoBehaviour
                     e = JsonUtility.FromJson<Event>(jsonString);
 
                     allEvents[i] = e;
+                    Debug.Log(allEvents[i].e_orig_title);
                     if(i == prefill.events.Length - 1){
                         dates = new Event[allEvents.Length];
                         dates = allEvents;
+                        Debug.Log(allEvents[i].e_orig_title);
+                        Debug.Log(dates[i].e_orig_title);
                         setEventsInCalendar();
                         eventTrigger();
                     }

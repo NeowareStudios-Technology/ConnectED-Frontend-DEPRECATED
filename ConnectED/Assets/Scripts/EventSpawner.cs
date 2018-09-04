@@ -96,7 +96,7 @@ public class EventSpawner : MonoBehaviour {
             {
                 //using (UnityWebRequest www = UnityWebRequest.Get("https://webhook.site/8e284497-5145-481d-8a18-0883dfd599e5"))
                 Debug.Log(prefill.events[i]);
-                using (UnityWebRequest www = UnityWebRequest.Get(getEventurl + prefill.events[i]))
+            using (UnityWebRequest www = UnityWebRequest.Get(getEventurl + prefill.events[i]))
                 {
 
 

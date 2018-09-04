@@ -14,6 +14,12 @@ public class Search : MonoBehaviour {
     //set mode, 0 is event, 1 is profile search, 2 is team search
     public void setMode(int i)
     {
+        search.text = "";
+        int childKillCount = eventSearchContainer.transform.childCount;
+        for (int y = childKillCount - 1; y >= 0; y--)
+        {
+            Destroy(eventSearchContainer.transform.GetChild(y).gameObject);
+        }
         mode = i;
     }
 

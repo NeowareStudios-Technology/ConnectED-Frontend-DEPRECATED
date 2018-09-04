@@ -55,7 +55,7 @@ public class TeamPageInit : MonoBehaviour {
         string newEvent = "";
         Debug.Log(newEvent);
         byte[] bodyRaw2 = Encoding.UTF8.GetBytes(newEvent);
-        UnityWebRequest www2 = UnityWebRequest.Get(joinTeamURL + s);
+        UnityWebRequest www2 = UnityWebRequest.Get(joinTeamURL + s );
         www2.SetRequestHeader("Authorization", "Bearer " + t);
         coroutine = Put(www2);
         StartCoroutine(coroutine);

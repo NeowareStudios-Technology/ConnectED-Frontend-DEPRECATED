@@ -159,24 +159,24 @@ public class EventCreator : MonoBehaviour
             Debug.Log("try again: make event");
             initEvent();
         }
-        //if (www.responseCode.ToString() == "200" && LeaderOne.text != "")
-        //{
-        //    Leaders leaders = new Leaders();
-        //    leaders.leaders = new string[3];
-        //    leaders.leaders[0] = LeaderOne.text;
-        //    leaders.leaders[1] = LeaderTwo.text;
-        //    leaders.leaders[2] = LeaderThree.text;
-        //    string newLeaders = JsonUtility.ToJson(leaders);
-        //    UnityWebRequest www2 = UnityWebRequest.Put(leadersURL + title.text.Replace(" ","+")+"/leaders", newLeaders);
-        //    byte[] bodyRaw2 = Encoding.UTF8.GetBytes(newLeaders);
-        //    www2.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw2);
-        //    www2.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        //    www2.SetRequestHeader("Authorization", j.token);
-        //    www2.SetRequestHeader("Content-Type", "application/json");
-        //    coroutine = setLeaders(www2);
-        //    StartCoroutine(coroutine);
-		//
-        //} 
+        if (www.responseCode.ToString() == "200" && LeaderOne.text != "")
+        {
+            Leaders leaders = new Leaders();
+            leaders.leaders = new string[3];
+            leaders.leaders[0] = LeaderOne.text;
+            leaders.leaders[1] = LeaderTwo.text;
+            leaders.leaders[2] = LeaderThree.text;
+            string newLeaders = JsonUtility.ToJson(leaders);
+            UnityWebRequest www2 = UnityWebRequest.Put(leadersURL + title.text.Replace(" ","+")+"/leaders", newLeaders);
+            byte[] bodyRaw2 = Encoding.UTF8.GetBytes(newLeaders);
+            www2.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw2);
+            www2.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+            www2.SetRequestHeader("Authorization", "Bearer " + j.token);
+            www2.SetRequestHeader("Content-Type", "application/json");
+            coroutine = setLeaders(www2);
+            StartCoroutine(coroutine);
+		
+        } 
     }
     private IEnumerator setLeaders(UnityWebRequest www)
     {
@@ -190,9 +190,11 @@ public class EventCreator : MonoBehaviour
         Debug.Log(www.GetRequestHeader("Authorization"));
         if (www.responseCode.ToString() == "503")
         {
-            Debug.Log("try again: make event");
+            Debug.Log("try again: set leaders");
             initEvent();
         }
+        if (www.responseCode.ToString() == "200")
+            Debug.Log("Leaders set");
     }
 
 }

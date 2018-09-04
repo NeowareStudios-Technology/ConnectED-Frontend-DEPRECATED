@@ -78,12 +78,13 @@ public class TeamsGet : MonoBehaviour {
             }
         }
     }
+	private Team[] allTeams;
 
     IEnumerator Populator()
     {
+        allTeams = new Team[prefill.team_ids.Length];
         FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
         FirebaseUser user = auth.CurrentUser;
-        Team[] allTeams = new Team[prefill.team_ids.Length];
         for (int i = 0; i < prefill.team_ids.Length; i++)
         {
             //using (UnityWebRequest www = UnityWebRequest.Get("https://webhook.site/8e284497-5145-481d-8a18-0883dfd599e5"))
@@ -105,6 +106,9 @@ public class TeamsGet : MonoBehaviour {
                     Debug.Log(www.GetRequestHeader("Content-Type"));
                     Debug.Log(www.error);
                     Debug.Log(www.downloadHandler.text);
+                    if(www.responseCode.ToString() == "500"){
+                        tryAgain(www , i);
+                    }
                 }
                 else
                 {
@@ -120,6 +124,39 @@ public class TeamsGet : MonoBehaviour {
         }
         instantiateTeams(allTeams);
     }
+    private int tries = 0;
+    IEnumerator tryAgain(UnityWebRequest www, int i){
+        yield return www.SendWebRequest();
+        if (www.isNetworkError || www.isHttpError)
+        {
+            Debug.Log(www.responseCode);
+            Debug.Log(www.url);
+            Debug.Log(www.GetRequestHeader("Authorization"));
+            Debug.Log(www.GetRequestHeader("Content-Type"));
+            Debug.Log(www.error);
+            Debug.Log(www.downloadHandler.text);
+            if (www.responseCode.ToString() == "500" || www.responseCode.ToString() == "503")
+            {
+                tries++;
+                if (tries < 5)
+                {
+                    tryAgain(www , i);
+                }
+            }
+        }
+        else
+        {
+            Debug.Log(www.responseCode);
+            byte[] results = www.downloadHandler.data;
+            jsonString = "";
+            jsonString = Encoding.UTF8.GetString(results);
+            Debug.Log(jsonString);
+            allTeams[i] = JsonUtility.FromJson<Team>(jsonString);
+
+        }
+    }
+
+
     public GameObject teamsPage;
 
     public void instantiateTeams(Team[] teams)

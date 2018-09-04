@@ -63,8 +63,9 @@ public class QRDecodeTest : MonoBehaviour
     private IEnumerator coroutine;
     public void QRScan(string s,string t)
     {
-
-        UnityWebRequest www2 = UnityWebRequest.Get(dbqrScanPut+s+"/"+"qr");
+        string s1 = s.Split('/')[0];
+        string s2 = s.Split('/')[1];
+        UnityWebRequest www2 = UnityWebRequest.Get(dbqrScanPut+s1.ToLower()+"/"+s2+"/"+"qr");
         www2.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
         www2.SetRequestHeader("Authorization", "Bearer " + t);
         coroutine = Put(www2);
