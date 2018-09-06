@@ -89,10 +89,9 @@ public class TeamsGet : MonoBehaviour {
             }
         }
     }
-	private Team[] allTeams;
-
     IEnumerator Populator()
     {
+		Team[] allTeams;
         allTeams = new Team[prefill.team_ids.Length];
         FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
         FirebaseUser user = auth.CurrentUser;
@@ -117,69 +116,48 @@ public class TeamsGet : MonoBehaviour {
                     Debug.Log(www.GetRequestHeader("Content-Type"));
                     Debug.Log(www.error);
                     Debug.Log(www.downloadHandler.text);
-                    if(www.responseCode.ToString() == "500"){
-                        tryAgain(www , i);
-                    }
                 }
-                else
-                {
-                    Debug.Log(www.responseCode);
-                    byte[] results = www.downloadHandler.data;
-                    jsonString = "";
-                    jsonString = Encoding.UTF8.GetString(results);
-                    Debug.Log(jsonString);
-                    allTeams[i] = JsonUtility.FromJson<Team>(jsonString);
-
+                    else
+                    {
+                        Debug.Log(www.responseCode);
+                        byte[] results = www.downloadHandler.data;
+                        jsonString = "";
+                        jsonString = Encoding.UTF8.GetString(results);
+                        Debug.Log(jsonString);
+                        allTeams[i] = JsonUtility.FromJson<Team>(jsonString);
+                    if(allTeams[i].t_pending_member_num!= 0 && allTeams[i].t_organizer == PlayerPrefs.GetString("email").ToLower()){
+                        Debug.Log("Queuing team noti <-----" +allTeams[i]);
+                        notification.queueTeamNotifications(allTeams[i]);
                     }
+                    }
+
             }
         }
-        instantiateTeams(allTeams);
-    }
-    private int tries = 0;
-    IEnumerator tryAgain(UnityWebRequest www, int i){
-        yield return www.SendWebRequest();
-        if (www.isNetworkError || www.isHttpError)
-        {
-            Debug.Log(www.responseCode);
-            Debug.Log(www.url);
-            Debug.Log(www.GetRequestHeader("Authorization"));
-            Debug.Log(www.GetRequestHeader("Content-Type"));
-            Debug.Log(www.error);
-            Debug.Log(www.downloadHandler.text);
-            if (www.responseCode.ToString() == "500" || www.responseCode.ToString() == "503")
-            {
-                tries++;
-                if (tries < 5)
-                {
-                    tryAgain(www , i);
-                }
-            }
-        }
-        else
-        {
-            Debug.Log(www.responseCode);
-            byte[] results = www.downloadHandler.data;
-            jsonString = "";
-            jsonString = Encoding.UTF8.GetString(results);
-            Debug.Log(jsonString);
-            allTeams[i] = JsonUtility.FromJson<Team>(jsonString);
-
-        }
+		newTeamContainer = null;
+		instantiateTeams(allTeams);
+        
     }
 
 
     public GameObject teamsPage;
-
+    public notificationQueuer notification;
     public void instantiateTeams(Team[] teams)
     {
         for (int i = 0; i < teams.Length; i++){
+            
             if(newTeamContainer == null || newTeamContainer.transform.childCount == 2){
                 newTeamContainer = Instantiate(TeamContainer, SuggestedTeams.transform.GetChild(0));
             }
             if (newTeamContainer.transform.childCount < 2)
             {
-                currentTeam = Instantiate(TeamPrefab, newTeamContainer.transform);
-                currentTeam.GetComponent<teamInitializer>().setTeamButton(teams[i],teamsPage);
+                
+                if (teams[i] == null){}
+                else
+                {
+                    currentTeam = Instantiate(TeamPrefab, newTeamContainer.transform);
+                    currentTeam.GetComponent<teamInitializer>().setTeamButton(teams[i], teamsPage);
+                }
+
             }
         }
         if (newTeamContainer.transform.childCount == 1)
@@ -296,9 +274,10 @@ public class TeamsGet : MonoBehaviour {
             }
             if (newTeamContainer.transform.childCount < 2)
             {
+                if(teams[i].t_name != null){
                 currentTeam = Instantiate(TeamPrefab, newTeamContainer.transform);
                 currentTeam.GetComponent<teamInitializer>().setTeamButton(teams[i], teamsPage);
-            }
+            }}
         }
         if (newTeamContainer.transform.childCount == 1)
             Instantiate(EmptyTeam, newTeamContainer.transform);

@@ -66,6 +66,7 @@
     <Compile Include="Assets\filterSetter.cs" />
     <Compile Include="Assets\JoinWithTeamInitialize.cs" />
     <Compile Include="Assets\JoinWithTeamSetter.cs" />
+    <Compile Include="Assets\profileNotificationSetter.cs" />
     <Compile Include="Assets\QRcode\Plugins\Loom\Loom.cs" />
     <Compile Include="Assets\QRcode\Scripts\CameraPlaneController.cs" />
     <Compile Include="Assets\QRcode\Scripts\DecodeByStaticPic.cs" />

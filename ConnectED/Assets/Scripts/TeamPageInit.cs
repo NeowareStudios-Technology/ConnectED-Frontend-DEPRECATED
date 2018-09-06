@@ -49,10 +49,9 @@ public class TeamPageInit : MonoBehaviour {
             teamPhoto.texture = tex;
 
         }
-        StartCoroutine(GetHistory(t.t_name));
 
-		Join.onClick.RemoveAllListeners();
-		Join.onClick.AddListener(() => Register(t.t_orig_name + "/registration", j.token));
+
+
 
         int childKillCount = TeamProfileContainer.transform.childCount;
         for (int i = childKillCount - 1; i >= 0; i--)
@@ -60,37 +59,101 @@ public class TeamPageInit : MonoBehaviour {
             Destroy(TeamProfileContainer.transform.GetChild(i).gameObject);
         }
 
-        for (int i = 0; i < t.t_member_num;i++){
+        for (int i = 0; i < t.t_member_num; i++)
+        {
             StartCoroutine(GetProfile(t.t_members[i]));
         }
+        bool deregister = false;
 
+        if (t.t_members == null) { }
+        else
+        {
+            for (int i = 0; i < t.t_members.Length; i++)
+            {
+                if (t.t_members[i] == PlayerPrefs.GetString("email").ToLower())
+                {
+                    Debug.Log("Team matches email");
+                    Join.onClick.RemoveAllListeners();
 
+                    Debug.Log(t.t_orig_name);
+                    Join.onClick.AddListener(() => Deregister(t.t_orig_name, j.token));
+                    Join.transform.GetChild(0).GetComponent<Text>().text = "Leave Team";
+                    deregister = true;
+
+                }
+            }
+        }
+            if (!deregister)
+            {
+                Debug.Log("No matching email");
+                Join.onClick.RemoveAllListeners();
+                Debug.Log(t.t_orig_name);
+                privacy = t.t_privacy;
+                Join.onClick.AddListener(() => Register(t.t_orig_name, j.token));
+                Join.transform.GetChild(0).GetComponent<Text>().text = "Join Team";
+            }
+        
+
+		StartCoroutine(GetHistory(t.t_name));
     }
     private IEnumerator coroutine;
-
+    private string privacy;
 
     public void Register(string s, string t)
     {
 
         string newEvent = "";
-        Debug.Log(newEvent);
         byte[] bodyRaw2 = Encoding.UTF8.GetBytes(newEvent);
-        UnityWebRequest www2 = UnityWebRequest.Get(joinTeamURL + s );
+        UnityWebRequest www2 = UnityWebRequest.Get(joinTeamURL + s + "/registration");
         www2.SetRequestHeader("Authorization", "Bearer " + t);
-        coroutine = Put(www2);
+        coroutine = Put(www2,true, s);
         StartCoroutine(coroutine);
     }
 
-    private IEnumerator Put(UnityWebRequest www)
+    public void Deregister(string s, string t)
+    {
+
+        string newEvent = "";
+        byte[] bodyRaw2 = Encoding.UTF8.GetBytes(newEvent);
+        UnityWebRequest www2 = UnityWebRequest.Delete(joinTeamURL + s + "/registration");
+        www2.SetRequestHeader("Authorization", "Bearer " + t);
+        coroutine = Put(www2 , false , s);
+        StartCoroutine(coroutine);
+    }
+
+
+    private IEnumerator Put(UnityWebRequest www , bool register, string orig)
     {
         yield return www.SendWebRequest();
 
         Debug.Log("Status Code: " + www.responseCode);
         Debug.Log(www.error);
-        Debug.Log(www.downloadHandler.text);
-        Debug.Log(www.downloadHandler.data);
         Debug.Log(www.url);
         Debug.Log(www.GetRequestHeader("Authorization"));
+
+        if(!register){
+            Debug.Log("Unregistered");
+            Join.onClick.RemoveAllListeners();
+            Join.onClick.AddListener(() => Register(orig , j.token));
+            Join.transform.GetChild(0).GetComponent<Text>().text = "Join Team";
+            privacy = team.t_privacy;
+            Debug.Log(orig);
+        } else{
+            if (privacy == "p")
+            {
+                Join.onClick.RemoveAllListeners();
+                Join.transform.GetChild(0).GetComponent<Text>().text = "Pending...";
+            }
+            else
+            {
+                Debug.Log("Registered");
+                Join.onClick.RemoveAllListeners();
+                Join.onClick.AddListener(() => Deregister(orig, j.token));
+                Join.transform.GetChild(0).GetComponent<Text>().text = "Leave Team";
+            }
+            Debug.Log(orig);
+
+        }
 
     }
     private string jsonString;

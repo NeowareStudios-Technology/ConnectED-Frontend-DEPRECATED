@@ -114,14 +114,14 @@ public class ProfileSetter : MonoBehaviour {
     private string searchURL = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles/";
     public void searchEvents()
     {
-        searchURL += j.profile.email + "/events";
+        searchURL += PlayerPrefs.GetString("email").ToLower() + "/events";
 
         UnityWebRequest www2 = UnityWebRequest.Get(searchURL);
         www2.SetRequestHeader("Authorization", "Bearer " + j.token);
 
         StartCoroutine(eventPut(www2));
     }
-    private EventSearch eSearch;
+    private profileHistory hist;
     private IEnumerator eventPut(UnityWebRequest www)
     {
         yield return www.SendWebRequest();
@@ -138,12 +138,12 @@ public class ProfileSetter : MonoBehaviour {
             jsonString = "";
             jsonString = Encoding.UTF8.GetString(results);
             Debug.Log(jsonString);
-            eSearch = JsonUtility.FromJson<EventSearch>(jsonString);
+            hist = new profileHistory();
+            hist = JsonUtility.FromJson<profileHistory>(jsonString);
             if (jsonString != "{}")
             {
                 eventPopulator();
             }
-            gameObject.SetActive(false);
         }
     }
 
@@ -163,11 +163,29 @@ public class ProfileSetter : MonoBehaviour {
         {
             Destroy(ProfileCreatedEventContainer.transform.GetChild(i).gameObject);
         }
-        for (int i = 0; i < eSearch.event_ids.Length; i++)
+        if (hist.created_events == null)
+        { }
+        else
         {
-            Debug.Log(eSearch.event_ids[i]);
-            //newEvent = Instantiate(TeamEventPrefab, ProfileCreatedEventContainer.transform);
+            for (int i = 0; i < hist.created_events.Length; i++)
+            {
+                Debug.Log(hist.created_events[i]);
+                StartCoroutine(Populator(i, 1, hist.created_events[i]));
+                //newEvent = Instantiate(TeamEventPrefab, ProfileCreatedEventContainer.transform);
+            }
         }
+        if (hist.completed_events != null)
+        {
+            for (int i = 0; i < hist.completed_events.Length; i++)
+            {
+                
+                Debug.Log(hist.completed_events[i]);
+                StartCoroutine(Populator(i, 2, hist.completed_events[i]));
+                //newEvent = Instantiate(TeamEventPrefab, ProfileCreatedEventContainer.transform);
+            }
+        }
+            
+
 
 		
 
@@ -178,11 +196,75 @@ public class ProfileSetter : MonoBehaviour {
         //    TeamEventHistoryContainer.GetComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
         //}
     }
+    private Event Event;
+    private string getEventurl = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/events/";
+    IEnumerator Populator(int i, int mode, string s)
+    {
 
 
 
+        FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+        FirebaseUser user = auth.CurrentUser;
+        Debug.Log(i);
+        Debug.Log(s);
 
-}
+        string str1 = s.Split('_')[0];
+        string str2 = s.Split('_')[1];
+        //using (UnityWebRequest www = UnityWebRequest.Get("https://webhook.site/8e284497-5145-481d-8a18-0883dfd599e5"))
+        if (s.Length > 4)
+        {
+            using (UnityWebRequest www = UnityWebRequest.Get(getEventurl + str1 + "/" + str2))
+            {
+
+
+
+                www.SetRequestHeader("Authorization", "Bearer " + j.token);
+                www.SetRequestHeader("Content-Type", "application/json");
+
+                yield return www.SendWebRequest();
+                if (www.isNetworkError || www.isHttpError)
+                {
+                    Debug.Log(www.responseCode);
+                    Debug.Log(www.url);
+                    Debug.Log(www.GetRequestHeader("Authorization"));
+                    Debug.Log(www.GetRequestHeader("Content-Type"));
+                    Debug.Log(www.error);
+                    Debug.Log(www.downloadHandler.text);
+                }
+                else
+                {
+                    Debug.Log(www.responseCode);
+                    byte[] results = www.downloadHandler.data;
+                    jsonString = "";
+                    jsonString = Encoding.UTF8.GetString(results);
+                    Debug.Log(jsonString);
+                    Event = JsonUtility.FromJson<Event>(jsonString);
+
+                    if (mode == 1)
+                    {
+                        GameObject newobj = Instantiate(TeamEventPrefab, ProfileCreatedEventContainer.transform);
+                        newobj.GetComponent<TeamEventInit>().initEvent(Event);
+                    }
+                    if (mode == 2){
+                        GameObject newobj = Instantiate(TeamEventPrefab, ProfileHistoryEventContainer.transform);
+                        newobj.GetComponent<TeamEventInit>().initEvent(Event);
+                    }
+                }
+            };
+        }
+
+        if (i == hist.created_events.Length - 1)
+        {
+            totalOpportunities.text = (i+1).ToString();
+            gameObject.SetActive(false);
+        }
+    }
+
+       
+    }
+
+
+
 
 [System.Serializable]
 public class profileHistory{

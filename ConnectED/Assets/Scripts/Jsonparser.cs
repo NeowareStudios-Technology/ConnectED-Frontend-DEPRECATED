@@ -138,9 +138,10 @@ public class Jsonparser : MonoBehaviour {
         //create a profile
 
     }
-
+    public GameObject loading;
     public void SignUp()
     {
+        loading.SetActive(true);
         path = Application.streamingAssetsPath + "/Profile.json";
         jsonString = File.ReadAllText(path);
         profile = JsonUtility.FromJson<Profile>(jsonString);

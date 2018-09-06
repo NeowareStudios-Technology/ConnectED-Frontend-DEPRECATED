@@ -233,7 +233,6 @@ public class calendarPopulator : MonoBehaviour
             handleOpportunities();
         if(newCalendarButtonContainerPrefab.transform.childCount == 1)
             Instantiate(emptyCalendarButton, newCalendarButtonContainerPrefab.transform);
-        noti.setNotification();
         calendarButtonPanel.transform.parent.GetComponent<ScrollSnapRect>().enabled = true;
         calendarButtonPanel.transform.parent.GetComponent<ScrollSnapRect>().Refresh();
 
@@ -272,7 +271,7 @@ public class calendarPopulator : MonoBehaviour
     {
         if(opportunityButtonContainer.transform.childCount == 1)
             Instantiate(emptyCalendarButton, opportunityButtonContainer.transform);
-        
+        noti.setNotification();
     }
 
     public void eventTrigger()
