@@ -49,7 +49,7 @@ public class TeamsGet : MonoBehaviour {
             if (www.isNetworkError || www.isHttpError)
             {
                 Debug.Log(www.responseCode);
-                if(www.responseCode == 500)
+                if (www.responseCode == 500)
                 {
                     PlayerPrefs.DeleteAll();
                     SceneManager.LoadScene(0);
@@ -72,9 +72,20 @@ public class TeamsGet : MonoBehaviour {
                 jsonString = "";
                 jsonString = Encoding.UTF8.GetString(results);
                 Debug.Log(jsonString);
-                prefill = JsonUtility.FromJson<teamPrefill>(jsonString);
+                if (jsonString == "{}")
+                {
+                    gameObject.GetComponent<Image>().raycastTarget = true;
+                    gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                    gameObject.GetComponent<Image>().color = Color.white;
+                    gameObject.SetActive(false);
 
-                StartCoroutine(Populator());
+                }
+                else
+                {
+                    prefill = JsonUtility.FromJson<teamPrefill>(jsonString);
+
+                    StartCoroutine(Populator());
+                }
             }
         }
     }

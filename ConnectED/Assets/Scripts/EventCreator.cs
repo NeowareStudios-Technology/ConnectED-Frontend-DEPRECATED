@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Text;
 using System;
+using UnityEngine.SceneManagement;
 
 
 public class EventCreator : MonoBehaviour
@@ -30,6 +31,7 @@ public class EventCreator : MonoBehaviour
     public bool isPrivate;
     public bool skillsRequired;
     public InputField SkillOne;
+    public string[] teams;
     public InputField SkillTwo;
     public InputField SkillThree;
     public string qr;
@@ -176,7 +178,10 @@ public class EventCreator : MonoBehaviour
             coroutine = setLeaders(www2);
             StartCoroutine(coroutine);
 		
-        } 
+        }
+        else{
+            SceneManager.LoadScene(0);
+        }
     }
     private IEnumerator setLeaders(UnityWebRequest www)
     {
@@ -194,7 +199,10 @@ public class EventCreator : MonoBehaviour
             initEvent();
         }
         if (www.responseCode.ToString() == "200")
+        {
             Debug.Log("Leaders set");
+            SceneManager.LoadScene(0);
+        }
     }
 
 }
@@ -212,23 +220,26 @@ public class Event
     public double e_lon;
     public string e_organizer;
     public string e_orig_title;
-    public string e_photo;
     public string e_title;
+    public string[] leaders;
     public string education;
     public string[] end;
     public string env;
     public int funds_raised;
     public string[] interests;
     public int is_registered;
-	public int num_attendees;
-	public int num_pending_attendees;
+    public int num_attendees;
+    public int num_pending_attendees;
+    public string[] pending_attendees;
     public string privacy;
-    public string qr;
     public string[] req_skills;
     public string[] start;
     public string state;
     public string street;
+    public string[] teams;
     public string zip_code;
+	public string qr;
+	public string e_photo;
 }
 public class Leaders{
     public string[] leaders;

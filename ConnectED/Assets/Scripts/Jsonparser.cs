@@ -150,7 +150,6 @@ public class Jsonparser : MonoBehaviour {
         profile.last_name = lastname.text;
         profile.email = email.text;
         PlayerPrefs.SetString("email", email.text);
-        profile.passwrd = password.text;
         PlayerPrefs.SetString("password", password.text);
         profile.time_day = timeDay.setTime();
         profile.education = education.Check();
@@ -219,6 +218,18 @@ public class Jsonparser : MonoBehaviour {
         eventSpawner.populateEvents();
 
     }
+
+    public void setExploreTile(GameObject o)
+    {
+        exploreTile = o;
+    }
+
+    //functions to help the Detail changer
+    public GameObject exploreTile;
+    public void changeExploreRegisterStatus(int i)
+    {
+        exploreTile.GetComponent<EventInitializer>().setRegistration(i);
+    }
 }
 
 
@@ -229,7 +240,7 @@ public class Profile
     public string last_name;
     public float hours;
     public string email;
-    public string passwrd;
+    public string env_pref;
     public string education;
     public string[] interests;
     public string[] skills;
@@ -242,6 +253,9 @@ public class Profile
     public bool fri;
     public bool sat;
     public bool sun;
+    public int search_rad;
     public string time_day;
     public string photo;
 }
+
+

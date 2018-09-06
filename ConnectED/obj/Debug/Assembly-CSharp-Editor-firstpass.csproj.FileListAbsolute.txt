@@ -1,0 +1,2 @@
+/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/obj/Debug/Assembly-CSharp-Editor-firstpass.csprojResolveAssemblyReference.cache
+/Users/alexchatham/Developer/Unity/ConnectED/ConnectED/obj/Debug/Assembly-CSharp-Editor-firstpass.csproj.CoreCompileInputs.cache

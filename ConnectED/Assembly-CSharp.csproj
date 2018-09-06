@@ -61,8 +61,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PersonSearch.cs" />
-    <Compile Include="Assets\profileSearchInitializer.cs" />
+    <Compile Include="Assets\DetailsTeamInstantiator.cs" />
+    <Compile Include="Assets\DetailsUpdatesPageSetter.cs" />
+    <Compile Include="Assets\filterSetter.cs" />
+    <Compile Include="Assets\JoinWithTeamInitialize.cs" />
+    <Compile Include="Assets\JoinWithTeamSetter.cs" />
     <Compile Include="Assets\QRcode\Plugins\Loom\Loom.cs" />
     <Compile Include="Assets\QRcode\Scripts\CameraPlaneController.cs" />
     <Compile Include="Assets\QRcode\Scripts\DecodeByStaticPic.cs" />
@@ -99,13 +102,20 @@
     <Compile Include="Assets\Scripts\loadingRotation.cs" />
     <Compile Include="Assets\Scripts\Login.cs" />
     <Compile Include="Assets\Scripts\Logout.cs" />
+    <Compile Include="Assets\Scripts\notificationQueuer.cs" />
+    <Compile Include="Assets\Scripts\PersonSearch.cs" />
     <Compile Include="Assets\Scripts\pictureGrabber.cs" />
     <Compile Include="Assets\Scripts\ProfileEdit.cs" />
+    <Compile Include="Assets\Scripts\profileSearchInitializer.cs" />
     <Compile Include="Assets\Scripts\ProfileSetter.cs" />
     <Compile Include="Assets\Scripts\returnPressed.cs" />
     <Compile Include="Assets\Scripts\returnPressedFields.cs" />
     <Compile Include="Assets\Scripts\ScrollSnapRect.cs" />
+    <Compile Include="Assets\Scripts\Search.cs" />
+    <Compile Include="Assets\Scripts\searchEventPrefab.cs" />
+    <Compile Include="Assets\Scripts\searchTeamInitializer.cs" />
     <Compile Include="Assets\Scripts\SignUpController.cs" />
+    <Compile Include="Assets\Scripts\SkillsController.cs" />
     <Compile Include="Assets\Scripts\slidertext.cs" />
     <Compile Include="Assets\Scripts\spriteSwitcher.cs" />
     <Compile Include="Assets\Scripts\SwitchScene.cs" />
@@ -115,10 +125,8 @@
     <Compile Include="Assets\Scripts\TeamsGet.cs" />
     <Compile Include="Assets\Scripts\timeOfDay.cs" />
     <Compile Include="Assets\Scripts\timeUpdater.cs" />
-    <Compile Include="Assets\Search.cs" />
-    <Compile Include="Assets\searchEventPrefab.cs" />
-    <Compile Include="Assets\searchTeamInitializer.cs" />
-    <Compile Include="Assets\SkillsController.cs" />
+    <Compile Include="Assets\TeamEventInit.cs" />
+    <Compile Include="Assets\TeamProfileInit.cs" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\Plugins\link.xml" />
     <None Include="Assets\QRcode\CamMat\WebCam.shader" />

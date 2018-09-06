@@ -233,14 +233,16 @@ public class calendarPopulator : MonoBehaviour
             handleOpportunities();
         if(newCalendarButtonContainerPrefab.transform.childCount == 1)
             Instantiate(emptyCalendarButton, newCalendarButtonContainerPrefab.transform);
+        noti.setNotification();
         calendarButtonPanel.transform.parent.GetComponent<ScrollSnapRect>().enabled = true;
         calendarButtonPanel.transform.parent.GetComponent<ScrollSnapRect>().Refresh();
 
     }
-
+    public notificationQueuer noti;
     public GameObject newButtonObj;
     public void addToOpportunities( GameObject o, int i)
     {
+        noti.queueNotifications(o.GetComponent<CalendarEventButton>().e);
         if (opportunityButtonContainer == null){
             opportunityButtonContainer = Instantiate(calendarButtonContainerPrefab,opportunityButtonPanel.transform);
             Instantiate(calendarDotPrefab, opportunityDotContainer.transform);
@@ -270,6 +272,7 @@ public class calendarPopulator : MonoBehaviour
     {
         if(opportunityButtonContainer.transform.childCount == 1)
             Instantiate(emptyCalendarButton, opportunityButtonContainer.transform);
+        
     }
 
     public void eventTrigger()
@@ -306,8 +309,6 @@ public class calendarPopulator : MonoBehaviour
             year = allEvents[currentEvent].Substring(6, 4);
             day = allEvents[currentEvent].Substring(3, 2);
         }
-        Debug.Log("Setting Event " + allEvents);
-        Debug.Log("Child count " + calendarContainer.transform.childCount);
         int inc = 1;
         for (int i = 0; i < calendarContainer.transform.childCount; i = i + inc)
         {
@@ -320,7 +321,7 @@ public class calendarPopulator : MonoBehaviour
                     // if same day and year
                     if (calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().dayNumber == int.Parse(day).ToString() && year == calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().Year)
                     {
-                        Debug.Log("Setting day for event " + month + "/" + day);
+                        //Debug.Log("Setting day for event " + month + "/" + day);
                         calendarContainer.transform.GetChild(i).GetChild(0).GetComponent<Text>().color = blue;
                         calendarContainer.transform.GetChild(i).GetComponent<Image>().color = brightWhite;
                         calendarContainer.transform.GetChild(i).GetComponent<dayInfo>().marked = true;
@@ -510,8 +511,6 @@ public class calendarPopulator : MonoBehaviour
                     if(i == prefill.events.Length - 1){
                         dates = new Event[allEvents.Length];
                         dates = allEvents;
-                        Debug.Log(allEvents[i].e_orig_title);
-                        Debug.Log(dates[i].e_orig_title);
                         setEventsInCalendar();
                         eventTrigger();
                     }

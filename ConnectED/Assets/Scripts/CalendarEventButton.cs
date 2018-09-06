@@ -13,13 +13,12 @@ public class CalendarEventButton : MonoBehaviour {
     public Text title;
     public Text Date;
     public Image qr;
-    private Event e;
+    public Event e;
     public QRDecodeTest qRDecode;
     public void setCalendarEvent(Event a )
     {
         e = new Event();
         e = a;
-        Debug.Log(a);
         title.text = e.e_title;
 
         string dateString = dateGetter();

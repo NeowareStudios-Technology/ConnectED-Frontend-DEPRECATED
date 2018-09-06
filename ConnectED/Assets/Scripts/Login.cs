@@ -91,11 +91,13 @@ public class Login : MonoBehaviour {
           Debug.Log(j.token);
           TeamsGet.getTeams();
           info.GetmyProfile();
+          JoinWithTeam.getTeams();
           // Send token to your backend via HTTPS
           // ...
       });
   }
 
+    public JoinWithTeamInitialize JoinWithTeam;
     public void GetInitialToken(FirebaseAuth auth)
     {
         FirebaseUser user = auth.CurrentUser;

@@ -99,7 +99,9 @@ public class ScrollSnapRect : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
         _scrollRectComponent = GetComponent<ScrollRect>();
         _scrollRectRect = GetComponent<RectTransform>();
         _container = _scrollRectComponent.content;
+        _pageCount = 0;
         _pageCount = _container.childCount;
+        _previousPageSelectionIndex = 0;
 
         // is it horizontal or vertical scrollrect
         if (_scrollRectComponent.horizontal && !_scrollRectComponent.vertical)
@@ -131,6 +133,12 @@ public class ScrollSnapRect : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
         if (prevButton)
             prevButton.GetComponent<Button>().onClick.AddListener(() => { PreviousScreen(); });
     }
+    //------------------------------------------------------------------------
+    public int getCurrentPage(){
+        return _currentPage;
+    }
+    //------------------------------------------------------------------------
+
 
     //------------------------------------------------------------------------
     void Update() {

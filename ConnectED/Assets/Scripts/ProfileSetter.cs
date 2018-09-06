@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Firebase;
+using Firebase.Auth;
+using Firebase.Unity.Editor;
+using UnityEngine.Networking;
+using System.Text;
+using System;
+
 public class ProfileSetter : MonoBehaviour {
 
     public Jsonparser j;
@@ -16,6 +23,8 @@ public class ProfileSetter : MonoBehaviour {
     public Text Skill2;
     public Text Skill3;
     public Text Education;
+    public Text totalHours;
+    public Text totalOpportunities;
     public bool set = false;
 
     public void setProfile()
@@ -24,6 +33,7 @@ public class ProfileSetter : MonoBehaviour {
         hours.text = j.profile.hours.ToString();
         username.text = j.profile.first_name + " " + j.profile.last_name;
         set = true;
+        searchEvents();
         if (j.profile.interests == null)
         {
             Interest1.text = "None";
@@ -99,4 +109,84 @@ public class ProfileSetter : MonoBehaviour {
             p.texture = tex;
         }
     }
+
+    private string jsonString;
+    private string searchURL = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles/";
+    public void searchEvents()
+    {
+        searchURL += j.profile.email + "/events";
+
+        UnityWebRequest www2 = UnityWebRequest.Get(searchURL);
+        www2.SetRequestHeader("Authorization", "Bearer " + j.token);
+
+        StartCoroutine(eventPut(www2));
+    }
+    private EventSearch eSearch;
+    private IEnumerator eventPut(UnityWebRequest www)
+    {
+        yield return www.SendWebRequest();
+
+        Debug.Log("Status Code: " + www.responseCode);
+        Debug.Log(www.error);
+        Debug.Log(www.downloadHandler.text);
+        Debug.Log(www.downloadHandler.data);
+        Debug.Log(www.url);
+        Debug.Log(www.GetRequestHeader("Authorization"));
+        if (www.responseCode == 200)
+        {
+            byte[] results = www.downloadHandler.data;
+            jsonString = "";
+            jsonString = Encoding.UTF8.GetString(results);
+            Debug.Log(jsonString);
+            eSearch = JsonUtility.FromJson<EventSearch>(jsonString);
+            if (jsonString != "{}")
+            {
+                eventPopulator();
+            }
+            gameObject.SetActive(false);
+        }
+    }
+
+    public GameObject ProfileCreatedEventContainer;
+    public GameObject ProfileHistoryEventContainer;
+    public GameObject TeamEventPrefab;
+    public void eventPopulator()
+    {
+        GameObject newEvent;
+        int childKillCount = ProfileHistoryEventContainer.transform.childCount;
+        for (int i = childKillCount - 1; i >= 0; i--)
+        {
+            Destroy(ProfileHistoryEventContainer.transform.GetChild(i).gameObject);
+        }
+        childKillCount = ProfileCreatedEventContainer.transform.childCount;
+        for (int i = childKillCount - 1; i >= 0; i--)
+        {
+            Destroy(ProfileCreatedEventContainer.transform.GetChild(i).gameObject);
+        }
+        for (int i = 0; i < eSearch.event_ids.Length; i++)
+        {
+            Debug.Log(eSearch.event_ids[i]);
+            //newEvent = Instantiate(TeamEventPrefab, ProfileCreatedEventContainer.transform);
+        }
+
+		
+
+
+        //if (childKillCount > 7)
+        //{
+        //    TeamEventHistoryContainer.AddComponent<ContentSizeFitter>();
+        //    TeamEventHistoryContainer.GetComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+        //}
+    }
+
+
+
+
+}
+
+[System.Serializable]
+public class profileHistory{
+    public string[] completed_events;
+    public string[] created_events;
+    public string[] registered_events;
 }

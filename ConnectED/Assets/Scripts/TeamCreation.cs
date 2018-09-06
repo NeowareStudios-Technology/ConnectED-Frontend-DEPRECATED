@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System;
 using System.Text;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 public class TeamCreation : MonoBehaviour {
 
     public RawImage image;
@@ -107,9 +108,53 @@ public class TeamCreation : MonoBehaviour {
         {
             Debug.Log("try again :maketeam");
         }
+        if (www.responseCode.ToString() == "200" && leader1.text != "")
+        {
+            Leaders leaders = new Leaders();
+            leaders.leaders = new string[3];
+            leaders.leaders[0] = leader1.text;
+            leaders.leaders[1] = leader2.text;
+            leaders.leaders[2] = leader3.text;
+            string newLeaders = JsonUtility.ToJson(leaders);
+            UnityWebRequest www2 = UnityWebRequest.Put(leadersURL + TeamName.text.Replace(" ", "+") + "/leaders", newLeaders);
+            byte[] bodyRaw2 = Encoding.UTF8.GetBytes(newLeaders);
+            www2.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw2);
+            www2.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+            www2.SetRequestHeader("Authorization", "Bearer " + j.token);
+            www2.SetRequestHeader("Content-Type", "application/json");
+            coroutine = setLeaders(www2);
+            StartCoroutine(coroutine);
+
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
+        }
       
 
     }
+    private IEnumerator setLeaders(UnityWebRequest www)
+    {
+        yield return www.SendWebRequest();
+
+        Debug.Log("Status Code: " + www.responseCode);
+        Debug.Log(www.error);
+        Debug.Log(www.uploadHandler.data);
+        Debug.Log(www.downloadHandler.data);
+        Debug.Log(www.downloadHandler.text);
+        Debug.Log(www.GetRequestHeader("Authorization"));
+        if (www.responseCode.ToString() == "503")
+        {
+            Debug.Log("try again: set leaders");
+
+        }
+        if (www.responseCode.ToString() == "200")
+        {
+            Debug.Log("Leaders set");
+            SceneManager.LoadScene(0);
+        }
+    }
+
 }
 
 [System.Serializable]
@@ -120,12 +165,14 @@ public class Team
 	public string t_city;
 	public string t_desc;
     public int t_hours;
+    public string[] t_leaders;
     public int t_member_num;
     public string[] t_members;
     public string t_name;
 	public string t_organizer;
     public string t_orig_name;
     public int t_pending_member_num;
+    public string[] t_pending_members;
     public string t_photo;
     public string t_privacy;
     public string t_state;

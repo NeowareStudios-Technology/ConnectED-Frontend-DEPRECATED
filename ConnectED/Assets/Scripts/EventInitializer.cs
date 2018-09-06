@@ -15,10 +15,14 @@ public class EventInitializer : MonoBehaviour {
     public Button button;
     // Use this for initialization
 
+    public void setRegistration(int i){
+        e.is_registered = i;
+    }
 
     public void deets()
     {
         button.onClick.AddListener(() => GameObject.FindWithTag("Details").GetComponent<DetailChanger>().setDetails(e));
+        button.onClick.AddListener(() => GameObject.FindWithTag("Player").GetComponent<Jsonparser>().setExploreTile(this.gameObject));
     }
 
 

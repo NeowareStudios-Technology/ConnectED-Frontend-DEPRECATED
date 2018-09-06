@@ -172,40 +172,11 @@ public class ProfileEdit : MonoBehaviour {
 
     public void changePassword()
     {
-        Profile p = new Profile();
-        p.passwrd = newRePass.text;
-
-
-
-        string t = "Bearer " + j.token;
-
-        string ourProfile = JsonUtility.ToJson(p);
-        byte[] bodyRaw2 = Encoding.UTF8.GetBytes(ourProfile);
-        UnityWebRequest www2 = UnityWebRequest.Put(dbProfilePut, ourProfile);
-        www2.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw2);
-        www2.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        www2.SetRequestHeader("Authorization", t);
-        www2.SetRequestHeader("Content-Type", "application/json");
-        coroutine = PostP(www2);
-        StartCoroutine(coroutine);
+  		auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+		auth.CurrentUser.UpdatePasswordAsync(newRePass.text);
     }
 
 
-    private IEnumerator PostP(UnityWebRequest www)
-    {
-        yield return www.SendWebRequest();
-
-        Debug.Log("Status Code: " + www.responseCode);
-        Debug.Log(www.error);
-        Debug.Log(www.uploadHandler.data);
-        Debug.Log(www.downloadHandler.data);
-        Debug.Log(www.GetRequestHeader("Authorization"));
-        if (www.responseCode.ToString() == "200")
-        {
-            auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
-			auth.CurrentUser.UpdatePasswordAsync(newRePass.text);
-        }
-    }
 
     public void getFields()
     {

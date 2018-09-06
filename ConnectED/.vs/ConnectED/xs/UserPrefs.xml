@@ -1,12 +1,16 @@
 ﻿<Properties StartupConfiguration="{A4FE120D-5677-0BE6-89B0-DE97FDD27F5C}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/searchTeamInitializer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ProfileSetter.cs">
     <Files>
-      <File FileName="Assets/Scripts/CalendarEventButton.cs" Line="23" Column="32" />
-      <File FileName="Assets/Scripts/calendarPopulator.cs" Line="497" Column="20" />
-      <File FileName="Assets/Scripts/TeamCreation.cs" Line="88" Column="60" />
-      <File FileName="Assets/Scripts/Jsonparser.cs" Line="190" Column="63" />
-      <File FileName="Assets/searchTeamInitializer.cs" Line="44" Column="140" />
+      <File FileName="Assets/Scripts/TeamCreation.cs" Line="140" Column="1" />
+      <File FileName="Assets/TeamProfileInit.cs" Line="21" Column="1" />
+      <File FileName="Assets/Scripts/TeamPageInit.cs" Line="171" Column="36" />
+      <File FileName="Assets/DetailsUpdatesPageSetter.cs" Line="298" Column="10" />
+      <File FileName="Assets/TeamEventInit.cs" Line="32" Column="5" />
+      <File FileName="Assets/Scripts/calendarPopulator.cs" Line="470" Column="1" />
+      <File FileName="Assets/Scripts/Search.cs" Line="102" Column="5" />
+      <File FileName="Assets/Scripts/getProfileinfo.cs" Line="72" Column="6" />
+      <File FileName="Assets/Scripts/ProfileSetter.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

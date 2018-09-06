@@ -66,29 +66,7 @@ public class getProfileinfo : MonoBehaviour {
     }
 
 
-    IEnumerator GetOtherProfile(string other)
-    {
-        string email = PlayerPrefs.GetString("email");
-        string password = PlayerPrefs.GetString("password");
-
-        using (UnityWebRequest www = UnityWebRequest.Get("https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles/" + "&email_to_get=" + other + "?passwrd=" + password + "&email=" + email))
-        {
-            yield return www.SendWebRequest();
-            if (www.isNetworkError || www.isHttpError)
-            {
-                Debug.Log(www.error);
-            }
-            else
-            {
-                Debug.Log(www.downloadHandler.text);
-
-                byte[] results = www.downloadHandler.data;
-                jsonString = "";
-                jsonString = System.Convert.ToString(results);
-                otherProfile = JsonUtility.FromJson<Profile>(jsonString);
-            }
-        };
-    }
+   
     public void SetPicture()
     {
         Texture2D tex = new Texture2D(200, 200);
