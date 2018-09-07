@@ -10,6 +10,7 @@ using System.Text;
 public class teamInitializer : MonoBehaviour {
 
     private Team team;
+    public Jsonparser j;
     public RawImage pic;
     public Text teamName;
     public Text teamMembers;
@@ -17,10 +18,11 @@ public class teamInitializer : MonoBehaviour {
 
     public void setTeamButton(Team t, GameObject teamPage)
     {
+        j = GameObject.FindWithTag("Player").GetComponent<Jsonparser>();
         team = t;
         teamName.text = t.t_name;
         teamMembers.text = t.t_member_num.ToString() + " Members" ;
-
+        j.setTeamButton(gameObject);
         if ( t.t_photo != null && t.t_photo.Length > 300)
         {
             Texture2D tex = new Texture2D(200, 200);
@@ -36,7 +38,8 @@ public class teamInitializer : MonoBehaviour {
         GetComponent<Button>().onClick.AddListener(() => teamPage.GetComponent<Image>().color = Color.white);
         GetComponent<Button>().onClick.AddListener(() => teamPage.transform.GetChild(0).gameObject.SetActive(true));
         GetComponent<Button>().onClick.AddListener(() => teamPage.GetComponent<TeamPageInit>().setTeamPage(t));
-
     }
+
+
 
 }

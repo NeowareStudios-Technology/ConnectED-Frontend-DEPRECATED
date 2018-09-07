@@ -231,6 +231,17 @@ public class Jsonparser : MonoBehaviour {
     {
         exploreTile.GetComponent<EventInitializer>().setRegistration(i);
     }
+    public GameObject TeamButton;
+    public void setTeamButton(GameObject o)
+    {
+        TeamButton = o;
+    }
+
+    //functions to help the Detail changer
+    public void changeTeamRegisterStatus(string priv)
+    {
+        //TeamButton.GetComponent<teamInitializer>().setRegistration(priv);
+    }
 }
 
 

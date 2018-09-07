@@ -26,7 +26,8 @@ d8a627eeec7c42dae904bf4685cea05a Assembly-CSharp.dll:.DeviceCameraController
 a928844c85bedbe15f2f8f02cffd7feb Assembly-CSharp.dll:.SwitchScene
 f6637497451c9a030c421de4a1ad5cdb Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 0cf3fd7ee01612b562f73cac54c361f3 Assembly-CSharp.dll:.EventSpawner
-bdc6abd02320922201d57871b89f1fab Assembly-CSharp.dll:.teamInitializer
+f433d8c2823ad91f0897b4994988c0c2 Assembly-CSharp.dll:.TeamProfileInit
+41f30cbe797337e147e29ac4dc78aace Assembly-CSharp.dll:.teamInitializer
 b14b4630cc47b6e9ea8a644551a6a8cc Unity.TextMeshPro.dll:TMPro.TMP_Text
 3da365f4c4ec5918037520daa44e21f3 Assembly-CSharp.dll:.Search
 53cefe5d98cadefbab750835e70b89c0 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -208,7 +209,7 @@ f351a53a5bb6578f76af7819b5eb8592 Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 ad24de185ef9a605870b931cda4f181e Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-6b058d32d367ff9441fa74fa5f868e7a Assembly-CSharp.dll:.TeamPageInit
+880c5d660234635adbd7e3d8858d2797 Assembly-CSharp.dll:.TeamPageInit
 6313b7ff30ce5db6d5aa24a22bf88969 Assembly-CSharp.dll:.spriteSwitcher
 c85cf771eaed8c2c430423ea74531644 Assembly-CSharp.dll:.firstOfMonthTrigger
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Loom
@@ -217,7 +218,7 @@ f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 b0d6518eeacea17dad7f7069cdb6d559 Assembly-CSharp.dll:.timeOfDay
 a400a88422022ddfc6298012402012e7 Assembly-CSharp.dll:.slidertext
 83126ba68a7475bafda4fe28ad09563e Assembly-CSharp.dll:.lerpMachine
-97f0c182987ebdef7aaa10dc6fa20b31 Assembly-CSharp.dll:.TeamsGet
+c46ac28e432ee5d852d302a52cb7ffa0 Assembly-CSharp.dll:.TeamsGet
 0ce1126269b1f0059a98de83bce338fc Assembly-CSharp.dll:.EventTagger
 101192bd4473eda54d3fa9ad0d0997f4 Assembly-CSharp.dll:.JoinWithTeamInitialize
 486cd95c82d8305219c352c06b776e1f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
@@ -252,7 +253,7 @@ db9dd210ca5847ba440686d5e7a6d524 Assembly-CSharp.dll:.ScrollSnapRect
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Logout
 72a8523b432c0a5317826b7a9e0a0e79 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 e53cc67d84060d628c7f03fc725766d8 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
-e3a22726ed89cd5ea2d719e664b963b3 Assembly-CSharp.dll:.ProfileSetter
+1e22d320fa1643f371e11e71b687c779 Assembly-CSharp.dll:.ProfileSetter
 392c5b921098bd4c139d9146d0efa6d7 Unity.TextMeshPro.dll:TMPro.TMP_Settings
 786cae486b67ed0a48f278c7e1095b43 Assembly-CSharp.dll:.timeUpdater
 486cd95c82d8305219c352c06b776e1f UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
@@ -269,9 +270,10 @@ e033f131358cea5a0eabf9561e781deb UnityEngine.TestRunner.dll:UnityEngine.TestTool
 97155d51be1dd2ad8c83fca72abdfd60 Assembly-CSharp.dll:.calendarPopulator
 e42a679d6fced11a5c5859e691e97ab6 Assembly-CSharp.dll:.pictureGrabber
 e6cdd40e12b3484001bd0aff72b492f8 Assembly-CSharp.dll:.ProfileEdit
+4c4f17d59e9fc3efbe06308388a96b34 Assembly-CSharp.dll:.TeamEventInit
 698ec092e87fc896f7b9ee18c6bacbfd Assembly-CSharp.dll:.DetailsUpdatesPageSetter
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.FieldsReturner
-96ea6a79673859c1a98e4223fae37e5d Assembly-CSharp.dll:.notificationQueuer
+cd637e9856b2e8f6b6bc24d301a8ae3b Assembly-CSharp.dll:.notificationQueuer
 d75dc834c5dec688db75a55a1724c90f UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 486cd95c82d8305219c352c06b776e1f UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
@@ -285,7 +287,7 @@ cd1d96d2869c3c3af7a40147cfea879e Assembly-CSharp.dll:.DetailsTeamInstantiator
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GalleryController
 b91159444be92170724740244c42e0f9 Assembly-CSharp.dll:.EventInitializer
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
-f1487001da3730b3e63c645d51b7a744 Assembly-CSharp.dll:.Jsonparser
+3b446d39482fb91d6547e1d1a9d76851 Assembly-CSharp.dll:.Jsonparser
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 3e01585d92763c59d15b9ffd40fa809a Assembly-CSharp.dll:.dateDayUpdater
@@ -359,3 +361,4 @@ f351a53a5bb6578f76af7819b5eb8592 Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 ad24de185ef9a605870b931cda4f181e Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.profileNotificationSetter
