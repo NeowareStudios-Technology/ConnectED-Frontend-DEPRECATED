@@ -60,6 +60,7 @@ public class EventSpawner : MonoBehaviour {
                 {
                     Debug.Log("Trying again : get prefill");
                     populateEvents();
+                    retry++;
                 }
             }
             else

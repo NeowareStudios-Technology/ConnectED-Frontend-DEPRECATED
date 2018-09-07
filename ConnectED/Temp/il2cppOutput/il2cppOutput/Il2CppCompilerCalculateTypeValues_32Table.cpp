@@ -36,6 +36,8 @@ struct Jsonparser_t2229457866;
 struct MediaPickCallback_t2468098299;
 // NativeGallery/MediaSaveCallback
 struct MediaSaveCallback_t1711154875;
+// Notifications
+struct Notifications_t987802027;
 // Profile
 struct Profile_t2655093077;
 // ProfileSearch
@@ -140,8 +142,6 @@ struct RectOffset_t1369453676;
 struct RectTransform_t3704657025;
 // UnityEngine.RectTransform/ReapplyDrivenProperties
 struct ReapplyDrivenProperties_t1258266594;
-// UnityEngine.Texture2D
-struct Texture2D_t3840446185;
 // UnityEngine.UI.Button
 struct Button_t4055032469;
 // UnityEngine.UI.Graphic
@@ -166,10 +166,10 @@ struct RaycastAllCallback_t1884415901;
 struct Slider_t3903728902;
 // UnityEngine.UI.Text
 struct Text_t1901882714;
-// UnityEngine.WebCamTexture
-struct WebCamTexture_t1514609158;
 // UpdateResponse
 struct UpdateResponse_t1644764919;
+// profileNotificationSetter
+struct profileNotificationSetter_t2988085128;
 // profileTeams
 struct profileTeams_t1834502170;
 
@@ -540,56 +540,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // U3CPROFILEPUTU3EC__ITERATOR0_T1673183847_H
-#ifndef DEVICECAMERA_T1276318851_H
-#define DEVICECAMERA_T1276318851_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// DeviceCamera
-struct  DeviceCamera_t1276318851  : public RuntimeObject
-{
-public:
-	// UnityEngine.WebCamTexture DeviceCamera::webcamera
-	WebCamTexture_t1514609158 * ___webcamera_0;
-	// System.Boolean DeviceCamera::isRunning
-	bool ___isRunning_1;
-	// System.Boolean DeviceCamera::isUseEasyWebCam
-	bool ___isUseEasyWebCam_2;
-
-public:
-	inline static int32_t get_offset_of_webcamera_0() { return static_cast<int32_t>(offsetof(DeviceCamera_t1276318851, ___webcamera_0)); }
-	inline WebCamTexture_t1514609158 * get_webcamera_0() const { return ___webcamera_0; }
-	inline WebCamTexture_t1514609158 ** get_address_of_webcamera_0() { return &___webcamera_0; }
-	inline void set_webcamera_0(WebCamTexture_t1514609158 * value)
-	{
-		___webcamera_0 = value;
-		Il2CppCodeGenWriteBarrier((&___webcamera_0), value);
-	}
-
-	inline static int32_t get_offset_of_isRunning_1() { return static_cast<int32_t>(offsetof(DeviceCamera_t1276318851, ___isRunning_1)); }
-	inline bool get_isRunning_1() const { return ___isRunning_1; }
-	inline bool* get_address_of_isRunning_1() { return &___isRunning_1; }
-	inline void set_isRunning_1(bool value)
-	{
-		___isRunning_1 = value;
-	}
-
-	inline static int32_t get_offset_of_isUseEasyWebCam_2() { return static_cast<int32_t>(offsetof(DeviceCamera_t1276318851, ___isUseEasyWebCam_2)); }
-	inline bool get_isUseEasyWebCam_2() const { return ___isUseEasyWebCam_2; }
-	inline bool* get_address_of_isUseEasyWebCam_2() { return &___isUseEasyWebCam_2; }
-	inline void set_isUseEasyWebCam_2(bool value)
-	{
-		___isUseEasyWebCam_2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // DEVICECAMERA_T1276318851_H
 #ifndef U3CPOPULATORU3EC__ITERATOR1_T48717210_H
 #define U3CPOPULATORU3EC__ITERATOR1_T48717210_H
 #ifdef __clang__
@@ -917,6 +867,58 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // NATIVEGALLERY_T2808515514_H
+#ifndef NOTIFICATIONS_T987802027_H
+#define NOTIFICATIONS_T987802027_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// Notifications
+struct  Notifications_t987802027  : public RuntimeObject
+{
+public:
+	// System.String[] Notifications::events
+	StringU5BU5D_t1281789340* ___events_0;
+	// System.String[] Notifications::u_datetime
+	StringU5BU5D_t1281789340* ___u_datetime_1;
+	// System.String[] Notifications::updates
+	StringU5BU5D_t1281789340* ___updates_2;
+
+public:
+	inline static int32_t get_offset_of_events_0() { return static_cast<int32_t>(offsetof(Notifications_t987802027, ___events_0)); }
+	inline StringU5BU5D_t1281789340* get_events_0() const { return ___events_0; }
+	inline StringU5BU5D_t1281789340** get_address_of_events_0() { return &___events_0; }
+	inline void set_events_0(StringU5BU5D_t1281789340* value)
+	{
+		___events_0 = value;
+		Il2CppCodeGenWriteBarrier((&___events_0), value);
+	}
+
+	inline static int32_t get_offset_of_u_datetime_1() { return static_cast<int32_t>(offsetof(Notifications_t987802027, ___u_datetime_1)); }
+	inline StringU5BU5D_t1281789340* get_u_datetime_1() const { return ___u_datetime_1; }
+	inline StringU5BU5D_t1281789340** get_address_of_u_datetime_1() { return &___u_datetime_1; }
+	inline void set_u_datetime_1(StringU5BU5D_t1281789340* value)
+	{
+		___u_datetime_1 = value;
+		Il2CppCodeGenWriteBarrier((&___u_datetime_1), value);
+	}
+
+	inline static int32_t get_offset_of_updates_2() { return static_cast<int32_t>(offsetof(Notifications_t987802027, ___updates_2)); }
+	inline StringU5BU5D_t1281789340* get_updates_2() const { return ___updates_2; }
+	inline StringU5BU5D_t1281789340** get_address_of_updates_2() { return &___updates_2; }
+	inline void set_updates_2(StringU5BU5D_t1281789340* value)
+	{
+		___updates_2 = value;
+		Il2CppCodeGenWriteBarrier((&___updates_2), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // NOTIFICATIONS_T987802027_H
 #ifndef VALUETYPE_T3640485471_H
 #define VALUETYPE_T3640485471_H
 #ifdef __clang__
@@ -1940,6 +1942,78 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // U3CPOSTU3EC__ITERATOR0_T820772441_H
+#ifndef U3CNOTIFICATIONLISTERU3EC__ITERATOR0_T1290292342_H
+#define U3CNOTIFICATIONLISTERU3EC__ITERATOR0_T1290292342_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// profileNotificationSetter/<NotificationLister>c__Iterator0
+struct  U3CNotificationListerU3Ec__Iterator0_t1290292342  : public RuntimeObject
+{
+public:
+	// UnityEngine.Networking.UnityWebRequest profileNotificationSetter/<NotificationLister>c__Iterator0::<www>__1
+	UnityWebRequest_t463507806 * ___U3CwwwU3E__1_0;
+	// profileNotificationSetter profileNotificationSetter/<NotificationLister>c__Iterator0::$this
+	profileNotificationSetter_t2988085128 * ___U24this_1;
+	// System.Object profileNotificationSetter/<NotificationLister>c__Iterator0::$current
+	RuntimeObject * ___U24current_2;
+	// System.Boolean profileNotificationSetter/<NotificationLister>c__Iterator0::$disposing
+	bool ___U24disposing_3;
+	// System.Int32 profileNotificationSetter/<NotificationLister>c__Iterator0::$PC
+	int32_t ___U24PC_4;
+
+public:
+	inline static int32_t get_offset_of_U3CwwwU3E__1_0() { return static_cast<int32_t>(offsetof(U3CNotificationListerU3Ec__Iterator0_t1290292342, ___U3CwwwU3E__1_0)); }
+	inline UnityWebRequest_t463507806 * get_U3CwwwU3E__1_0() const { return ___U3CwwwU3E__1_0; }
+	inline UnityWebRequest_t463507806 ** get_address_of_U3CwwwU3E__1_0() { return &___U3CwwwU3E__1_0; }
+	inline void set_U3CwwwU3E__1_0(UnityWebRequest_t463507806 * value)
+	{
+		___U3CwwwU3E__1_0 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CwwwU3E__1_0), value);
+	}
+
+	inline static int32_t get_offset_of_U24this_1() { return static_cast<int32_t>(offsetof(U3CNotificationListerU3Ec__Iterator0_t1290292342, ___U24this_1)); }
+	inline profileNotificationSetter_t2988085128 * get_U24this_1() const { return ___U24this_1; }
+	inline profileNotificationSetter_t2988085128 ** get_address_of_U24this_1() { return &___U24this_1; }
+	inline void set_U24this_1(profileNotificationSetter_t2988085128 * value)
+	{
+		___U24this_1 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_1), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_2() { return static_cast<int32_t>(offsetof(U3CNotificationListerU3Ec__Iterator0_t1290292342, ___U24current_2)); }
+	inline RuntimeObject * get_U24current_2() const { return ___U24current_2; }
+	inline RuntimeObject ** get_address_of_U24current_2() { return &___U24current_2; }
+	inline void set_U24current_2(RuntimeObject * value)
+	{
+		___U24current_2 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_2), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_3() { return static_cast<int32_t>(offsetof(U3CNotificationListerU3Ec__Iterator0_t1290292342, ___U24disposing_3)); }
+	inline bool get_U24disposing_3() const { return ___U24disposing_3; }
+	inline bool* get_address_of_U24disposing_3() { return &___U24disposing_3; }
+	inline void set_U24disposing_3(bool value)
+	{
+		___U24disposing_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_4() { return static_cast<int32_t>(offsetof(U3CNotificationListerU3Ec__Iterator0_t1290292342, ___U24PC_4)); }
+	inline int32_t get_U24PC_4() const { return ___U24PC_4; }
+	inline int32_t* get_address_of_U24PC_4() { return &___U24PC_4; }
+	inline void set_U24PC_4(int32_t value)
+	{
+		___U24PC_4 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CNOTIFICATIONLISTERU3EC__ITERATOR0_T1290292342_H
 #ifndef PROFILETEAMS_T1834502170_H
 #define PROFILETEAMS_T1834502170_H
 #ifdef __clang__
@@ -4733,47 +4807,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // CAMERAPLANECONTROLLER_T168097945_H
-#ifndef DECODEBYSTATICPIC_T2652011615_H
-#define DECODEBYSTATICPIC_T2652011615_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// DecodeByStaticPic
-struct  DecodeByStaticPic_t2652011615  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Texture2D DecodeByStaticPic::targetTex
-	Texture2D_t3840446185 * ___targetTex_4;
-	// UnityEngine.UI.Text DecodeByStaticPic::resultText
-	Text_t1901882714 * ___resultText_5;
-
-public:
-	inline static int32_t get_offset_of_targetTex_4() { return static_cast<int32_t>(offsetof(DecodeByStaticPic_t2652011615, ___targetTex_4)); }
-	inline Texture2D_t3840446185 * get_targetTex_4() const { return ___targetTex_4; }
-	inline Texture2D_t3840446185 ** get_address_of_targetTex_4() { return &___targetTex_4; }
-	inline void set_targetTex_4(Texture2D_t3840446185 * value)
-	{
-		___targetTex_4 = value;
-		Il2CppCodeGenWriteBarrier((&___targetTex_4), value);
-	}
-
-	inline static int32_t get_offset_of_resultText_5() { return static_cast<int32_t>(offsetof(DecodeByStaticPic_t2652011615, ___resultText_5)); }
-	inline Text_t1901882714 * get_resultText_5() const { return ___resultText_5; }
-	inline Text_t1901882714 ** get_address_of_resultText_5() { return &___resultText_5; }
-	inline void set_resultText_5(Text_t1901882714 * value)
-	{
-		___resultText_5 = value;
-		Il2CppCodeGenWriteBarrier((&___resultText_5), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // DECODEBYSTATICPIC_T2652011615_H
 #ifndef DETAILSTEAMINSTANTIATOR_T2050343530_H
 #define DETAILSTEAMINSTANTIATOR_T2050343530_H
 #ifdef __clang__
@@ -5810,8 +5843,116 @@ public:
 struct  profileNotificationSetter_t2988085128  : public MonoBehaviour_t3962482529
 {
 public:
+	// UnityEngine.GameObject profileNotificationSetter::notificationPrefab
+	GameObject_t1113636619 * ___notificationPrefab_4;
+	// UnityEngine.GameObject profileNotificationSetter::notificationDotPrefab
+	GameObject_t1113636619 * ___notificationDotPrefab_5;
+	// UnityEngine.GameObject profileNotificationSetter::notificationContainer
+	GameObject_t1113636619 * ___notificationContainer_6;
+	// UnityEngine.GameObject profileNotificationSetter::notificationDotContainer
+	GameObject_t1113636619 * ___notificationDotContainer_7;
+	// Jsonparser profileNotificationSetter::j
+	Jsonparser_t2229457866 * ___j_8;
+	// Notifications profileNotificationSetter::notifications
+	Notifications_t987802027 * ___notifications_9;
+	// System.String profileNotificationSetter::notificationURL
+	String_t* ___notificationURL_10;
+	// System.Int32 profileNotificationSetter::retry
+	int32_t ___retry_11;
+	// System.String profileNotificationSetter::jsonString
+	String_t* ___jsonString_12;
+	// UnityEngine.GameObject profileNotificationSetter::NotificationContainerPrefab
+	GameObject_t1113636619 * ___NotificationContainerPrefab_13;
 
 public:
+	inline static int32_t get_offset_of_notificationPrefab_4() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___notificationPrefab_4)); }
+	inline GameObject_t1113636619 * get_notificationPrefab_4() const { return ___notificationPrefab_4; }
+	inline GameObject_t1113636619 ** get_address_of_notificationPrefab_4() { return &___notificationPrefab_4; }
+	inline void set_notificationPrefab_4(GameObject_t1113636619 * value)
+	{
+		___notificationPrefab_4 = value;
+		Il2CppCodeGenWriteBarrier((&___notificationPrefab_4), value);
+	}
+
+	inline static int32_t get_offset_of_notificationDotPrefab_5() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___notificationDotPrefab_5)); }
+	inline GameObject_t1113636619 * get_notificationDotPrefab_5() const { return ___notificationDotPrefab_5; }
+	inline GameObject_t1113636619 ** get_address_of_notificationDotPrefab_5() { return &___notificationDotPrefab_5; }
+	inline void set_notificationDotPrefab_5(GameObject_t1113636619 * value)
+	{
+		___notificationDotPrefab_5 = value;
+		Il2CppCodeGenWriteBarrier((&___notificationDotPrefab_5), value);
+	}
+
+	inline static int32_t get_offset_of_notificationContainer_6() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___notificationContainer_6)); }
+	inline GameObject_t1113636619 * get_notificationContainer_6() const { return ___notificationContainer_6; }
+	inline GameObject_t1113636619 ** get_address_of_notificationContainer_6() { return &___notificationContainer_6; }
+	inline void set_notificationContainer_6(GameObject_t1113636619 * value)
+	{
+		___notificationContainer_6 = value;
+		Il2CppCodeGenWriteBarrier((&___notificationContainer_6), value);
+	}
+
+	inline static int32_t get_offset_of_notificationDotContainer_7() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___notificationDotContainer_7)); }
+	inline GameObject_t1113636619 * get_notificationDotContainer_7() const { return ___notificationDotContainer_7; }
+	inline GameObject_t1113636619 ** get_address_of_notificationDotContainer_7() { return &___notificationDotContainer_7; }
+	inline void set_notificationDotContainer_7(GameObject_t1113636619 * value)
+	{
+		___notificationDotContainer_7 = value;
+		Il2CppCodeGenWriteBarrier((&___notificationDotContainer_7), value);
+	}
+
+	inline static int32_t get_offset_of_j_8() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___j_8)); }
+	inline Jsonparser_t2229457866 * get_j_8() const { return ___j_8; }
+	inline Jsonparser_t2229457866 ** get_address_of_j_8() { return &___j_8; }
+	inline void set_j_8(Jsonparser_t2229457866 * value)
+	{
+		___j_8 = value;
+		Il2CppCodeGenWriteBarrier((&___j_8), value);
+	}
+
+	inline static int32_t get_offset_of_notifications_9() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___notifications_9)); }
+	inline Notifications_t987802027 * get_notifications_9() const { return ___notifications_9; }
+	inline Notifications_t987802027 ** get_address_of_notifications_9() { return &___notifications_9; }
+	inline void set_notifications_9(Notifications_t987802027 * value)
+	{
+		___notifications_9 = value;
+		Il2CppCodeGenWriteBarrier((&___notifications_9), value);
+	}
+
+	inline static int32_t get_offset_of_notificationURL_10() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___notificationURL_10)); }
+	inline String_t* get_notificationURL_10() const { return ___notificationURL_10; }
+	inline String_t** get_address_of_notificationURL_10() { return &___notificationURL_10; }
+	inline void set_notificationURL_10(String_t* value)
+	{
+		___notificationURL_10 = value;
+		Il2CppCodeGenWriteBarrier((&___notificationURL_10), value);
+	}
+
+	inline static int32_t get_offset_of_retry_11() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___retry_11)); }
+	inline int32_t get_retry_11() const { return ___retry_11; }
+	inline int32_t* get_address_of_retry_11() { return &___retry_11; }
+	inline void set_retry_11(int32_t value)
+	{
+		___retry_11 = value;
+	}
+
+	inline static int32_t get_offset_of_jsonString_12() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___jsonString_12)); }
+	inline String_t* get_jsonString_12() const { return ___jsonString_12; }
+	inline String_t** get_address_of_jsonString_12() { return &___jsonString_12; }
+	inline void set_jsonString_12(String_t* value)
+	{
+		___jsonString_12 = value;
+		Il2CppCodeGenWriteBarrier((&___jsonString_12), value);
+	}
+
+	inline static int32_t get_offset_of_NotificationContainerPrefab_13() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___NotificationContainerPrefab_13)); }
+	inline GameObject_t1113636619 * get_NotificationContainerPrefab_13() const { return ___NotificationContainerPrefab_13; }
+	inline GameObject_t1113636619 ** get_address_of_NotificationContainerPrefab_13() { return &___NotificationContainerPrefab_13; }
+	inline void set_NotificationContainerPrefab_13(GameObject_t1113636619 * value)
+	{
+		___NotificationContainerPrefab_13 = value;
+		Il2CppCodeGenWriteBarrier((&___NotificationContainerPrefab_13), value);
+	}
 };
 
 #ifdef __clang__
@@ -7034,8 +7175,37 @@ extern const int32_t g_FieldOffsetTable3292[3] =
 	JoinWithTeamSetter_t4177912884::get_offset_of_t_6(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3293 = { sizeof (profileNotificationSetter_t2988085128), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3294 = { sizeof (Loom_t3759828253), -1, sizeof(Loom_t3759828253_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable3294[7] = 
+extern const int32_t g_FieldOffsetTable3293[10] = 
+{
+	profileNotificationSetter_t2988085128::get_offset_of_notificationPrefab_4(),
+	profileNotificationSetter_t2988085128::get_offset_of_notificationDotPrefab_5(),
+	profileNotificationSetter_t2988085128::get_offset_of_notificationContainer_6(),
+	profileNotificationSetter_t2988085128::get_offset_of_notificationDotContainer_7(),
+	profileNotificationSetter_t2988085128::get_offset_of_j_8(),
+	profileNotificationSetter_t2988085128::get_offset_of_notifications_9(),
+	profileNotificationSetter_t2988085128::get_offset_of_notificationURL_10(),
+	profileNotificationSetter_t2988085128::get_offset_of_retry_11(),
+	profileNotificationSetter_t2988085128::get_offset_of_jsonString_12(),
+	profileNotificationSetter_t2988085128::get_offset_of_NotificationContainerPrefab_13(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3294 = { sizeof (U3CNotificationListerU3Ec__Iterator0_t1290292342), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3294[5] = 
+{
+	U3CNotificationListerU3Ec__Iterator0_t1290292342::get_offset_of_U3CwwwU3E__1_0(),
+	U3CNotificationListerU3Ec__Iterator0_t1290292342::get_offset_of_U24this_1(),
+	U3CNotificationListerU3Ec__Iterator0_t1290292342::get_offset_of_U24current_2(),
+	U3CNotificationListerU3Ec__Iterator0_t1290292342::get_offset_of_U24disposing_3(),
+	U3CNotificationListerU3Ec__Iterator0_t1290292342::get_offset_of_U24PC_4(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3295 = { sizeof (Notifications_t987802027), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3295[3] = 
+{
+	Notifications_t987802027::get_offset_of_events_0(),
+	Notifications_t987802027::get_offset_of_u_datetime_1(),
+	Notifications_t987802027::get_offset_of_updates_2(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3296 = { sizeof (Loom_t3759828253), -1, sizeof(Loom_t3759828253_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable3296[7] = 
 {
 	Loom_t3759828253_StaticFields::get_offset_of__current_4(),
 	Loom_t3759828253::get_offset_of__actions_5(),
@@ -7045,20 +7215,20 @@ extern const int32_t g_FieldOffsetTable3294[7] =
 	Loom_t3759828253_StaticFields::get_offset_of_U3CU3Ef__mgU24cache0_9(),
 	Loom_t3759828253_StaticFields::get_offset_of_U3CU3Ef__amU24cache0_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3295 = { sizeof (DelayedQueueItem_t1027542936), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3295[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3297 = { sizeof (DelayedQueueItem_t1027542936), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3297[3] = 
 {
 	DelayedQueueItem_t1027542936::get_offset_of_time_0(),
 	DelayedQueueItem_t1027542936::get_offset_of_action_1(),
 	DelayedQueueItem_t1027542936::get_offset_of_name_2(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3296 = { sizeof (U3CQueueOnMainThreadU3Ec__AnonStorey0_t3105882156), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3296[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3298 = { sizeof (U3CQueueOnMainThreadU3Ec__AnonStorey0_t3105882156), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3298[1] = 
 {
 	U3CQueueOnMainThreadU3Ec__AnonStorey0_t3105882156::get_offset_of_name_0(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3297 = { sizeof (CameraPlaneController_t168097945), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3297[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3299 = { sizeof (CameraPlaneController_t168097945), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3299[9] = 
 {
 	CameraPlaneController_t168097945::get_offset_of__targetCam_4(),
 	CameraPlaneController_t168097945::get_offset_of_orientation_5(),
@@ -7069,19 +7239,6 @@ extern const int32_t g_FieldOffsetTable3297[9] =
 	CameraPlaneController_t168097945::get_offset_of_and_puRot_10(),
 	CameraPlaneController_t168097945::get_offset_of_and_lRot_11(),
 	CameraPlaneController_t168097945::get_offset_of_and_lrRot_12(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3298 = { sizeof (DecodeByStaticPic_t2652011615), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3298[2] = 
-{
-	DecodeByStaticPic_t2652011615::get_offset_of_targetTex_4(),
-	DecodeByStaticPic_t2652011615::get_offset_of_resultText_5(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3299 = { sizeof (DeviceCamera_t1276318851), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3299[3] = 
-{
-	DeviceCamera_t1276318851::get_offset_of_webcamera_0(),
-	DeviceCamera_t1276318851::get_offset_of_isRunning_1(),
-	DeviceCamera_t1276318851::get_offset_of_isUseEasyWebCam_2(),
 };
 #ifdef __clang__
 #pragma clang diagnostic pop

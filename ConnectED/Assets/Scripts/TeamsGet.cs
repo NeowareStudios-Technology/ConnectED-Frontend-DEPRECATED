@@ -63,6 +63,7 @@ public class TeamsGet : MonoBehaviour {
                 {
                     Debug.Log("Trying again : get prefill");
                     getTeams();
+                    retry++;
                 }
             }
             else

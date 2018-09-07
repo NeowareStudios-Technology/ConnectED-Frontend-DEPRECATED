@@ -33,7 +33,7 @@ public class ProfileSetter : MonoBehaviour {
         hours.text = j.profile.hours.ToString();
         username.text = j.profile.first_name + " " + j.profile.last_name;
         set = true;
-        searchEvents();
+
         if (j.profile.interests == null)
         {
             Interest1.text = "None";
@@ -96,6 +96,7 @@ public class ProfileSetter : MonoBehaviour {
         {
             Education.text = "Not Specified";
         }
+        searchEvents();
 
     }
     public void SetPicture()
@@ -143,6 +144,11 @@ public class ProfileSetter : MonoBehaviour {
             if (jsonString != "{}")
             {
                 eventPopulator();
+            } else{
+                gameObject.GetComponent<Image>().raycastTarget = true;
+                gameObject.GetComponent<Image>().color = Color.white;
+                gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                gameObject.SetActive(false);
             }
         }
     }
@@ -164,7 +170,12 @@ public class ProfileSetter : MonoBehaviour {
             Destroy(ProfileCreatedEventContainer.transform.GetChild(i).gameObject);
         }
         if (hist.created_events == null)
-        { }
+        {
+            gameObject.GetComponent<Image>().raycastTarget = true;
+            gameObject.GetComponent<Image>().color = Color.white;
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            gameObject.SetActive(false);
+        }
         else
         {
             for (int i = 0; i < hist.created_events.Length; i++)
@@ -187,7 +198,6 @@ public class ProfileSetter : MonoBehaviour {
             
 
 
-		
 
 
         //if (childKillCount > 7)
@@ -256,6 +266,9 @@ public class ProfileSetter : MonoBehaviour {
         if (i == hist.created_events.Length - 1)
         {
             totalOpportunities.text = (i+1).ToString();
+            gameObject.GetComponent<Image>().raycastTarget = true;
+            gameObject.GetComponent<Image>().color = Color.white;
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
             gameObject.SetActive(false);
         }
     }

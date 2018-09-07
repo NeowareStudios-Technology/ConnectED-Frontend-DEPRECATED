@@ -40,6 +40,8 @@ public class teamInitializer : MonoBehaviour {
         GetComponent<Button>().onClick.AddListener(() => teamPage.GetComponent<TeamPageInit>().setTeamPage(t));
     }
 
-
+    public void setRegistration(int i){
+        team.is_registered = i;
+    }
 
 }

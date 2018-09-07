@@ -2085,135 +2085,139 @@ extern const int32_t g_FieldOffsetTable3289[7];
 extern const int32_t g_FieldOffsetTable3290[8];
 extern const int32_t g_FieldOffsetTable3291[8];
 extern const int32_t g_FieldOffsetTable3292[3];
-extern const int32_t g_FieldOffsetTable3294[7];
+extern const int32_t g_FieldOffsetTable3293[10];
+extern const int32_t g_FieldOffsetTable3294[5];
 extern const int32_t g_FieldOffsetTable3295[3];
-extern const int32_t g_FieldOffsetTable3296[1];
-extern const int32_t g_FieldOffsetTable3297[9];
-extern const int32_t g_FieldOffsetTable3298[2];
-extern const int32_t g_FieldOffsetTable3299[3];
-extern const int32_t g_FieldOffsetTable3300[5];
-extern const int32_t g_FieldOffsetTable3301[4];
-extern const int32_t g_FieldOffsetTable3302[1];
-extern const int32_t g_FieldOffsetTable3303[15];
-extern const int32_t g_FieldOffsetTable3305[9];
-extern const int32_t g_FieldOffsetTable3306[7];
-extern const int32_t g_FieldOffsetTable3308[20];
-extern const int32_t g_FieldOffsetTable3309[5];
-extern const int32_t g_FieldOffsetTable3310[1];
-extern const int32_t g_FieldOffsetTable3311[6];
-extern const int32_t g_FieldOffsetTable3312[8];
-extern const int32_t g_FieldOffsetTable3313[2];
-extern const int32_t g_FieldOffsetTable3315[4];
-extern const int32_t g_FieldOffsetTable3316[1];
-extern const int32_t g_FieldOffsetTable3318[9];
-extern const int32_t g_FieldOffsetTable3319[49];
-extern const int32_t g_FieldOffsetTable3320[3];
-extern const int32_t g_FieldOffsetTable3321[8];
-extern const int32_t g_FieldOffsetTable3322[10];
-extern const int32_t g_FieldOffsetTable3323[7];
-extern const int32_t g_FieldOffsetTable3324[4];
-extern const int32_t g_FieldOffsetTable3325[38];
-extern const int32_t g_FieldOffsetTable3326[2];
-extern const int32_t g_FieldOffsetTable3327[5];
-extern const int32_t g_FieldOffsetTable3328[5];
+extern const int32_t g_FieldOffsetTable3296[7];
+extern const int32_t g_FieldOffsetTable3297[3];
+extern const int32_t g_FieldOffsetTable3298[1];
+extern const int32_t g_FieldOffsetTable3299[9];
+extern const int32_t g_FieldOffsetTable3300[2];
+extern const int32_t g_FieldOffsetTable3301[3];
+extern const int32_t g_FieldOffsetTable3302[5];
+extern const int32_t g_FieldOffsetTable3303[4];
+extern const int32_t g_FieldOffsetTable3304[1];
+extern const int32_t g_FieldOffsetTable3305[15];
+extern const int32_t g_FieldOffsetTable3307[9];
+extern const int32_t g_FieldOffsetTable3308[7];
+extern const int32_t g_FieldOffsetTable3310[20];
+extern const int32_t g_FieldOffsetTable3311[5];
+extern const int32_t g_FieldOffsetTable3312[1];
+extern const int32_t g_FieldOffsetTable3313[6];
+extern const int32_t g_FieldOffsetTable3314[8];
+extern const int32_t g_FieldOffsetTable3315[2];
+extern const int32_t g_FieldOffsetTable3317[4];
+extern const int32_t g_FieldOffsetTable3318[1];
+extern const int32_t g_FieldOffsetTable3320[9];
+extern const int32_t g_FieldOffsetTable3321[49];
+extern const int32_t g_FieldOffsetTable3322[3];
+extern const int32_t g_FieldOffsetTable3323[8];
+extern const int32_t g_FieldOffsetTable3324[10];
+extern const int32_t g_FieldOffsetTable3325[7];
+extern const int32_t g_FieldOffsetTable3326[4];
+extern const int32_t g_FieldOffsetTable3327[38];
+extern const int32_t g_FieldOffsetTable3328[2];
 extern const int32_t g_FieldOffsetTable3329[5];
-extern const int32_t g_FieldOffsetTable3330[8];
-extern const int32_t g_FieldOffsetTable3331[1];
-extern const int32_t g_FieldOffsetTable3332[2];
-extern const int32_t g_FieldOffsetTable3333[11];
-extern const int32_t g_FieldOffsetTable3334[8];
-extern const int32_t g_FieldOffsetTable3335[34];
-extern const int32_t g_FieldOffsetTable3336[5];
-extern const int32_t g_FieldOffsetTable3337[5];
-extern const int32_t g_FieldOffsetTable3338[30];
-extern const int32_t g_FieldOffsetTable3339[1];
-extern const int32_t g_FieldOffsetTable3340[10];
-extern const int32_t g_FieldOffsetTable3341[16];
-extern const int32_t g_FieldOffsetTable3342[7];
-extern const int32_t g_FieldOffsetTable3343[9];
-extern const int32_t g_FieldOffsetTable3344[2];
-extern const int32_t g_FieldOffsetTable3345[1];
-extern const int32_t g_FieldOffsetTable3346[3];
-extern const int32_t g_FieldOffsetTable3347[2];
-extern const int32_t g_FieldOffsetTable3348[1];
+extern const int32_t g_FieldOffsetTable3330[5];
+extern const int32_t g_FieldOffsetTable3331[5];
+extern const int32_t g_FieldOffsetTable3332[8];
+extern const int32_t g_FieldOffsetTable3333[1];
+extern const int32_t g_FieldOffsetTable3334[2];
+extern const int32_t g_FieldOffsetTable3335[11];
+extern const int32_t g_FieldOffsetTable3336[8];
+extern const int32_t g_FieldOffsetTable3337[34];
+extern const int32_t g_FieldOffsetTable3338[5];
+extern const int32_t g_FieldOffsetTable3339[5];
+extern const int32_t g_FieldOffsetTable3340[30];
+extern const int32_t g_FieldOffsetTable3341[1];
+extern const int32_t g_FieldOffsetTable3342[10];
+extern const int32_t g_FieldOffsetTable3343[16];
+extern const int32_t g_FieldOffsetTable3344[7];
+extern const int32_t g_FieldOffsetTable3345[9];
+extern const int32_t g_FieldOffsetTable3346[2];
+extern const int32_t g_FieldOffsetTable3347[1];
+extern const int32_t g_FieldOffsetTable3348[3];
 extern const int32_t g_FieldOffsetTable3349[2];
-extern const int32_t g_FieldOffsetTable3350[7];
-extern const int32_t g_FieldOffsetTable3351[7];
-extern const int32_t g_FieldOffsetTable3352[37];
-extern const int32_t g_FieldOffsetTable3353[5];
-extern const int32_t g_FieldOffsetTable3354[5];
-extern const int32_t g_FieldOffsetTable3355[20];
-extern const int32_t g_FieldOffsetTable3356[9];
-extern const int32_t g_FieldOffsetTable3357[4];
-extern const int32_t g_FieldOffsetTable3358[7];
+extern const int32_t g_FieldOffsetTable3350[1];
+extern const int32_t g_FieldOffsetTable3351[2];
+extern const int32_t g_FieldOffsetTable3352[7];
+extern const int32_t g_FieldOffsetTable3353[7];
+extern const int32_t g_FieldOffsetTable3354[37];
+extern const int32_t g_FieldOffsetTable3355[5];
+extern const int32_t g_FieldOffsetTable3356[5];
+extern const int32_t g_FieldOffsetTable3357[20];
+extern const int32_t g_FieldOffsetTable3358[9];
 extern const int32_t g_FieldOffsetTable3359[4];
-extern const int32_t g_FieldOffsetTable3361[23];
-extern const int32_t g_FieldOffsetTable3362[9];
-extern const int32_t g_FieldOffsetTable3363[9];
-extern const int32_t g_FieldOffsetTable3364[9];
+extern const int32_t g_FieldOffsetTable3360[11];
+extern const int32_t g_FieldOffsetTable3361[4];
+extern const int32_t g_FieldOffsetTable3362[5];
+extern const int32_t g_FieldOffsetTable3364[23];
 extern const int32_t g_FieldOffsetTable3365[9];
 extern const int32_t g_FieldOffsetTable3366[9];
 extern const int32_t g_FieldOffsetTable3367[9];
-extern const int32_t g_FieldOffsetTable3368[1];
-extern const int32_t g_FieldOffsetTable3369[2];
-extern const int32_t g_FieldOffsetTable3370[1];
-extern const int32_t g_FieldOffsetTable3371[2];
-extern const int32_t g_FieldOffsetTable3372[34];
-extern const int32_t g_FieldOffsetTable3373[5];
-extern const int32_t g_FieldOffsetTable3374[5];
-extern const int32_t g_FieldOffsetTable3375[2];
-extern const int32_t g_FieldOffsetTable3376[23];
+extern const int32_t g_FieldOffsetTable3368[9];
+extern const int32_t g_FieldOffsetTable3369[9];
+extern const int32_t g_FieldOffsetTable3370[9];
+extern const int32_t g_FieldOffsetTable3371[1];
+extern const int32_t g_FieldOffsetTable3372[2];
+extern const int32_t g_FieldOffsetTable3373[1];
+extern const int32_t g_FieldOffsetTable3374[2];
+extern const int32_t g_FieldOffsetTable3375[34];
+extern const int32_t g_FieldOffsetTable3376[5];
 extern const int32_t g_FieldOffsetTable3377[5];
-extern const int32_t g_FieldOffsetTable3378[12];
-extern const int32_t g_FieldOffsetTable3379[3];
-extern const int32_t g_FieldOffsetTable3381[2];
-extern const int32_t g_FieldOffsetTable3382[26];
-extern const int32_t g_FieldOffsetTable3383[18];
-extern const int32_t g_FieldOffsetTable3384[5];
-extern const int32_t g_FieldOffsetTable3385[5];
-extern const int32_t g_FieldOffsetTable3386[5];
-extern const int32_t g_FieldOffsetTable3387[1];
-extern const int32_t g_FieldOffsetTable3388[4];
-extern const int32_t g_FieldOffsetTable3389[3];
-extern const int32_t g_FieldOffsetTable3390[4];
-extern const int32_t g_FieldOffsetTable3391[9];
+extern const int32_t g_FieldOffsetTable3378[2];
+extern const int32_t g_FieldOffsetTable3379[23];
+extern const int32_t g_FieldOffsetTable3380[5];
+extern const int32_t g_FieldOffsetTable3381[12];
+extern const int32_t g_FieldOffsetTable3382[3];
+extern const int32_t g_FieldOffsetTable3384[2];
+extern const int32_t g_FieldOffsetTable3385[26];
+extern const int32_t g_FieldOffsetTable3386[18];
+extern const int32_t g_FieldOffsetTable3387[5];
+extern const int32_t g_FieldOffsetTable3388[5];
+extern const int32_t g_FieldOffsetTable3389[5];
+extern const int32_t g_FieldOffsetTable3390[1];
+extern const int32_t g_FieldOffsetTable3391[4];
 extern const int32_t g_FieldOffsetTable3392[3];
-extern const int32_t g_FieldOffsetTable3393[6];
-extern const int32_t g_FieldOffsetTable3394[7];
-extern const int32_t g_FieldOffsetTable3395[4];
-extern const int32_t g_FieldOffsetTable3396[7];
-extern const int32_t g_FieldOffsetTable3397[17];
-extern const int32_t g_FieldOffsetTable3398[2];
-extern const int32_t g_FieldOffsetTable3399[2];
-extern const int32_t g_FieldOffsetTable3400[6];
-extern const int32_t g_FieldOffsetTable3401[3];
-extern const int32_t g_FieldOffsetTable3402[17];
-extern const int32_t g_FieldOffsetTable3403[5];
-extern const int32_t g_FieldOffsetTable3404[4];
-extern const int32_t g_FieldOffsetTable3405[16];
-extern const int32_t g_FieldOffsetTable3406[6];
-extern const int32_t g_FieldOffsetTable3407[2];
-extern const int32_t g_FieldOffsetTable3408[25];
-extern const int32_t g_FieldOffsetTable3409[2];
-extern const int32_t g_FieldOffsetTable3410[8];
-extern const int32_t g_FieldOffsetTable3411[2];
-extern const int32_t g_FieldOffsetTable3412[6];
-extern const int32_t g_FieldOffsetTable3413[6];
-extern const int32_t g_FieldOffsetTable3414[5];
-extern const int32_t g_FieldOffsetTable3415[2];
-extern const int32_t g_FieldOffsetTable3416[15];
-extern const int32_t g_FieldOffsetTable3417[7];
-extern const int32_t g_FieldOffsetTable3418[9];
-extern const int32_t g_FieldOffsetTable3419[7];
-extern const int32_t g_FieldOffsetTable3420[9];
-extern const int32_t g_FieldOffsetTable3421[2];
-extern const int32_t g_FieldOffsetTable3422[3];
-extern const int32_t g_FieldOffsetTable3423[5];
-extern const int32_t g_FieldOffsetTable3424[3];
-extern const int32_t g_FieldOffsetTable3425[6];
-extern const int32_t g_FieldOffsetTable3426[4];
+extern const int32_t g_FieldOffsetTable3393[4];
+extern const int32_t g_FieldOffsetTable3394[9];
+extern const int32_t g_FieldOffsetTable3395[3];
+extern const int32_t g_FieldOffsetTable3396[6];
+extern const int32_t g_FieldOffsetTable3397[7];
+extern const int32_t g_FieldOffsetTable3398[4];
+extern const int32_t g_FieldOffsetTable3399[7];
+extern const int32_t g_FieldOffsetTable3400[17];
+extern const int32_t g_FieldOffsetTable3401[2];
+extern const int32_t g_FieldOffsetTable3402[2];
+extern const int32_t g_FieldOffsetTable3403[6];
+extern const int32_t g_FieldOffsetTable3404[3];
+extern const int32_t g_FieldOffsetTable3405[17];
+extern const int32_t g_FieldOffsetTable3406[5];
+extern const int32_t g_FieldOffsetTable3407[4];
+extern const int32_t g_FieldOffsetTable3408[16];
+extern const int32_t g_FieldOffsetTable3409[6];
+extern const int32_t g_FieldOffsetTable3410[2];
+extern const int32_t g_FieldOffsetTable3411[25];
+extern const int32_t g_FieldOffsetTable3412[2];
+extern const int32_t g_FieldOffsetTable3413[8];
+extern const int32_t g_FieldOffsetTable3414[2];
+extern const int32_t g_FieldOffsetTable3415[6];
+extern const int32_t g_FieldOffsetTable3416[6];
+extern const int32_t g_FieldOffsetTable3417[5];
+extern const int32_t g_FieldOffsetTable3418[2];
+extern const int32_t g_FieldOffsetTable3419[15];
+extern const int32_t g_FieldOffsetTable3420[7];
+extern const int32_t g_FieldOffsetTable3421[9];
+extern const int32_t g_FieldOffsetTable3422[7];
+extern const int32_t g_FieldOffsetTable3423[9];
+extern const int32_t g_FieldOffsetTable3424[2];
+extern const int32_t g_FieldOffsetTable3425[3];
+extern const int32_t g_FieldOffsetTable3426[5];
+extern const int32_t g_FieldOffsetTable3427[3];
+extern const int32_t g_FieldOffsetTable3428[6];
+extern const int32_t g_FieldOffsetTable3429[4];
 
-extern const int32_t* g_FieldOffsetTable[3427] = 
+extern const int32_t* g_FieldOffsetTable[3430] = 
 {
 	NULL,
 	NULL,
@@ -5508,7 +5512,7 @@ extern const int32_t* g_FieldOffsetTable[3427] =
 	g_FieldOffsetTable3290,
 	g_FieldOffsetTable3291,
 	g_FieldOffsetTable3292,
-	NULL,
+	g_FieldOffsetTable3293,
 	g_FieldOffsetTable3294,
 	g_FieldOffsetTable3295,
 	g_FieldOffsetTable3296,
@@ -5519,22 +5523,22 @@ extern const int32_t* g_FieldOffsetTable[3427] =
 	g_FieldOffsetTable3301,
 	g_FieldOffsetTable3302,
 	g_FieldOffsetTable3303,
-	NULL,
+	g_FieldOffsetTable3304,
 	g_FieldOffsetTable3305,
-	g_FieldOffsetTable3306,
 	NULL,
+	g_FieldOffsetTable3307,
 	g_FieldOffsetTable3308,
-	g_FieldOffsetTable3309,
+	NULL,
 	g_FieldOffsetTable3310,
 	g_FieldOffsetTable3311,
 	g_FieldOffsetTable3312,
 	g_FieldOffsetTable3313,
-	NULL,
+	g_FieldOffsetTable3314,
 	g_FieldOffsetTable3315,
-	g_FieldOffsetTable3316,
 	NULL,
+	g_FieldOffsetTable3317,
 	g_FieldOffsetTable3318,
-	g_FieldOffsetTable3319,
+	NULL,
 	g_FieldOffsetTable3320,
 	g_FieldOffsetTable3321,
 	g_FieldOffsetTable3322,
@@ -5575,10 +5579,10 @@ extern const int32_t* g_FieldOffsetTable[3427] =
 	g_FieldOffsetTable3357,
 	g_FieldOffsetTable3358,
 	g_FieldOffsetTable3359,
-	NULL,
+	g_FieldOffsetTable3360,
 	g_FieldOffsetTable3361,
 	g_FieldOffsetTable3362,
-	g_FieldOffsetTable3363,
+	NULL,
 	g_FieldOffsetTable3364,
 	g_FieldOffsetTable3365,
 	g_FieldOffsetTable3366,
@@ -5595,10 +5599,10 @@ extern const int32_t* g_FieldOffsetTable[3427] =
 	g_FieldOffsetTable3377,
 	g_FieldOffsetTable3378,
 	g_FieldOffsetTable3379,
-	NULL,
+	g_FieldOffsetTable3380,
 	g_FieldOffsetTable3381,
 	g_FieldOffsetTable3382,
-	g_FieldOffsetTable3383,
+	NULL,
 	g_FieldOffsetTable3384,
 	g_FieldOffsetTable3385,
 	g_FieldOffsetTable3386,
@@ -5642,6 +5646,9 @@ extern const int32_t* g_FieldOffsetTable[3427] =
 	g_FieldOffsetTable3424,
 	g_FieldOffsetTable3425,
 	g_FieldOffsetTable3426,
+	g_FieldOffsetTable3427,
+	g_FieldOffsetTable3428,
+	g_FieldOffsetTable3429,
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize0;
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1;
@@ -9070,7 +9077,10 @@ extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3423;
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3424;
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3425;
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3426;
-extern const Il2CppTypeDefinitionSizes* g_Il2CppTypeDefinitionSizesTable[3427] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3427;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3428;
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3429;
+extern const Il2CppTypeDefinitionSizes* g_Il2CppTypeDefinitionSizesTable[3430] = 
 {
 	(&g_typeDefinitionSize0),
 	(&g_typeDefinitionSize1),
@@ -12499,4 +12509,7 @@ extern const Il2CppTypeDefinitionSizes* g_Il2CppTypeDefinitionSizesTable[3427] =
 	(&g_typeDefinitionSize3424),
 	(&g_typeDefinitionSize3425),
 	(&g_typeDefinitionSize3426),
+	(&g_typeDefinitionSize3427),
+	(&g_typeDefinitionSize3428),
+	(&g_typeDefinitionSize3429),
 };

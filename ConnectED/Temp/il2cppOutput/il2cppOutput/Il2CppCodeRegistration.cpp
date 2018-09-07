@@ -35,7 +35,7 @@ extern const Il2CppMethodPointer g_UnresolvedVirtualMethodPointers[];
 extern Il2CppInteropData g_Il2CppInteropData[];
 extern const Il2CppCodeRegistration g_CodeRegistration = 
 {
-	21244,
+	21267,
 	g_MethodPointers,
 	42,
 	g_ReversePInvokeWrapperPointers,
@@ -43,7 +43,7 @@ extern const Il2CppCodeRegistration g_CodeRegistration =
 	g_Il2CppGenericMethodPointers,
 	2371,
 	g_Il2CppInvokerPointers,
-	4648,
+	4662,
 	g_AttributeGenerators,
 	370,
 	g_UnresolvedVirtualMethodPointers,

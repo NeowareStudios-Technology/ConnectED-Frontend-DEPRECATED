@@ -103,6 +103,8 @@ struct SafeWaitHandle_t1972936122;
 struct MyDictionaryU5BU5D_t441689085;
 // NativeGallery/MediaPickCallback
 struct MediaPickCallback_t2468098299;
+// Notifications
+struct Notifications_t987802027;
 // Profile
 struct Profile_t2655093077;
 // ProfileSearch
@@ -235,6 +237,12 @@ struct Void_t1185182177;
 struct Team_t627267163;
 // TeamPageInit
 struct TeamPageInit_t768358174;
+// TeamPageInit/<eventPut>c__Iterator3
+struct U3CeventPutU3Ec__Iterator3_t1124273298;
+// TeamPageInit/<setTeamPage>c__AnonStorey4
+struct U3CsetTeamPageU3Ec__AnonStorey4_t711940773;
+// TeamProfileInit
+struct TeamProfileInit_t3516255158;
 // TeamSearch
 struct TeamSearch_t368283327;
 // Team[]
@@ -437,6 +445,8 @@ struct prefill_t1646751602;
 struct profileHistory_t1906111988;
 // profileNotificationSetter
 struct profileNotificationSetter_t2988085128;
+// profileNotificationSetter/<NotificationLister>c__Iterator0
+struct U3CNotificationListerU3Ec__Iterator0_t1290292342;
 // profileSearchInitializer
 struct profileSearchInitializer_t4098462952;
 // profileSearchInitializer/<setNameEmail>c__AnonStorey0
@@ -517,9 +527,12 @@ extern RuntimeClass* Thread_t2300836069_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CGetProfileU3Ec__Iterator0_t2437943573_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CGetProfileU3Ec__Iterator0_t3631969045_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CGetTeamU3Ec__Iterator3_t3114738425_il2cpp_TypeInfo_var;
+extern RuntimeClass* U3CNotificationListerU3Ec__Iterator0_t1290292342_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CPickImageU3Ec__AnonStorey0_t3116646050_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CPopulatorU3Ec__Iterator1_t2660160845_il2cpp_TypeInfo_var;
+extern RuntimeClass* U3CPopulatorU3Ec__Iterator1_t3268492917_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CPostU3Ec__Iterator0_t820772441_il2cpp_TypeInfo_var;
+extern RuntimeClass* U3CTopPopulatorU3Ec__Iterator3_t3488124398_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CacceptProfileU3Ec__Iterator1_t3425313596_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CacceptingTeamU3Ec__Iterator4_t1810988964_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CdenyProfileU3Ec__Iterator2_t1416246153_il2cpp_TypeInfo_var;
@@ -531,18 +544,22 @@ extern RuntimeClass* U3CsetNameEmailU3Ec__AnonStorey0_t2583701432_il2cpp_TypeInf
 extern RuntimeClass* U3CsetSearchEventU3Ec__AnonStorey1_t3876693336_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CsetSearchTeamU3Ec__AnonStorey1_t2846420339_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CsetTeamButtonU3Ec__AnonStorey0_t2856834385_il2cpp_TypeInfo_var;
+extern RuntimeClass* U3CteamListerU3Ec__Iterator0_t2742360854_il2cpp_TypeInfo_var;
+extern RuntimeClass* U3CteamTopListerU3Ec__Iterator2_t1625396836_il2cpp_TypeInfo_var;
 extern RuntimeClass* UnityAction_t3245792599_il2cpp_TypeInfo_var;
 extern RuntimeClass* UploadHandlerRaw_t25761545_il2cpp_TypeInfo_var;
 extern RuntimeClass* Vector3_t3722313464_il2cpp_TypeInfo_var;
 extern RuntimeClass* approveList_t192994076_il2cpp_TypeInfo_var;
 extern RuntimeClass* calendarPopulator_t3961875236_il2cpp_TypeInfo_var;
 extern String_t* _stringLiteral1008917561;
+extern String_t* _stringLiteral1163448006;
 extern String_t* _stringLiteral1221200104;
 extern String_t* _stringLiteral1246680825;
 extern String_t* _stringLiteral1370936018;
 extern String_t* _stringLiteral1394922867;
 extern String_t* _stringLiteral1434144996;
 extern String_t* _stringLiteral1462421739;
+extern String_t* _stringLiteral1473685639;
 extern String_t* _stringLiteral1574691733;
 extern String_t* _stringLiteral1612360013;
 extern String_t* _stringLiteral1661851033;
@@ -562,6 +579,7 @@ extern String_t* _stringLiteral2261822918;
 extern String_t* _stringLiteral2263792357;
 extern String_t* _stringLiteral228012198;
 extern String_t* _stringLiteral2306927834;
+extern String_t* _stringLiteral2310942994;
 extern String_t* _stringLiteral2429867837;
 extern String_t* _stringLiteral2435121148;
 extern String_t* _stringLiteral2568382674;
@@ -571,6 +589,8 @@ extern String_t* _stringLiteral2687346692;
 extern String_t* _stringLiteral2704241041;
 extern String_t* _stringLiteral2726223665;
 extern String_t* _stringLiteral2792395066;
+extern String_t* _stringLiteral288607468;
+extern String_t* _stringLiteral2916158021;
 extern String_t* _stringLiteral3074447152;
 extern String_t* _stringLiteral3074643752;
 extern String_t* _stringLiteral3074643760;
@@ -582,6 +602,7 @@ extern String_t* _stringLiteral3223680704;
 extern String_t* _stringLiteral3273954248;
 extern String_t* _stringLiteral3346240207;
 extern String_t* _stringLiteral3401422088;
+extern String_t* _stringLiteral3449507607;
 extern String_t* _stringLiteral3451107214;
 extern String_t* _stringLiteral3451107215;
 extern String_t* _stringLiteral3451172750;
@@ -676,7 +697,10 @@ extern const RuntimeMethod* GameObject_GetComponent_TisTeamPageInit_t768358174_m
 extern const RuntimeMethod* GameObject_GetComponent_TisdayInfo_t3924891336_m1842419668_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisfirstOfMonthTrigger_t2052414217_m1408392579_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisspriteSwitcher_t2594934744_m3465867408_RuntimeMethod_var;
+extern const RuntimeMethod* GameObject_GetComponent_TisteamInitializer_t188153746_m774905409_RuntimeMethod_var;
+extern const RuntimeMethod* JsonUtility_FromJson_TisEventSearch_t1270132540_m1414630702_RuntimeMethod_var;
 extern const RuntimeMethod* JsonUtility_FromJson_TisEvent_t3739346240_m1279678833_RuntimeMethod_var;
+extern const RuntimeMethod* JsonUtility_FromJson_TisNotifications_t987802027_m2787351905_RuntimeMethod_var;
 extern const RuntimeMethod* JsonUtility_FromJson_TisProfile_t2655093077_m2977580098_RuntimeMethod_var;
 extern const RuntimeMethod* JsonUtility_FromJson_TisTeam_t627267163_m450526261_RuntimeMethod_var;
 extern const RuntimeMethod* JsonUtility_FromJson_TisteamPrefill_t1320688299_m2508224979_RuntimeMethod_var;
@@ -697,6 +721,7 @@ extern const RuntimeMethod* TextureScale_PointScale_m1136455383_RuntimeMethod_va
 extern const RuntimeMethod* U3CGetProfileU3Ec__Iterator0_Reset_m859560806_RuntimeMethod_var;
 extern const RuntimeMethod* U3CGetProfileU3Ec__Iterator0_Reset_m874450376_RuntimeMethod_var;
 extern const RuntimeMethod* U3CGetTeamU3Ec__Iterator3_Reset_m2109929703_RuntimeMethod_var;
+extern const RuntimeMethod* U3CNotificationListerU3Ec__Iterator0_Reset_m2436983663_RuntimeMethod_var;
 extern const RuntimeMethod* U3CPickImageU3Ec__AnonStorey0_U3CU3Em__0_m538071898_RuntimeMethod_var;
 extern const RuntimeMethod* U3CPopulatorU3Ec__Iterator1_Reset_m1048695504_RuntimeMethod_var;
 extern const RuntimeMethod* U3CPopulatorU3Ec__Iterator1_Reset_m1267395693_RuntimeMethod_var;
@@ -706,6 +731,7 @@ extern const RuntimeMethod* U3CacceptProfileU3Ec__Iterator1_Reset_m17148670_Runt
 extern const RuntimeMethod* U3CacceptingTeamU3Ec__Iterator4_Reset_m1035404432_RuntimeMethod_var;
 extern const RuntimeMethod* U3CdenyProfileU3Ec__Iterator2_Reset_m3966429355_RuntimeMethod_var;
 extern const RuntimeMethod* U3CdenyTeamU3Ec__Iterator5_Reset_m4100449992_RuntimeMethod_var;
+extern const RuntimeMethod* U3CeventPutU3Ec__Iterator3_Reset_m1750347568_RuntimeMethod_var;
 extern const RuntimeMethod* U3CprefillListerU3Ec__Iterator0_Reset_m1716420962_RuntimeMethod_var;
 extern const RuntimeMethod* U3CsetDetailsU3Ec__Iterator0_Reset_m1160649908_RuntimeMethod_var;
 extern const RuntimeMethod* U3CsetDetailsU3Ec__Iterator0_Reset_m1855792590_RuntimeMethod_var;
@@ -718,6 +744,16 @@ extern const RuntimeMethod* U3CsetTeamButtonU3Ec__AnonStorey0_U3CU3Em__2_m351133
 extern const RuntimeMethod* U3CsetTeamButtonU3Ec__AnonStorey0_U3CU3Em__3_m3511336691_RuntimeMethod_var;
 extern const RuntimeMethod* U3CteamListerU3Ec__Iterator0_Reset_m3144343573_RuntimeMethod_var;
 extern const RuntimeMethod* U3CteamTopListerU3Ec__Iterator2_Reset_m452985203_RuntimeMethod_var;
+extern const uint32_t TeamProfileInit_setTeamProfile_m1401687269_MetadataUsageId;
+extern const uint32_t TeamsGet_Populator_m757272477_MetadataUsageId;
+extern const uint32_t TeamsGet_TopPopulator_m415545313_MetadataUsageId;
+extern const uint32_t TeamsGet__ctor_m211097906_MetadataUsageId;
+extern const uint32_t TeamsGet_getTeams_m3668858059_MetadataUsageId;
+extern const uint32_t TeamsGet_getTopTeams_m3412285289_MetadataUsageId;
+extern const uint32_t TeamsGet_instantiateTeams_m1209751037_MetadataUsageId;
+extern const uint32_t TeamsGet_instantiateTopTeams_m57428017_MetadataUsageId;
+extern const uint32_t TeamsGet_teamLister_m709058578_MetadataUsageId;
+extern const uint32_t TeamsGet_teamTopLister_m26192313_MetadataUsageId;
 extern const uint32_t TextureScale_BilinearScale_m2698915474_MetadataUsageId;
 extern const uint32_t TextureScale_PointScale_m1136455383_MetadataUsageId;
 extern const uint32_t TextureScale_ThreadedScale_m530321348_MetadataUsageId;
@@ -730,6 +766,9 @@ extern const uint32_t U3CGetProfileU3Ec__Iterator0_U3CU3E__Finally0_m400484523_M
 extern const uint32_t U3CGetTeamU3Ec__Iterator3_MoveNext_m4187278706_MetadataUsageId;
 extern const uint32_t U3CGetTeamU3Ec__Iterator3_Reset_m2109929703_MetadataUsageId;
 extern const uint32_t U3CGetTeamU3Ec__Iterator3_U3CU3E__Finally0_m2783870656_MetadataUsageId;
+extern const uint32_t U3CNotificationListerU3Ec__Iterator0_MoveNext_m893866083_MetadataUsageId;
+extern const uint32_t U3CNotificationListerU3Ec__Iterator0_Reset_m2436983663_MetadataUsageId;
+extern const uint32_t U3CNotificationListerU3Ec__Iterator0_U3CU3E__Finally0_m1894724873_MetadataUsageId;
 extern const uint32_t U3CPickImageU3Ec__AnonStorey0_U3CU3Em__0_m538071898_MetadataUsageId;
 extern const uint32_t U3CPopulatorU3Ec__Iterator1_MoveNext_m1632942241_MetadataUsageId;
 extern const uint32_t U3CPopulatorU3Ec__Iterator1_MoveNext_m661044137_MetadataUsageId;
@@ -754,6 +793,8 @@ extern const uint32_t U3CdenyProfileU3Ec__Iterator2_U3CU3E__Finally0_m3831034690
 extern const uint32_t U3CdenyTeamU3Ec__Iterator5_MoveNext_m1003236700_MetadataUsageId;
 extern const uint32_t U3CdenyTeamU3Ec__Iterator5_Reset_m4100449992_MetadataUsageId;
 extern const uint32_t U3CdenyTeamU3Ec__Iterator5_U3CU3E__Finally0_m3355436121_MetadataUsageId;
+extern const uint32_t U3CeventPutU3Ec__Iterator3_MoveNext_m4125901295_MetadataUsageId;
+extern const uint32_t U3CeventPutU3Ec__Iterator3_Reset_m1750347568_MetadataUsageId;
 extern const uint32_t U3CprefillListerU3Ec__Iterator0_MoveNext_m2864489690_MetadataUsageId;
 extern const uint32_t U3CprefillListerU3Ec__Iterator0_Reset_m1716420962_MetadataUsageId;
 extern const uint32_t U3CprefillListerU3Ec__Iterator0_U3CU3E__Finally0_m2267453812_MetadataUsageId;
@@ -817,6 +858,10 @@ extern const uint32_t notificationQueuer_queueTeamNotifications_m956004398_Metad
 extern const uint32_t notificationQueuer_setNotification_m4085289664_MetadataUsageId;
 extern const uint32_t notificationQueuer_setTeamNotification_m2756858659_MetadataUsageId;
 extern const uint32_t pictureGrabber_PickImage_m2900278154_MetadataUsageId;
+extern const uint32_t profileNotificationSetter_NotificationLister_m4294553938_MetadataUsageId;
+extern const uint32_t profileNotificationSetter__ctor_m2192859108_MetadataUsageId;
+extern const uint32_t profileNotificationSetter_getNotifications_m4005455675_MetadataUsageId;
+extern const uint32_t profileNotificationSetter_notificationInitializer_m805960625_MetadataUsageId;
 extern const uint32_t profileSearchInitializer_setNameEmail_m541698305_MetadataUsageId;
 extern const uint32_t profileSearchInitializer_setPic_m3235430790_MetadataUsageId;
 extern const uint32_t returnPressedFields_returnFields_m2139055098_MetadataUsageId;
@@ -1272,6 +1317,58 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // EVENTSEARCH_T1270132540_H
+#ifndef NOTIFICATIONS_T987802027_H
+#define NOTIFICATIONS_T987802027_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// Notifications
+struct  Notifications_t987802027  : public RuntimeObject
+{
+public:
+	// System.String[] Notifications::events
+	StringU5BU5D_t1281789340* ___events_0;
+	// System.String[] Notifications::u_datetime
+	StringU5BU5D_t1281789340* ___u_datetime_1;
+	// System.String[] Notifications::updates
+	StringU5BU5D_t1281789340* ___updates_2;
+
+public:
+	inline static int32_t get_offset_of_events_0() { return static_cast<int32_t>(offsetof(Notifications_t987802027, ___events_0)); }
+	inline StringU5BU5D_t1281789340* get_events_0() const { return ___events_0; }
+	inline StringU5BU5D_t1281789340** get_address_of_events_0() { return &___events_0; }
+	inline void set_events_0(StringU5BU5D_t1281789340* value)
+	{
+		___events_0 = value;
+		Il2CppCodeGenWriteBarrier((&___events_0), value);
+	}
+
+	inline static int32_t get_offset_of_u_datetime_1() { return static_cast<int32_t>(offsetof(Notifications_t987802027, ___u_datetime_1)); }
+	inline StringU5BU5D_t1281789340* get_u_datetime_1() const { return ___u_datetime_1; }
+	inline StringU5BU5D_t1281789340** get_address_of_u_datetime_1() { return &___u_datetime_1; }
+	inline void set_u_datetime_1(StringU5BU5D_t1281789340* value)
+	{
+		___u_datetime_1 = value;
+		Il2CppCodeGenWriteBarrier((&___u_datetime_1), value);
+	}
+
+	inline static int32_t get_offset_of_updates_2() { return static_cast<int32_t>(offsetof(Notifications_t987802027, ___updates_2)); }
+	inline StringU5BU5D_t1281789340* get_updates_2() const { return ___updates_2; }
+	inline StringU5BU5D_t1281789340** get_address_of_updates_2() { return &___updates_2; }
+	inline void set_updates_2(StringU5BU5D_t1281789340* value)
+	{
+		___updates_2 = value;
+		Il2CppCodeGenWriteBarrier((&___updates_2), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // NOTIFICATIONS_T987802027_H
 #ifndef PROFILE_T2655093077_H
 #define PROFILE_T2655093077_H
 #ifdef __clang__
@@ -2666,6 +2763,119 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // TEAM_T627267163_H
+#ifndef U3CEVENTPUTU3EC__ITERATOR3_T1124273298_H
+#define U3CEVENTPUTU3EC__ITERATOR3_T1124273298_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TeamPageInit/<eventPut>c__Iterator3
+struct  U3CeventPutU3Ec__Iterator3_t1124273298  : public RuntimeObject
+{
+public:
+	// UnityEngine.Networking.UnityWebRequest TeamPageInit/<eventPut>c__Iterator3::www
+	UnityWebRequest_t463507806 * ___www_0;
+	// TeamPageInit TeamPageInit/<eventPut>c__Iterator3::$this
+	TeamPageInit_t768358174 * ___U24this_1;
+	// System.Object TeamPageInit/<eventPut>c__Iterator3::$current
+	RuntimeObject * ___U24current_2;
+	// System.Boolean TeamPageInit/<eventPut>c__Iterator3::$disposing
+	bool ___U24disposing_3;
+	// System.Int32 TeamPageInit/<eventPut>c__Iterator3::$PC
+	int32_t ___U24PC_4;
+
+public:
+	inline static int32_t get_offset_of_www_0() { return static_cast<int32_t>(offsetof(U3CeventPutU3Ec__Iterator3_t1124273298, ___www_0)); }
+	inline UnityWebRequest_t463507806 * get_www_0() const { return ___www_0; }
+	inline UnityWebRequest_t463507806 ** get_address_of_www_0() { return &___www_0; }
+	inline void set_www_0(UnityWebRequest_t463507806 * value)
+	{
+		___www_0 = value;
+		Il2CppCodeGenWriteBarrier((&___www_0), value);
+	}
+
+	inline static int32_t get_offset_of_U24this_1() { return static_cast<int32_t>(offsetof(U3CeventPutU3Ec__Iterator3_t1124273298, ___U24this_1)); }
+	inline TeamPageInit_t768358174 * get_U24this_1() const { return ___U24this_1; }
+	inline TeamPageInit_t768358174 ** get_address_of_U24this_1() { return &___U24this_1; }
+	inline void set_U24this_1(TeamPageInit_t768358174 * value)
+	{
+		___U24this_1 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_1), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_2() { return static_cast<int32_t>(offsetof(U3CeventPutU3Ec__Iterator3_t1124273298, ___U24current_2)); }
+	inline RuntimeObject * get_U24current_2() const { return ___U24current_2; }
+	inline RuntimeObject ** get_address_of_U24current_2() { return &___U24current_2; }
+	inline void set_U24current_2(RuntimeObject * value)
+	{
+		___U24current_2 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_2), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_3() { return static_cast<int32_t>(offsetof(U3CeventPutU3Ec__Iterator3_t1124273298, ___U24disposing_3)); }
+	inline bool get_U24disposing_3() const { return ___U24disposing_3; }
+	inline bool* get_address_of_U24disposing_3() { return &___U24disposing_3; }
+	inline void set_U24disposing_3(bool value)
+	{
+		___U24disposing_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_4() { return static_cast<int32_t>(offsetof(U3CeventPutU3Ec__Iterator3_t1124273298, ___U24PC_4)); }
+	inline int32_t get_U24PC_4() const { return ___U24PC_4; }
+	inline int32_t* get_address_of_U24PC_4() { return &___U24PC_4; }
+	inline void set_U24PC_4(int32_t value)
+	{
+		___U24PC_4 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CEVENTPUTU3EC__ITERATOR3_T1124273298_H
+#ifndef U3CSETTEAMPAGEU3EC__ANONSTOREY4_T711940773_H
+#define U3CSETTEAMPAGEU3EC__ANONSTOREY4_T711940773_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TeamPageInit/<setTeamPage>c__AnonStorey4
+struct  U3CsetTeamPageU3Ec__AnonStorey4_t711940773  : public RuntimeObject
+{
+public:
+	// Team TeamPageInit/<setTeamPage>c__AnonStorey4::t
+	Team_t627267163 * ___t_0;
+	// TeamPageInit TeamPageInit/<setTeamPage>c__AnonStorey4::$this
+	TeamPageInit_t768358174 * ___U24this_1;
+
+public:
+	inline static int32_t get_offset_of_t_0() { return static_cast<int32_t>(offsetof(U3CsetTeamPageU3Ec__AnonStorey4_t711940773, ___t_0)); }
+	inline Team_t627267163 * get_t_0() const { return ___t_0; }
+	inline Team_t627267163 ** get_address_of_t_0() { return &___t_0; }
+	inline void set_t_0(Team_t627267163 * value)
+	{
+		___t_0 = value;
+		Il2CppCodeGenWriteBarrier((&___t_0), value);
+	}
+
+	inline static int32_t get_offset_of_U24this_1() { return static_cast<int32_t>(offsetof(U3CsetTeamPageU3Ec__AnonStorey4_t711940773, ___U24this_1)); }
+	inline TeamPageInit_t768358174 * get_U24this_1() const { return ___U24this_1; }
+	inline TeamPageInit_t768358174 ** get_address_of_U24this_1() { return &___U24this_1; }
+	inline void set_U24this_1(TeamPageInit_t768358174 * value)
+	{
+		___U24this_1 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_1), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CSETTEAMPAGEU3EC__ANONSTOREY4_T711940773_H
 #ifndef TEAMSEARCH_T368283327_H
 #define TEAMSEARCH_T368283327_H
 #ifdef __clang__
@@ -4736,6 +4946,78 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // PROFILEHISTORY_T1906111988_H
+#ifndef U3CNOTIFICATIONLISTERU3EC__ITERATOR0_T1290292342_H
+#define U3CNOTIFICATIONLISTERU3EC__ITERATOR0_T1290292342_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// profileNotificationSetter/<NotificationLister>c__Iterator0
+struct  U3CNotificationListerU3Ec__Iterator0_t1290292342  : public RuntimeObject
+{
+public:
+	// UnityEngine.Networking.UnityWebRequest profileNotificationSetter/<NotificationLister>c__Iterator0::<www>__1
+	UnityWebRequest_t463507806 * ___U3CwwwU3E__1_0;
+	// profileNotificationSetter profileNotificationSetter/<NotificationLister>c__Iterator0::$this
+	profileNotificationSetter_t2988085128 * ___U24this_1;
+	// System.Object profileNotificationSetter/<NotificationLister>c__Iterator0::$current
+	RuntimeObject * ___U24current_2;
+	// System.Boolean profileNotificationSetter/<NotificationLister>c__Iterator0::$disposing
+	bool ___U24disposing_3;
+	// System.Int32 profileNotificationSetter/<NotificationLister>c__Iterator0::$PC
+	int32_t ___U24PC_4;
+
+public:
+	inline static int32_t get_offset_of_U3CwwwU3E__1_0() { return static_cast<int32_t>(offsetof(U3CNotificationListerU3Ec__Iterator0_t1290292342, ___U3CwwwU3E__1_0)); }
+	inline UnityWebRequest_t463507806 * get_U3CwwwU3E__1_0() const { return ___U3CwwwU3E__1_0; }
+	inline UnityWebRequest_t463507806 ** get_address_of_U3CwwwU3E__1_0() { return &___U3CwwwU3E__1_0; }
+	inline void set_U3CwwwU3E__1_0(UnityWebRequest_t463507806 * value)
+	{
+		___U3CwwwU3E__1_0 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CwwwU3E__1_0), value);
+	}
+
+	inline static int32_t get_offset_of_U24this_1() { return static_cast<int32_t>(offsetof(U3CNotificationListerU3Ec__Iterator0_t1290292342, ___U24this_1)); }
+	inline profileNotificationSetter_t2988085128 * get_U24this_1() const { return ___U24this_1; }
+	inline profileNotificationSetter_t2988085128 ** get_address_of_U24this_1() { return &___U24this_1; }
+	inline void set_U24this_1(profileNotificationSetter_t2988085128 * value)
+	{
+		___U24this_1 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_1), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_2() { return static_cast<int32_t>(offsetof(U3CNotificationListerU3Ec__Iterator0_t1290292342, ___U24current_2)); }
+	inline RuntimeObject * get_U24current_2() const { return ___U24current_2; }
+	inline RuntimeObject ** get_address_of_U24current_2() { return &___U24current_2; }
+	inline void set_U24current_2(RuntimeObject * value)
+	{
+		___U24current_2 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_2), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_3() { return static_cast<int32_t>(offsetof(U3CNotificationListerU3Ec__Iterator0_t1290292342, ___U24disposing_3)); }
+	inline bool get_U24disposing_3() const { return ___U24disposing_3; }
+	inline bool* get_address_of_U24disposing_3() { return &___U24disposing_3; }
+	inline void set_U24disposing_3(bool value)
+	{
+		___U24disposing_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_4() { return static_cast<int32_t>(offsetof(U3CNotificationListerU3Ec__Iterator0_t1290292342, ___U24PC_4)); }
+	inline int32_t get_U24PC_4() const { return ___U24PC_4; }
+	inline int32_t* get_address_of_U24PC_4() { return &___U24PC_4; }
+	inline void set_U24PC_4(int32_t value)
+	{
+		___U24PC_4 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CNOTIFICATIONLISTERU3EC__ITERATOR0_T1290292342_H
 #ifndef U3CSETNAMEEMAILU3EC__ANONSTOREY0_T2583701432_H
 #define U3CSETNAMEEMAILU3EC__ANONSTOREY0_T2583701432_H
 #ifdef __clang__
@@ -10177,8 +10459,16 @@ public:
 	getProfileinfo_t2637313008 * ___info_8;
 	// TeamsGet Login::TeamsGet
 	TeamsGet_t3881229921 * ___TeamsGet_9;
+	// UnityEngine.GameObject Login::loading
+	GameObject_t1113636619 * ___loading_10;
+	// System.String Login::dbProfilePut
+	String_t* ___dbProfilePut_11;
+	// System.Collections.IEnumerator Login::coroutine
+	RuntimeObject* ___coroutine_12;
+	// profileNotificationSetter Login::pns
+	profileNotificationSetter_t2988085128 * ___pns_13;
 	// JoinWithTeamInitialize Login::JoinWithTeam
-	JoinWithTeamInitialize_t1277768832 * ___JoinWithTeam_10;
+	JoinWithTeamInitialize_t1277768832 * ___JoinWithTeam_14;
 
 public:
 	inline static int32_t get_offset_of_EventPanel_4() { return static_cast<int32_t>(offsetof(Login_t3691040569, ___EventPanel_4)); }
@@ -10235,13 +10525,49 @@ public:
 		Il2CppCodeGenWriteBarrier((&___TeamsGet_9), value);
 	}
 
-	inline static int32_t get_offset_of_JoinWithTeam_10() { return static_cast<int32_t>(offsetof(Login_t3691040569, ___JoinWithTeam_10)); }
-	inline JoinWithTeamInitialize_t1277768832 * get_JoinWithTeam_10() const { return ___JoinWithTeam_10; }
-	inline JoinWithTeamInitialize_t1277768832 ** get_address_of_JoinWithTeam_10() { return &___JoinWithTeam_10; }
-	inline void set_JoinWithTeam_10(JoinWithTeamInitialize_t1277768832 * value)
+	inline static int32_t get_offset_of_loading_10() { return static_cast<int32_t>(offsetof(Login_t3691040569, ___loading_10)); }
+	inline GameObject_t1113636619 * get_loading_10() const { return ___loading_10; }
+	inline GameObject_t1113636619 ** get_address_of_loading_10() { return &___loading_10; }
+	inline void set_loading_10(GameObject_t1113636619 * value)
 	{
-		___JoinWithTeam_10 = value;
-		Il2CppCodeGenWriteBarrier((&___JoinWithTeam_10), value);
+		___loading_10 = value;
+		Il2CppCodeGenWriteBarrier((&___loading_10), value);
+	}
+
+	inline static int32_t get_offset_of_dbProfilePut_11() { return static_cast<int32_t>(offsetof(Login_t3691040569, ___dbProfilePut_11)); }
+	inline String_t* get_dbProfilePut_11() const { return ___dbProfilePut_11; }
+	inline String_t** get_address_of_dbProfilePut_11() { return &___dbProfilePut_11; }
+	inline void set_dbProfilePut_11(String_t* value)
+	{
+		___dbProfilePut_11 = value;
+		Il2CppCodeGenWriteBarrier((&___dbProfilePut_11), value);
+	}
+
+	inline static int32_t get_offset_of_coroutine_12() { return static_cast<int32_t>(offsetof(Login_t3691040569, ___coroutine_12)); }
+	inline RuntimeObject* get_coroutine_12() const { return ___coroutine_12; }
+	inline RuntimeObject** get_address_of_coroutine_12() { return &___coroutine_12; }
+	inline void set_coroutine_12(RuntimeObject* value)
+	{
+		___coroutine_12 = value;
+		Il2CppCodeGenWriteBarrier((&___coroutine_12), value);
+	}
+
+	inline static int32_t get_offset_of_pns_13() { return static_cast<int32_t>(offsetof(Login_t3691040569, ___pns_13)); }
+	inline profileNotificationSetter_t2988085128 * get_pns_13() const { return ___pns_13; }
+	inline profileNotificationSetter_t2988085128 ** get_address_of_pns_13() { return &___pns_13; }
+	inline void set_pns_13(profileNotificationSetter_t2988085128 * value)
+	{
+		___pns_13 = value;
+		Il2CppCodeGenWriteBarrier((&___pns_13), value);
+	}
+
+	inline static int32_t get_offset_of_JoinWithTeam_14() { return static_cast<int32_t>(offsetof(Login_t3691040569, ___JoinWithTeam_14)); }
+	inline JoinWithTeamInitialize_t1277768832 * get_JoinWithTeam_14() const { return ___JoinWithTeam_14; }
+	inline JoinWithTeamInitialize_t1277768832 ** get_address_of_JoinWithTeam_14() { return &___JoinWithTeam_14; }
+	inline void set_JoinWithTeam_14(JoinWithTeamInitialize_t1277768832 * value)
+	{
+		___JoinWithTeam_14 = value;
+		Il2CppCodeGenWriteBarrier((&___JoinWithTeam_14), value);
 	}
 };
 
@@ -11045,6 +11371,69 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // TEAMPAGEINIT_T768358174_H
+#ifndef TEAMPROFILEINIT_T3516255158_H
+#define TEAMPROFILEINIT_T3516255158_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TeamProfileInit
+struct  TeamProfileInit_t3516255158  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.UI.RawImage TeamProfileInit::pic
+	RawImage_t3182918964 * ___pic_4;
+	// UnityEngine.UI.Text TeamProfileInit::Name
+	Text_t1901882714 * ___Name_5;
+	// UnityEngine.UI.Text TeamProfileInit::Title
+	Text_t1901882714 * ___Title_6;
+	// Profile TeamProfileInit::profile
+	Profile_t2655093077 * ___profile_7;
+
+public:
+	inline static int32_t get_offset_of_pic_4() { return static_cast<int32_t>(offsetof(TeamProfileInit_t3516255158, ___pic_4)); }
+	inline RawImage_t3182918964 * get_pic_4() const { return ___pic_4; }
+	inline RawImage_t3182918964 ** get_address_of_pic_4() { return &___pic_4; }
+	inline void set_pic_4(RawImage_t3182918964 * value)
+	{
+		___pic_4 = value;
+		Il2CppCodeGenWriteBarrier((&___pic_4), value);
+	}
+
+	inline static int32_t get_offset_of_Name_5() { return static_cast<int32_t>(offsetof(TeamProfileInit_t3516255158, ___Name_5)); }
+	inline Text_t1901882714 * get_Name_5() const { return ___Name_5; }
+	inline Text_t1901882714 ** get_address_of_Name_5() { return &___Name_5; }
+	inline void set_Name_5(Text_t1901882714 * value)
+	{
+		___Name_5 = value;
+		Il2CppCodeGenWriteBarrier((&___Name_5), value);
+	}
+
+	inline static int32_t get_offset_of_Title_6() { return static_cast<int32_t>(offsetof(TeamProfileInit_t3516255158, ___Title_6)); }
+	inline Text_t1901882714 * get_Title_6() const { return ___Title_6; }
+	inline Text_t1901882714 ** get_address_of_Title_6() { return &___Title_6; }
+	inline void set_Title_6(Text_t1901882714 * value)
+	{
+		___Title_6 = value;
+		Il2CppCodeGenWriteBarrier((&___Title_6), value);
+	}
+
+	inline static int32_t get_offset_of_profile_7() { return static_cast<int32_t>(offsetof(TeamProfileInit_t3516255158, ___profile_7)); }
+	inline Profile_t2655093077 * get_profile_7() const { return ___profile_7; }
+	inline Profile_t2655093077 ** get_address_of_profile_7() { return &___profile_7; }
+	inline void set_profile_7(Profile_t2655093077 * value)
+	{
+		___profile_7 = value;
+		Il2CppCodeGenWriteBarrier((&___profile_7), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // TEAMPROFILEINIT_T3516255158_H
 #ifndef TEAMSGET_T3881229921_H
 #define TEAMSGET_T3881229921_H
 #ifdef __clang__
@@ -12784,8 +13173,116 @@ public:
 struct  profileNotificationSetter_t2988085128  : public MonoBehaviour_t3962482529
 {
 public:
+	// UnityEngine.GameObject profileNotificationSetter::notificationPrefab
+	GameObject_t1113636619 * ___notificationPrefab_4;
+	// UnityEngine.GameObject profileNotificationSetter::notificationDotPrefab
+	GameObject_t1113636619 * ___notificationDotPrefab_5;
+	// UnityEngine.GameObject profileNotificationSetter::notificationContainer
+	GameObject_t1113636619 * ___notificationContainer_6;
+	// UnityEngine.GameObject profileNotificationSetter::notificationDotContainer
+	GameObject_t1113636619 * ___notificationDotContainer_7;
+	// Jsonparser profileNotificationSetter::j
+	Jsonparser_t2229457866 * ___j_8;
+	// Notifications profileNotificationSetter::notifications
+	Notifications_t987802027 * ___notifications_9;
+	// System.String profileNotificationSetter::notificationURL
+	String_t* ___notificationURL_10;
+	// System.Int32 profileNotificationSetter::retry
+	int32_t ___retry_11;
+	// System.String profileNotificationSetter::jsonString
+	String_t* ___jsonString_12;
+	// UnityEngine.GameObject profileNotificationSetter::NotificationContainerPrefab
+	GameObject_t1113636619 * ___NotificationContainerPrefab_13;
 
 public:
+	inline static int32_t get_offset_of_notificationPrefab_4() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___notificationPrefab_4)); }
+	inline GameObject_t1113636619 * get_notificationPrefab_4() const { return ___notificationPrefab_4; }
+	inline GameObject_t1113636619 ** get_address_of_notificationPrefab_4() { return &___notificationPrefab_4; }
+	inline void set_notificationPrefab_4(GameObject_t1113636619 * value)
+	{
+		___notificationPrefab_4 = value;
+		Il2CppCodeGenWriteBarrier((&___notificationPrefab_4), value);
+	}
+
+	inline static int32_t get_offset_of_notificationDotPrefab_5() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___notificationDotPrefab_5)); }
+	inline GameObject_t1113636619 * get_notificationDotPrefab_5() const { return ___notificationDotPrefab_5; }
+	inline GameObject_t1113636619 ** get_address_of_notificationDotPrefab_5() { return &___notificationDotPrefab_5; }
+	inline void set_notificationDotPrefab_5(GameObject_t1113636619 * value)
+	{
+		___notificationDotPrefab_5 = value;
+		Il2CppCodeGenWriteBarrier((&___notificationDotPrefab_5), value);
+	}
+
+	inline static int32_t get_offset_of_notificationContainer_6() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___notificationContainer_6)); }
+	inline GameObject_t1113636619 * get_notificationContainer_6() const { return ___notificationContainer_6; }
+	inline GameObject_t1113636619 ** get_address_of_notificationContainer_6() { return &___notificationContainer_6; }
+	inline void set_notificationContainer_6(GameObject_t1113636619 * value)
+	{
+		___notificationContainer_6 = value;
+		Il2CppCodeGenWriteBarrier((&___notificationContainer_6), value);
+	}
+
+	inline static int32_t get_offset_of_notificationDotContainer_7() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___notificationDotContainer_7)); }
+	inline GameObject_t1113636619 * get_notificationDotContainer_7() const { return ___notificationDotContainer_7; }
+	inline GameObject_t1113636619 ** get_address_of_notificationDotContainer_7() { return &___notificationDotContainer_7; }
+	inline void set_notificationDotContainer_7(GameObject_t1113636619 * value)
+	{
+		___notificationDotContainer_7 = value;
+		Il2CppCodeGenWriteBarrier((&___notificationDotContainer_7), value);
+	}
+
+	inline static int32_t get_offset_of_j_8() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___j_8)); }
+	inline Jsonparser_t2229457866 * get_j_8() const { return ___j_8; }
+	inline Jsonparser_t2229457866 ** get_address_of_j_8() { return &___j_8; }
+	inline void set_j_8(Jsonparser_t2229457866 * value)
+	{
+		___j_8 = value;
+		Il2CppCodeGenWriteBarrier((&___j_8), value);
+	}
+
+	inline static int32_t get_offset_of_notifications_9() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___notifications_9)); }
+	inline Notifications_t987802027 * get_notifications_9() const { return ___notifications_9; }
+	inline Notifications_t987802027 ** get_address_of_notifications_9() { return &___notifications_9; }
+	inline void set_notifications_9(Notifications_t987802027 * value)
+	{
+		___notifications_9 = value;
+		Il2CppCodeGenWriteBarrier((&___notifications_9), value);
+	}
+
+	inline static int32_t get_offset_of_notificationURL_10() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___notificationURL_10)); }
+	inline String_t* get_notificationURL_10() const { return ___notificationURL_10; }
+	inline String_t** get_address_of_notificationURL_10() { return &___notificationURL_10; }
+	inline void set_notificationURL_10(String_t* value)
+	{
+		___notificationURL_10 = value;
+		Il2CppCodeGenWriteBarrier((&___notificationURL_10), value);
+	}
+
+	inline static int32_t get_offset_of_retry_11() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___retry_11)); }
+	inline int32_t get_retry_11() const { return ___retry_11; }
+	inline int32_t* get_address_of_retry_11() { return &___retry_11; }
+	inline void set_retry_11(int32_t value)
+	{
+		___retry_11 = value;
+	}
+
+	inline static int32_t get_offset_of_jsonString_12() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___jsonString_12)); }
+	inline String_t* get_jsonString_12() const { return ___jsonString_12; }
+	inline String_t** get_address_of_jsonString_12() { return &___jsonString_12; }
+	inline void set_jsonString_12(String_t* value)
+	{
+		___jsonString_12 = value;
+		Il2CppCodeGenWriteBarrier((&___jsonString_12), value);
+	}
+
+	inline static int32_t get_offset_of_NotificationContainerPrefab_13() { return static_cast<int32_t>(offsetof(profileNotificationSetter_t2988085128, ___NotificationContainerPrefab_13)); }
+	inline GameObject_t1113636619 * get_NotificationContainerPrefab_13() const { return ___NotificationContainerPrefab_13; }
+	inline GameObject_t1113636619 ** get_address_of_NotificationContainerPrefab_13() { return &___NotificationContainerPrefab_13; }
+	inline void set_NotificationContainerPrefab_13(GameObject_t1113636619 * value)
+	{
+		___NotificationContainerPrefab_13 = value;
+		Il2CppCodeGenWriteBarrier((&___NotificationContainerPrefab_13), value);
+	}
 };
 
 #ifdef __clang__
@@ -14809,43 +15306,6 @@ public:
 		m_Items[index] = value;
 	}
 };
-// System.String[]
-struct StringU5BU5D_t1281789340  : public RuntimeArray
-{
-public:
-	ALIGN_FIELD (8) String_t* m_Items[1];
-
-public:
-	inline String_t* GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline String_t** GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, String_t* value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier(m_Items + index, value);
-	}
-	inline String_t* GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline String_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, String_t* value)
-	{
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier(m_Items + index, value);
-	}
-};
 // Team[]
 struct TeamU5BU5D_t561935834  : public RuntimeArray
 {
@@ -14878,6 +15338,43 @@ public:
 		return m_Items + index;
 	}
 	inline void SetAtUnchecked(il2cpp_array_size_t index, Team_t627267163 * value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
+// System.String[]
+struct StringU5BU5D_t1281789340  : public RuntimeArray
+{
+public:
+	ALIGN_FIELD (8) String_t* m_Items[1];
+
+public:
+	inline String_t* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, String_t* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+	inline String_t* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, String_t* value)
 	{
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier(m_Items + index, value);
@@ -15066,12 +15563,12 @@ public:
 
 // !!0 UnityEngine.JsonUtility::FromJson<System.Object>(System.String)
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject * JsonUtility_FromJson_TisRuntimeObject_m1405553448_gshared (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method);
+// !!0 UnityEngine.Object::Instantiate<System.Object>(!!0,UnityEngine.Transform)
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject * Object_Instantiate_TisRuntimeObject_m1061214600_gshared (RuntimeObject * __this /* static, unused */, RuntimeObject * p0, Transform_t3600365921 * p1, const RuntimeMethod* method);
 // !!0 UnityEngine.GameObject::GetComponent<System.Object>()
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject * GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared (GameObject_t1113636619 * __this, const RuntimeMethod* method);
 // !!0 UnityEngine.Component::GetComponent<System.Object>()
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject * Component_GetComponent_TisRuntimeObject_m2906321015_gshared (Component_t1923634451 * __this, const RuntimeMethod* method);
-// !!0 UnityEngine.Object::Instantiate<System.Object>(!!0,UnityEngine.Transform)
-extern "C" IL2CPP_METHOD_ATTR RuntimeObject * Object_Instantiate_TisRuntimeObject_m1061214600_gshared (RuntimeObject * __this /* static, unused */, RuntimeObject * p0, Transform_t3600365921 * p1, const RuntimeMethod* method);
 // !!0 UnityEngine.GameObject::AddComponent<System.Object>()
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject * GameObject_AddComponent_TisRuntimeObject_m341300652_gshared (GameObject_t1113636619 * __this, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Int32>::.ctor(System.Int32)
@@ -15093,30 +15590,14 @@ extern "C" IL2CPP_METHOD_ATTR ObjectU5BU5D_t2843939325* List_1_ToArray_m41680204
 
 // System.Void System.Object::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void Object__ctor_m297566312 (RuntimeObject * __this, const RuntimeMethod* method);
-// Firebase.Auth.FirebaseAuth Firebase.Auth.FirebaseAuth::get_DefaultInstance()
-extern "C" IL2CPP_METHOD_ATTR FirebaseAuth_t3361360866 * FirebaseAuth_get_DefaultInstance_m236605690 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
-// Firebase.Auth.FirebaseUser Firebase.Auth.FirebaseAuth::get_CurrentUser()
-extern "C" IL2CPP_METHOD_ATTR FirebaseUser_t4237635511 * FirebaseAuth_get_CurrentUser_m3915863574 (FirebaseAuth_t3361360866 * __this, const RuntimeMethod* method);
-// System.Void UnityEngine.Debug::Log(System.Object)
-extern "C" IL2CPP_METHOD_ATTR void Debug_Log_m4051431634 (RuntimeObject * __this /* static, unused */, RuntimeObject * p0, const RuntimeMethod* method);
-// System.String System.String::Concat(System.String,System.String)
-extern "C" IL2CPP_METHOD_ATTR String_t* String_Concat_m3937257545 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
-// UnityEngine.Networking.UnityWebRequest UnityEngine.Networking.UnityWebRequest::Get(System.String)
-extern "C" IL2CPP_METHOD_ATTR UnityWebRequest_t463507806 * UnityWebRequest_Get_m996521828 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method);
-// System.Void UnityEngine.Networking.UnityWebRequest::SetRequestHeader(System.String,System.String)
-extern "C" IL2CPP_METHOD_ATTR void UnityWebRequest_SetRequestHeader_m2927335855 (UnityWebRequest_t463507806 * __this, String_t* p0, String_t* p1, const RuntimeMethod* method);
 // UnityEngine.Networking.UnityWebRequestAsyncOperation UnityEngine.Networking.UnityWebRequest::SendWebRequest()
 extern "C" IL2CPP_METHOD_ATTR UnityWebRequestAsyncOperation_t3852015985 * UnityWebRequest_SendWebRequest_m489860187 (UnityWebRequest_t463507806 * __this, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Networking.UnityWebRequest::get_isNetworkError()
-extern "C" IL2CPP_METHOD_ATTR bool UnityWebRequest_get_isNetworkError_m1231611882 (UnityWebRequest_t463507806 * __this, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Networking.UnityWebRequest::get_isHttpError()
-extern "C" IL2CPP_METHOD_ATTR bool UnityWebRequest_get_isHttpError_m797082501 (UnityWebRequest_t463507806 * __this, const RuntimeMethod* method);
 // System.Int64 UnityEngine.Networking.UnityWebRequest::get_responseCode()
 extern "C" IL2CPP_METHOD_ATTR int64_t UnityWebRequest_get_responseCode_m1090830473 (UnityWebRequest_t463507806 * __this, const RuntimeMethod* method);
-// System.String UnityEngine.Networking.UnityWebRequest::get_url()
-extern "C" IL2CPP_METHOD_ATTR String_t* UnityWebRequest_get_url_m2568598920 (UnityWebRequest_t463507806 * __this, const RuntimeMethod* method);
-// System.String UnityEngine.Networking.UnityWebRequest::GetRequestHeader(System.String)
-extern "C" IL2CPP_METHOD_ATTR String_t* UnityWebRequest_GetRequestHeader_m1019420783 (UnityWebRequest_t463507806 * __this, String_t* p0, const RuntimeMethod* method);
+// System.String System.String::Concat(System.Object,System.Object)
+extern "C" IL2CPP_METHOD_ATTR String_t* String_Concat_m904156431 (RuntimeObject * __this /* static, unused */, RuntimeObject * p0, RuntimeObject * p1, const RuntimeMethod* method);
+// System.Void UnityEngine.Debug::Log(System.Object)
+extern "C" IL2CPP_METHOD_ATTR void Debug_Log_m4051431634 (RuntimeObject * __this /* static, unused */, RuntimeObject * p0, const RuntimeMethod* method);
 // System.String UnityEngine.Networking.UnityWebRequest::get_error()
 extern "C" IL2CPP_METHOD_ATTR String_t* UnityWebRequest_get_error_m1613086199 (UnityWebRequest_t463507806 * __this, const RuntimeMethod* method);
 // UnityEngine.Networking.DownloadHandler UnityEngine.Networking.UnityWebRequest::get_downloadHandler()
@@ -15125,8 +15606,113 @@ extern "C" IL2CPP_METHOD_ATTR DownloadHandler_t2937767557 * UnityWebRequest_get_
 extern "C" IL2CPP_METHOD_ATTR String_t* DownloadHandler_get_text_m2427232382 (DownloadHandler_t2937767557 * __this, const RuntimeMethod* method);
 // System.Byte[] UnityEngine.Networking.DownloadHandler::get_data()
 extern "C" IL2CPP_METHOD_ATTR ByteU5BU5D_t4116647657* DownloadHandler_get_data_m1669096410 (DownloadHandler_t2937767557 * __this, const RuntimeMethod* method);
+// System.String UnityEngine.Networking.UnityWebRequest::get_url()
+extern "C" IL2CPP_METHOD_ATTR String_t* UnityWebRequest_get_url_m2568598920 (UnityWebRequest_t463507806 * __this, const RuntimeMethod* method);
+// System.String UnityEngine.Networking.UnityWebRequest::GetRequestHeader(System.String)
+extern "C" IL2CPP_METHOD_ATTR String_t* UnityWebRequest_GetRequestHeader_m1019420783 (UnityWebRequest_t463507806 * __this, String_t* p0, const RuntimeMethod* method);
 // System.Text.Encoding System.Text.Encoding::get_UTF8()
 extern "C" IL2CPP_METHOD_ATTR Encoding_t1523322056 * Encoding_get_UTF8_m1008486739 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+// !!0 UnityEngine.JsonUtility::FromJson<EventSearch>(System.String)
+inline EventSearch_t1270132540 * JsonUtility_FromJson_TisEventSearch_t1270132540_m1414630702 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method)
+{
+	return ((  EventSearch_t1270132540 * (*) (RuntimeObject * /* static, unused */, String_t*, const RuntimeMethod*))JsonUtility_FromJson_TisRuntimeObject_m1405553448_gshared)(__this /* static, unused */, p0, method);
+}
+// System.Boolean System.String::op_Inequality(System.String,System.String)
+extern "C" IL2CPP_METHOD_ATTR bool String_op_Inequality_m215368492 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
+// System.Void TeamPageInit::eventPopulator()
+extern "C" IL2CPP_METHOD_ATTR void TeamPageInit_eventPopulator_m1466842129 (TeamPageInit_t768358174 * __this, const RuntimeMethod* method);
+// System.Void System.NotSupportedException::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m2730133172 (NotSupportedException_t1314879016 * __this, const RuntimeMethod* method);
+// System.Void TeamPageInit::Deregister(System.String,System.String)
+extern "C" IL2CPP_METHOD_ATTR void TeamPageInit_Deregister_m3718447045 (TeamPageInit_t768358174 * __this, String_t* ___s0, String_t* ___t1, const RuntimeMethod* method);
+// System.Void Jsonparser::changeTeamRegisterStatus(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void Jsonparser_changeTeamRegisterStatus_m4168605372 (Jsonparser_t2229457866 * __this, int32_t ___priv0, const RuntimeMethod* method);
+// System.Void TeamPageInit::Register(System.String,System.String)
+extern "C" IL2CPP_METHOD_ATTR void TeamPageInit_Register_m1711779249 (TeamPageInit_t768358174 * __this, String_t* ___s0, String_t* ___t1, const RuntimeMethod* method);
+// System.Void UnityEngine.MonoBehaviour::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m1579109191 (MonoBehaviour_t3962482529 * __this, const RuntimeMethod* method);
+// System.String System.String::Concat(System.String,System.String,System.String)
+extern "C" IL2CPP_METHOD_ATTR String_t* String_Concat_m3755062657 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, String_t* p2, const RuntimeMethod* method);
+// System.Int32 System.String::get_Length()
+extern "C" IL2CPP_METHOD_ATTR int32_t String_get_Length_m3847582255 (String_t* __this, const RuntimeMethod* method);
+// System.Void UnityEngine.Texture2D::.ctor(System.Int32,System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void Texture2D__ctor_m373113269 (Texture2D_t3840446185 * __this, int32_t p0, int32_t p1, const RuntimeMethod* method);
+// System.Byte[] System.Convert::FromBase64String(System.String)
+extern "C" IL2CPP_METHOD_ATTR ByteU5BU5D_t4116647657* Convert_FromBase64String_m3685135396 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method);
+// System.Boolean UnityEngine.ImageConversion::LoadImage(UnityEngine.Texture2D,System.Byte[],System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR bool ImageConversion_LoadImage_m601733642 (RuntimeObject * __this /* static, unused */, Texture2D_t3840446185 * p0, ByteU5BU5D_t4116647657* p1, bool p2, const RuntimeMethod* method);
+// System.Void UnityEngine.UI.RawImage::set_texture(UnityEngine.Texture)
+extern "C" IL2CPP_METHOD_ATTR void RawImage_set_texture_m415027901 (RawImage_t3182918964 * __this, Texture_t3661962703 * p0, const RuntimeMethod* method);
+// System.Collections.IEnumerator TeamsGet::teamLister()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* TeamsGet_teamLister_m709058578 (TeamsGet_t3881229921 * __this, const RuntimeMethod* method);
+// UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
+extern "C" IL2CPP_METHOD_ATTR Coroutine_t3829159415 * MonoBehaviour_StartCoroutine_m3411253000 (MonoBehaviour_t3962482529 * __this, RuntimeObject* p0, const RuntimeMethod* method);
+// System.Void TeamsGet/<teamLister>c__Iterator0::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void U3CteamListerU3Ec__Iterator0__ctor_m2875675357 (U3CteamListerU3Ec__Iterator0_t2742360854 * __this, const RuntimeMethod* method);
+// System.Void TeamsGet/<Populator>c__Iterator1::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void U3CPopulatorU3Ec__Iterator1__ctor_m1365444627 (U3CPopulatorU3Ec__Iterator1_t3268492917 * __this, const RuntimeMethod* method);
+// System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+extern "C" IL2CPP_METHOD_ATTR bool Object_op_Equality_m1810815630 (RuntimeObject * __this /* static, unused */, Object_t631007953 * p0, Object_t631007953 * p1, const RuntimeMethod* method);
+// UnityEngine.Transform UnityEngine.GameObject::get_transform()
+extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * GameObject_get_transform_m1369836730 (GameObject_t1113636619 * __this, const RuntimeMethod* method);
+// System.Int32 UnityEngine.Transform::get_childCount()
+extern "C" IL2CPP_METHOD_ATTR int32_t Transform_get_childCount_m3145433196 (Transform_t3600365921 * __this, const RuntimeMethod* method);
+// UnityEngine.Transform UnityEngine.Transform::GetChild(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * Transform_GetChild_m1092972975 (Transform_t3600365921 * __this, int32_t p0, const RuntimeMethod* method);
+// !!0 UnityEngine.Object::Instantiate<UnityEngine.GameObject>(!!0,UnityEngine.Transform)
+inline GameObject_t1113636619 * Object_Instantiate_TisGameObject_t1113636619_m3215236302 (RuntimeObject * __this /* static, unused */, GameObject_t1113636619 * p0, Transform_t3600365921 * p1, const RuntimeMethod* method)
+{
+	return ((  GameObject_t1113636619 * (*) (RuntimeObject * /* static, unused */, GameObject_t1113636619 *, Transform_t3600365921 *, const RuntimeMethod*))Object_Instantiate_TisRuntimeObject_m1061214600_gshared)(__this /* static, unused */, p0, p1, method);
+}
+// !!0 UnityEngine.GameObject::GetComponent<teamInitializer>()
+inline teamInitializer_t188153746 * GameObject_GetComponent_TisteamInitializer_t188153746_m774905409 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
+{
+	return ((  teamInitializer_t188153746 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
+}
+// System.Void teamInitializer::setTeamButton(Team,UnityEngine.GameObject)
+extern "C" IL2CPP_METHOD_ATTR void teamInitializer_setTeamButton_m2216881357 (teamInitializer_t188153746 * __this, Team_t627267163 * ___t0, GameObject_t1113636619 * ___teamPage1, const RuntimeMethod* method);
+// !!0 UnityEngine.GameObject::GetComponent<ScrollSnapRect>()
+inline ScrollSnapRect_t3278334712 * GameObject_GetComponent_TisScrollSnapRect_t3278334712_m1405940431 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
+{
+	return ((  ScrollSnapRect_t3278334712 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
+}
+// System.Void UnityEngine.Behaviour::set_enabled(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void Behaviour_set_enabled_m20417929 (Behaviour_t1437897464 * __this, bool p0, const RuntimeMethod* method);
+// System.Void ScrollSnapRect::Refresh()
+extern "C" IL2CPP_METHOD_ATTR void ScrollSnapRect_Refresh_m3806445074 (ScrollSnapRect_t3278334712 * __this, const RuntimeMethod* method);
+// System.Void TeamsGet::getTopTeams()
+extern "C" IL2CPP_METHOD_ATTR void TeamsGet_getTopTeams_m3412285289 (TeamsGet_t3881229921 * __this, const RuntimeMethod* method);
+// System.Collections.IEnumerator TeamsGet::teamTopLister()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* TeamsGet_teamTopLister_m26192313 (TeamsGet_t3881229921 * __this, const RuntimeMethod* method);
+// System.Void TeamsGet/<teamTopLister>c__Iterator2::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void U3CteamTopListerU3Ec__Iterator2__ctor_m648883402 (U3CteamTopListerU3Ec__Iterator2_t1625396836 * __this, const RuntimeMethod* method);
+// System.Void TeamsGet/<TopPopulator>c__Iterator3::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void U3CTopPopulatorU3Ec__Iterator3__ctor_m1095389565 (U3CTopPopulatorU3Ec__Iterator3_t3488124398 * __this, const RuntimeMethod* method);
+// UnityEngine.GameObject UnityEngine.Component::get_gameObject()
+extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * Component_get_gameObject_m442555142 (Component_t1923634451 * __this, const RuntimeMethod* method);
+// !!0 UnityEngine.GameObject::GetComponent<UnityEngine.UI.Image>()
+inline Image_t2670269651 * GameObject_GetComponent_TisImage_t2670269651_m2486712510 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
+{
+	return ((  Image_t2670269651 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
+}
+// System.Void UnityEngine.GameObject::SetActive(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void GameObject_SetActive_m796801857 (GameObject_t1113636619 * __this, bool p0, const RuntimeMethod* method);
+// UnityEngine.Color UnityEngine.Color::get_white()
+extern "C" IL2CPP_METHOD_ATTR Color_t2555686324  Color_get_white_m332174077 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+// Firebase.Auth.FirebaseAuth Firebase.Auth.FirebaseAuth::get_DefaultInstance()
+extern "C" IL2CPP_METHOD_ATTR FirebaseAuth_t3361360866 * FirebaseAuth_get_DefaultInstance_m236605690 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+// Firebase.Auth.FirebaseUser Firebase.Auth.FirebaseAuth::get_CurrentUser()
+extern "C" IL2CPP_METHOD_ATTR FirebaseUser_t4237635511 * FirebaseAuth_get_CurrentUser_m3915863574 (FirebaseAuth_t3361360866 * __this, const RuntimeMethod* method);
+// System.String System.String::Concat(System.String,System.String)
+extern "C" IL2CPP_METHOD_ATTR String_t* String_Concat_m3937257545 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
+// UnityEngine.Networking.UnityWebRequest UnityEngine.Networking.UnityWebRequest::Get(System.String)
+extern "C" IL2CPP_METHOD_ATTR UnityWebRequest_t463507806 * UnityWebRequest_Get_m996521828 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method);
+// System.Void UnityEngine.Networking.UnityWebRequest::SetRequestHeader(System.String,System.String)
+extern "C" IL2CPP_METHOD_ATTR void UnityWebRequest_SetRequestHeader_m2927335855 (UnityWebRequest_t463507806 * __this, String_t* p0, String_t* p1, const RuntimeMethod* method);
+// System.Boolean UnityEngine.Networking.UnityWebRequest::get_isNetworkError()
+extern "C" IL2CPP_METHOD_ATTR bool UnityWebRequest_get_isNetworkError_m1231611882 (UnityWebRequest_t463507806 * __this, const RuntimeMethod* method);
+// System.Boolean UnityEngine.Networking.UnityWebRequest::get_isHttpError()
+extern "C" IL2CPP_METHOD_ATTR bool UnityWebRequest_get_isHttpError_m797082501 (UnityWebRequest_t463507806 * __this, const RuntimeMethod* method);
 // !!0 UnityEngine.JsonUtility::FromJson<Team>(System.String)
 inline Team_t627267163 * JsonUtility_FromJson_TisTeam_t627267163_m450526261 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method)
 {
@@ -15138,16 +15724,12 @@ extern "C" IL2CPP_METHOD_ATTR String_t* PlayerPrefs_GetString_m389913383 (Runtim
 extern "C" IL2CPP_METHOD_ATTR String_t* String_ToLower_m2029374922 (String_t* __this, const RuntimeMethod* method);
 // System.Boolean System.String::op_Equality(System.String,System.String)
 extern "C" IL2CPP_METHOD_ATTR bool String_op_Equality_m920492651 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
-// System.String System.String::Concat(System.Object,System.Object)
-extern "C" IL2CPP_METHOD_ATTR String_t* String_Concat_m904156431 (RuntimeObject * __this /* static, unused */, RuntimeObject * p0, RuntimeObject * p1, const RuntimeMethod* method);
 // System.Void notificationQueuer::queueTeamNotifications(Team)
 extern "C" IL2CPP_METHOD_ATTR void notificationQueuer_queueTeamNotifications_m956004398 (notificationQueuer_t4183331512 * __this, Team_t627267163 * ___t0, const RuntimeMethod* method);
 // System.Void TeamsGet/<Populator>c__Iterator1::<>__Finally0()
 extern "C" IL2CPP_METHOD_ATTR void U3CPopulatorU3Ec__Iterator1_U3CU3E__Finally0_m1469243204 (U3CPopulatorU3Ec__Iterator1_t3268492917 * __this, const RuntimeMethod* method);
 // System.Void TeamsGet::instantiateTeams(Team[])
 extern "C" IL2CPP_METHOD_ATTR void TeamsGet_instantiateTeams_m1209751037 (TeamsGet_t3881229921 * __this, TeamU5BU5D_t561935834* ___teams0, const RuntimeMethod* method);
-// System.Void System.NotSupportedException::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m2730133172 (NotSupportedException_t1314879016 * __this, const RuntimeMethod* method);
 // System.Void TeamsGet/<TopPopulator>c__Iterator3::<>__Finally0()
 extern "C" IL2CPP_METHOD_ATTR void U3CTopPopulatorU3Ec__Iterator3_U3CU3E__Finally0_m967405022 (U3CTopPopulatorU3Ec__Iterator3_t3488124398 * __this, const RuntimeMethod* method);
 // System.Void TeamsGet::instantiateTopTeams(Team[])
@@ -15160,21 +15742,6 @@ extern "C" IL2CPP_METHOD_ATTR void SceneManager_LoadScene_m3463216446 (RuntimeOb
 extern "C" IL2CPP_METHOD_ATTR String_t* Int64_ToString_m2986581816 (int64_t* __this, const RuntimeMethod* method);
 // System.Void TeamsGet::getTeams()
 extern "C" IL2CPP_METHOD_ATTR void TeamsGet_getTeams_m3668858059 (TeamsGet_t3881229921 * __this, const RuntimeMethod* method);
-// UnityEngine.GameObject UnityEngine.Component::get_gameObject()
-extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * Component_get_gameObject_m442555142 (Component_t1923634451 * __this, const RuntimeMethod* method);
-// !!0 UnityEngine.GameObject::GetComponent<UnityEngine.UI.Image>()
-inline Image_t2670269651 * GameObject_GetComponent_TisImage_t2670269651_m2486712510 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
-{
-	return ((  Image_t2670269651 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
-}
-// UnityEngine.Transform UnityEngine.GameObject::get_transform()
-extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * GameObject_get_transform_m1369836730 (GameObject_t1113636619 * __this, const RuntimeMethod* method);
-// UnityEngine.Transform UnityEngine.Transform::GetChild(System.Int32)
-extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * Transform_GetChild_m1092972975 (Transform_t3600365921 * __this, int32_t p0, const RuntimeMethod* method);
-// System.Void UnityEngine.GameObject::SetActive(System.Boolean)
-extern "C" IL2CPP_METHOD_ATTR void GameObject_SetActive_m796801857 (GameObject_t1113636619 * __this, bool p0, const RuntimeMethod* method);
-// UnityEngine.Color UnityEngine.Color::get_white()
-extern "C" IL2CPP_METHOD_ATTR Color_t2555686324  Color_get_white_m332174077 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // !!0 UnityEngine.JsonUtility::FromJson<teamPrefill>(System.String)
 inline teamPrefill_t1320688299 * JsonUtility_FromJson_TisteamPrefill_t1320688299_m2508224979 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method)
 {
@@ -15182,12 +15749,8 @@ inline teamPrefill_t1320688299 * JsonUtility_FromJson_TisteamPrefill_t1320688299
 }
 // System.Collections.IEnumerator TeamsGet::Populator()
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject* TeamsGet_Populator_m757272477 (TeamsGet_t3881229921 * __this, const RuntimeMethod* method);
-// UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
-extern "C" IL2CPP_METHOD_ATTR Coroutine_t3829159415 * MonoBehaviour_StartCoroutine_m3411253000 (MonoBehaviour_t3962482529 * __this, RuntimeObject* p0, const RuntimeMethod* method);
 // System.Void TeamsGet/<teamLister>c__Iterator0::<>__Finally0()
 extern "C" IL2CPP_METHOD_ATTR void U3CteamListerU3Ec__Iterator0_U3CU3E__Finally0_m1161468502 (U3CteamListerU3Ec__Iterator0_t2742360854 * __this, const RuntimeMethod* method);
-// System.Void TeamsGet::getTopTeams()
-extern "C" IL2CPP_METHOD_ATTR void TeamsGet_getTopTeams_m3412285289 (TeamsGet_t3881229921 * __this, const RuntimeMethod* method);
 // !!0 UnityEngine.JsonUtility::FromJson<teamTopPrefill>(System.String)
 inline teamTopPrefill_t4261041944 * JsonUtility_FromJson_TisteamTopPrefill_t4261041944_m980622271 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method)
 {
@@ -15237,14 +15800,10 @@ extern "C" IL2CPP_METHOD_ATTR void Color__ctor_m2943235014 (Color_t2555686324 * 
 extern "C" IL2CPP_METHOD_ATTR bool Utility_CheckIsFormat_m1448468700 (RuntimeObject * __this /* static, unused */, String_t* ___strRegex0, String_t* ___strValue1, const RuntimeMethod* method);
 // System.String System.String::Trim()
 extern "C" IL2CPP_METHOD_ATTR String_t* String_Trim_m923598732 (String_t* __this, const RuntimeMethod* method);
-// System.Boolean System.String::op_Inequality(System.String,System.String)
-extern "C" IL2CPP_METHOD_ATTR bool String_op_Inequality_m215368492 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
 // System.Void System.Text.RegularExpressions.Regex::.ctor(System.String)
 extern "C" IL2CPP_METHOD_ATTR void Regex__ctor_m3948448025 (Regex_t3657309853 * __this, String_t* p0, const RuntimeMethod* method);
 // System.Boolean System.Text.RegularExpressions.Regex::IsMatch(System.String)
 extern "C" IL2CPP_METHOD_ATTR bool Regex_IsMatch_m4067478295 (Regex_t3657309853 * __this, String_t* p0, const RuntimeMethod* method);
-// System.Void UnityEngine.MonoBehaviour::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m1579109191 (MonoBehaviour_t3962482529 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Color::op_Equality(UnityEngine.Color,UnityEngine.Color)
 extern "C" IL2CPP_METHOD_ATTR bool Color_op_Equality_m1112359053 (RuntimeObject * __this /* static, unused */, Color_t2555686324  p0, Color_t2555686324  p1, const RuntimeMethod* method);
 // UnityEngine.Color UnityEngine.Color::get_clear()
@@ -15278,11 +15837,6 @@ extern "C" IL2CPP_METHOD_ATTR Vector2_t2156229523  RectTransform_get_sizeDelta_m
 extern "C" IL2CPP_METHOD_ATTR void calendarPopulator_populate_m357937676 (calendarPopulator_t3961875236 * __this, const RuntimeMethod* method);
 // System.Void calendarPopulator::changeMonthColor(System.String)
 extern "C" IL2CPP_METHOD_ATTR void calendarPopulator_changeMonthColor_m2040064081 (calendarPopulator_t3961875236 * __this, String_t* ___s0, const RuntimeMethod* method);
-// !!0 UnityEngine.Object::Instantiate<UnityEngine.GameObject>(!!0,UnityEngine.Transform)
-inline GameObject_t1113636619 * Object_Instantiate_TisGameObject_t1113636619_m3215236302 (RuntimeObject * __this /* static, unused */, GameObject_t1113636619 * p0, Transform_t3600365921 * p1, const RuntimeMethod* method)
-{
-	return ((  GameObject_t1113636619 * (*) (RuntimeObject * /* static, unused */, GameObject_t1113636619 *, Transform_t3600365921 *, const RuntimeMethod*))Object_Instantiate_TisRuntimeObject_m1061214600_gshared)(__this /* static, unused */, p0, p1, method);
-}
 // !!0 UnityEngine.GameObject::GetComponent<dayInfo>()
 inline dayInfo_t3924891336 * GameObject_GetComponent_TisdayInfo_t3924891336_m1842419668 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
 {
@@ -15380,8 +15934,6 @@ inline dayInfo_t3924891336 * Component_GetComponent_TisdayInfo_t3924891336_m3064
 }
 // System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
 extern "C" IL2CPP_METHOD_ATTR bool Object_op_Inequality_m4071470834 (RuntimeObject * __this /* static, unused */, Object_t631007953 * p0, Object_t631007953 * p1, const RuntimeMethod* method);
-// System.Int32 UnityEngine.Transform::get_childCount()
-extern "C" IL2CPP_METHOD_ATTR int32_t Transform_get_childCount_m3145433196 (Transform_t3600365921 * __this, const RuntimeMethod* method);
 // System.Void calendarPopulator::instantiateCalendarButtons()
 extern "C" IL2CPP_METHOD_ATTR void calendarPopulator_instantiateCalendarButtons_m4074314450 (calendarPopulator_t3961875236 * __this, const RuntimeMethod* method);
 // !!0 UnityEngine.GameObject::GetComponent<CalendarEventButton>()
@@ -15400,27 +15952,14 @@ inline ScrollSnapRect_t3278334712 * Component_GetComponent_TisScrollSnapRect_t32
 {
 	return ((  ScrollSnapRect_t3278334712 * (*) (Component_t1923634451 *, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m2906321015_gshared)(__this, method);
 }
-// System.Void UnityEngine.Behaviour::set_enabled(System.Boolean)
-extern "C" IL2CPP_METHOD_ATTR void Behaviour_set_enabled_m20417929 (Behaviour_t1437897464 * __this, bool p0, const RuntimeMethod* method);
-// System.Void ScrollSnapRect::Refresh()
-extern "C" IL2CPP_METHOD_ATTR void ScrollSnapRect_Refresh_m3806445074 (ScrollSnapRect_t3278334712 * __this, const RuntimeMethod* method);
 // System.Void notificationQueuer::queueNotifications(Event)
 extern "C" IL2CPP_METHOD_ATTR void notificationQueuer_queueNotifications_m2847983731 (notificationQueuer_t4183331512 * __this, Event_t3739346240 * ___e0, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
-extern "C" IL2CPP_METHOD_ATTR bool Object_op_Equality_m1810815630 (RuntimeObject * __this /* static, unused */, Object_t631007953 * p0, Object_t631007953 * p1, const RuntimeMethod* method);
-// !!0 UnityEngine.GameObject::GetComponent<ScrollSnapRect>()
-inline ScrollSnapRect_t3278334712 * GameObject_GetComponent_TisScrollSnapRect_t3278334712_m1405940431 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
-{
-	return ((  ScrollSnapRect_t3278334712 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
-}
 // System.Void notificationQueuer::setNotification()
 extern "C" IL2CPP_METHOD_ATTR void notificationQueuer_setNotification_m4085289664 (notificationQueuer_t4183331512 * __this, const RuntimeMethod* method);
 // System.Void calendarPopulator::setEventDate(System.String[])
 extern "C" IL2CPP_METHOD_ATTR void calendarPopulator_setEventDate_m603400491 (calendarPopulator_t3961875236 * __this, StringU5BU5D_t1281789340* ___allEvents0, const RuntimeMethod* method);
 // System.String System.String::Substring(System.Int32,System.Int32)
 extern "C" IL2CPP_METHOD_ATTR String_t* String_Substring_m1610150815 (String_t* __this, int32_t p0, int32_t p1, const RuntimeMethod* method);
-// System.String System.String::Concat(System.String,System.String,System.String)
-extern "C" IL2CPP_METHOD_ATTR String_t* String_Concat_m3755062657 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, String_t* p2, const RuntimeMethod* method);
 // System.Int32 System.Int32::Parse(System.String)
 extern "C" IL2CPP_METHOD_ATTR int32_t Int32_Parse_m1033611559 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method);
 // UnityEngine.GameObject UnityEngine.GameObject::FindWithTag(System.String)
@@ -15506,19 +16045,11 @@ extern "C" IL2CPP_METHOD_ATTR void calendarPopulator_setYearMonth_m568193435 (ca
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject* getProfileinfo_GetProfile_m1762325945 (getProfileinfo_t2637313008 * __this, const RuntimeMethod* method);
 // System.Void getProfileinfo/<GetProfile>c__Iterator0::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void U3CGetProfileU3Ec__Iterator0__ctor_m545127880 (U3CGetProfileU3Ec__Iterator0_t3631969045 * __this, const RuntimeMethod* method);
-// System.Void UnityEngine.Texture2D::.ctor(System.Int32,System.Int32)
-extern "C" IL2CPP_METHOD_ATTR void Texture2D__ctor_m373113269 (Texture2D_t3840446185 * __this, int32_t p0, int32_t p1, const RuntimeMethod* method);
-// System.Byte[] System.Convert::FromBase64String(System.String)
-extern "C" IL2CPP_METHOD_ATTR ByteU5BU5D_t4116647657* Convert_FromBase64String_m3685135396 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method);
-// System.Boolean UnityEngine.ImageConversion::LoadImage(UnityEngine.Texture2D,System.Byte[],System.Boolean)
-extern "C" IL2CPP_METHOD_ATTR bool ImageConversion_LoadImage_m601733642 (RuntimeObject * __this /* static, unused */, Texture2D_t3840446185 * p0, ByteU5BU5D_t4116647657* p1, bool p2, const RuntimeMethod* method);
 // !!0 UnityEngine.GameObject::GetComponent<UnityEngine.UI.RawImage>()
 inline RawImage_t3182918964 * GameObject_GetComponent_TisRawImage_t3182918964_m856277241 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
 {
 	return ((  RawImage_t3182918964 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
 }
-// System.Void UnityEngine.UI.RawImage::set_texture(UnityEngine.Texture)
-extern "C" IL2CPP_METHOD_ATTR void RawImage_set_texture_m415027901 (RawImage_t3182918964 * __this, Texture_t3661962703 * p0, const RuntimeMethod* method);
 // System.String UnityEngine.PlayerPrefs::GetString(System.String,System.String)
 extern "C" IL2CPP_METHOD_ATTR String_t* PlayerPrefs_GetString_m614532710 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
 // !!0 UnityEngine.JsonUtility::FromJson<Profile>(System.String)
@@ -15654,8 +16185,21 @@ extern "C" IL2CPP_METHOD_ATTR void Texture2D_ReadPixels_m3395504488 (Texture2D_t
 extern "C" IL2CPP_METHOD_ATTR void RenderTexture_ReleaseTemporary_m2400081536 (RuntimeObject * __this /* static, unused */, RenderTexture_t2108887433 * p0, const RuntimeMethod* method);
 // UnityEngine.Color[] UnityEngine.Texture2D::GetPixels(System.Int32,System.Int32,System.Int32,System.Int32)
 extern "C" IL2CPP_METHOD_ATTR ColorU5BU5D_t941916413* Texture2D_GetPixels_m255035209 (Texture2D_t3840446185 * __this, int32_t p0, int32_t p1, int32_t p2, int32_t p3, const RuntimeMethod* method);
-// System.Int32 System.String::get_Length()
-extern "C" IL2CPP_METHOD_ATTR int32_t String_get_Length_m3847582255 (String_t* __this, const RuntimeMethod* method);
+// System.Collections.IEnumerator profileNotificationSetter::NotificationLister()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* profileNotificationSetter_NotificationLister_m4294553938 (profileNotificationSetter_t2988085128 * __this, const RuntimeMethod* method);
+// System.Void profileNotificationSetter/<NotificationLister>c__Iterator0::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void U3CNotificationListerU3Ec__Iterator0__ctor_m2656944142 (U3CNotificationListerU3Ec__Iterator0_t1290292342 * __this, const RuntimeMethod* method);
+// System.Void profileNotificationSetter::getNotifications()
+extern "C" IL2CPP_METHOD_ATTR void profileNotificationSetter_getNotifications_m4005455675 (profileNotificationSetter_t2988085128 * __this, const RuntimeMethod* method);
+// !!0 UnityEngine.JsonUtility::FromJson<Notifications>(System.String)
+inline Notifications_t987802027 * JsonUtility_FromJson_TisNotifications_t987802027_m2787351905 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method)
+{
+	return ((  Notifications_t987802027 * (*) (RuntimeObject * /* static, unused */, String_t*, const RuntimeMethod*))JsonUtility_FromJson_TisRuntimeObject_m1405553448_gshared)(__this /* static, unused */, p0, method);
+}
+// System.Void profileNotificationSetter::notificationInitializer()
+extern "C" IL2CPP_METHOD_ATTR void profileNotificationSetter_notificationInitializer_m805960625 (profileNotificationSetter_t2988085128 * __this, const RuntimeMethod* method);
+// System.Void profileNotificationSetter/<NotificationLister>c__Iterator0::<>__Finally0()
+extern "C" IL2CPP_METHOD_ATTR void U3CNotificationListerU3Ec__Iterator0_U3CU3E__Finally0_m1894724873 (U3CNotificationListerU3Ec__Iterator0_t1290292342 * __this, const RuntimeMethod* method);
 // System.Void profileSearchInitializer/<setNameEmail>c__AnonStorey0::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void U3CsetNameEmailU3Ec__AnonStorey0__ctor_m2540805396 (U3CsetNameEmailU3Ec__AnonStorey0_t2583701432 * __this, const RuntimeMethod* method);
 // UnityEngine.UI.Button/ButtonClickedEvent UnityEngine.UI.Button::get_onClick()
@@ -15727,6 +16271,864 @@ inline Button_t4055032469 * Component_GetComponent_TisButton_t4055032469_m138187
 {
 	return ((  Button_t4055032469 * (*) (Component_t1923634451 *, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m2906321015_gshared)(__this, method);
 }
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void TeamPageInit/<eventPut>c__Iterator3::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void U3CeventPutU3Ec__Iterator3__ctor_m1581833304 (U3CeventPutU3Ec__Iterator3_t1124273298 * __this, const RuntimeMethod* method)
+{
+	{
+		Object__ctor_m297566312(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Boolean TeamPageInit/<eventPut>c__Iterator3::MoveNext()
+extern "C" IL2CPP_METHOD_ATTR bool U3CeventPutU3Ec__Iterator3_MoveNext_m4125901295 (U3CeventPutU3Ec__Iterator3_t1124273298 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (U3CeventPutU3Ec__Iterator3_MoveNext_m4125901295_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint32_t V_0 = 0;
+	ByteU5BU5D_t4116647657* V_1 = NULL;
+	{
+		int32_t L_0 = __this->get_U24PC_4();
+		V_0 = L_0;
+		__this->set_U24PC_4((-1));
+		uint32_t L_1 = V_0;
+		switch (L_1)
+		{
+			case 0:
+			{
+				goto IL_0021;
+			}
+			case 1:
+			{
+				goto IL_0046;
+			}
+		}
+	}
+	{
+		goto IL_0168;
+	}
+
+IL_0021:
+	{
+		UnityWebRequest_t463507806 * L_2 = __this->get_www_0();
+		NullCheck(L_2);
+		UnityWebRequestAsyncOperation_t3852015985 * L_3 = UnityWebRequest_SendWebRequest_m489860187(L_2, /*hidden argument*/NULL);
+		__this->set_U24current_2(L_3);
+		bool L_4 = __this->get_U24disposing_3();
+		if (L_4)
+		{
+			goto IL_0041;
+		}
+	}
+	{
+		__this->set_U24PC_4(1);
+	}
+
+IL_0041:
+	{
+		goto IL_016a;
+	}
+
+IL_0046:
+	{
+		UnityWebRequest_t463507806 * L_5 = __this->get_www_0();
+		NullCheck(L_5);
+		int64_t L_6 = UnityWebRequest_get_responseCode_m1090830473(L_5, /*hidden argument*/NULL);
+		int64_t L_7 = L_6;
+		RuntimeObject * L_8 = Box(Int64_t3736567304_il2cpp_TypeInfo_var, &L_7);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_9 = String_Concat_m904156431(NULL /*static, unused*/, _stringLiteral3693305595, L_8, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+		Debug_Log_m4051431634(NULL /*static, unused*/, L_9, /*hidden argument*/NULL);
+		UnityWebRequest_t463507806 * L_10 = __this->get_www_0();
+		NullCheck(L_10);
+		String_t* L_11 = UnityWebRequest_get_error_m1613086199(L_10, /*hidden argument*/NULL);
+		Debug_Log_m4051431634(NULL /*static, unused*/, L_11, /*hidden argument*/NULL);
+		UnityWebRequest_t463507806 * L_12 = __this->get_www_0();
+		NullCheck(L_12);
+		DownloadHandler_t2937767557 * L_13 = UnityWebRequest_get_downloadHandler_m534911913(L_12, /*hidden argument*/NULL);
+		NullCheck(L_13);
+		String_t* L_14 = DownloadHandler_get_text_m2427232382(L_13, /*hidden argument*/NULL);
+		Debug_Log_m4051431634(NULL /*static, unused*/, L_14, /*hidden argument*/NULL);
+		UnityWebRequest_t463507806 * L_15 = __this->get_www_0();
+		NullCheck(L_15);
+		DownloadHandler_t2937767557 * L_16 = UnityWebRequest_get_downloadHandler_m534911913(L_15, /*hidden argument*/NULL);
+		NullCheck(L_16);
+		ByteU5BU5D_t4116647657* L_17 = DownloadHandler_get_data_m1669096410(L_16, /*hidden argument*/NULL);
+		Debug_Log_m4051431634(NULL /*static, unused*/, (RuntimeObject *)(RuntimeObject *)L_17, /*hidden argument*/NULL);
+		UnityWebRequest_t463507806 * L_18 = __this->get_www_0();
+		NullCheck(L_18);
+		String_t* L_19 = UnityWebRequest_get_url_m2568598920(L_18, /*hidden argument*/NULL);
+		Debug_Log_m4051431634(NULL /*static, unused*/, L_19, /*hidden argument*/NULL);
+		UnityWebRequest_t463507806 * L_20 = __this->get_www_0();
+		NullCheck(L_20);
+		String_t* L_21 = UnityWebRequest_GetRequestHeader_m1019420783(L_20, _stringLiteral1574691733, /*hidden argument*/NULL);
+		Debug_Log_m4051431634(NULL /*static, unused*/, L_21, /*hidden argument*/NULL);
+		UnityWebRequest_t463507806 * L_22 = __this->get_www_0();
+		NullCheck(L_22);
+		int64_t L_23 = UnityWebRequest_get_responseCode_m1090830473(L_22, /*hidden argument*/NULL);
+		if ((!(((uint64_t)L_23) == ((uint64_t)(((int64_t)((int64_t)((int32_t)200))))))))
+		{
+			goto IL_0161;
+		}
+	}
+	{
+		UnityWebRequest_t463507806 * L_24 = __this->get_www_0();
+		NullCheck(L_24);
+		DownloadHandler_t2937767557 * L_25 = UnityWebRequest_get_downloadHandler_m534911913(L_24, /*hidden argument*/NULL);
+		NullCheck(L_25);
+		ByteU5BU5D_t4116647657* L_26 = DownloadHandler_get_data_m1669096410(L_25, /*hidden argument*/NULL);
+		V_1 = L_26;
+		TeamPageInit_t768358174 * L_27 = __this->get_U24this_1();
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_28 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
+		NullCheck(L_27);
+		L_27->set_jsonString_23(L_28);
+		TeamPageInit_t768358174 * L_29 = __this->get_U24this_1();
+		IL2CPP_RUNTIME_CLASS_INIT(Encoding_t1523322056_il2cpp_TypeInfo_var);
+		Encoding_t1523322056 * L_30 = Encoding_get_UTF8_m1008486739(NULL /*static, unused*/, /*hidden argument*/NULL);
+		ByteU5BU5D_t4116647657* L_31 = V_1;
+		NullCheck(L_30);
+		String_t* L_32 = VirtFuncInvoker1< String_t*, ByteU5BU5D_t4116647657* >::Invoke(22 /* System.String System.Text.Encoding::GetString(System.Byte[]) */, L_30, L_31);
+		NullCheck(L_29);
+		L_29->set_jsonString_23(L_32);
+		TeamPageInit_t768358174 * L_33 = __this->get_U24this_1();
+		NullCheck(L_33);
+		String_t* L_34 = L_33->get_jsonString_23();
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+		Debug_Log_m4051431634(NULL /*static, unused*/, L_34, /*hidden argument*/NULL);
+		TeamPageInit_t768358174 * L_35 = __this->get_U24this_1();
+		TeamPageInit_t768358174 * L_36 = __this->get_U24this_1();
+		NullCheck(L_36);
+		String_t* L_37 = L_36->get_jsonString_23();
+		EventSearch_t1270132540 * L_38 = JsonUtility_FromJson_TisEventSearch_t1270132540_m1414630702(NULL /*static, unused*/, L_37, /*hidden argument*/JsonUtility_FromJson_TisEventSearch_t1270132540_m1414630702_RuntimeMethod_var);
+		NullCheck(L_35);
+		L_35->set_eSearch_28(L_38);
+		TeamPageInit_t768358174 * L_39 = __this->get_U24this_1();
+		NullCheck(L_39);
+		String_t* L_40 = L_39->get_jsonString_23();
+		bool L_41 = String_op_Inequality_m215368492(NULL /*static, unused*/, L_40, _stringLiteral3455956949, /*hidden argument*/NULL);
+		if (!L_41)
+		{
+			goto IL_0161;
+		}
+	}
+	{
+		TeamPageInit_t768358174 * L_42 = __this->get_U24this_1();
+		NullCheck(L_42);
+		TeamPageInit_eventPopulator_m1466842129(L_42, /*hidden argument*/NULL);
+	}
+
+IL_0161:
+	{
+		__this->set_U24PC_4((-1));
+	}
+
+IL_0168:
+	{
+		return (bool)0;
+	}
+
+IL_016a:
+	{
+		return (bool)1;
+	}
+}
+// System.Object TeamPageInit/<eventPut>c__Iterator3::System.Collections.Generic.IEnumerator<object>.get_Current()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject * U3CeventPutU3Ec__Iterator3_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m562374806 (U3CeventPutU3Ec__Iterator3_t1124273298 * __this, const RuntimeMethod* method)
+{
+	{
+		RuntimeObject * L_0 = __this->get_U24current_2();
+		return L_0;
+	}
+}
+// System.Object TeamPageInit/<eventPut>c__Iterator3::System.Collections.IEnumerator.get_Current()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject * U3CeventPutU3Ec__Iterator3_System_Collections_IEnumerator_get_Current_m379355 (U3CeventPutU3Ec__Iterator3_t1124273298 * __this, const RuntimeMethod* method)
+{
+	{
+		RuntimeObject * L_0 = __this->get_U24current_2();
+		return L_0;
+	}
+}
+// System.Void TeamPageInit/<eventPut>c__Iterator3::Dispose()
+extern "C" IL2CPP_METHOD_ATTR void U3CeventPutU3Ec__Iterator3_Dispose_m1474432333 (U3CeventPutU3Ec__Iterator3_t1124273298 * __this, const RuntimeMethod* method)
+{
+	{
+		__this->set_U24disposing_3((bool)1);
+		__this->set_U24PC_4((-1));
+		return;
+	}
+}
+// System.Void TeamPageInit/<eventPut>c__Iterator3::Reset()
+extern "C" IL2CPP_METHOD_ATTR void U3CeventPutU3Ec__Iterator3_Reset_m1750347568 (U3CeventPutU3Ec__Iterator3_t1124273298 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (U3CeventPutU3Ec__Iterator3_Reset_m1750347568_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		NotSupportedException_t1314879016 * L_0 = (NotSupportedException_t1314879016 *)il2cpp_codegen_object_new(NotSupportedException_t1314879016_il2cpp_TypeInfo_var);
+		NotSupportedException__ctor_m2730133172(L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, NULL, U3CeventPutU3Ec__Iterator3_Reset_m1750347568_RuntimeMethod_var);
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void TeamPageInit/<setTeamPage>c__AnonStorey4::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void U3CsetTeamPageU3Ec__AnonStorey4__ctor_m44758647 (U3CsetTeamPageU3Ec__AnonStorey4_t711940773 * __this, const RuntimeMethod* method)
+{
+	{
+		Object__ctor_m297566312(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void TeamPageInit/<setTeamPage>c__AnonStorey4::<>m__0()
+extern "C" IL2CPP_METHOD_ATTR void U3CsetTeamPageU3Ec__AnonStorey4_U3CU3Em__0_m3815948852 (U3CsetTeamPageU3Ec__AnonStorey4_t711940773 * __this, const RuntimeMethod* method)
+{
+	{
+		TeamPageInit_t768358174 * L_0 = __this->get_U24this_1();
+		Team_t627267163 * L_1 = __this->get_t_0();
+		NullCheck(L_1);
+		String_t* L_2 = L_1->get_t_orig_name_10();
+		TeamPageInit_t768358174 * L_3 = __this->get_U24this_1();
+		NullCheck(L_3);
+		Jsonparser_t2229457866 * L_4 = L_3->get_j_19();
+		NullCheck(L_4);
+		String_t* L_5 = L_4->get_token_6();
+		NullCheck(L_0);
+		TeamPageInit_Deregister_m3718447045(L_0, L_2, L_5, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void TeamPageInit/<setTeamPage>c__AnonStorey4::<>m__1()
+extern "C" IL2CPP_METHOD_ATTR void U3CsetTeamPageU3Ec__AnonStorey4_U3CU3Em__1_m1859633716 (U3CsetTeamPageU3Ec__AnonStorey4_t711940773 * __this, const RuntimeMethod* method)
+{
+	{
+		TeamPageInit_t768358174 * L_0 = __this->get_U24this_1();
+		NullCheck(L_0);
+		Jsonparser_t2229457866 * L_1 = L_0->get_j_19();
+		NullCheck(L_1);
+		Jsonparser_changeTeamRegisterStatus_m4168605372(L_1, 0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void TeamPageInit/<setTeamPage>c__AnonStorey4::<>m__2()
+extern "C" IL2CPP_METHOD_ATTR void U3CsetTeamPageU3Ec__AnonStorey4_U3CU3Em__2_m4198285876 (U3CsetTeamPageU3Ec__AnonStorey4_t711940773 * __this, const RuntimeMethod* method)
+{
+	{
+		TeamPageInit_t768358174 * L_0 = __this->get_U24this_1();
+		NullCheck(L_0);
+		Jsonparser_t2229457866 * L_1 = L_0->get_j_19();
+		NullCheck(L_1);
+		Jsonparser_changeTeamRegisterStatus_m4168605372(L_1, (-1), /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void TeamPageInit/<setTeamPage>c__AnonStorey4::<>m__3()
+extern "C" IL2CPP_METHOD_ATTR void U3CsetTeamPageU3Ec__AnonStorey4_U3CU3Em__3_m2241970740 (U3CsetTeamPageU3Ec__AnonStorey4_t711940773 * __this, const RuntimeMethod* method)
+{
+	{
+		TeamPageInit_t768358174 * L_0 = __this->get_U24this_1();
+		Team_t627267163 * L_1 = __this->get_t_0();
+		NullCheck(L_1);
+		String_t* L_2 = L_1->get_t_orig_name_10();
+		TeamPageInit_t768358174 * L_3 = __this->get_U24this_1();
+		NullCheck(L_3);
+		Jsonparser_t2229457866 * L_4 = L_3->get_j_19();
+		NullCheck(L_4);
+		String_t* L_5 = L_4->get_token_6();
+		NullCheck(L_0);
+		TeamPageInit_Register_m1711779249(L_0, L_2, L_5, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void TeamPageInit/<setTeamPage>c__AnonStorey4::<>m__4()
+extern "C" IL2CPP_METHOD_ATTR void U3CsetTeamPageU3Ec__AnonStorey4_U3CU3Em__4_m3051274804 (U3CsetTeamPageU3Ec__AnonStorey4_t711940773 * __this, const RuntimeMethod* method)
+{
+	{
+		TeamPageInit_t768358174 * L_0 = __this->get_U24this_1();
+		NullCheck(L_0);
+		Jsonparser_t2229457866 * L_1 = L_0->get_j_19();
+		NullCheck(L_1);
+		Jsonparser_changeTeamRegisterStatus_m4168605372(L_1, 1, /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void TeamProfileInit::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void TeamProfileInit__ctor_m3781480937 (TeamProfileInit_t3516255158 * __this, const RuntimeMethod* method)
+{
+	{
+		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void TeamProfileInit::setTeamProfile(Profile,System.String)
+extern "C" IL2CPP_METHOD_ATTR void TeamProfileInit_setTeamProfile_m1401687269 (TeamProfileInit_t3516255158 * __this, Profile_t2655093077 * ___p0, String_t* ___orig1, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (TeamProfileInit_setTeamProfile_m1401687269_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Texture2D_t3840446185 * V_0 = NULL;
+	ByteU5BU5D_t4116647657* V_1 = NULL;
+	{
+		Profile_t2655093077 * L_0 = ___p0;
+		__this->set_profile_7(L_0);
+		Text_t1901882714 * L_1 = __this->get_Name_5();
+		Profile_t2655093077 * L_2 = ___p0;
+		NullCheck(L_2);
+		String_t* L_3 = L_2->get_first_name_0();
+		Profile_t2655093077 * L_4 = ___p0;
+		NullCheck(L_4);
+		String_t* L_5 = L_4->get_last_name_1();
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_6 = String_Concat_m3755062657(NULL /*static, unused*/, L_3, _stringLiteral3452614528, L_5, /*hidden argument*/NULL);
+		NullCheck(L_1);
+		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_1, L_6);
+		Profile_t2655093077 * L_7 = ___p0;
+		NullCheck(L_7);
+		String_t* L_8 = L_7->get_photo_19();
+		NullCheck(L_8);
+		int32_t L_9 = String_get_Length_m3847582255(L_8, /*hidden argument*/NULL);
+		if ((((int32_t)L_9) <= ((int32_t)((int32_t)300))))
+		{
+			goto IL_0074;
+		}
+	}
+	{
+		Texture2D_t3840446185 * L_10 = (Texture2D_t3840446185 *)il2cpp_codegen_object_new(Texture2D_t3840446185_il2cpp_TypeInfo_var);
+		Texture2D__ctor_m373113269(L_10, ((int32_t)200), ((int32_t)200), /*hidden argument*/NULL);
+		V_0 = L_10;
+		Profile_t2655093077 * L_11 = ___p0;
+		NullCheck(L_11);
+		String_t* L_12 = L_11->get_photo_19();
+		IL2CPP_RUNTIME_CLASS_INIT(Convert_t2465617642_il2cpp_TypeInfo_var);
+		ByteU5BU5D_t4116647657* L_13 = Convert_FromBase64String_m3685135396(NULL /*static, unused*/, L_12, /*hidden argument*/NULL);
+		V_1 = L_13;
+		ByteU5BU5D_t4116647657* L_14 = V_1;
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+		Debug_Log_m4051431634(NULL /*static, unused*/, (RuntimeObject *)(RuntimeObject *)L_14, /*hidden argument*/NULL);
+		Texture2D_t3840446185 * L_15 = V_0;
+		ByteU5BU5D_t4116647657* L_16 = V_1;
+		ImageConversion_LoadImage_m601733642(NULL /*static, unused*/, L_15, L_16, (bool)0, /*hidden argument*/NULL);
+		RawImage_t3182918964 * L_17 = __this->get_pic_4();
+		Texture2D_t3840446185 * L_18 = V_0;
+		NullCheck(L_17);
+		RawImage_set_texture_m415027901(L_17, L_18, /*hidden argument*/NULL);
+	}
+
+IL_0074:
+	{
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void TeamSearch::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void TeamSearch__ctor_m3899620255 (TeamSearch_t368283327 * __this, const RuntimeMethod* method)
+{
+	{
+		Object__ctor_m297566312(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void TeamsGet::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void TeamsGet__ctor_m211097906 (TeamsGet_t3881229921 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (TeamsGet__ctor_m211097906_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		__this->set_teamURL_15(_stringLiteral3781941264);
+		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void TeamsGet::getTeams()
+extern "C" IL2CPP_METHOD_ATTR void TeamsGet_getTeams_m3668858059 (TeamsGet_t3881229921 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (TeamsGet_getTeams_m3668858059_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+		Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral1473685639, /*hidden argument*/NULL);
+		RuntimeObject* L_0 = TeamsGet_teamLister_m709058578(__this, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Collections.IEnumerator TeamsGet::teamLister()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* TeamsGet_teamLister_m709058578 (TeamsGet_t3881229921 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (TeamsGet_teamLister_m709058578_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CteamListerU3Ec__Iterator0_t2742360854 * V_0 = NULL;
+	{
+		U3CteamListerU3Ec__Iterator0_t2742360854 * L_0 = (U3CteamListerU3Ec__Iterator0_t2742360854 *)il2cpp_codegen_object_new(U3CteamListerU3Ec__Iterator0_t2742360854_il2cpp_TypeInfo_var);
+		U3CteamListerU3Ec__Iterator0__ctor_m2875675357(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		U3CteamListerU3Ec__Iterator0_t2742360854 * L_1 = V_0;
+		NullCheck(L_1);
+		L_1->set_U24this_3(__this);
+		U3CteamListerU3Ec__Iterator0_t2742360854 * L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Collections.IEnumerator TeamsGet::Populator()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* TeamsGet_Populator_m757272477 (TeamsGet_t3881229921 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (TeamsGet_Populator_m757272477_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CPopulatorU3Ec__Iterator1_t3268492917 * V_0 = NULL;
+	{
+		U3CPopulatorU3Ec__Iterator1_t3268492917 * L_0 = (U3CPopulatorU3Ec__Iterator1_t3268492917 *)il2cpp_codegen_object_new(U3CPopulatorU3Ec__Iterator1_t3268492917_il2cpp_TypeInfo_var);
+		U3CPopulatorU3Ec__Iterator1__ctor_m1365444627(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		U3CPopulatorU3Ec__Iterator1_t3268492917 * L_1 = V_0;
+		NullCheck(L_1);
+		L_1->set_U24this_5(__this);
+		U3CPopulatorU3Ec__Iterator1_t3268492917 * L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Void TeamsGet::instantiateTeams(Team[])
+extern "C" IL2CPP_METHOD_ATTR void TeamsGet_instantiateTeams_m1209751037 (TeamsGet_t3881229921 * __this, TeamU5BU5D_t561935834* ___teams0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (TeamsGet_instantiateTeams_m1209751037_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		V_0 = 0;
+		goto IL_00ac;
+	}
+
+IL_0007:
+	{
+		GameObject_t1113636619 * L_0 = __this->get_newTeamContainer_9();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_1 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (L_1)
+		{
+			goto IL_002e;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_2 = __this->get_newTeamContainer_9();
+		NullCheck(L_2);
+		Transform_t3600365921 * L_3 = GameObject_get_transform_m1369836730(L_2, /*hidden argument*/NULL);
+		NullCheck(L_3);
+		int32_t L_4 = Transform_get_childCount_m3145433196(L_3, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_4) == ((uint32_t)2))))
+		{
+			goto IL_0050;
+		}
+	}
+
+IL_002e:
+	{
+		GameObject_t1113636619 * L_5 = __this->get_TeamContainer_8();
+		GameObject_t1113636619 * L_6 = __this->get_SuggestedTeams_4();
+		NullCheck(L_6);
+		Transform_t3600365921 * L_7 = GameObject_get_transform_m1369836730(L_6, /*hidden argument*/NULL);
+		NullCheck(L_7);
+		Transform_t3600365921 * L_8 = Transform_GetChild_m1092972975(L_7, 0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		GameObject_t1113636619 * L_9 = Object_Instantiate_TisGameObject_t1113636619_m3215236302(NULL /*static, unused*/, L_5, L_8, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m3215236302_RuntimeMethod_var);
+		__this->set_newTeamContainer_9(L_9);
+	}
+
+IL_0050:
+	{
+		GameObject_t1113636619 * L_10 = __this->get_newTeamContainer_9();
+		NullCheck(L_10);
+		Transform_t3600365921 * L_11 = GameObject_get_transform_m1369836730(L_10, /*hidden argument*/NULL);
+		NullCheck(L_11);
+		int32_t L_12 = Transform_get_childCount_m3145433196(L_11, /*hidden argument*/NULL);
+		if ((((int32_t)L_12) >= ((int32_t)2)))
+		{
+			goto IL_00a8;
+		}
+	}
+	{
+		TeamU5BU5D_t561935834* L_13 = ___teams0;
+		int32_t L_14 = V_0;
+		NullCheck(L_13);
+		int32_t L_15 = L_14;
+		Team_t627267163 * L_16 = (L_13)->GetAt(static_cast<il2cpp_array_size_t>(L_15));
+		if (L_16)
+		{
+			goto IL_0073;
+		}
+	}
+	{
+		goto IL_00a8;
+	}
+
+IL_0073:
+	{
+		GameObject_t1113636619 * L_17 = __this->get_TeamPrefab_6();
+		GameObject_t1113636619 * L_18 = __this->get_newTeamContainer_9();
+		NullCheck(L_18);
+		Transform_t3600365921 * L_19 = GameObject_get_transform_m1369836730(L_18, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		GameObject_t1113636619 * L_20 = Object_Instantiate_TisGameObject_t1113636619_m3215236302(NULL /*static, unused*/, L_17, L_19, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m3215236302_RuntimeMethod_var);
+		__this->set_currentTeam_7(L_20);
+		GameObject_t1113636619 * L_21 = __this->get_currentTeam_7();
+		NullCheck(L_21);
+		teamInitializer_t188153746 * L_22 = GameObject_GetComponent_TisteamInitializer_t188153746_m774905409(L_21, /*hidden argument*/GameObject_GetComponent_TisteamInitializer_t188153746_m774905409_RuntimeMethod_var);
+		TeamU5BU5D_t561935834* L_23 = ___teams0;
+		int32_t L_24 = V_0;
+		NullCheck(L_23);
+		int32_t L_25 = L_24;
+		Team_t627267163 * L_26 = (L_23)->GetAt(static_cast<il2cpp_array_size_t>(L_25));
+		GameObject_t1113636619 * L_27 = __this->get_teamsPage_16();
+		NullCheck(L_22);
+		teamInitializer_setTeamButton_m2216881357(L_22, L_26, L_27, /*hidden argument*/NULL);
+	}
+
+IL_00a8:
+	{
+		int32_t L_28 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add((int32_t)L_28, (int32_t)1));
+	}
+
+IL_00ac:
+	{
+		int32_t L_29 = V_0;
+		TeamU5BU5D_t561935834* L_30 = ___teams0;
+		NullCheck(L_30);
+		if ((((int32_t)L_29) < ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_30)->max_length)))))))
+		{
+			goto IL_0007;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_31 = __this->get_newTeamContainer_9();
+		NullCheck(L_31);
+		Transform_t3600365921 * L_32 = GameObject_get_transform_m1369836730(L_31, /*hidden argument*/NULL);
+		NullCheck(L_32);
+		int32_t L_33 = Transform_get_childCount_m3145433196(L_32, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_33) == ((uint32_t)1))))
+		{
+			goto IL_00e2;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_34 = __this->get_EmptyTeam_10();
+		GameObject_t1113636619 * L_35 = __this->get_newTeamContainer_9();
+		NullCheck(L_35);
+		Transform_t3600365921 * L_36 = GameObject_get_transform_m1369836730(L_35, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_Instantiate_TisGameObject_t1113636619_m3215236302(NULL /*static, unused*/, L_34, L_36, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m3215236302_RuntimeMethod_var);
+	}
+
+IL_00e2:
+	{
+		GameObject_t1113636619 * L_37 = __this->get_SuggestedTeams_4();
+		NullCheck(L_37);
+		ScrollSnapRect_t3278334712 * L_38 = GameObject_GetComponent_TisScrollSnapRect_t3278334712_m1405940431(L_37, /*hidden argument*/GameObject_GetComponent_TisScrollSnapRect_t3278334712_m1405940431_RuntimeMethod_var);
+		NullCheck(L_38);
+		Behaviour_set_enabled_m20417929(L_38, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_39 = __this->get_SuggestedTeams_4();
+		NullCheck(L_39);
+		ScrollSnapRect_t3278334712 * L_40 = GameObject_GetComponent_TisScrollSnapRect_t3278334712_m1405940431(L_39, /*hidden argument*/GameObject_GetComponent_TisScrollSnapRect_t3278334712_m1405940431_RuntimeMethod_var);
+		NullCheck(L_40);
+		ScrollSnapRect_Refresh_m3806445074(L_40, /*hidden argument*/NULL);
+		TeamsGet_getTopTeams_m3412285289(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void TeamsGet::getTopTeams()
+extern "C" IL2CPP_METHOD_ATTR void TeamsGet_getTopTeams_m3412285289 (TeamsGet_t3881229921 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (TeamsGet_getTopTeams_m3412285289_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+		Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral2916158021, /*hidden argument*/NULL);
+		RuntimeObject* L_0 = TeamsGet_teamTopLister_m26192313(__this, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Collections.IEnumerator TeamsGet::teamTopLister()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* TeamsGet_teamTopLister_m26192313 (TeamsGet_t3881229921 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (TeamsGet_teamTopLister_m26192313_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CteamTopListerU3Ec__Iterator2_t1625396836 * V_0 = NULL;
+	{
+		U3CteamTopListerU3Ec__Iterator2_t1625396836 * L_0 = (U3CteamTopListerU3Ec__Iterator2_t1625396836 *)il2cpp_codegen_object_new(U3CteamTopListerU3Ec__Iterator2_t1625396836_il2cpp_TypeInfo_var);
+		U3CteamTopListerU3Ec__Iterator2__ctor_m648883402(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		U3CteamTopListerU3Ec__Iterator2_t1625396836 * L_1 = V_0;
+		NullCheck(L_1);
+		L_1->set_U24this_3(__this);
+		U3CteamTopListerU3Ec__Iterator2_t1625396836 * L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Collections.IEnumerator TeamsGet::TopPopulator()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* TeamsGet_TopPopulator_m415545313 (TeamsGet_t3881229921 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (TeamsGet_TopPopulator_m415545313_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CTopPopulatorU3Ec__Iterator3_t3488124398 * V_0 = NULL;
+	{
+		U3CTopPopulatorU3Ec__Iterator3_t3488124398 * L_0 = (U3CTopPopulatorU3Ec__Iterator3_t3488124398 *)il2cpp_codegen_object_new(U3CTopPopulatorU3Ec__Iterator3_t3488124398_il2cpp_TypeInfo_var);
+		U3CTopPopulatorU3Ec__Iterator3__ctor_m1095389565(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		U3CTopPopulatorU3Ec__Iterator3_t3488124398 * L_1 = V_0;
+		NullCheck(L_1);
+		L_1->set_U24this_5(__this);
+		U3CTopPopulatorU3Ec__Iterator3_t3488124398 * L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Void TeamsGet::instantiateTopTeams(Team[])
+extern "C" IL2CPP_METHOD_ATTR void TeamsGet_instantiateTopTeams_m57428017 (TeamsGet_t3881229921 * __this, TeamU5BU5D_t561935834* ___teams0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (TeamsGet_instantiateTopTeams_m57428017_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		V_0 = 0;
+		goto IL_00ac;
+	}
+
+IL_0007:
+	{
+		GameObject_t1113636619 * L_0 = __this->get_newTeamContainer_9();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_1 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (L_1)
+		{
+			goto IL_002e;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_2 = __this->get_newTeamContainer_9();
+		NullCheck(L_2);
+		Transform_t3600365921 * L_3 = GameObject_get_transform_m1369836730(L_2, /*hidden argument*/NULL);
+		NullCheck(L_3);
+		int32_t L_4 = Transform_get_childCount_m3145433196(L_3, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_4) == ((uint32_t)2))))
+		{
+			goto IL_0050;
+		}
+	}
+
+IL_002e:
+	{
+		GameObject_t1113636619 * L_5 = __this->get_TeamContainer_8();
+		GameObject_t1113636619 * L_6 = __this->get_TopTeams_5();
+		NullCheck(L_6);
+		Transform_t3600365921 * L_7 = GameObject_get_transform_m1369836730(L_6, /*hidden argument*/NULL);
+		NullCheck(L_7);
+		Transform_t3600365921 * L_8 = Transform_GetChild_m1092972975(L_7, 0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		GameObject_t1113636619 * L_9 = Object_Instantiate_TisGameObject_t1113636619_m3215236302(NULL /*static, unused*/, L_5, L_8, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m3215236302_RuntimeMethod_var);
+		__this->set_newTeamContainer_9(L_9);
+	}
+
+IL_0050:
+	{
+		GameObject_t1113636619 * L_10 = __this->get_newTeamContainer_9();
+		NullCheck(L_10);
+		Transform_t3600365921 * L_11 = GameObject_get_transform_m1369836730(L_10, /*hidden argument*/NULL);
+		NullCheck(L_11);
+		int32_t L_12 = Transform_get_childCount_m3145433196(L_11, /*hidden argument*/NULL);
+		if ((((int32_t)L_12) >= ((int32_t)2)))
+		{
+			goto IL_00a8;
+		}
+	}
+	{
+		TeamU5BU5D_t561935834* L_13 = ___teams0;
+		int32_t L_14 = V_0;
+		NullCheck(L_13);
+		int32_t L_15 = L_14;
+		Team_t627267163 * L_16 = (L_13)->GetAt(static_cast<il2cpp_array_size_t>(L_15));
+		NullCheck(L_16);
+		String_t* L_17 = L_16->get_t_name_8();
+		if (!L_17)
+		{
+			goto IL_00a8;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_18 = __this->get_TeamPrefab_6();
+		GameObject_t1113636619 * L_19 = __this->get_newTeamContainer_9();
+		NullCheck(L_19);
+		Transform_t3600365921 * L_20 = GameObject_get_transform_m1369836730(L_19, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		GameObject_t1113636619 * L_21 = Object_Instantiate_TisGameObject_t1113636619_m3215236302(NULL /*static, unused*/, L_18, L_20, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m3215236302_RuntimeMethod_var);
+		__this->set_currentTeam_7(L_21);
+		GameObject_t1113636619 * L_22 = __this->get_currentTeam_7();
+		NullCheck(L_22);
+		teamInitializer_t188153746 * L_23 = GameObject_GetComponent_TisteamInitializer_t188153746_m774905409(L_22, /*hidden argument*/GameObject_GetComponent_TisteamInitializer_t188153746_m774905409_RuntimeMethod_var);
+		TeamU5BU5D_t561935834* L_24 = ___teams0;
+		int32_t L_25 = V_0;
+		NullCheck(L_24);
+		int32_t L_26 = L_25;
+		Team_t627267163 * L_27 = (L_24)->GetAt(static_cast<il2cpp_array_size_t>(L_26));
+		GameObject_t1113636619 * L_28 = __this->get_teamsPage_16();
+		NullCheck(L_23);
+		teamInitializer_setTeamButton_m2216881357(L_23, L_27, L_28, /*hidden argument*/NULL);
+	}
+
+IL_00a8:
+	{
+		int32_t L_29 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add((int32_t)L_29, (int32_t)1));
+	}
+
+IL_00ac:
+	{
+		int32_t L_30 = V_0;
+		TeamU5BU5D_t561935834* L_31 = ___teams0;
+		NullCheck(L_31);
+		if ((((int32_t)L_30) < ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_31)->max_length)))))))
+		{
+			goto IL_0007;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_32 = __this->get_newTeamContainer_9();
+		NullCheck(L_32);
+		Transform_t3600365921 * L_33 = GameObject_get_transform_m1369836730(L_32, /*hidden argument*/NULL);
+		NullCheck(L_33);
+		int32_t L_34 = Transform_get_childCount_m3145433196(L_33, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_34) == ((uint32_t)1))))
+		{
+			goto IL_00e2;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_35 = __this->get_EmptyTeam_10();
+		GameObject_t1113636619 * L_36 = __this->get_newTeamContainer_9();
+		NullCheck(L_36);
+		Transform_t3600365921 * L_37 = GameObject_get_transform_m1369836730(L_36, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_Instantiate_TisGameObject_t1113636619_m3215236302(NULL /*static, unused*/, L_35, L_37, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m3215236302_RuntimeMethod_var);
+	}
+
+IL_00e2:
+	{
+		GameObject_t1113636619 * L_38 = __this->get_TopTeams_5();
+		NullCheck(L_38);
+		ScrollSnapRect_t3278334712 * L_39 = GameObject_GetComponent_TisScrollSnapRect_t3278334712_m1405940431(L_38, /*hidden argument*/GameObject_GetComponent_TisScrollSnapRect_t3278334712_m1405940431_RuntimeMethod_var);
+		NullCheck(L_39);
+		Behaviour_set_enabled_m20417929(L_39, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_40 = __this->get_TopTeams_5();
+		NullCheck(L_40);
+		ScrollSnapRect_t3278334712 * L_41 = GameObject_GetComponent_TisScrollSnapRect_t3278334712_m1405940431(L_40, /*hidden argument*/GameObject_GetComponent_TisScrollSnapRect_t3278334712_m1405940431_RuntimeMethod_var);
+		NullCheck(L_41);
+		ScrollSnapRect_Refresh_m3806445074(L_41, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_42 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
+		NullCheck(L_42);
+		Image_t2670269651 * L_43 = GameObject_GetComponent_TisImage_t2670269651_m2486712510(L_42, /*hidden argument*/GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var);
+		NullCheck(L_43);
+		VirtActionInvoker1< bool >::Invoke(25 /* System.Void UnityEngine.UI.Graphic::set_raycastTarget(System.Boolean) */, L_43, (bool)1);
+		GameObject_t1113636619 * L_44 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
+		NullCheck(L_44);
+		Transform_t3600365921 * L_45 = GameObject_get_transform_m1369836730(L_44, /*hidden argument*/NULL);
+		NullCheck(L_45);
+		Transform_t3600365921 * L_46 = Transform_GetChild_m1092972975(L_45, 0, /*hidden argument*/NULL);
+		NullCheck(L_46);
+		GameObject_t1113636619 * L_47 = Component_get_gameObject_m442555142(L_46, /*hidden argument*/NULL);
+		NullCheck(L_47);
+		GameObject_SetActive_m796801857(L_47, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_48 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
+		NullCheck(L_48);
+		Image_t2670269651 * L_49 = GameObject_GetComponent_TisImage_t2670269651_m2486712510(L_48, /*hidden argument*/GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var);
+		Color_t2555686324  L_50 = Color_get_white_m332174077(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_49);
+		VirtActionInvoker1< Color_t2555686324  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_49, L_50);
+		GameObject_t1113636619 * L_51 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
+		NullCheck(L_51);
+		GameObject_SetActive_m796801857(L_51, (bool)0, /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -16744,7 +18146,7 @@ extern "C" IL2CPP_METHOD_ATTR bool U3CteamListerU3Ec__Iterator0_MoveNext_m296677
 		}
 	}
 	{
-		goto IL_030a;
+		goto IL_031d;
 	}
 
 IL_0023:
@@ -16816,7 +18218,7 @@ IL_00d0:
 IL_00d7:
 		{
 			V_1 = (bool)1;
-			IL2CPP_LEAVE(0x30C, FINALLY_02f8);
+			IL2CPP_LEAVE(0x31F, FINALLY_030b);
 		}
 
 IL_00de:
@@ -16837,7 +18239,7 @@ IL_00ee:
 			bool L_22 = UnityWebRequest_get_isHttpError_m797082501(L_21, /*hidden argument*/NULL);
 			if (!L_22)
 			{
-				goto IL_01e4;
+				goto IL_01f7;
 			}
 		}
 
@@ -16902,7 +18304,7 @@ IL_0134:
 			int32_t L_45 = L_44->get_retry_12();
 			if (!((int32_t)((int32_t)L_43&(int32_t)((((int32_t)L_45) < ((int32_t)3))? 1 : 0))))
 			{
-				goto IL_01df;
+				goto IL_01f2;
 			}
 		}
 
@@ -16913,158 +18315,164 @@ IL_01ca:
 			TeamsGet_t3881229921 * L_46 = __this->get_U24this_3();
 			NullCheck(L_46);
 			TeamsGet_getTeams_m3668858059(L_46, /*hidden argument*/NULL);
+			TeamsGet_t3881229921 * L_47 = __this->get_U24this_3();
+			TeamsGet_t3881229921 * L_48 = L_47;
+			NullCheck(L_48);
+			int32_t L_49 = L_48->get_retry_12();
+			NullCheck(L_48);
+			L_48->set_retry_12(((int32_t)il2cpp_codegen_add((int32_t)L_49, (int32_t)1)));
 		}
 
-IL_01df:
+IL_01f2:
 		{
-			goto IL_02f3;
+			goto IL_0306;
 		}
 
-IL_01e4:
+IL_01f7:
 		{
-			UnityWebRequest_t463507806 * L_47 = __this->get_U3CwwwU3E__1_2();
-			NullCheck(L_47);
-			int64_t L_48 = UnityWebRequest_get_responseCode_m1090830473(L_47, /*hidden argument*/NULL);
-			int64_t L_49 = L_48;
-			RuntimeObject * L_50 = Box(Int64_t3736567304_il2cpp_TypeInfo_var, &L_49);
+			UnityWebRequest_t463507806 * L_50 = __this->get_U3CwwwU3E__1_2();
+			NullCheck(L_50);
+			int64_t L_51 = UnityWebRequest_get_responseCode_m1090830473(L_50, /*hidden argument*/NULL);
+			int64_t L_52 = L_51;
+			RuntimeObject * L_53 = Box(Int64_t3736567304_il2cpp_TypeInfo_var, &L_52);
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
-			Debug_Log_m4051431634(NULL /*static, unused*/, L_50, /*hidden argument*/NULL);
-			UnityWebRequest_t463507806 * L_51 = __this->get_U3CwwwU3E__1_2();
-			NullCheck(L_51);
-			DownloadHandler_t2937767557 * L_52 = UnityWebRequest_get_downloadHandler_m534911913(L_51, /*hidden argument*/NULL);
-			NullCheck(L_52);
-			ByteU5BU5D_t4116647657* L_53 = DownloadHandler_get_data_m1669096410(L_52, /*hidden argument*/NULL);
-			V_3 = L_53;
-			TeamsGet_t3881229921 * L_54 = __this->get_U24this_3();
-			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-			String_t* L_55 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
+			Debug_Log_m4051431634(NULL /*static, unused*/, L_53, /*hidden argument*/NULL);
+			UnityWebRequest_t463507806 * L_54 = __this->get_U3CwwwU3E__1_2();
 			NullCheck(L_54);
-			L_54->set_jsonString_13(L_55);
-			TeamsGet_t3881229921 * L_56 = __this->get_U24this_3();
-			IL2CPP_RUNTIME_CLASS_INIT(Encoding_t1523322056_il2cpp_TypeInfo_var);
-			Encoding_t1523322056 * L_57 = Encoding_get_UTF8_m1008486739(NULL /*static, unused*/, /*hidden argument*/NULL);
-			ByteU5BU5D_t4116647657* L_58 = V_3;
+			DownloadHandler_t2937767557 * L_55 = UnityWebRequest_get_downloadHandler_m534911913(L_54, /*hidden argument*/NULL);
+			NullCheck(L_55);
+			ByteU5BU5D_t4116647657* L_56 = DownloadHandler_get_data_m1669096410(L_55, /*hidden argument*/NULL);
+			V_3 = L_56;
+			TeamsGet_t3881229921 * L_57 = __this->get_U24this_3();
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			String_t* L_58 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
 			NullCheck(L_57);
-			String_t* L_59 = VirtFuncInvoker1< String_t*, ByteU5BU5D_t4116647657* >::Invoke(22 /* System.String System.Text.Encoding::GetString(System.Byte[]) */, L_57, L_58);
-			NullCheck(L_56);
-			L_56->set_jsonString_13(L_59);
-			TeamsGet_t3881229921 * L_60 = __this->get_U24this_3();
+			L_57->set_jsonString_13(L_58);
+			TeamsGet_t3881229921 * L_59 = __this->get_U24this_3();
+			IL2CPP_RUNTIME_CLASS_INIT(Encoding_t1523322056_il2cpp_TypeInfo_var);
+			Encoding_t1523322056 * L_60 = Encoding_get_UTF8_m1008486739(NULL /*static, unused*/, /*hidden argument*/NULL);
+			ByteU5BU5D_t4116647657* L_61 = V_3;
 			NullCheck(L_60);
-			String_t* L_61 = L_60->get_jsonString_13();
-			Debug_Log_m4051431634(NULL /*static, unused*/, L_61, /*hidden argument*/NULL);
-			TeamsGet_t3881229921 * L_62 = __this->get_U24this_3();
-			NullCheck(L_62);
-			String_t* L_63 = L_62->get_jsonString_13();
-			bool L_64 = String_op_Equality_m920492651(NULL /*static, unused*/, L_63, _stringLiteral3455956949, /*hidden argument*/NULL);
-			if (!L_64)
+			String_t* L_62 = VirtFuncInvoker1< String_t*, ByteU5BU5D_t4116647657* >::Invoke(22 /* System.String System.Text.Encoding::GetString(System.Byte[]) */, L_60, L_61);
+			NullCheck(L_59);
+			L_59->set_jsonString_13(L_62);
+			TeamsGet_t3881229921 * L_63 = __this->get_U24this_3();
+			NullCheck(L_63);
+			String_t* L_64 = L_63->get_jsonString_13();
+			Debug_Log_m4051431634(NULL /*static, unused*/, L_64, /*hidden argument*/NULL);
+			TeamsGet_t3881229921 * L_65 = __this->get_U24this_3();
+			NullCheck(L_65);
+			String_t* L_66 = L_65->get_jsonString_13();
+			bool L_67 = String_op_Equality_m920492651(NULL /*static, unused*/, L_66, _stringLiteral3455956949, /*hidden argument*/NULL);
+			if (!L_67)
 			{
-				goto IL_02c1;
+				goto IL_02d4;
 			}
 		}
 
-IL_025a:
+IL_026d:
 		{
-			TeamsGet_t3881229921 * L_65 = __this->get_U24this_3();
-			NullCheck(L_65);
-			GameObject_t1113636619 * L_66 = Component_get_gameObject_m442555142(L_65, /*hidden argument*/NULL);
-			NullCheck(L_66);
-			Image_t2670269651 * L_67 = GameObject_GetComponent_TisImage_t2670269651_m2486712510(L_66, /*hidden argument*/GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var);
-			NullCheck(L_67);
-			VirtActionInvoker1< bool >::Invoke(25 /* System.Void UnityEngine.UI.Graphic::set_raycastTarget(System.Boolean) */, L_67, (bool)1);
 			TeamsGet_t3881229921 * L_68 = __this->get_U24this_3();
 			NullCheck(L_68);
 			GameObject_t1113636619 * L_69 = Component_get_gameObject_m442555142(L_68, /*hidden argument*/NULL);
 			NullCheck(L_69);
-			Transform_t3600365921 * L_70 = GameObject_get_transform_m1369836730(L_69, /*hidden argument*/NULL);
+			Image_t2670269651 * L_70 = GameObject_GetComponent_TisImage_t2670269651_m2486712510(L_69, /*hidden argument*/GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var);
 			NullCheck(L_70);
-			Transform_t3600365921 * L_71 = Transform_GetChild_m1092972975(L_70, 0, /*hidden argument*/NULL);
+			VirtActionInvoker1< bool >::Invoke(25 /* System.Void UnityEngine.UI.Graphic::set_raycastTarget(System.Boolean) */, L_70, (bool)1);
+			TeamsGet_t3881229921 * L_71 = __this->get_U24this_3();
 			NullCheck(L_71);
 			GameObject_t1113636619 * L_72 = Component_get_gameObject_m442555142(L_71, /*hidden argument*/NULL);
 			NullCheck(L_72);
-			GameObject_SetActive_m796801857(L_72, (bool)1, /*hidden argument*/NULL);
-			TeamsGet_t3881229921 * L_73 = __this->get_U24this_3();
+			Transform_t3600365921 * L_73 = GameObject_get_transform_m1369836730(L_72, /*hidden argument*/NULL);
 			NullCheck(L_73);
-			GameObject_t1113636619 * L_74 = Component_get_gameObject_m442555142(L_73, /*hidden argument*/NULL);
+			Transform_t3600365921 * L_74 = Transform_GetChild_m1092972975(L_73, 0, /*hidden argument*/NULL);
 			NullCheck(L_74);
-			Image_t2670269651 * L_75 = GameObject_GetComponent_TisImage_t2670269651_m2486712510(L_74, /*hidden argument*/GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var);
-			Color_t2555686324  L_76 = Color_get_white_m332174077(NULL /*static, unused*/, /*hidden argument*/NULL);
+			GameObject_t1113636619 * L_75 = Component_get_gameObject_m442555142(L_74, /*hidden argument*/NULL);
 			NullCheck(L_75);
-			VirtActionInvoker1< Color_t2555686324  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_75, L_76);
-			TeamsGet_t3881229921 * L_77 = __this->get_U24this_3();
+			GameObject_SetActive_m796801857(L_75, (bool)1, /*hidden argument*/NULL);
+			TeamsGet_t3881229921 * L_76 = __this->get_U24this_3();
+			NullCheck(L_76);
+			GameObject_t1113636619 * L_77 = Component_get_gameObject_m442555142(L_76, /*hidden argument*/NULL);
 			NullCheck(L_77);
-			GameObject_t1113636619 * L_78 = Component_get_gameObject_m442555142(L_77, /*hidden argument*/NULL);
+			Image_t2670269651 * L_78 = GameObject_GetComponent_TisImage_t2670269651_m2486712510(L_77, /*hidden argument*/GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var);
+			Color_t2555686324  L_79 = Color_get_white_m332174077(NULL /*static, unused*/, /*hidden argument*/NULL);
 			NullCheck(L_78);
-			GameObject_SetActive_m796801857(L_78, (bool)0, /*hidden argument*/NULL);
-			goto IL_02f3;
-		}
-
-IL_02c1:
-		{
-			TeamsGet_t3881229921 * L_79 = __this->get_U24this_3();
+			VirtActionInvoker1< Color_t2555686324  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_78, L_79);
 			TeamsGet_t3881229921 * L_80 = __this->get_U24this_3();
 			NullCheck(L_80);
-			String_t* L_81 = L_80->get_jsonString_13();
-			teamPrefill_t1320688299 * L_82 = JsonUtility_FromJson_TisteamPrefill_t1320688299_m2508224979(NULL /*static, unused*/, L_81, /*hidden argument*/JsonUtility_FromJson_TisteamPrefill_t1320688299_m2508224979_RuntimeMethod_var);
-			NullCheck(L_79);
-			L_79->set_prefill_14(L_82);
-			TeamsGet_t3881229921 * L_83 = __this->get_U24this_3();
-			TeamsGet_t3881229921 * L_84 = __this->get_U24this_3();
-			NullCheck(L_84);
-			RuntimeObject* L_85 = TeamsGet_Populator_m757272477(L_84, /*hidden argument*/NULL);
-			NullCheck(L_83);
-			MonoBehaviour_StartCoroutine_m3411253000(L_83, L_85, /*hidden argument*/NULL);
+			GameObject_t1113636619 * L_81 = Component_get_gameObject_m442555142(L_80, /*hidden argument*/NULL);
+			NullCheck(L_81);
+			GameObject_SetActive_m796801857(L_81, (bool)0, /*hidden argument*/NULL);
+			goto IL_0306;
 		}
 
-IL_02f3:
+IL_02d4:
 		{
-			IL2CPP_LEAVE(0x303, FINALLY_02f8);
+			TeamsGet_t3881229921 * L_82 = __this->get_U24this_3();
+			TeamsGet_t3881229921 * L_83 = __this->get_U24this_3();
+			NullCheck(L_83);
+			String_t* L_84 = L_83->get_jsonString_13();
+			teamPrefill_t1320688299 * L_85 = JsonUtility_FromJson_TisteamPrefill_t1320688299_m2508224979(NULL /*static, unused*/, L_84, /*hidden argument*/JsonUtility_FromJson_TisteamPrefill_t1320688299_m2508224979_RuntimeMethod_var);
+			NullCheck(L_82);
+			L_82->set_prefill_14(L_85);
+			TeamsGet_t3881229921 * L_86 = __this->get_U24this_3();
+			TeamsGet_t3881229921 * L_87 = __this->get_U24this_3();
+			NullCheck(L_87);
+			RuntimeObject* L_88 = TeamsGet_Populator_m757272477(L_87, /*hidden argument*/NULL);
+			NullCheck(L_86);
+			MonoBehaviour_StartCoroutine_m3411253000(L_86, L_88, /*hidden argument*/NULL);
+		}
+
+IL_0306:
+		{
+			IL2CPP_LEAVE(0x316, FINALLY_030b);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_02f8;
+		goto FINALLY_030b;
 	}
 
-FINALLY_02f8:
+FINALLY_030b:
 	{ // begin finally (depth: 1)
 		{
-			bool L_86 = V_1;
-			if (!L_86)
+			bool L_89 = V_1;
+			if (!L_89)
 			{
-				goto IL_02fc;
+				goto IL_030f;
 			}
 		}
 
-IL_02fb:
+IL_030e:
 		{
-			IL2CPP_END_FINALLY(760)
+			IL2CPP_END_FINALLY(779)
 		}
 
-IL_02fc:
+IL_030f:
 		{
 			U3CteamListerU3Ec__Iterator0_U3CU3E__Finally0_m1161468502(__this, /*hidden argument*/NULL);
-			IL2CPP_END_FINALLY(760)
+			IL2CPP_END_FINALLY(779)
 		}
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(760)
+	IL2CPP_CLEANUP(779)
 	{
-		IL2CPP_JUMP_TBL(0x30C, IL_030c)
-		IL2CPP_JUMP_TBL(0x303, IL_0303)
+		IL2CPP_JUMP_TBL(0x31F, IL_031f)
+		IL2CPP_JUMP_TBL(0x316, IL_0316)
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
-IL_0303:
+IL_0316:
 	{
 		__this->set_U24PC_6((-1));
 	}
 
-IL_030a:
+IL_031d:
 	{
 		return (bool)0;
 	}
 
-IL_030c:
+IL_031f:
 	{
 		return (bool)1;
 	}
@@ -27381,8 +28789,688 @@ extern "C" IL2CPP_METHOD_ATTR void profileHistory__ctor_m3574106312 (profileHist
 // System.Void profileNotificationSetter::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void profileNotificationSetter__ctor_m2192859108 (profileNotificationSetter_t2988085128 * __this, const RuntimeMethod* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_method (profileNotificationSetter__ctor_m2192859108_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		__this->set_notificationURL_10(_stringLiteral288607468);
 		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void profileNotificationSetter::getNotifications()
+extern "C" IL2CPP_METHOD_ATTR void profileNotificationSetter_getNotifications_m4005455675 (profileNotificationSetter_t2988085128 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (profileNotificationSetter_getNotifications_m4005455675_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		GameObject_t1113636619 * L_0 = GameObject_FindWithTag_m981614592(NULL /*static, unused*/, _stringLiteral2261822918, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		Jsonparser_t2229457866 * L_1 = GameObject_GetComponent_TisJsonparser_t2229457866_m2689185314(L_0, /*hidden argument*/GameObject_GetComponent_TisJsonparser_t2229457866_m2689185314_RuntimeMethod_var);
+		__this->set_j_8(L_1);
+		RuntimeObject* L_2 = profileNotificationSetter_NotificationLister_m4294553938(__this, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Collections.IEnumerator profileNotificationSetter::NotificationLister()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* profileNotificationSetter_NotificationLister_m4294553938 (profileNotificationSetter_t2988085128 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (profileNotificationSetter_NotificationLister_m4294553938_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CNotificationListerU3Ec__Iterator0_t1290292342 * V_0 = NULL;
+	{
+		U3CNotificationListerU3Ec__Iterator0_t1290292342 * L_0 = (U3CNotificationListerU3Ec__Iterator0_t1290292342 *)il2cpp_codegen_object_new(U3CNotificationListerU3Ec__Iterator0_t1290292342_il2cpp_TypeInfo_var);
+		U3CNotificationListerU3Ec__Iterator0__ctor_m2656944142(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		U3CNotificationListerU3Ec__Iterator0_t1290292342 * L_1 = V_0;
+		NullCheck(L_1);
+		L_1->set_U24this_1(__this);
+		U3CNotificationListerU3Ec__Iterator0_t1290292342 * L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Void profileNotificationSetter::notificationInitializer()
+extern "C" IL2CPP_METHOD_ATTR void profileNotificationSetter_notificationInitializer_m805960625 (profileNotificationSetter_t2988085128 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (profileNotificationSetter_notificationInitializer_m805960625_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	GameObject_t1113636619 * V_1 = NULL;
+	{
+		GameObject_t1113636619 * L_0 = __this->get_notificationDotPrefab_5();
+		GameObject_t1113636619 * L_1 = __this->get_notificationDotContainer_7();
+		NullCheck(L_1);
+		Transform_t3600365921 * L_2 = GameObject_get_transform_m1369836730(L_1, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_Instantiate_TisGameObject_t1113636619_m3215236302(NULL /*static, unused*/, L_0, L_2, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m3215236302_RuntimeMethod_var);
+		V_0 = 0;
+		goto IL_0113;
+	}
+
+IL_001e:
+	{
+		GameObject_t1113636619 * L_3 = __this->get_notificationContainer_6();
+		NullCheck(L_3);
+		Transform_t3600365921 * L_4 = GameObject_get_transform_m1369836730(L_3, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		int32_t L_5 = Transform_get_childCount_m3145433196(L_4, /*hidden argument*/NULL);
+		if ((((int32_t)L_5) >= ((int32_t)8)))
+		{
+			goto IL_00ac;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_6 = __this->get_notificationPrefab_4();
+		GameObject_t1113636619 * L_7 = __this->get_notificationContainer_6();
+		NullCheck(L_7);
+		Transform_t3600365921 * L_8 = GameObject_get_transform_m1369836730(L_7, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		GameObject_t1113636619 * L_9 = Object_Instantiate_TisGameObject_t1113636619_m3215236302(NULL /*static, unused*/, L_6, L_8, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m3215236302_RuntimeMethod_var);
+		V_1 = L_9;
+		GameObject_t1113636619 * L_10 = V_1;
+		NullCheck(L_10);
+		Transform_t3600365921 * L_11 = GameObject_get_transform_m1369836730(L_10, /*hidden argument*/NULL);
+		NullCheck(L_11);
+		Transform_t3600365921 * L_12 = Transform_GetChild_m1092972975(L_11, 0, /*hidden argument*/NULL);
+		NullCheck(L_12);
+		Text_t1901882714 * L_13 = Component_GetComponent_TisText_t1901882714_m4196288697(L_12, /*hidden argument*/Component_GetComponent_TisText_t1901882714_m4196288697_RuntimeMethod_var);
+		StringU5BU5D_t1281789340* L_14 = (StringU5BU5D_t1281789340*)SZArrayNew(StringU5BU5D_t1281789340_il2cpp_TypeInfo_var, (uint32_t)5);
+		StringU5BU5D_t1281789340* L_15 = L_14;
+		Notifications_t987802027 * L_16 = __this->get_notifications_9();
+		NullCheck(L_16);
+		StringU5BU5D_t1281789340* L_17 = L_16->get_updates_2();
+		int32_t L_18 = V_0;
+		NullCheck(L_17);
+		int32_t L_19 = L_18;
+		String_t* L_20 = (L_17)->GetAt(static_cast<il2cpp_array_size_t>(L_19));
+		NullCheck(L_15);
+		ArrayElementTypeCheck (L_15, L_20);
+		(L_15)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_20);
+		StringU5BU5D_t1281789340* L_21 = L_15;
+		NullCheck(L_21);
+		ArrayElementTypeCheck (L_21, _stringLiteral3452614528);
+		(L_21)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral3452614528);
+		StringU5BU5D_t1281789340* L_22 = L_21;
+		Notifications_t987802027 * L_23 = __this->get_notifications_9();
+		NullCheck(L_23);
+		StringU5BU5D_t1281789340* L_24 = L_23->get_events_0();
+		int32_t L_25 = V_0;
+		NullCheck(L_24);
+		int32_t L_26 = L_25;
+		String_t* L_27 = (L_24)->GetAt(static_cast<il2cpp_array_size_t>(L_26));
+		NullCheck(L_22);
+		ArrayElementTypeCheck (L_22, L_27);
+		(L_22)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)L_27);
+		StringU5BU5D_t1281789340* L_28 = L_22;
+		NullCheck(L_28);
+		ArrayElementTypeCheck (L_28, _stringLiteral3452614528);
+		(L_28)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)_stringLiteral3452614528);
+		StringU5BU5D_t1281789340* L_29 = L_28;
+		Notifications_t987802027 * L_30 = __this->get_notifications_9();
+		NullCheck(L_30);
+		StringU5BU5D_t1281789340* L_31 = L_30->get_u_datetime_1();
+		int32_t L_32 = V_0;
+		NullCheck(L_31);
+		int32_t L_33 = L_32;
+		String_t* L_34 = (L_31)->GetAt(static_cast<il2cpp_array_size_t>(L_33));
+		NullCheck(L_29);
+		ArrayElementTypeCheck (L_29, L_34);
+		(L_29)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)L_34);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_35 = String_Concat_m1809518182(NULL /*static, unused*/, L_29, /*hidden argument*/NULL);
+		NullCheck(L_13);
+		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_13, L_35);
+	}
+
+IL_00ac:
+	{
+		GameObject_t1113636619 * L_36 = __this->get_notificationContainer_6();
+		NullCheck(L_36);
+		Transform_t3600365921 * L_37 = GameObject_get_transform_m1369836730(L_36, /*hidden argument*/NULL);
+		NullCheck(L_37);
+		int32_t L_38 = Transform_get_childCount_m3145433196(L_37, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_38) == ((uint32_t)8))))
+		{
+			goto IL_010f;
+		}
+	}
+	{
+		int32_t L_39 = V_0;
+		Notifications_t987802027 * L_40 = __this->get_notifications_9();
+		NullCheck(L_40);
+		StringU5BU5D_t1281789340* L_41 = L_40->get_updates_2();
+		NullCheck(L_41);
+		if ((((int32_t)L_39) == ((int32_t)((int32_t)il2cpp_codegen_subtract((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_41)->max_length)))), (int32_t)1)))))
+		{
+			goto IL_010f;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_42 = __this->get_NotificationContainerPrefab_13();
+		GameObject_t1113636619 * L_43 = __this->get_notificationContainer_6();
+		NullCheck(L_43);
+		Transform_t3600365921 * L_44 = GameObject_get_transform_m1369836730(L_43, /*hidden argument*/NULL);
+		NullCheck(L_44);
+		Transform_t3600365921 * L_45 = Transform_get_parent_m835071599(L_44, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		GameObject_t1113636619 * L_46 = Object_Instantiate_TisGameObject_t1113636619_m3215236302(NULL /*static, unused*/, L_42, L_45, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m3215236302_RuntimeMethod_var);
+		__this->set_notificationContainer_6(L_46);
+		GameObject_t1113636619 * L_47 = __this->get_notificationDotPrefab_5();
+		GameObject_t1113636619 * L_48 = __this->get_notificationDotContainer_7();
+		NullCheck(L_48);
+		Transform_t3600365921 * L_49 = GameObject_get_transform_m1369836730(L_48, /*hidden argument*/NULL);
+		Object_Instantiate_TisGameObject_t1113636619_m3215236302(NULL /*static, unused*/, L_47, L_49, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m3215236302_RuntimeMethod_var);
+	}
+
+IL_010f:
+	{
+		int32_t L_50 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add((int32_t)L_50, (int32_t)1));
+	}
+
+IL_0113:
+	{
+		int32_t L_51 = V_0;
+		Notifications_t987802027 * L_52 = __this->get_notifications_9();
+		NullCheck(L_52);
+		StringU5BU5D_t1281789340* L_53 = L_52->get_updates_2();
+		NullCheck(L_53);
+		if ((((int32_t)L_51) < ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_53)->max_length)))))))
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_54 = __this->get_notificationContainer_6();
+		NullCheck(L_54);
+		Transform_t3600365921 * L_55 = GameObject_get_transform_m1369836730(L_54, /*hidden argument*/NULL);
+		NullCheck(L_55);
+		Transform_t3600365921 * L_56 = Transform_get_parent_m835071599(L_55, /*hidden argument*/NULL);
+		NullCheck(L_56);
+		Transform_t3600365921 * L_57 = Transform_get_parent_m835071599(L_56, /*hidden argument*/NULL);
+		NullCheck(L_57);
+		GameObject_t1113636619 * L_58 = Component_get_gameObject_m442555142(L_57, /*hidden argument*/NULL);
+		NullCheck(L_58);
+		ScrollSnapRect_t3278334712 * L_59 = GameObject_GetComponent_TisScrollSnapRect_t3278334712_m1405940431(L_58, /*hidden argument*/GameObject_GetComponent_TisScrollSnapRect_t3278334712_m1405940431_RuntimeMethod_var);
+		NullCheck(L_59);
+		Behaviour_set_enabled_m20417929(L_59, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_60 = __this->get_notificationContainer_6();
+		NullCheck(L_60);
+		Transform_t3600365921 * L_61 = GameObject_get_transform_m1369836730(L_60, /*hidden argument*/NULL);
+		NullCheck(L_61);
+		Transform_t3600365921 * L_62 = Transform_get_parent_m835071599(L_61, /*hidden argument*/NULL);
+		NullCheck(L_62);
+		Transform_t3600365921 * L_63 = Transform_get_parent_m835071599(L_62, /*hidden argument*/NULL);
+		NullCheck(L_63);
+		GameObject_t1113636619 * L_64 = Component_get_gameObject_m442555142(L_63, /*hidden argument*/NULL);
+		NullCheck(L_64);
+		ScrollSnapRect_t3278334712 * L_65 = GameObject_GetComponent_TisScrollSnapRect_t3278334712_m1405940431(L_64, /*hidden argument*/GameObject_GetComponent_TisScrollSnapRect_t3278334712_m1405940431_RuntimeMethod_var);
+		NullCheck(L_65);
+		ScrollSnapRect_Refresh_m3806445074(L_65, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_66 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
+		NullCheck(L_66);
+		GameObject_SetActive_m796801857(L_66, (bool)0, /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void profileNotificationSetter/<NotificationLister>c__Iterator0::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void U3CNotificationListerU3Ec__Iterator0__ctor_m2656944142 (U3CNotificationListerU3Ec__Iterator0_t1290292342 * __this, const RuntimeMethod* method)
+{
+	{
+		Object__ctor_m297566312(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Boolean profileNotificationSetter/<NotificationLister>c__Iterator0::MoveNext()
+extern "C" IL2CPP_METHOD_ATTR bool U3CNotificationListerU3Ec__Iterator0_MoveNext_m893866083 (U3CNotificationListerU3Ec__Iterator0_t1290292342 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (U3CNotificationListerU3Ec__Iterator0_MoveNext_m893866083_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint32_t V_0 = 0;
+	bool V_1 = false;
+	int64_t V_2 = 0;
+	ByteU5BU5D_t4116647657* V_3 = NULL;
+	Exception_t * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = -1;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		int32_t L_0 = __this->get_U24PC_4();
+		V_0 = L_0;
+		__this->set_U24PC_4((-1));
+		V_1 = (bool)0;
+		uint32_t L_1 = V_0;
+		switch (L_1)
+		{
+			case 0:
+			{
+				goto IL_0023;
+			}
+			case 1:
+			{
+				goto IL_0046;
+			}
+		}
+	}
+	{
+		goto IL_0280;
+	}
+
+IL_0023:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+		Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral2310942994, /*hidden argument*/NULL);
+		profileNotificationSetter_t2988085128 * L_2 = __this->get_U24this_1();
+		NullCheck(L_2);
+		String_t* L_3 = L_2->get_notificationURL_10();
+		UnityWebRequest_t463507806 * L_4 = UnityWebRequest_Get_m996521828(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
+		__this->set_U3CwwwU3E__1_0(L_4);
+		V_0 = ((int32_t)-3);
+	}
+
+IL_0046:
+	try
+	{ // begin try (depth: 1)
+		{
+			uint32_t L_5 = V_0;
+			switch (((int32_t)il2cpp_codegen_subtract((int32_t)L_5, (int32_t)1)))
+			{
+				case 0:
+				{
+					goto IL_00b8;
+				}
+			}
+		}
+
+IL_0052:
+		{
+			UnityWebRequest_t463507806 * L_6 = __this->get_U3CwwwU3E__1_0();
+			profileNotificationSetter_t2988085128 * L_7 = __this->get_U24this_1();
+			NullCheck(L_7);
+			Jsonparser_t2229457866 * L_8 = L_7->get_j_8();
+			NullCheck(L_8);
+			String_t* L_9 = L_8->get_token_6();
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			String_t* L_10 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral1902047338, L_9, /*hidden argument*/NULL);
+			NullCheck(L_6);
+			UnityWebRequest_SetRequestHeader_m2927335855(L_6, _stringLiteral1574691733, L_10, /*hidden argument*/NULL);
+			UnityWebRequest_t463507806 * L_11 = __this->get_U3CwwwU3E__1_0();
+			NullCheck(L_11);
+			UnityWebRequest_SetRequestHeader_m2927335855(L_11, _stringLiteral2263792357, _stringLiteral1946891126, /*hidden argument*/NULL);
+			UnityWebRequest_t463507806 * L_12 = __this->get_U3CwwwU3E__1_0();
+			NullCheck(L_12);
+			UnityWebRequestAsyncOperation_t3852015985 * L_13 = UnityWebRequest_SendWebRequest_m489860187(L_12, /*hidden argument*/NULL);
+			__this->set_U24current_2(L_13);
+			bool L_14 = __this->get_U24disposing_3();
+			if (L_14)
+			{
+				goto IL_00b1;
+			}
+		}
+
+IL_00aa:
+		{
+			__this->set_U24PC_4(1);
+		}
+
+IL_00b1:
+		{
+			V_1 = (bool)1;
+			IL2CPP_LEAVE(0x282, FINALLY_026e);
+		}
+
+IL_00b8:
+		{
+			UnityWebRequest_t463507806 * L_15 = __this->get_U3CwwwU3E__1_0();
+			NullCheck(L_15);
+			bool L_16 = UnityWebRequest_get_isNetworkError_m1231611882(L_15, /*hidden argument*/NULL);
+			if (L_16)
+			{
+				goto IL_00d8;
+			}
+		}
+
+IL_00c8:
+		{
+			UnityWebRequest_t463507806 * L_17 = __this->get_U3CwwwU3E__1_0();
+			NullCheck(L_17);
+			bool L_18 = UnityWebRequest_get_isHttpError_m797082501(L_17, /*hidden argument*/NULL);
+			if (!L_18)
+			{
+				goto IL_019d;
+			}
+		}
+
+IL_00d8:
+		{
+			UnityWebRequest_t463507806 * L_19 = __this->get_U3CwwwU3E__1_0();
+			NullCheck(L_19);
+			int64_t L_20 = UnityWebRequest_get_responseCode_m1090830473(L_19, /*hidden argument*/NULL);
+			int64_t L_21 = L_20;
+			RuntimeObject * L_22 = Box(Int64_t3736567304_il2cpp_TypeInfo_var, &L_21);
+			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+			Debug_Log_m4051431634(NULL /*static, unused*/, L_22, /*hidden argument*/NULL);
+			UnityWebRequest_t463507806 * L_23 = __this->get_U3CwwwU3E__1_0();
+			NullCheck(L_23);
+			String_t* L_24 = UnityWebRequest_get_url_m2568598920(L_23, /*hidden argument*/NULL);
+			Debug_Log_m4051431634(NULL /*static, unused*/, L_24, /*hidden argument*/NULL);
+			UnityWebRequest_t463507806 * L_25 = __this->get_U3CwwwU3E__1_0();
+			NullCheck(L_25);
+			String_t* L_26 = UnityWebRequest_GetRequestHeader_m1019420783(L_25, _stringLiteral1574691733, /*hidden argument*/NULL);
+			Debug_Log_m4051431634(NULL /*static, unused*/, L_26, /*hidden argument*/NULL);
+			UnityWebRequest_t463507806 * L_27 = __this->get_U3CwwwU3E__1_0();
+			NullCheck(L_27);
+			String_t* L_28 = UnityWebRequest_GetRequestHeader_m1019420783(L_27, _stringLiteral2263792357, /*hidden argument*/NULL);
+			Debug_Log_m4051431634(NULL /*static, unused*/, L_28, /*hidden argument*/NULL);
+			UnityWebRequest_t463507806 * L_29 = __this->get_U3CwwwU3E__1_0();
+			NullCheck(L_29);
+			String_t* L_30 = UnityWebRequest_get_error_m1613086199(L_29, /*hidden argument*/NULL);
+			Debug_Log_m4051431634(NULL /*static, unused*/, L_30, /*hidden argument*/NULL);
+			UnityWebRequest_t463507806 * L_31 = __this->get_U3CwwwU3E__1_0();
+			NullCheck(L_31);
+			DownloadHandler_t2937767557 * L_32 = UnityWebRequest_get_downloadHandler_m534911913(L_31, /*hidden argument*/NULL);
+			NullCheck(L_32);
+			String_t* L_33 = DownloadHandler_get_text_m2427232382(L_32, /*hidden argument*/NULL);
+			Debug_Log_m4051431634(NULL /*static, unused*/, L_33, /*hidden argument*/NULL);
+			UnityWebRequest_t463507806 * L_34 = __this->get_U3CwwwU3E__1_0();
+			NullCheck(L_34);
+			int64_t L_35 = UnityWebRequest_get_responseCode_m1090830473(L_34, /*hidden argument*/NULL);
+			V_2 = L_35;
+			String_t* L_36 = Int64_ToString_m2986581816((int64_t*)(&V_2), /*hidden argument*/NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			bool L_37 = String_op_Equality_m920492651(NULL /*static, unused*/, L_36, _stringLiteral2671359222, /*hidden argument*/NULL);
+			profileNotificationSetter_t2988085128 * L_38 = __this->get_U24this_1();
+			NullCheck(L_38);
+			int32_t L_39 = L_38->get_retry_11();
+			if (!((int32_t)((int32_t)L_37&(int32_t)((((int32_t)L_39) < ((int32_t)3))? 1 : 0))))
+			{
+				goto IL_0198;
+			}
+		}
+
+IL_0183:
+		{
+			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+			Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral3449507607, /*hidden argument*/NULL);
+			profileNotificationSetter_t2988085128 * L_40 = __this->get_U24this_1();
+			NullCheck(L_40);
+			profileNotificationSetter_getNotifications_m4005455675(L_40, /*hidden argument*/NULL);
+		}
+
+IL_0198:
+		{
+			goto IL_0269;
+		}
+
+IL_019d:
+		{
+			UnityWebRequest_t463507806 * L_41 = __this->get_U3CwwwU3E__1_0();
+			NullCheck(L_41);
+			String_t* L_42 = UnityWebRequest_get_url_m2568598920(L_41, /*hidden argument*/NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			String_t* L_43 = String_Concat_m3937257545(NULL /*static, unused*/, L_42, _stringLiteral1163448006, /*hidden argument*/NULL);
+			IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+			Debug_Log_m4051431634(NULL /*static, unused*/, L_43, /*hidden argument*/NULL);
+			UnityWebRequest_t463507806 * L_44 = __this->get_U3CwwwU3E__1_0();
+			NullCheck(L_44);
+			int64_t L_45 = UnityWebRequest_get_responseCode_m1090830473(L_44, /*hidden argument*/NULL);
+			int64_t L_46 = L_45;
+			RuntimeObject * L_47 = Box(Int64_t3736567304_il2cpp_TypeInfo_var, &L_46);
+			Debug_Log_m4051431634(NULL /*static, unused*/, L_47, /*hidden argument*/NULL);
+			UnityWebRequest_t463507806 * L_48 = __this->get_U3CwwwU3E__1_0();
+			NullCheck(L_48);
+			DownloadHandler_t2937767557 * L_49 = UnityWebRequest_get_downloadHandler_m534911913(L_48, /*hidden argument*/NULL);
+			NullCheck(L_49);
+			ByteU5BU5D_t4116647657* L_50 = DownloadHandler_get_data_m1669096410(L_49, /*hidden argument*/NULL);
+			V_3 = L_50;
+			profileNotificationSetter_t2988085128 * L_51 = __this->get_U24this_1();
+			String_t* L_52 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
+			NullCheck(L_51);
+			L_51->set_jsonString_12(L_52);
+			profileNotificationSetter_t2988085128 * L_53 = __this->get_U24this_1();
+			IL2CPP_RUNTIME_CLASS_INIT(Encoding_t1523322056_il2cpp_TypeInfo_var);
+			Encoding_t1523322056 * L_54 = Encoding_get_UTF8_m1008486739(NULL /*static, unused*/, /*hidden argument*/NULL);
+			ByteU5BU5D_t4116647657* L_55 = V_3;
+			NullCheck(L_54);
+			String_t* L_56 = VirtFuncInvoker1< String_t*, ByteU5BU5D_t4116647657* >::Invoke(22 /* System.String System.Text.Encoding::GetString(System.Byte[]) */, L_54, L_55);
+			NullCheck(L_53);
+			L_53->set_jsonString_12(L_56);
+			profileNotificationSetter_t2988085128 * L_57 = __this->get_U24this_1();
+			NullCheck(L_57);
+			String_t* L_58 = L_57->get_jsonString_12();
+			Debug_Log_m4051431634(NULL /*static, unused*/, L_58, /*hidden argument*/NULL);
+			profileNotificationSetter_t2988085128 * L_59 = __this->get_U24this_1();
+			profileNotificationSetter_t2988085128 * L_60 = __this->get_U24this_1();
+			NullCheck(L_60);
+			String_t* L_61 = L_60->get_jsonString_12();
+			Notifications_t987802027 * L_62 = JsonUtility_FromJson_TisNotifications_t987802027_m2787351905(NULL /*static, unused*/, L_61, /*hidden argument*/JsonUtility_FromJson_TisNotifications_t987802027_m2787351905_RuntimeMethod_var);
+			NullCheck(L_59);
+			L_59->set_notifications_9(L_62);
+			profileNotificationSetter_t2988085128 * L_63 = __this->get_U24this_1();
+			NullCheck(L_63);
+			String_t* L_64 = L_63->get_jsonString_12();
+			bool L_65 = String_op_Inequality_m215368492(NULL /*static, unused*/, L_64, _stringLiteral3455956949, /*hidden argument*/NULL);
+			if (!L_65)
+			{
+				goto IL_0258;
+			}
+		}
+
+IL_0248:
+		{
+			profileNotificationSetter_t2988085128 * L_66 = __this->get_U24this_1();
+			NullCheck(L_66);
+			profileNotificationSetter_notificationInitializer_m805960625(L_66, /*hidden argument*/NULL);
+			goto IL_0269;
+		}
+
+IL_0258:
+		{
+			profileNotificationSetter_t2988085128 * L_67 = __this->get_U24this_1();
+			NullCheck(L_67);
+			GameObject_t1113636619 * L_68 = Component_get_gameObject_m442555142(L_67, /*hidden argument*/NULL);
+			NullCheck(L_68);
+			GameObject_SetActive_m796801857(L_68, (bool)0, /*hidden argument*/NULL);
+		}
+
+IL_0269:
+		{
+			IL2CPP_LEAVE(0x279, FINALLY_026e);
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t *)e.ex;
+		goto FINALLY_026e;
+	}
+
+FINALLY_026e:
+	{ // begin finally (depth: 1)
+		{
+			bool L_69 = V_1;
+			if (!L_69)
+			{
+				goto IL_0272;
+			}
+		}
+
+IL_0271:
+		{
+			IL2CPP_END_FINALLY(622)
+		}
+
+IL_0272:
+		{
+			U3CNotificationListerU3Ec__Iterator0_U3CU3E__Finally0_m1894724873(__this, /*hidden argument*/NULL);
+			IL2CPP_END_FINALLY(622)
+		}
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(622)
+	{
+		IL2CPP_JUMP_TBL(0x282, IL_0282)
+		IL2CPP_JUMP_TBL(0x279, IL_0279)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+	}
+
+IL_0279:
+	{
+		__this->set_U24PC_4((-1));
+	}
+
+IL_0280:
+	{
+		return (bool)0;
+	}
+
+IL_0282:
+	{
+		return (bool)1;
+	}
+}
+// System.Object profileNotificationSetter/<NotificationLister>c__Iterator0::System.Collections.Generic.IEnumerator<object>.get_Current()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject * U3CNotificationListerU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m1074838622 (U3CNotificationListerU3Ec__Iterator0_t1290292342 * __this, const RuntimeMethod* method)
+{
+	{
+		RuntimeObject * L_0 = __this->get_U24current_2();
+		return L_0;
+	}
+}
+// System.Object profileNotificationSetter/<NotificationLister>c__Iterator0::System.Collections.IEnumerator.get_Current()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject * U3CNotificationListerU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m1097837631 (U3CNotificationListerU3Ec__Iterator0_t1290292342 * __this, const RuntimeMethod* method)
+{
+	{
+		RuntimeObject * L_0 = __this->get_U24current_2();
+		return L_0;
+	}
+}
+// System.Void profileNotificationSetter/<NotificationLister>c__Iterator0::Dispose()
+extern "C" IL2CPP_METHOD_ATTR void U3CNotificationListerU3Ec__Iterator0_Dispose_m3419329180 (U3CNotificationListerU3Ec__Iterator0_t1290292342 * __this, const RuntimeMethod* method)
+{
+	uint32_t V_0 = 0;
+	Exception_t * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = -1;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		int32_t L_0 = __this->get_U24PC_4();
+		V_0 = L_0;
+		__this->set_U24disposing_3((bool)1);
+		__this->set_U24PC_4((-1));
+		uint32_t L_1 = V_0;
+		switch (L_1)
+		{
+			case 0:
+			{
+				goto IL_0034;
+			}
+			case 1:
+			{
+				goto IL_0028;
+			}
+		}
+	}
+	{
+		goto IL_0034;
+	}
+
+IL_0028:
+	try
+	{ // begin try (depth: 1)
+		IL2CPP_LEAVE(0x34, FINALLY_002d);
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t *)e.ex;
+		goto FINALLY_002d;
+	}
+
+FINALLY_002d:
+	{ // begin finally (depth: 1)
+		U3CNotificationListerU3Ec__Iterator0_U3CU3E__Finally0_m1894724873(__this, /*hidden argument*/NULL);
+		IL2CPP_END_FINALLY(45)
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(45)
+	{
+		IL2CPP_JUMP_TBL(0x34, IL_0034)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+	}
+
+IL_0034:
+	{
+		return;
+	}
+}
+// System.Void profileNotificationSetter/<NotificationLister>c__Iterator0::Reset()
+extern "C" IL2CPP_METHOD_ATTR void U3CNotificationListerU3Ec__Iterator0_Reset_m2436983663 (U3CNotificationListerU3Ec__Iterator0_t1290292342 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (U3CNotificationListerU3Ec__Iterator0_Reset_m2436983663_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		NotSupportedException_t1314879016 * L_0 = (NotSupportedException_t1314879016 *)il2cpp_codegen_object_new(NotSupportedException_t1314879016_il2cpp_TypeInfo_var);
+		NotSupportedException__ctor_m2730133172(L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, NULL, U3CNotificationListerU3Ec__Iterator0_Reset_m2436983663_RuntimeMethod_var);
+	}
+}
+// System.Void profileNotificationSetter/<NotificationLister>c__Iterator0::<>__Finally0()
+extern "C" IL2CPP_METHOD_ATTR void U3CNotificationListerU3Ec__Iterator0_U3CU3E__Finally0_m1894724873 (U3CNotificationListerU3Ec__Iterator0_t1290292342 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (U3CNotificationListerU3Ec__Iterator0_U3CU3E__Finally0_m1894724873_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		UnityWebRequest_t463507806 * L_0 = __this->get_U3CwwwU3E__1_0();
+		if (!L_0)
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		UnityWebRequest_t463507806 * L_1 = __this->get_U3CwwwU3E__1_0();
+		NullCheck(L_1);
+		InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_1);
+	}
+
+IL_0016:
+	{
 		return;
 	}
 }
@@ -29564,6 +31652,17 @@ IL_00e7:
 		UnityAction__ctor_m772160306(L_56, L_54, L_55, /*hidden argument*/NULL);
 		NullCheck(L_53);
 		UnityEvent_AddListener_m2276267359(L_53, L_56, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void teamInitializer::setRegistration(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void teamInitializer_setRegistration_m1731966155 (teamInitializer_t188153746 * __this, int32_t ___i0, const RuntimeMethod* method)
+{
+	{
+		Team_t627267163 * L_0 = __this->get_team_4();
+		int32_t L_1 = ___i0;
+		NullCheck(L_0);
+		L_0->set_is_registered_1(L_1);
 		return;
 	}
 }

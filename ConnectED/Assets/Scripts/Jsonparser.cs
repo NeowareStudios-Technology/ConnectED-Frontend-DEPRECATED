@@ -19,8 +19,8 @@ public class Jsonparser : MonoBehaviour {
     public InputField password;
     public Text firstname;
     public Text lastname;
-    public float lat = 0;
-    public float lon = 0;
+    public float lat = -81.191458f;
+    public float lon = 28.590012f;
     public GameObject mon;
     public GameObject tue;
     public GameObject wed;
@@ -68,6 +68,9 @@ public class Jsonparser : MonoBehaviour {
 
         if(Input.location.status == LocationServiceStatus.Failed)
         {
+           
+            lat = -81.191458f;
+            lon = 28.590012f;
             Debug.Log("Unable to determine device location");
             yield break;
         }
@@ -138,14 +141,18 @@ public class Jsonparser : MonoBehaviour {
         //create a profile
 
     }
+
     public GameObject loading;
+
+
+
     public void SignUp()
     {
         loading.SetActive(true);
         path = Application.streamingAssetsPath + "/Profile.json";
         jsonString = File.ReadAllText(path);
         profile = JsonUtility.FromJson<Profile>(jsonString);
-
+        Debug.Log("signing up");
 
         profile.first_name = firstname.text;
         profile.last_name = lastname.text;
@@ -238,9 +245,10 @@ public class Jsonparser : MonoBehaviour {
     }
 
     //functions to help the Detail changer
-    public void changeTeamRegisterStatus(string priv)
+    public void changeTeamRegisterStatus(int priv)
     {
-        //TeamButton.GetComponent<teamInitializer>().setRegistration(priv);
+        
+        TeamButton.GetComponent<teamInitializer>().setRegistration(priv);
     }
 }
 

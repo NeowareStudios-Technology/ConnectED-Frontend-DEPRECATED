@@ -75,10 +75,33 @@ public class TeamPageInit : MonoBehaviour {
                     Debug.Log("Team matches email");
                     Join.onClick.RemoveAllListeners();
 
+
                     Debug.Log(t.t_orig_name);
                     Join.onClick.AddListener(() => Deregister(t.t_orig_name, j.token));
+                    Join.onClick.AddListener(() => j.changeTeamRegisterStatus(0));
                     Join.transform.GetChild(0).GetComponent<Text>().text = "Leave Team";
                     deregister = true;
+
+                }
+
+            }
+            if (t.t_pending_members == null) { }
+            else
+            {
+                for (int i = 0; i < t.t_pending_members.Length; i++)
+                {
+                    if (t.t_pending_members[i] == PlayerPrefs.GetString("email").ToLower())
+                    {
+                        Debug.Log("Team matches email pending");
+                        Join.onClick.RemoveAllListeners();
+
+
+                        Debug.Log(t.t_orig_name);
+                        Join.onClick.AddListener(() => j.changeTeamRegisterStatus(-1));
+                        Join.transform.GetChild(0).GetComponent<Text>().text = "Pending...";
+                        deregister = true;
+
+                    }
 
                 }
             }
@@ -90,6 +113,7 @@ public class TeamPageInit : MonoBehaviour {
                 Debug.Log(t.t_orig_name);
                 privacy = t.t_privacy;
                 Join.onClick.AddListener(() => Register(t.t_orig_name, j.token));
+                Join.onClick.AddListener(() => j.changeTeamRegisterStatus(1));
                 Join.transform.GetChild(0).GetComponent<Text>().text = "Join Team";
             }
         

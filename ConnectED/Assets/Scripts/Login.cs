@@ -10,7 +10,8 @@ using Firebase.Auth;
 using Firebase.Unity.Editor;
 using UnityEngine.SceneManagement;
 
-public class Login : MonoBehaviour {
+public class Login : MonoBehaviour
+{
 
     public Animator EventPanel;
     public InputField email;
@@ -20,9 +21,9 @@ public class Login : MonoBehaviour {
     public TeamsGet TeamsGet;
     public void StartLoginProcess()
     {
-            string e = email.text;
-            string p = Password.text;
-	
+        string e = email.text;
+        string p = Password.text;
+
         if (PlayerPrefs.GetString("email", "email") != "email" && PlayerPrefs.GetString("password", "password") != "password")
         {
             e = PlayerPrefs.GetString("email", "email");
@@ -30,14 +31,15 @@ public class Login : MonoBehaviour {
         }
         else
         {
-	
-        PlayerPrefs.SetString("email", email.text);
-        PlayerPrefs.SetString("password", Password.text);
-	
+
+            PlayerPrefs.SetString("email", email.text);
+            PlayerPrefs.SetString("password", Password.text);
+
         }
         //firebase signin
         FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
-        auth.SignInWithEmailAndPasswordAsync(e, p).ContinueWith(task => {
+        auth.SignInWithEmailAndPasswordAsync(e, p).ContinueWith(task =>
+        {
             if (task.IsCanceled)
             {
                 Debug.LogError("SignInWithEmailAndPasswordAsync was canceled.");
@@ -49,60 +51,103 @@ public class Login : MonoBehaviour {
             if (task.IsFaulted)
             {
                 Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
-				PlayerPrefs.DeleteAll();
+                PlayerPrefs.DeleteAll();
                 j.alreadyin.SetActive(false);
                 SceneManager.LoadScene(0);
                 return;
             }
-        
+
             Firebase.Auth.FirebaseUser newUser = task.Result;
             Debug.LogFormat("User signed in successfully: {0} ({1})",
                 newUser.DisplayName, newUser.UserId);
             j.UserID = newUser.UserId;
             GetToken(auth);
 
-			Debug.Log("Logging in: "+e + " " + p);
+            Debug.Log("Logging in: " + e + " " + p);
             EventPanel.enabled = true;
         });
 
 
-    
+
 
 
     }
 
-  public void GetToken(FirebaseAuth auth){
-      FirebaseUser user = auth.CurrentUser;
- 
-      user.TokenAsync(true).ContinueWith(task => {
-          if (task.IsCanceled)
-          {
-              Debug.LogError("TokenAsync was canceled.");
-              return;
-          }
- 
-          if (task.IsFaulted)
-          {
-              Debug.LogError("TokenAsync encountered an error: " + task.Exception);
-              return;
-          }
- 
-          j.token = task.Result;
-          Debug.Log(j.token);
-          TeamsGet.getTeams();
-          info.GetmyProfile();
-          JoinWithTeam.getTeams();
+    public void GetToken(FirebaseAuth auth)
+    {
+        FirebaseUser user = auth.CurrentUser;
+
+        user.TokenAsync(true).ContinueWith(task =>
+        {
+            if (task.IsCanceled)
+            {
+                Debug.LogError("TokenAsync was canceled.");
+                return;
+            }
+
+            if (task.IsFaulted)
+            {
+                Debug.LogError("TokenAsync encountered an error: " + task.Exception);
+                return;
+            }
+
+            j.token = task.Result;
+            Debug.Log(j.token);
+            TeamsGet.getTeams();
+            loading.SetActive(true);
+            pns.gameObject.SetActive(true);
+            pns.getNotifications();
+            updatePosition();
+            JoinWithTeam.getTeams();
           // Send token to your backend via HTTPS
           // ...
       });
-  }
+    }
+    public GameObject loading;
+    public string dbProfilePut = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles";
+    private IEnumerator coroutine;
+    public void updatePosition()
+    {
 
+        Profile profile = new Profile();
+        profile.lat = j.lat;
+        profile.lon = j.lon;
+        string ourProfile = JsonUtility.ToJson(profile);
+        byte[] bodyRaw2 = Encoding.UTF8.GetBytes(ourProfile);
+        UnityWebRequest www2 = UnityWebRequest.Put(dbProfilePut, ourProfile);
+        www2.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw2);
+        www2.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        www2.SetRequestHeader("Authorization", "Bearer " + j.token);
+        www2.SetRequestHeader("Content-Type", "application/json");
+        coroutine = Post(www2);
+        StartCoroutine(coroutine);
+    }
+
+
+    private IEnumerator Post(UnityWebRequest www)
+    {
+        yield return www.SendWebRequest();
+
+        Debug.Log("Status Code: " + www.responseCode);
+        Debug.Log(www.error);
+        Debug.Log(www.uploadHandler.data);
+        Debug.Log(www.downloadHandler.data);
+        Debug.Log(www.GetRequestHeader("Authorization"));
+        if (www.responseCode.ToString() == "200")
+        {
+
+            info.GetmyProfile();
+
+        }
+    }
+    public profileNotificationSetter pns;
     public JoinWithTeamInitialize JoinWithTeam;
     public void GetInitialToken(FirebaseAuth auth)
     {
         FirebaseUser user = auth.CurrentUser;
 
-        user.TokenAsync(true).ContinueWith(task => {
+        user.TokenAsync(true).ContinueWith(task =>
+        {
             if (task.IsCanceled)
             {
                 Debug.LogError("TokenAsync was canceled.");
@@ -126,7 +171,10 @@ public class Login : MonoBehaviour {
 
     public void Continue()
     {
-        if (j.profileSet)
+        if (j.profileSet){
             EventPanel.enabled = true;
+
+        }
+
     }
 }

@@ -639,6 +639,7 @@ extern const Il2CppType prefill_t1646751602_0_0_0;
 extern const Il2CppType FieldsController_t1403175110_0_0_0;
 extern const Il2CppType GalleryController_t2037433465_0_0_0;
 extern const Il2CppType profileTeams_t1834502170_0_0_0;
+extern const Il2CppType teamInitializer_t188153746_0_0_0;
 extern const Il2CppType Loom_t3759828253_0_0_0;
 extern const Il2CppType TeamEventInit_t1564489714_0_0_0;
 extern const Il2CppType profileHistory_t1906111988_0_0_0;
@@ -652,7 +653,6 @@ extern const Il2CppType TeamSearch_t368283327_0_0_0;
 extern const Il2CppType EventSearch_t1270132540_0_0_0;
 extern const Il2CppType teamHistory_t1555552932_0_0_0;
 extern const Il2CppType TeamProfileInit_t3516255158_0_0_0;
-extern const Il2CppType teamInitializer_t188153746_0_0_0;
 extern const Il2CppType teamPrefill_t1320688299_0_0_0;
 extern const Il2CppType teamTopPrefill_t4261041944_0_0_0;
 extern const Il2CppType dayInfo_t3924891336_0_0_0;
@@ -660,6 +660,7 @@ extern const Il2CppType BoxCollider2D_t3581341831_0_0_0;
 extern const Il2CppType firstOfMonthTrigger_t2052414217_0_0_0;
 extern const Il2CppType CalendarEventButton_t2119709032_0_0_0;
 extern const Il2CppType timePrefill_t976998095_0_0_0;
+extern const Il2CppType Notifications_t987802027_0_0_0;
 extern const Il2CppType IEnumerable_1_t1615002100_gp_0_0_0_0;
 extern const Il2CppType Array_InternalArray__IEnumerable_GetEnumerator_m370636962_gp_0_0_0_0;
 extern const Il2CppType Array_Sort_m673391272_gp_0_0_0_0;
@@ -2441,6 +2442,8 @@ static const RuntimeType* GenInst_GalleryController_t2037433465_0_0_0_Types[] = 
 extern const Il2CppGenericInst GenInst_GalleryController_t2037433465_0_0_0 = { 1, GenInst_GalleryController_t2037433465_0_0_0_Types };
 static const RuntimeType* GenInst_profileTeams_t1834502170_0_0_0_Types[] = { (&profileTeams_t1834502170_0_0_0) };
 extern const Il2CppGenericInst GenInst_profileTeams_t1834502170_0_0_0 = { 1, GenInst_profileTeams_t1834502170_0_0_0_Types };
+static const RuntimeType* GenInst_teamInitializer_t188153746_0_0_0_Types[] = { (&teamInitializer_t188153746_0_0_0) };
+extern const Il2CppGenericInst GenInst_teamInitializer_t188153746_0_0_0 = { 1, GenInst_teamInitializer_t188153746_0_0_0_Types };
 static const RuntimeType* GenInst_Loom_t3759828253_0_0_0_Types[] = { (&Loom_t3759828253_0_0_0) };
 extern const Il2CppGenericInst GenInst_Loom_t3759828253_0_0_0 = { 1, GenInst_Loom_t3759828253_0_0_0_Types };
 static const RuntimeType* GenInst_TeamEventInit_t1564489714_0_0_0_Types[] = { (&TeamEventInit_t1564489714_0_0_0) };
@@ -2467,8 +2470,6 @@ static const RuntimeType* GenInst_teamHistory_t1555552932_0_0_0_Types[] = { (&te
 extern const Il2CppGenericInst GenInst_teamHistory_t1555552932_0_0_0 = { 1, GenInst_teamHistory_t1555552932_0_0_0_Types };
 static const RuntimeType* GenInst_TeamProfileInit_t3516255158_0_0_0_Types[] = { (&TeamProfileInit_t3516255158_0_0_0) };
 extern const Il2CppGenericInst GenInst_TeamProfileInit_t3516255158_0_0_0 = { 1, GenInst_TeamProfileInit_t3516255158_0_0_0_Types };
-static const RuntimeType* GenInst_teamInitializer_t188153746_0_0_0_Types[] = { (&teamInitializer_t188153746_0_0_0) };
-extern const Il2CppGenericInst GenInst_teamInitializer_t188153746_0_0_0 = { 1, GenInst_teamInitializer_t188153746_0_0_0_Types };
 static const RuntimeType* GenInst_teamPrefill_t1320688299_0_0_0_Types[] = { (&teamPrefill_t1320688299_0_0_0) };
 extern const Il2CppGenericInst GenInst_teamPrefill_t1320688299_0_0_0 = { 1, GenInst_teamPrefill_t1320688299_0_0_0_Types };
 static const RuntimeType* GenInst_teamTopPrefill_t4261041944_0_0_0_Types[] = { (&teamTopPrefill_t4261041944_0_0_0) };
@@ -2483,6 +2484,8 @@ static const RuntimeType* GenInst_CalendarEventButton_t2119709032_0_0_0_Types[] 
 extern const Il2CppGenericInst GenInst_CalendarEventButton_t2119709032_0_0_0 = { 1, GenInst_CalendarEventButton_t2119709032_0_0_0_Types };
 static const RuntimeType* GenInst_timePrefill_t976998095_0_0_0_Types[] = { (&timePrefill_t976998095_0_0_0) };
 extern const Il2CppGenericInst GenInst_timePrefill_t976998095_0_0_0 = { 1, GenInst_timePrefill_t976998095_0_0_0_Types };
+static const RuntimeType* GenInst_Notifications_t987802027_0_0_0_Types[] = { (&Notifications_t987802027_0_0_0) };
+extern const Il2CppGenericInst GenInst_Notifications_t987802027_0_0_0 = { 1, GenInst_Notifications_t987802027_0_0_0_Types };
 static const RuntimeType* GenInst_Boolean_t97287965_0_0_0_Boolean_t97287965_0_0_0_Types[] = { (&Boolean_t97287965_0_0_0), (&Boolean_t97287965_0_0_0) };
 extern const Il2CppGenericInst GenInst_Boolean_t97287965_0_0_0_Boolean_t97287965_0_0_0 = { 2, GenInst_Boolean_t97287965_0_0_0_Boolean_t97287965_0_0_0_Types };
 static const RuntimeType* GenInst_Byte_t1134296376_0_0_0_Byte_t1134296376_0_0_0_Types[] = { (&Byte_t1134296376_0_0_0), (&Byte_t1134296376_0_0_0) };
@@ -3009,7 +3012,7 @@ static const RuntimeType* GenInst_List_1_t3009893961_0_0_0_Types[] = { (&List_1_
 extern const Il2CppGenericInst GenInst_List_1_t3009893961_0_0_0 = { 1, GenInst_List_1_t3009893961_0_0_0_Types };
 static const RuntimeType* GenInst_ObjectPool_1_t892185599_gp_0_0_0_0_Types[] = { (&ObjectPool_1_t892185599_gp_0_0_0_0) };
 extern const Il2CppGenericInst GenInst_ObjectPool_1_t892185599_gp_0_0_0_0 = { 1, GenInst_ObjectPool_1_t892185599_gp_0_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1074] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1075] = 
 {
 	&GenInst_RuntimeObject_0_0_0,
 	&GenInst_Int32_t2950945753_0_0_0,
@@ -3801,6 +3804,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1074] =
 	&GenInst_FieldsController_t1403175110_0_0_0,
 	&GenInst_GalleryController_t2037433465_0_0_0,
 	&GenInst_profileTeams_t1834502170_0_0_0,
+	&GenInst_teamInitializer_t188153746_0_0_0,
 	&GenInst_Loom_t3759828253_0_0_0,
 	&GenInst_TeamEventInit_t1564489714_0_0_0,
 	&GenInst_profileHistory_t1906111988_0_0_0,
@@ -3814,7 +3818,6 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1074] =
 	&GenInst_EventSearch_t1270132540_0_0_0,
 	&GenInst_teamHistory_t1555552932_0_0_0,
 	&GenInst_TeamProfileInit_t3516255158_0_0_0,
-	&GenInst_teamInitializer_t188153746_0_0_0,
 	&GenInst_teamPrefill_t1320688299_0_0_0,
 	&GenInst_teamTopPrefill_t4261041944_0_0_0,
 	&GenInst_dayInfo_t3924891336_0_0_0,
@@ -3822,6 +3825,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1074] =
 	&GenInst_firstOfMonthTrigger_t2052414217_0_0_0,
 	&GenInst_CalendarEventButton_t2119709032_0_0_0,
 	&GenInst_timePrefill_t976998095_0_0_0,
+	&GenInst_Notifications_t987802027_0_0_0,
 	&GenInst_Boolean_t97287965_0_0_0_Boolean_t97287965_0_0_0,
 	&GenInst_Byte_t1134296376_0_0_0_Byte_t1134296376_0_0_0,
 	&GenInst_IntPtr_t_0_0_0_IntPtr_t_0_0_0,
