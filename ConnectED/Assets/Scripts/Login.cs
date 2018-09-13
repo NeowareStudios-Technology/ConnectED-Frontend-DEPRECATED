@@ -93,7 +93,6 @@ public class Login : MonoBehaviour
 
             j.token = task.Result;
             Debug.Log(j.token);
-            TeamsGet.getTeams();
             loading.SetActive(true);
             pns.gameObject.SetActive(true);
             pns.getNotifications();
@@ -138,6 +137,7 @@ public class Login : MonoBehaviour
 
             info.GetmyProfile();
 
+            TeamsGet.getTeams();
         }
     }
     public profileNotificationSetter pns;
