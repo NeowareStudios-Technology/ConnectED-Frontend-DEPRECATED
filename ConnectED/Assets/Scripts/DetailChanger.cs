@@ -99,6 +99,7 @@ public class DetailChanger : MonoBehaviour
         {
             //Volunteer.onClick.AddListener(() => Register(e.e_organizer + "/" + e.e_title, j.token));
             Volunteer.onClick.AddListener(() => JoinWithTeam.SetActive(true));
+            Volunteer.onClick.AddListener(() => joinWithAction.SetActive(true));
             Volunteer.transform.GetChild(0).GetComponent<Text>().text = "VOLUNTEER";
         }
         if (e.is_registered == 1)
@@ -206,11 +207,28 @@ public class DetailChanger : MonoBehaviour
     public Button joinWithTeamButton;
     public Button joinWithoutButton;
     public GameObject joinWithTeamContainer;
+    public GameObject joinWithAction;
     public ScrollSnapRect scroll;
+    public String action = "both";
+
+    public void setTeamAction(int i){
+        if(i == 0){
+            action = "Walking";
+
+        }
+        if(i == 1){
+            action = "Fundraising";
+        }
+        if(i == 2){
+            action = "Both";
+        }
+    }
+
     public void RegisterWithTeam(string s, string t)
     {
         loader.SetActive(true);
         team.team = joinWithTeamContainer.transform.GetChild(scroll.getCurrentPage()).GetComponent<JoinWithTeamSetter>().teamName.text;
+        team.user_action = action;
         string newEvent = JsonUtility.ToJson(team);
         Debug.Log(newEvent);
         byte[] bodyRaw2 = Encoding.UTF8.GetBytes(newEvent);
@@ -292,6 +310,7 @@ public class DetailChanger : MonoBehaviour
         {
             Volunteer.onClick.RemoveAllListeners();
             Volunteer.onClick.AddListener(() => JoinWithTeam.SetActive(true));
+            Volunteer.onClick.AddListener(() => joinWithAction.SetActive(true));
             Volunteer.transform.GetChild(0).GetComponent<Text>().text = "VOLUNTEER";
             j.changeExploreRegisterStatus(0);
             loader.SetActive(false);
@@ -493,6 +512,7 @@ public class DetailChanger : MonoBehaviour
 [System.Serializable]
 public class SignUpWithTeam{
     public string team;
+    public string user_action;
 }
 public class MyDictionary{
     public string s;
