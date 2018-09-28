@@ -72,6 +72,17 @@ public class Login : MonoBehaviour
 
 
     }
+    public InputField resetEmail;
+    public void forgotPassword()
+    {
+        if (resetEmail.text.Length > 6)
+        {
+            var auth = FirebaseAuth.DefaultInstance;
+            var emailAddress = j.email;
+            auth.SendPasswordResetEmailAsync(resetEmail.text);
+            // Email sent.
+        }
+    }
 
     public void GetToken(FirebaseAuth auth)
     {
