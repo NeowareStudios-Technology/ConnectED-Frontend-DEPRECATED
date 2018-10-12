@@ -124,7 +124,7 @@ public class Jsonparser : MonoBehaviour {
        
 		});
     }
-
+    //creates firebase account
 	public void CreateProfile()
     {
         

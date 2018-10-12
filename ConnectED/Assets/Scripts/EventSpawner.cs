@@ -24,6 +24,8 @@ public class EventSpawner : MonoBehaviour {
     public Jsonparser j;
     public GameObject Loading;
     public calendarPopulator calPop;
+
+    //lead into prefilllister webcall
     public void populateEvents()
     {
         StartCoroutine(prefillLister());
