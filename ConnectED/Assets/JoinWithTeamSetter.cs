@@ -8,7 +8,7 @@ public class JoinWithTeamSetter : MonoBehaviour {
     public RawImage pic;
     public Text teamName;
     private Team t;
-
+    //this initializes all the teams in the join with team popup
     public void setTeam(Team team)
     {
         t = new Team();

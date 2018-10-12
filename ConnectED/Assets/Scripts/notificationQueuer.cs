@@ -9,7 +9,7 @@ using Firebase.Auth;
 using Firebase.Unity.Editor;
 
 public class notificationQueuer : MonoBehaviour {
-
+    //this script spawns in notifications for events and teams, such as approving a private member
     public string pendingName;
     public string eventName;
     public GameObject notificationPanel;
@@ -27,6 +27,7 @@ public class notificationQueuer : MonoBehaviour {
     private bool gettingProf = false;
 	public approveList approve;
     public approveList deny;
+    //these are  called when setting event and team tiles if you own the event or team
     public void queueNotifications(Event e){
         events.Add(e);
     }
@@ -49,6 +50,7 @@ public class notificationQueuer : MonoBehaviour {
                 {
                     if (x < events[i].num_pending_attendees)
                     {
+                        //this goes through all of the pending attendees recursively
                         notificationPanel.SetActive(true);
                         GetmyProfile(i, x);
 
@@ -56,12 +58,14 @@ public class notificationQueuer : MonoBehaviour {
                 }
                 if (events[i].num_pending_attendees == 0)
                 {
+                    //this is called when you have no more pending attendees
                     i++;
                     setNotification();
                 }
             }
             else
             {
+                //if there is no privacy in an event
                 Debug.Log("open event");
                 i++;
                 setNotification();
@@ -71,12 +75,14 @@ public class notificationQueuer : MonoBehaviour {
         {
             if (!SettingDBa && !SettingDBd && notiUp == false)
             {
+                //this is if there are no more notifications for events at all
                 Debug.Log("no more notifications");
                 deny = new approveList();
                 approve = new approveList();
 				x = 0;
 				i = 0;
                 eventNoti = true;
+                //then it will send notifications for teams
                 setTeamNotification();
             }
         }
@@ -84,8 +90,10 @@ public class notificationQueuer : MonoBehaviour {
 
     public void GetmyProfile(int i1, int x1)
     {
+        //let the user know we are loading in the persons information
         loading.SetActive(true);
         gettingProf = true;
+        //this adds the persons information to the privacy request
         StartCoroutine(GetProfile(i1,x1));
     }
 
@@ -119,6 +127,7 @@ public class notificationQueuer : MonoBehaviour {
             }
             else
             {
+                //on success set the information on the notification
                 Debug.Log(www.responseCode);
                 byte[] results = www.downloadHandler.data;
                 jsonString = "";
@@ -131,7 +140,7 @@ public class notificationQueuer : MonoBehaviour {
             }
         };
     }
-
+    //set the notification
     public void initializeNotification(int i1)
     {
         notificationText.text = "Would you like to allow " + profile.first_name + " " + profile.last_name + " to come to your private event " + events[i1].e_title + "?";
@@ -144,15 +153,18 @@ public class notificationQueuer : MonoBehaviour {
     }
     public bool teamMode;
     public int pendingIndex = 0;
+    //this is called if you accept someone
     public void accept()
     {
         if (teamMode)
         {
+            //if you accept someone onto your team
             acceptTeam();
             return;
         }
         else
         {
+            //if you accept someone into an event it changes around the lists associated with the event and approves the people you approved and denys the people you deny
             if (approve.approve_list.Length != events[i].pending_attendees.Length)
                 approve.approve_list = new string[events[i].pending_attendees.Length];
             approve.approve_list[x] = events[i].pending_attendees[x];
@@ -165,6 +177,7 @@ public class notificationQueuer : MonoBehaviour {
             }
             else
             {
+                //this decided to initiate a deny or approve action
                 if (approve.approve_list.Length != 0 || approve.approve_list == null)
                     StartCoroutine(acceptProfile());
                 if (deny.approve_list.Length != 0 || deny.approve_list == null)
@@ -234,6 +247,7 @@ public class notificationQueuer : MonoBehaviour {
                 Debug.Log(www.error);
                 Debug.Log(www.downloadHandler.text);
             }
+            //get ready to set approvals and denys for the next event
             i++;
             x = 0;
             SettingDBa = false;
@@ -281,7 +295,7 @@ public class notificationQueuer : MonoBehaviour {
             loading.SetActive(false);
         };
     }
-
+    //this is where team notifications are handled, it is almost the exact same as the event notifications
     public void setTeamNotification()
     {
         teamMode = true;
@@ -327,7 +341,7 @@ public class notificationQueuer : MonoBehaviour {
             }
         }
     }
-
+    //i is the current team and x is the current person on that team for getting their profile
     public void GetmyTeam(int i1, int x1)
     {
         teamMode = true;
@@ -336,7 +350,7 @@ public class notificationQueuer : MonoBehaviour {
         StartCoroutine(GetTeam(i1, x1));
     }
 
-
+    //this gets the profile for the person you are going to approve or deny for teams
     IEnumerator GetTeam(int i1, int x1)
     {
         FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
@@ -365,6 +379,7 @@ public class notificationQueuer : MonoBehaviour {
             }
             else
             {
+                //on success display notification and wait for user to deny or approve
                 Debug.Log(www.responseCode);
                 byte[] results = www.downloadHandler.data;
                 jsonString = "";
@@ -372,6 +387,7 @@ public class notificationQueuer : MonoBehaviour {
                 Debug.Log(jsonString);
                 profile = JsonUtility.FromJson<Profile>(jsonString);
                 loading.SetActive(false);
+                //initialize the team notification
                 initializeTeamNotification(i1);
                 notificationPanel.SetActive(true);
             }
@@ -401,12 +417,14 @@ public class notificationQueuer : MonoBehaviour {
         approve.approve_list = new string[teams[i].t_pending_members.Length];
         approve.approve_list[x] = teams[i].t_pending_members[x];
         Debug.Log(teams[i].t_pending_members[x]);
+        //if there are more team members to approve keep recursively doing that
         if (x < teams[i].t_pending_members.Length - 1)
         {
             Debug.Log("Adding " + profile.email);
             x++;
             setTeamNotification();
         }
+        //or start the accept or deny process for the private people on this event
         else
         {
             if (approve.approve_list != null && approve.approve_list.Length != 0 )
@@ -471,6 +489,7 @@ public class notificationQueuer : MonoBehaviour {
                 Debug.Log(www.downloadHandler.data);
             }
             Debug.Log(www.responseCode);
+            //now that we have approved or denied the people for this team, move onto the next one on the list if there is one
             i++;
             x = 0;
             SettingDBa = false;

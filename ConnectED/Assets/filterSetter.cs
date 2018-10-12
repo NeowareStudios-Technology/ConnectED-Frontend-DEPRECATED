@@ -12,7 +12,7 @@ using Firebase.Unity.Editor;
 using UnityEngine.SceneManagement;
 
 public class filterSetter : MonoBehaviour {
-
+    //this script handles changes to your filter settings and the actual webcall
     public Slider distance;
     public int dist = 100;
     public string env = "b";
@@ -66,7 +66,7 @@ public class filterSetter : MonoBehaviour {
         Debug.Log(www.GetRequestHeader("Authorization"));
         if (www.responseCode.ToString() == "200")
         {
-
+            //reload the app if you change your filter settings
             SceneManager.LoadScene(0);
             //if (EmailCheck && Email.text != j.profile.email)
             //    changeEmail();

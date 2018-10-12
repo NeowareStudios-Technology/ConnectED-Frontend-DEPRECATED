@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class TeamProfileInit : MonoBehaviour {
-
+    //this initializes the profiles on the team page
     // Use this for initialization
     public RawImage pic;
     public Text Name;

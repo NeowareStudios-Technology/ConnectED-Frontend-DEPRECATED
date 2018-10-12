@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 public class EventCreator : MonoBehaviour
 {
-    
+    //this code takes input from the event creation pages and uses that to create an event on the database
     public InputField title;
     public InputField description;
     public Dropdown month;
@@ -161,6 +161,7 @@ public class EventCreator : MonoBehaviour
             Debug.Log("try again: make event");
             initEvent();
         }
+        //on successful webcall
         if (www.responseCode.ToString() == "200" && LeaderOne.text != "")
         {
             Leaders leaders = new Leaders();
@@ -206,7 +207,7 @@ public class EventCreator : MonoBehaviour
     }
 
 }
-
+//this is how you set up json objects in c#
 [System.Serializable]
 public class Event
 {

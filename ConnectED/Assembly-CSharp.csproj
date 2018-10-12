@@ -82,7 +82,6 @@
     <Compile Include="Assets\QRcode\Scripts\Utility.cs" />
     <Compile Include="Assets\Scripts\alphaAndText.cs" />
     <Compile Include="Assets\Scripts\animationController.cs" />
-    <Compile Include="Assets\Scripts\APImanager.cs" />
     <Compile Include="Assets\Scripts\CalendarEventButton.cs" />
     <Compile Include="Assets\Scripts\calendarPopulator.cs" />
     <Compile Include="Assets\Scripts\dateDayUpdater.cs" />

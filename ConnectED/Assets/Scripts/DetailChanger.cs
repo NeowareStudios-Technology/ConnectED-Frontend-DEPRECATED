@@ -11,7 +11,7 @@ using System;
 
 public class DetailChanger : MonoBehaviour
 {
-
+    //this script changes what is on the details page
     public Text Date;
     public Text Title;
     public RawImage pic;
@@ -60,8 +60,10 @@ public class DetailChanger : MonoBehaviour
         }
     }
     public int eventCapacity;
+    //this function gets an event and fills out the details page based on that event
     public void setDetails(Event e)
     {
+        //these set all of the information on the page
         eventCapacity = e.capacity;
         detailsUpdatesPageSetter.setUpdate(e);
         detailsUpdatesPageSetter.getEventUpdates(e.e_organizer, e.e_orig_title);
@@ -73,12 +75,15 @@ public class DetailChanger : MonoBehaviour
         Location.text = (e.street + " " + e.city + " " + e.state + " " + e.zip_code);
         Title.text = e.e_title;
         Time.text = e.start[0] + " -" + e.end[0];
+
+        //this sets all of the buttons on the page
         joinWithTeamButton.onClick.RemoveAllListeners();
         joinWithoutButton.onClick.RemoveAllListeners();
         joinWithTeamButton.onClick.AddListener(() => RegisterWithTeam(e.e_organizer + "/" + e.e_title, j.token));
         joinWithoutButton.onClick.AddListener(() => Register(e.e_organizer + "/" + e.e_title, j.token));
         Description.text = e.e_desc;
         Capacity.text = e.num_attendees + " / " + e.capacity;
+        //this sets the required skills of the details page
         Status.text = privacy() + " / Required Skills: ";
         if (e.req_skills == null)
         {
@@ -93,7 +98,7 @@ public class DetailChanger : MonoBehaviour
             if (e.req_skills.Length >= 3)
                 Status.text += e.req_skills[0] + ", " + e.req_skills[1] + ", " + e.req_skills[2];
         }
-
+        //this sets the volunteer button correctly
         Volunteer.onClick.RemoveAllListeners();
         if (e.is_registered == 0)
         {
@@ -113,6 +118,7 @@ public class DetailChanger : MonoBehaviour
             Volunteer.transform.GetChild(0).GetComponent<Text>().text = "PENDING...";
             // is private event
         }
+        //this sets the interests of the page
         if (e.interests == null)
         {
             Tag1.SetActive(false);
@@ -223,7 +229,7 @@ public class DetailChanger : MonoBehaviour
             action = "Both";
         }
     }
-
+    //this starts the regestering process and takes in a string s and a team t
     public void RegisterWithTeam(string s, string t)
     {
         loader.SetActive(true);
@@ -254,7 +260,7 @@ public class DetailChanger : MonoBehaviour
         coroutine = Put(www2);
         StartCoroutine(coroutine);
     }
-
+    //this is where we make the call and handle the results changing the page as necessary
     private IEnumerator Put(UnityWebRequest www)
     {
         yield return www.SendWebRequest();
@@ -286,6 +292,7 @@ public class DetailChanger : MonoBehaviour
         }
 
     }
+    //these are the deregistering process
     public void Deregister(string s, string t)
     {
         loader.SetActive(true);
@@ -317,10 +324,16 @@ public class DetailChanger : MonoBehaviour
         }
 
     }
+
+
+
     public MyDictionary[] eventTeamCounter;
     private string jsonString;
     private string searchTeamURL = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/teams/search";
     private string token;
+
+
+    //this searches teams associated with an event
     public void searchTeams(string s, string t)
     {
         token = t;
@@ -368,14 +381,20 @@ public class DetailChanger : MonoBehaviour
             }
         }
     }
+
+
     public GameObject teamSearchPrefab;
     public GameObject teamSearchContainer;
     private TeamSearch tSearch;
     private int retry = 0;
+
+
     private void teamPutRetry(UnityWebRequest www){
         www.SetRequestHeader("Authorization", "Bearer " + token);
         StartCoroutine(TeamPut(www));
     }
+
+
     private IEnumerator TeamPut(UnityWebRequest www)
     {
         allTeams = new Team();
@@ -420,7 +439,10 @@ public class DetailChanger : MonoBehaviour
             }
         }
     }
+
     public GameObject teamPage;
+
+    //this populates the team page for the event on the details page
     public void teamPopulator()
     {
         GameObject newEvent;
@@ -448,9 +470,13 @@ public class DetailChanger : MonoBehaviour
         teamPage = _teamPage;
     }
     private Team allTeams;
+
+
     public void populatorRetry(string i){
         StartCoroutine(Populator(i));
     }
+
+
     IEnumerator Populator(string t_id)
     {
         allTeams = new Team();

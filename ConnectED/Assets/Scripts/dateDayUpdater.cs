@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class dateDayUpdater : MonoBehaviour {
-
+    //this script performs updates to the date dropdown menu. when you update the month update day is called, also if you update the year
     public Dropdown months;
     public Dropdown days;
     public Dropdown year;
@@ -19,9 +19,11 @@ public class dateDayUpdater : MonoBehaviour {
             days.AddOptions(thirtyOne);
             return;
         }
+        //leap year
         if (months.value == 1)
         {
-            if (year.value == 2)
+            //if year == 2020 or 2024, 2028...
+            if (year.value + 2 % 4 == 0)
                 days.AddOptions(twentyNine);
             else
                 days.AddOptions(twentyEight);

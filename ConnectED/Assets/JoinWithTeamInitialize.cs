@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 public class JoinWithTeamInitialize : MonoBehaviour
 {
-
+    //this loads in all the teams you are in and puts them in the join with team popup so that you can select the team you want to join with
     public string db = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles/";
     public profileTeams profileTeams;
 
@@ -63,18 +63,20 @@ public class JoinWithTeamInitialize : MonoBehaviour
             }
             else
             {
+                //success
                 Debug.Log(www.responseCode);
                 byte[] results = www.downloadHandler.data;
                 jsonString = "";
                 jsonString = Encoding.UTF8.GetString(results);
                 Debug.Log(jsonString);
                 profileTeams = JsonUtility.FromJson<profileTeams>(jsonString);
+                //if we have teams that we are registered too
                 if(jsonString != "{}" && profileTeams.registered_team_ids != null)
                     StartCoroutine(Populator());
             }
         }
     }
-
+    //populate with teams we are registered for
     IEnumerator Populator()
     {
         allTeams = new Team[profileTeams.registered_team_ids.Length];
@@ -169,6 +171,7 @@ public class JoinWithTeamInitialize : MonoBehaviour
     public GameObject JoinWithTeamDotPrefab;
     public GameObject JoinWithTeamDotContainer;
     public ScrollSnapRect scroll;
+    //this creates all the teams in the popup
     public void instantiateTeams(Team[] teams){
         for (int i = 0; i < teams.Length; i++)
         {

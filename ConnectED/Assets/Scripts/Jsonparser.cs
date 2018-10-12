@@ -12,7 +12,8 @@ using Firebase.Auth;
 using Firebase.Unity.Editor;
 
 public class Jsonparser : MonoBehaviour {
-
+    //this is the main script in the app as it holds the token, which is referenced frequently
+    //Also it holds the users profile information
     public Text email;
     public string UserID;
     public string token;
@@ -46,14 +47,14 @@ public class Jsonparser : MonoBehaviour {
     private string dbprofiles = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles";
     //Post
     private IEnumerator coroutine;
-
+    //this is how you get the users location
     private IEnumerator StartLocationService()
     {
         if (!Input.location.isEnabledByUser){
  
             yield break;
         }
-
+        //this is the process described in the tutorial
         Input.location.Start();
         int maxWait = 20;
         while(Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
@@ -99,7 +100,7 @@ public class Jsonparser : MonoBehaviour {
 
     void Start() {
 
-
+        //this is where the app flow mostly begins
         System.DateTime DateTime = new DateTime(2018, 8, 24);
         Debug.Log(DateTime.DayOfWeek);
         //firebase init
@@ -155,7 +156,7 @@ public class Jsonparser : MonoBehaviour {
     public GameObject loading;
 
 
-
+    //this script creates your profile based on the signup page
     public void SignUp()
     {
         loading.SetActive(true);
@@ -182,7 +183,7 @@ public class Jsonparser : MonoBehaviour {
         profile.sun = sun.GetComponent<spriteSwitcher>().pressed;
         profile.lat = lat;
         profile.lon = lon;
-
+        //this is how you convert a texture to a jpg
         if (profilePic.color.a == 1)
         {
             RenderTexture tmp = RenderTexture.GetTemporary(profilePic.texture.width, profilePic.texture.height, 0, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);
@@ -228,6 +229,7 @@ public class Jsonparser : MonoBehaviour {
         }
     }
     public EventSpawner eventSpawner;
+    //this is how you set the profile, when you log in 
     public void SetProfile(Profile p)
     {
         profile = p;
@@ -236,7 +238,7 @@ public class Jsonparser : MonoBehaviour {
         eventSpawner.populateEvents();
 
     }
-
+    //this is a reference to the active explore tile, so that we can keep track of what we are looking at
     public void setExploreTile(GameObject o)
     {
         exploreTile = o;
@@ -244,11 +246,13 @@ public class Jsonparser : MonoBehaviour {
 
     //functions to help the Detail changer
     public GameObject exploreTile;
+    //this changes the registration status of the event tiles so if you back out of an event and go back in it will have the correct registration status
     public void changeExploreRegisterStatus(int i)
     {
         exploreTile.GetComponent<EventInitializer>().setRegistration(i);
     }
     public GameObject TeamButton;
+    //this keeps track of what team button you pressed
     public void setTeamButton(GameObject o)
     {
         TeamButton = o;

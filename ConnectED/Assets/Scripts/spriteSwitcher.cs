@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class spriteSwitcher : MonoBehaviour {
 
-
+    //this is used heavily in the app to control which sprite is shown for an image, it is used on buttons primarily, but is also used in the calendar as well
+    //pressed is used to see if buttons are pressed, and also creates a custom button system aswell
     private Sprite firstImage;
     public Sprite secondImage;
     private Sprite onImage;
@@ -25,7 +26,7 @@ public class spriteSwitcher : MonoBehaviour {
             offImage = firstImage;
         }
 	}
-	
+	//this happens if it is just pressed
     public void isPressed()
     {
         pressed = !pressed;
@@ -41,7 +42,7 @@ public class spriteSwitcher : MonoBehaviour {
         }
 
     }
-
+    //you can also turn off or turn on buttons, this is nice for choices that can be exclusive to each other
     public void turnOff()
     {
         this.GetComponent<Image>().sprite = offImage;

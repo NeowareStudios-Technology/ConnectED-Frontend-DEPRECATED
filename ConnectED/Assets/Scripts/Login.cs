@@ -12,18 +12,21 @@ using UnityEngine.SceneManagement;
 
 public class Login : MonoBehaviour
 {
-
+    //this script works with many others to log you in
+    //this is located in the login object on the login button
     public Animator EventPanel;
     public InputField email;
     public InputField Password;
     public Jsonparser j;
     public getProfileinfo info;
     public TeamsGet TeamsGet;
+    //this is called to begin logging in
     public void StartLoginProcess()
     {
+        //login credentials
         string e = email.text;
         string p = Password.text;
-
+        //this is used for automatically logging you in 
         if (PlayerPrefs.GetString("email", "email") != "email" && PlayerPrefs.GetString("password", "password") != "password")
         {
             e = PlayerPrefs.GetString("email", "email");
@@ -31,7 +34,7 @@ public class Login : MonoBehaviour
         }
         else
         {
-
+            //sets your email and password for later
             PlayerPrefs.SetString("email", email.text);
             PlayerPrefs.SetString("password", Password.text);
 
@@ -73,6 +76,7 @@ public class Login : MonoBehaviour
 
     }
     public InputField resetEmail;
+    //this sends you and email if you forgot your password
     public void forgotPassword()
     {
         if (resetEmail.text.Length > 6)
@@ -83,7 +87,7 @@ public class Login : MonoBehaviour
             // Email sent.
         }
     }
-
+    //this gets your token
     public void GetToken(FirebaseAuth auth)
     {
         FirebaseUser user = auth.CurrentUser;
@@ -116,6 +120,7 @@ public class Login : MonoBehaviour
     public GameObject loading;
     public string dbProfilePut = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles";
     private IEnumerator coroutine;
+    //this changes your location each time you log in
     public void updatePosition()
     {
 
@@ -145,7 +150,7 @@ public class Login : MonoBehaviour
         Debug.Log(www.GetRequestHeader("Authorization"));
         if (www.responseCode.ToString() == "200")
         {
-
+            //now that your location is updated continue logging in with these functions
             info.GetmyProfile();
 
             TeamsGet.getTeams();
@@ -153,6 +158,7 @@ public class Login : MonoBehaviour
     }
     public profileNotificationSetter pns;
     public JoinWithTeamInitialize JoinWithTeam;
+    //this gets the initial token for your account
     public void GetInitialToken(FirebaseAuth auth)
     {
         FirebaseUser user = auth.CurrentUser;
@@ -179,7 +185,7 @@ public class Login : MonoBehaviour
         });
     }
 
-
+    //this script enables the event panel and triggers its animation
     public void Continue()
     {
         if (j.profileSet){

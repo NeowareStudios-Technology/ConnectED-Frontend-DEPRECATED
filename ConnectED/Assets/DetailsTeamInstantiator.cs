@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 public class DetailsTeamInstantiator : MonoBehaviour
 {
-
+    //this initializes teams on the details page
     public Team team;
     public RawImage pic;
     public Text teamName;
@@ -24,7 +24,7 @@ public class DetailsTeamInstantiator : MonoBehaviour
 
 
 
-
+    //this initializes the team button
     public void finishSet(Team t, GameObject teamPage,int i,int eventCapacity){
 
         team = t;
@@ -41,6 +41,7 @@ public class DetailsTeamInstantiator : MonoBehaviour
             pic.texture = tex;
 
         }
+        //you can press the button to see the team page for it
         GetComponent<Button>().onClick.AddListener(() => teamPage.SetActive(true));
         GetComponent<Button>().onClick.AddListener(() => teamPage.GetComponent<Image>().color = Color.white);
         GetComponent<Button>().onClick.AddListener(() => teamPage.transform.GetChild(0).gameObject.SetActive(true));

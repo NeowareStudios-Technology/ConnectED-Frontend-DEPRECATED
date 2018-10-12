@@ -8,6 +8,7 @@ public class timeOfDay : MonoBehaviour {
     public spriteSwitcher eve;
     public Jsonparser jsonparser;
     private string s;
+    //this is used to report the time of day the user reports they would like to volunteer for events
     public string setTime()
     {
         s = "";

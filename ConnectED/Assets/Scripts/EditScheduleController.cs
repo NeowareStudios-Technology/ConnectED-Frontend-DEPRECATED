@@ -15,7 +15,7 @@ public class EditScheduleController : MonoBehaviour {
     public GameObject pm;
     public GameObject eve;
     public ProfileEdit p;
-
+    //this sets all of the values for the editschedule spriteswitcher pressed returns true or false
     public void editSchedule()
     {
         p.mon = mon.GetComponent<spriteSwitcher>().pressed;

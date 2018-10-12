@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class FieldsReturner : MonoBehaviour {
-
+    //this returns the fields when you click on one of them
     private FieldsController f;
     public void onPress()
     {

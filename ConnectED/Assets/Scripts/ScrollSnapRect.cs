@@ -3,7 +3,9 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
-
+//this is a script from the internet
+//to understand this better I would search it on youtube
+//https://www.youtube.com/watch?v=OsnyJNbqYXo
 [RequireComponent(typeof(Image))]
 [RequireComponent(typeof(Mask))]
 [RequireComponent(typeof(ScrollRect))]

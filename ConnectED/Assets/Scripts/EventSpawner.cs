@@ -8,7 +8,7 @@ using Firebase.Unity.Editor;
 using UnityEngine.Networking;
 
 public class EventSpawner : MonoBehaviour {
-
+    //this script spawns in all the events into the explore page
     public GameObject container;
     public GameObject dotContainer;
     public GameObject prefabEvent;
@@ -30,7 +30,7 @@ public class EventSpawner : MonoBehaviour {
     }
 
     public int retry = 0;
-
+    //this webcall gets all of the events
     IEnumerator prefillLister()
     {
         FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
@@ -48,6 +48,7 @@ public class EventSpawner : MonoBehaviour {
             www.SetRequestHeader("Content-Type", "application/json");
 
             yield return www.SendWebRequest();
+            //this script tries to get the events again if it fails
             if (www.isNetworkError || www.isHttpError)
             {
                 Debug.Log(www.responseCode);
@@ -81,7 +82,7 @@ public class EventSpawner : MonoBehaviour {
             }
         };
     }
-
+    //this webcall populates the tile array with events from the event list
     IEnumerator Populator()
     {
 
@@ -89,10 +90,14 @@ public class EventSpawner : MonoBehaviour {
 
             FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
             FirebaseUser user = auth.CurrentUser;
+
+            //this script will spawn 10 or fewer events
             int amountOfEvents = 10;
             allEvents = new Event[prefill.events.Length];
             if (prefill.events.Length < amountOfEvents)
                 amountOfEvents = prefill.events.Length;
+
+            //this is where the web calls for all the events are called
             for (int i = 0; i < amountOfEvents; i++)
             {
                 //using (UnityWebRequest www = UnityWebRequest.Get("https://webhook.site/8e284497-5145-481d-8a18-0883dfd599e5"))
@@ -132,6 +137,7 @@ public class EventSpawner : MonoBehaviour {
                     }
                 };
             }
+        //this starts the calendar
             calPop.populateEvents();
 
             calPop.StartCalendar();

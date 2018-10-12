@@ -7,7 +7,7 @@ using System.Text;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 public class TeamCreation : MonoBehaviour {
-
+    //this is used to create a team based on input provided
     public RawImage image;
     public InputField TeamName;
     public InputField TeamDesc;
@@ -26,7 +26,7 @@ public class TeamCreation : MonoBehaviour {
     private string dbteams ="https://connected-dev-214119.appspot.com/_ah/api/connected/v1/teams";
 	// Use this for initialization
 
-
+    //this is called when you press the privacy buttons
     public void privacy(int i){
         if (i == 1)
             priv = false;
@@ -34,7 +34,7 @@ public class TeamCreation : MonoBehaviour {
             priv = true;
         
     }
-
+    //this controls the team creation setup
     public void next(){
 
         if(TeamName.text != "" && TeamDesc.text != ""){
@@ -44,7 +44,7 @@ public class TeamCreation : MonoBehaviour {
         }
             
     }
-
+    //when you press the make team button first set everything make the web call then set the leaders through another web call
     public void makeTeam()
     {
 
@@ -110,6 +110,7 @@ public class TeamCreation : MonoBehaviour {
         }
         if (www.responseCode.ToString() == "200" && leader1.text != "")
         {
+            //if it was successful and there are leaders
             Leaders leaders = new Leaders();
             leaders.leaders = new string[3];
             leaders.leaders[0] = leader1.text;
@@ -126,6 +127,7 @@ public class TeamCreation : MonoBehaviour {
             StartCoroutine(coroutine);
 
         }
+        //otherwise reset the app to include new team
         else
         {
             SceneManager.LoadScene(0);
@@ -150,6 +152,7 @@ public class TeamCreation : MonoBehaviour {
         }
         if (www.responseCode.ToString() == "200")
         {
+            //reset the app to include new team
             Debug.Log("Leaders set");
             SceneManager.LoadScene(0);
         }

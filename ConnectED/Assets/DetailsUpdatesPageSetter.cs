@@ -7,6 +7,7 @@ using System.Text;
 
 public class DetailsUpdatesPageSetter : MonoBehaviour {
 
+    //this sets the last page on the details page
     public RawImage organizerImage;
     public Text organizerName;
     public RawImage leaderOnePic;
@@ -23,6 +24,7 @@ public class DetailsUpdatesPageSetter : MonoBehaviour {
 	{
 		j = GameObject.FindWithTag("Player").GetComponent<Jsonparser>();
     }
+    //this sets this page recursively!!! i controls which part you are at and calls for the organizer, then the leaders
     public void setUpdate(Event e)
     {
         Event = e;
@@ -75,7 +77,7 @@ public class DetailsUpdatesPageSetter : MonoBehaviour {
         }
 
     }
-
+    //we have to use this internally to search for people based off their names
     public void startSearch(string s)
     {
         
@@ -92,6 +94,7 @@ public class DetailsUpdatesPageSetter : MonoBehaviour {
     }
     private string jsonString;
     private string searchProfileURL = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles/search";
+    //search for leaders for event
     public void searchProfiles(string s, string t)
     {
 
@@ -161,7 +164,7 @@ public class DetailsUpdatesPageSetter : MonoBehaviour {
     }
 
 
-
+    //this populates the info about each leader and the organizer
     public void profilePopulator()
     {
         if(i == 3){
@@ -234,6 +237,7 @@ public class DetailsUpdatesPageSetter : MonoBehaviour {
     public GameObject updateDotContainer;
     private UpdateResponse update;
     private string updateURL = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/events/";
+    //this sets the event updates then instantiates them all in a scroll snap rect
     public void getEventUpdates(string origEmail,string origEvent)
     {
         Debug.Log("Getting Updates");
@@ -273,6 +277,7 @@ public class DetailsUpdatesPageSetter : MonoBehaviour {
             }
         };
     }
+    //this clears the updates for for a new events updates
     public void ClearUpdates()
     {
         int childKillCount = updateDotContainer.transform.childCount;
@@ -287,7 +292,7 @@ public class DetailsUpdatesPageSetter : MonoBehaviour {
             Destroy(updateFeedContainer.transform.GetChild(i).gameObject);
         } 
     }
-
+    //this updates the updates! after clearing them, it loads them all in and enables the scroll snap rect
     public void SetUpdates(UpdateResponse update)
     {
 

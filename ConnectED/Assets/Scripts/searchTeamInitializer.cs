@@ -14,7 +14,7 @@ public class searchTeamInitializer : MonoBehaviour {
     public RawImage pic;
     public Button button;
     public Search search;
-
+    //this sets the team prefabs for the searched teams
     public void setSearchTeam(TeamSearch e, int i, GameObject teamPage, Search s)
     {
         search = s;
@@ -31,7 +31,7 @@ public class searchTeamInitializer : MonoBehaviour {
             pic.texture = tex;
 
         }
-
+        //if you click on it it will bring up the team page
         button.onClick.AddListener(() => StartCoroutine(setDetails(e.t_id[i],teamPage)));
 
     }
@@ -71,6 +71,7 @@ public class searchTeamInitializer : MonoBehaviour {
 
                 //GameObject.FindWithTag("Details").GetComponent<DetailChanger>().setDetails(Team);
                 //GameObject.FindWithTag("Details").GetComponent<Animator>().SetTrigger("Show");
+                //team page initialization stuff
                 teamPage.SetActive(true);
                 teamPage.GetComponent<Image>().color = Color.white;
                 teamPage.transform.GetChild(0).gameObject.SetActive(true);

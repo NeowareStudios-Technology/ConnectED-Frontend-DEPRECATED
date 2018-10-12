@@ -12,6 +12,7 @@ public class EventCreationController : MonoBehaviour {
     public GameObject EventSettings;
     public GameObject EventSubmission;
     public EventCreator evcr;
+    //this handles the event creation next button and sets things active or false respectively
     public void Next()
     {
         
@@ -62,6 +63,8 @@ public class EventCreationController : MonoBehaviour {
         Skills.SetActive(true);
     }
 
+
+    //this handles the back button
     public void Back()
     {
         if (EventSetup.activeSelf)
@@ -95,6 +98,7 @@ public class EventCreationController : MonoBehaviour {
             return;
         }
     }
+    //this is called to reset the page
     public void setNew()
     {
         Fields.SetActive(false);

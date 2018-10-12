@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class returnPressed : MonoBehaviour {
 	// Use this for initialization
-
+    //this returns which ever element was pressed in a group
     public string Check()
     {
         string s = "";

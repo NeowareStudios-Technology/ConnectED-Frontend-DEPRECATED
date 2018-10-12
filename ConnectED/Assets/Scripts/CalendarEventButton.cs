@@ -17,6 +17,7 @@ public class CalendarEventButton : MonoBehaviour {
     public QRDecodeTest qRDecode;
     public void setCalendarEvent(Event a )
     {
+        //this is passed an event and instantiates it and all that is needed for the calendar event buttons
         e = new Event();
         e = a;
         title.text = e.e_title;
@@ -44,6 +45,7 @@ public class CalendarEventButton : MonoBehaviour {
 
 
     }
+    //this function gets the date from **/**/** to January 1st
     public string dateGetter(){
         string s = "";
         string month = e.date[0].Substring(0, 2);
@@ -135,13 +137,15 @@ public class CalendarEventButton : MonoBehaviour {
 
     public GameObject QR;
     public GameObject qrImage;
+
+    //this function adds all the funtions to the buttons
  public void deets()
     {
         GetComponent<Button>().onClick.AddListener(() => GameObject.FindWithTag("Details").GetComponent<Animator>().SetTrigger("Show"));
         GetComponent<Button>().onClick.AddListener(() => GameObject.FindWithTag("Details").GetComponent<DetailChanger>().setDetails(e));
         Button qrb = qr.gameObject.GetComponent<Button>();
 
-
+        //if you are the organizer of the event you are able to pull up the QR code, otherwise you pull up the camera
         if (e.e_organizer == PlayerPrefs.GetString("email").ToLower())
         {
             qrb.onClick.AddListener(() => setQRImage());
@@ -149,7 +153,7 @@ public class CalendarEventButton : MonoBehaviour {
         else
         qrb.onClick.AddListener(() => qRDecode.Play());
     }
-
+    //sets QR code
     public void setQRImage()
     {
         qRDecode.QRpage.SetActive(true);

@@ -8,7 +8,7 @@ using UnityEngine.Networking;
 using System.Text;
 
 public class profileNotificationSetter : MonoBehaviour {
-
+    //this fills up the notifications 
     public GameObject notificationPrefab;
     public GameObject notificationDotPrefab;
     public GameObject notificationContainer;
@@ -22,6 +22,7 @@ public class profileNotificationSetter : MonoBehaviour {
     }
     private int retry = 0;
     private string jsonString;
+    //this gets the notifications
     IEnumerator NotificationLister()
     {
         
@@ -69,13 +70,17 @@ public class profileNotificationSetter : MonoBehaviour {
         }
     }
     public GameObject NotificationContainerPrefab;
+    //this initializes the notification center
     public void notificationInitializer(){
         Instantiate(notificationDotPrefab, notificationDotContainer.transform);
+
         for (int i = 0; i < notifications.updates.Length;i++){
+            //if we have room in our current container
             if(notificationContainer.transform.childCount < 8){
                 GameObject newNotification = Instantiate(notificationPrefab, notificationContainer.transform);
                 newNotification.transform.GetChild(0).GetComponent<Text>().text =notifications.updates[i]+ " "+notifications.events[i]+" " +notifications.u_datetime[i];
             }
+            //if we have more notifications and our container if full
             if(notificationContainer.transform.childCount == 8 && i != notifications.updates.Length -1){
                 notificationContainer = Instantiate(NotificationContainerPrefab, notificationContainer.transform.parent);
                 Instantiate(notificationDotPrefab, notificationDotContainer.transform);

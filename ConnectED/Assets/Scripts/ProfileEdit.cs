@@ -11,7 +11,7 @@ using Firebase.Auth;
 using Firebase.Unity.Editor;
 
 public class ProfileEdit : MonoBehaviour {
-
+    //this script is how you edit your profile
     public Jsonparser j;
     public InputField fname;
     public InputField lname;
@@ -39,12 +39,15 @@ public class ProfileEdit : MonoBehaviour {
     private IEnumerator coroutine;
     public string dbProfilePut = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles";
     protected Firebase.Auth.FirebaseAuth auth;
+    //change your name
     public void GetProfile()
     {
         fname.text = j.profile.first_name;
         lname.text = j.profile.last_name;
+        //we do not allow the changing of emails
         //Email.text = PlayerPrefs.GetString("email","email");
     }
+    //edit your skills or other things
     public void editProfile()
     {
         profile = new Profile();
@@ -58,6 +61,7 @@ public class ProfileEdit : MonoBehaviour {
             profile.skills = skills;
         if(interestsCheck)
             profile.interests = interests;
+        //change your profile photo
         if (editImage.color.a != 0)
         {
             RenderTexture tmp = RenderTexture.GetTemporary(editImage.texture.width, editImage.texture.height, 0, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);
@@ -100,7 +104,7 @@ public class ProfileEdit : MonoBehaviour {
         StartCoroutine(coroutine);
     }
 
-
+    //post the new stuff to the db
     private IEnumerator Post(UnityWebRequest www)
     {
         yield return www.SendWebRequest();
@@ -112,7 +116,7 @@ public class ProfileEdit : MonoBehaviour {
         Debug.Log(www.GetRequestHeader("Authorization"));
         if(www.responseCode.ToString() == "200")
        {
-
+            //on success exit the edit menu
             this.gameObject.GetComponent<Animator>().SetTrigger("EditExit");
             this.gameObject.GetComponent<Animator>().ResetTrigger("Edit");
            //if (EmailCheck && Email.text != j.profile.email)
@@ -125,7 +129,7 @@ public class ProfileEdit : MonoBehaviour {
     //    auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
     //    auth.CurrentUser.UpdateEmailAsync(Email.text);
     //}
-
+    //changing your password
     public GameObject passwordPage;
     public InputField pass;
     public GameObject newPassPage;

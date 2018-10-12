@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class lerpMachine : MonoBehaviour {
-
+    //this script controls the different views in the details page
     public Transform TrueCenter;
     public Transform DetailsCenter;
     public Transform TeamsCenter;
@@ -18,6 +18,7 @@ public class lerpMachine : MonoBehaviour {
     {
         CurretCenter = DetailsCenter;
     }
+    //based on which button is pressed the update function will make the gameobject lerp
     private void Update()
     {
         if(lerpValue > 1f)
@@ -43,6 +44,7 @@ public class lerpMachine : MonoBehaviour {
         }
     }
 
+    //when you press a button this script is called
     public void LerpTo(int i)
     {
         

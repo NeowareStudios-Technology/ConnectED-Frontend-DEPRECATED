@@ -7,6 +7,7 @@ public class SwitchScene : MonoBehaviour {
     private string scene = "splash";
     public Animator form;
     public Animator eventpanel;
+    //this controls some of the animations and is used to switch between some scenes
     public void Switch()
     {
         if (scene == "splash" && PlayerPrefs.GetInt("signedin", 0) == 0)

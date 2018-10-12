@@ -4,11 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class pictureGrabber : MonoBehaviour {
+    //this script controls the native gallery plug in
+    //this is where you want the image to end up
     public RawImage image;
+    //when you click on an image
     public void pick()
     {
-        PickImage(1600);
+        //using 0 makes it use the images values
+        PickImage(0);
     }
+
     private void PickImage(int maxSize)
     {
         NativeGallery.Permission permission = NativeGallery.GetImageFromGallery((path) =>

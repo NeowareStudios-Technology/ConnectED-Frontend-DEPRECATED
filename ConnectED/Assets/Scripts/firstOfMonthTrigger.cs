@@ -6,7 +6,7 @@ public class firstOfMonthTrigger : MonoBehaviour {
 
     public calendarPopulator p;
     public dayInfo info;
-   
+    //this is the trigger that happens when you are scrolling in the calendar
     private void OnTriggerEnter2D(Collider2D collision)
     {
         info = GetComponent<dayInfo>();

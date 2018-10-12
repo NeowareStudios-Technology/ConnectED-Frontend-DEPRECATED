@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SignUpController : MonoBehaviour {
-
+    //this controls where you are in the signup process and if you can proceed or not based on certain criteria...
     public GameObject Email;
     public InputField Ema;
     public GameObject Password;
@@ -23,7 +23,7 @@ public class SignUpController : MonoBehaviour {
     public Jsonparser signup;
 
     public int current = 1;
-
+    //if you press the next button certain things happen based off of the value of current which refers to the current page you are on
     public void Next()
     {
         if(current == 1)
@@ -96,6 +96,7 @@ public class SignUpController : MonoBehaviour {
             a.SetTrigger("SignupOver");
         }
     }
+    //this does the same as next but in the opposite direction
     public void Back()
     {
 

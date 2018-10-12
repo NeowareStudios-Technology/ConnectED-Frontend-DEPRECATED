@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class profileSearchInitializer : MonoBehaviour {
-
+    //this initializes the profiles in the search menu
     public RawImage pic;
     public Text name;
     public string email;
@@ -30,6 +30,7 @@ public class profileSearchInitializer : MonoBehaviour {
     public void setNameEmail(string s, string e){
         name.text = s;
         email = e;
+        //if you click on the person it will set them for the leader spot. which is the only search functionality so far.
         button.onClick.AddListener(() => search.setLeader(s));
     }
 }

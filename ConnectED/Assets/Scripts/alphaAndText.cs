@@ -12,6 +12,7 @@ public class alphaAndText : MonoBehaviour {
 
     public void alphachange()
     {
+        //if the color of the image is white, make it clear, and visversa
         if (i.color == Color.white || i.color.a == 1f)
         {
             i.color = Color.clear;
@@ -22,12 +23,14 @@ public class alphaAndText : MonoBehaviour {
     }
     public void alphaOne()
     {
+        //set alpha to 1
         Color tmp = i.color;
         tmp.a = 1f;
         i.color = tmp;
     }
     public void textColor()
     {
+        //change text color between two color values
         if (t.color == primary)
             t.color = secondary;
         else
@@ -35,6 +38,7 @@ public class alphaAndText : MonoBehaviour {
     }
 	public void Update()
 	{
+        //updates color of images to match if sprite switcher gets pressed
         if (this.GetComponent<spriteSwitcher>())
         {
             if (t.color == primary && this.GetComponent<spriteSwitcher>().pressed)

@@ -8,7 +8,7 @@ using UnityEngine.Networking;
 using System.Text;
 
 public class teamInitializer : MonoBehaviour {
-
+    //this initializes the team buttons and allows you to click on them to see the team pages
     private Team team;
     public Jsonparser j;
     public RawImage pic;
@@ -34,12 +34,13 @@ public class teamInitializer : MonoBehaviour {
             pic.texture = tex;
 
         }
+        //on click initialize the team page and set it correctly to show up
         GetComponent<Button>().onClick.AddListener(() => teamPage.SetActive(true));
         GetComponent<Button>().onClick.AddListener(() => teamPage.GetComponent<Image>().color = Color.white);
         GetComponent<Button>().onClick.AddListener(() => teamPage.transform.GetChild(0).gameObject.SetActive(true));
         GetComponent<Button>().onClick.AddListener(() => teamPage.GetComponent<TeamPageInit>().setTeamPage(t));
     }
-
+    //this is used as a callback to let this page set the registration status of these teams
     public void setRegistration(int i){
         team.is_registered = i;
     }

@@ -10,7 +10,7 @@ using System.Text;
 using System;
 
 public class ProfileSetter : MonoBehaviour {
-
+    //this sets your profile page
     public Jsonparser j;
     public getProfileinfo g;
     public RawImage p;
@@ -26,7 +26,7 @@ public class ProfileSetter : MonoBehaviour {
     public Text totalHours;
     public Text totalOpportunities;
     public bool set = false;
-
+    //this sets all the values if applicable 
     public void setProfile()
     {
         SetPicture();
@@ -113,6 +113,7 @@ public class ProfileSetter : MonoBehaviour {
 
     private string jsonString;
     private string searchURL = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles/";
+    //this will set all your events
     public void searchEvents()
     {
         searchURL += PlayerPrefs.GetString("email").ToLower() + "/events";
@@ -156,6 +157,7 @@ public class ProfileSetter : MonoBehaviour {
     public GameObject ProfileCreatedEventContainer;
     public GameObject ProfileHistoryEventContainer;
     public GameObject TeamEventPrefab;
+    //this populates the events in your profile
     public void eventPopulator()
     {
         GameObject newEvent;
@@ -180,6 +182,7 @@ public class ProfileSetter : MonoBehaviour {
         {
             for (int i = 0; i < hist.created_events.Length; i++)
             {
+                //this populates the created events
                 Debug.Log(hist.created_events[i]);
                 StartCoroutine(Populator(i, 1, hist.created_events[i]));
                 //newEvent = Instantiate(TeamEventPrefab, ProfileCreatedEventContainer.transform);
@@ -189,7 +192,7 @@ public class ProfileSetter : MonoBehaviour {
         {
             for (int i = 0; i < hist.completed_events.Length; i++)
             {
-                
+                //this populates the completed events
                 Debug.Log(hist.completed_events[i]);
                 StartCoroutine(Populator(i, 2, hist.completed_events[i]));
                 //newEvent = Instantiate(TeamEventPrefab, ProfileCreatedEventContainer.transform);
@@ -208,6 +211,7 @@ public class ProfileSetter : MonoBehaviour {
     }
     private Event Event;
     private string getEventurl = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/events/";
+    //mode 1 for created mode 2 for completed
     IEnumerator Populator(int i, int mode, string s)
     {
 
@@ -217,7 +221,7 @@ public class ProfileSetter : MonoBehaviour {
         FirebaseUser user = auth.CurrentUser;
         Debug.Log(i);
         Debug.Log(s);
-
+        //this parses the string into the email and event
         string str1 = s.Split('_')[0];
         string str2 = s.Split('_')[1];
         //using (UnityWebRequest www = UnityWebRequest.Get("https://webhook.site/8e284497-5145-481d-8a18-0883dfd599e5"))
@@ -262,7 +266,7 @@ public class ProfileSetter : MonoBehaviour {
                 }
             };
         }
-
+        //after creating those, tidy up
         if (i == hist.created_events.Length - 1)
         {
             totalOpportunities.text = (i+1).ToString();

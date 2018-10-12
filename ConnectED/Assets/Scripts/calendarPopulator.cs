@@ -9,6 +9,7 @@ using System.Text;
 
 public class calendarPopulator : MonoBehaviour
 {
+    //In this Class I create a calendar that is used to find out dates and populate the calendar
     public GameObject calendarPrefab;
     public GameObject newCalendarDot;
     public GameObject calendarContainer;
@@ -36,6 +37,7 @@ public class calendarPopulator : MonoBehaviour
     public Month currentMonth;
     public float contentHeight;
     public Event[] dates;
+    //create all months and add them to a calendar
     public void StartCalendar()
     {
         setMonth(ref jan, 31, "January");
@@ -70,8 +72,11 @@ public class calendarPopulator : MonoBehaviour
 
     public int count = 0;
     public int yearCount = 0;
+
+    //this function populates the calendar based on the months provided
     public void populate()
     {
+        //this sets all the information for each day of a month, and if its the 1st adds a box collider which handles changing the text at the top of the calendar
         for (int i = 1; i <= currentMonth.monthTotal; i++)
         {
             newCalendarDot = Instantiate(calendarPrefab, calendarContainer.transform);
@@ -92,6 +97,7 @@ public class calendarPopulator : MonoBehaviour
             }
         }
         count++;
+        //this adds in the next month recursively up to 15 months in the future
         if (count < 15)
         {
             RectTransform rt = calendarContainer.gameObject.GetComponent<RectTransform>();
@@ -152,6 +158,7 @@ public class calendarPopulator : MonoBehaviour
             }
             return;
         }
+        //these change the size of the container to fit all of the days we just added
         calendarContainer.AddComponent<ContentSizeFitter>();
         calendarContainer.GetComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
         calendarContainer.transform.parent.gameObject.AddComponent<ContentSizeFitter>();
@@ -170,6 +177,7 @@ public class calendarPopulator : MonoBehaviour
     public Color grey;
     public Color white;
     public Color brightWhite;
+    //when a 1st of the month is triggered this is called
     public void changeMonthColor(string s)
     {
         for (int i = 0; i < calendarContainer.transform.childCount; i++)
@@ -208,6 +216,9 @@ public class calendarPopulator : MonoBehaviour
     public GameObject opportunityButtonContainer;
     public GameObject opportunityDotContainer;
     public GameObject myOpportunities;
+
+
+    //this function Instantiates all of the buttons underneath the calendar, creating two per container then refreshing the snap rect script
     public void instantiateCalendarButtons()
     {
         newCalendarButtonContainerPrefab = Instantiate(calendarButtonContainerPrefab, calendarButtonPanel.transform);
@@ -239,6 +250,7 @@ public class calendarPopulator : MonoBehaviour
     }
     public notificationQueuer noti;
     public GameObject newButtonObj;
+    //this adds opportunities to the my opportunities tab same as the calendar buttons
     public void addToOpportunities( GameObject o, int i)
     {
         noti.queueNotifications(o.GetComponent<CalendarEventButton>().e);
@@ -273,7 +285,7 @@ public class calendarPopulator : MonoBehaviour
             Instantiate(emptyCalendarButton, opportunityButtonContainer.transform);
         noti.setNotification();
     }
-
+    //this creates a list of days with events we will use to mark the calendar
     public void eventTrigger()
     {
         string[] eventDays = new string[dates.Length];
@@ -293,7 +305,7 @@ public class calendarPopulator : MonoBehaviour
         setEventDate(eventDays);
     }
 
-
+    //this highlights all of the calendar dates that have events t
     public void setEventDate(string[] allEvents)
     {
         int currentEvent = 0;
@@ -408,7 +420,7 @@ public class calendarPopulator : MonoBehaviour
         return 1;
     }
 
-
+    //This is a webcall that handles calling in a list of events by date
     private string prefillurl = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/events/prefill/dates";
     private Jsonparser j;
     private string jsonString;
@@ -465,7 +477,7 @@ public class calendarPopulator : MonoBehaviour
     private Event[] allEvents;
     private string getEventurl = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/events/";
 
-
+    //this gets all of the events from the prefill lister
     IEnumerator Populator()
     {
         FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;

@@ -7,7 +7,7 @@ public class timeUpdater : MonoBehaviour {
     public Dropdown hour;
     public Dropdown minute;
     public Dropdown ampm;
-
+    //this sets the time for an event, by changing the value of a drop down into string values for the database
     public string[] time()
     {
         string s = "";
@@ -15,7 +15,7 @@ public class timeUpdater : MonoBehaviour {
             s += (hour.value + 13).ToString();
         else
             s += (hour.value + 1).ToString();
-
+        //value is the value of the dropdown
         switch(minute.value){
             case 0:
                 s += ":00";

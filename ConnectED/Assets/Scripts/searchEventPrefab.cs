@@ -16,7 +16,7 @@ public class searchEventPrefab : MonoBehaviour {
     public Text month;
     public RawImage pic;
     public Button button;
-
+    //this sets the events that you search for and allows you to look at the events by clicking on them
     public void setSearchEvent(EventSearch e , int i)
     {
         title.text = e.event_ids[i].Split('_')[1].Replace("+"," ");

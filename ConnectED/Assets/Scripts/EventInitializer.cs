@@ -18,7 +18,7 @@ public class EventInitializer : MonoBehaviour {
     public void setRegistration(int i){
         e.is_registered = i;
     }
-
+    //this sets the event tiles button actions
     public void deets()
     {
         button.onClick.AddListener(() => GameObject.FindWithTag("Details").GetComponent<DetailChanger>().setDetails(e));
@@ -26,7 +26,7 @@ public class EventInitializer : MonoBehaviour {
     }
 
 
-
+    //this initializes the event tile
     public void GetEvent(Event a,float f)
     {
         e = a;
@@ -68,7 +68,7 @@ public class EventInitializer : MonoBehaviour {
     }
             
 
-
+    // s == 00/00/00
     public string GetMonth(string s){
         string m = s.Substring(0, 2);
         switch(m)
@@ -101,6 +101,7 @@ public class EventInitializer : MonoBehaviour {
                 return "???";
         }
     }
+    // s = 00/00/00
     public string GetDay(string s)
     {
         string m = s.Substring(3, 2);

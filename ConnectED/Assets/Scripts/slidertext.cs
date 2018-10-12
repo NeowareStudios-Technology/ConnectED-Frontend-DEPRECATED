@@ -11,12 +11,9 @@ public class slidertext : MonoBehaviour {
         s = this.GetComponent<Text>();
         s.text = slide.value.ToString() + " Miles";
 	}
-	
+	//this is called when you move the slider that controls the miles away filter
     public void ChangedValue(){
         s.text = slide.value.ToString() + " Miles";
     }
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	
 }

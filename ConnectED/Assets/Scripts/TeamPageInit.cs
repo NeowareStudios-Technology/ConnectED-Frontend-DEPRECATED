@@ -29,7 +29,7 @@ public class TeamPageInit : MonoBehaviour {
     private Jsonparser j;
 
     private string joinTeamURL = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/teams/";
-
+    //this initializes the team page
     public void setTeamPage(Team t)
     {
         team = t;
@@ -52,7 +52,7 @@ public class TeamPageInit : MonoBehaviour {
 
 
 
-
+        //this clears the team page, then sets it with the correct information
         int childKillCount = TeamProfileContainer.transform.childCount;
         for (int i = childKillCount - 1; i >= 0; i--)
         {
@@ -70,6 +70,7 @@ public class TeamPageInit : MonoBehaviour {
         {
             for (int i = 0; i < t.t_members.Length; i++)
             {
+                //this checks to see if you are already in the team, then changes the button to reflect your status
                 if (t.t_members[i] == PlayerPrefs.GetString("email").ToLower())
                 {
                     Debug.Log("Team matches email");
@@ -90,6 +91,7 @@ public class TeamPageInit : MonoBehaviour {
             {
                 for (int i = 0; i < t.t_pending_members.Length; i++)
                 {
+                    //this happens if you are pending to get in the team
                     if (t.t_pending_members[i] == PlayerPrefs.GetString("email").ToLower())
                     {
                         Debug.Log("Team matches email pending");
@@ -106,6 +108,7 @@ public class TeamPageInit : MonoBehaviour {
                 }
             }
         }
+        //otherwise its the default join team
             if (!deregister)
             {
                 Debug.Log("No matching email");
@@ -145,7 +148,7 @@ public class TeamPageInit : MonoBehaviour {
         StartCoroutine(coroutine);
     }
 
-
+    //this handles registering for teams based on the register bool and the privacy status of the team
     private IEnumerator Put(UnityWebRequest www , bool register, string orig)
     {
         yield return www.SendWebRequest();

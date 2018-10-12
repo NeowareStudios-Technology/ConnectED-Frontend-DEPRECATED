@@ -9,7 +9,7 @@ using Firebase.Auth;
 using Firebase.Unity.Editor;
 
 public class getProfileinfo : MonoBehaviour {
-
+    //this gets your profile
     private Profile profile;
     public Profile otherProfile;
     private string jsonString;
@@ -52,12 +52,14 @@ public class getProfileinfo : MonoBehaviour {
             }
             else
             {
+                //not error
                 Debug.Log(www.responseCode);
                 byte[] results = www.downloadHandler.data;
                 jsonString = "";
                 jsonString = Encoding.UTF8.GetString(results);
                 Debug.Log(jsonString);
                 profile = JsonUtility.FromJson<Profile>(jsonString);
+                //sets your profile and continues logging in
                 j.SetProfile(profile);
                 if(l)
                     l.Continue();
@@ -66,7 +68,7 @@ public class getProfileinfo : MonoBehaviour {
     }
 
 
-   
+   //this handles the input of pictures, not sure why it is here
     public void SetPicture()
     {
         Texture2D tex = new Texture2D(200, 200);

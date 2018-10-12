@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class loadingRotation : MonoBehaviour {
-
+    //this spins the loading symbol
     public Transform transform;
     // Update is called once per frame
     public bool right = true;

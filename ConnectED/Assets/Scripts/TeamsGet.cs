@@ -22,7 +22,8 @@ public class TeamsGet : MonoBehaviour {
     private string jsonString;
     teamPrefill prefill;
     private string teamURL = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/teams/";
-
+    //this script gets the teams for the team page by getting a list of suggested teams, then getting a list of top teams
+    //then populating the teams page with both of those lists
     public void getTeams()
     {
         Debug.Log("GetTeams");
@@ -75,6 +76,7 @@ public class TeamsGet : MonoBehaviour {
                 Debug.Log(jsonString);
                 if (jsonString == "{}")
                 {
+                    //if list is empty
                     gameObject.GetComponent<Image>().raycastTarget = true;
                     gameObject.transform.GetChild(0).gameObject.SetActive(true);
                     gameObject.GetComponent<Image>().color = Color.white;
@@ -84,7 +86,7 @@ public class TeamsGet : MonoBehaviour {
                 else
                 {
                     prefill = JsonUtility.FromJson<teamPrefill>(jsonString);
-
+                    //populate
                     StartCoroutine(Populator());
                 }
             }
@@ -120,6 +122,7 @@ public class TeamsGet : MonoBehaviour {
                 }
                     else
                     {
+                    //got team and queues it for notifications if need be
                         Debug.Log(www.responseCode);
                         byte[] results = www.downloadHandler.data;
                         jsonString = "";
@@ -142,29 +145,36 @@ public class TeamsGet : MonoBehaviour {
 
     public GameObject teamsPage;
     public notificationQueuer notification;
+    //this creates all the team buttons for suggested teams
     public void instantiateTeams(Team[] teams)
     {
+        //for all the events
         for (int i = 0; i < teams.Length; i++){
-            
+            //if we dont have a container, or our container if full, make a new one
             if(newTeamContainer == null || newTeamContainer.transform.childCount == 2){
                 newTeamContainer = Instantiate(TeamContainer, SuggestedTeams.transform.GetChild(0));
             }
+            //if we have room in our container
             if (newTeamContainer.transform.childCount < 2)
             {
-                
                 if (teams[i] == null){}
+				//if we have a team
                 else
                 {
+                    //create a button and initialize it
                     currentTeam = Instantiate(TeamPrefab, newTeamContainer.transform);
                     currentTeam.GetComponent<teamInitializer>().setTeamButton(teams[i], teamsPage);
                 }
 
             }
         }
+        //if we have a single button at the end add an empty one in to create good spacing
         if (newTeamContainer.transform.childCount == 1)
             Instantiate(EmptyTeam, newTeamContainer.transform);
+        //enable snap scrolling
         SuggestedTeams.GetComponent<ScrollSnapRect>().enabled = true;
         SuggestedTeams.GetComponent<ScrollSnapRect>().Refresh();
+        //start same process for top teams
         getTopTeams();
     }
 

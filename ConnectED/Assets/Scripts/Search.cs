@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Text;
-
+//this is the search script 
 public class Search : MonoBehaviour {
     public InputField search;
     public Jsonparser j;
@@ -12,6 +12,7 @@ public class Search : MonoBehaviour {
     public int mode = 0;
 
     //set mode, 0 is event, 1 is profile search, 2 is team search
+    //when you set the mode you want to clear out the last search
     public void setMode(int i)
     {
         search.text = "";
@@ -24,6 +25,7 @@ public class Search : MonoBehaviour {
     }
 
     private Searcher s;
+    //this formats what you typed to be a good search
     public void startSearch()
     {
         if (search.text == "" || search.text == null || search.text == " ")
@@ -45,6 +47,7 @@ public class Search : MonoBehaviour {
 
     private string searchURL ="https://connected-dev-214119.appspot.com/_ah/api/connected/v1/events/search";
     private IEnumerator coroutine;
+    //this searches based on what you typed, we pass the text s and the token t
     public void searchEvents(string s, string t)
     {
 
@@ -57,6 +60,7 @@ public class Search : MonoBehaviour {
     public GameObject eventSearchPrefab;
     public GameObject eventSearchContainer;
     private EventSearch eSearch;
+    //this gets a list of events 
     private IEnumerator eventPut(UnityWebRequest www)
     {
         yield return www.SendWebRequest();
@@ -75,6 +79,7 @@ public class Search : MonoBehaviour {
             eSearch = JsonUtility.FromJson<EventSearch>(jsonString);
             if (jsonString != "{}")
             {
+                //if the list is not empty
                 eventPopulator();
             }
         }
@@ -83,16 +88,18 @@ public class Search : MonoBehaviour {
     {
         GameObject newEvent;
         int childKillCount = eventSearchContainer.transform.childCount;
+        //this clears out the old events 
         for (int i = childKillCount - 1; i >= 0; i--)
         {
             Destroy(eventSearchContainer.transform.GetChild(i).gameObject);
         }
+        //this adds in the new events
         for (int i = 0; i < eSearch.event_ids.Length; i++)
         {
             newEvent = Instantiate(eventSearchPrefab, eventSearchContainer.transform);
             newEvent.GetComponent<searchEventPrefab>().setSearchEvent(eSearch, i);
         }
-
+        //this formats the size of the container so you can scroll properly
         if (childKillCount > 7)
         {
             eventSearchContainer.AddComponent<ContentSizeFitter>();
@@ -101,6 +108,7 @@ public class Search : MonoBehaviour {
     }
 
     private string searchProfileURL = "https://connected-dev-214119.appspot.com/_ah/api/connected/v1/profiles/search";
+    //this is called if you are on profile mode
     public void searchProfiles(string s, string t)
     {
 
@@ -130,6 +138,7 @@ public class Search : MonoBehaviour {
             pSearch = JsonUtility.FromJson<ProfileSearch>(jsonString);
             if (jsonString != "{}")
             {
+                //this is the same as the other search
                 profilePopulator();
             }
         }
@@ -223,6 +232,7 @@ public class Search : MonoBehaviour {
 
 
     public InputField leader;
+    //this is used to set leaders for events
     public void setLeader(string s)
     {
         leader.text = s;
