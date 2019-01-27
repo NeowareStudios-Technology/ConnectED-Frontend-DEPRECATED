@@ -2,3 +2,7 @@ Base path: /Applications/Unity/Unity.app/Contents
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+<<<<<<< HEAD
+=======
+Cmd: initializeCompiler
+>>>>>>> parent of 2a7586b5... android build

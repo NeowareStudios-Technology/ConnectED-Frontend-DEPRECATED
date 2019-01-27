@@ -64,11 +64,6 @@ public class Jsonparser : MonoBehaviour {
         }
         if(maxWait <= 0){
             Debug.Log("Timed out");
-            if (PlayerPrefs.GetString("email", "email") != "email" && PlayerPrefs.GetString("password", "password") != "password")
-            {
-                alreadyin.SetActive(true);
-                l.StartLoginProcess();
-            }
             yield break;
         }
 
@@ -78,22 +73,13 @@ public class Jsonparser : MonoBehaviour {
             lat = -81.191458f;
             lon = 28.590012f;
             Debug.Log("Unable to determine device location");
-            if (PlayerPrefs.GetString("email", "email") != "email" && PlayerPrefs.GetString("password", "password") != "password")
-            {
-                alreadyin.SetActive(true);
-                l.StartLoginProcess();
-            }
             yield break;
         }
 
         lat = Input.location.lastData.latitude;
         lon = Input.location.lastData.longitude;
         Debug.Log("lat: " + lat + " lon: " + lon);
-        if (PlayerPrefs.GetString("email", "email") != "email" && PlayerPrefs.GetString("password", "password") != "password")
-        {
-            alreadyin.SetActive(true);
-            l.StartLoginProcess();
-        }
+
         yield break;
     }
     // Use this for initialization
@@ -116,13 +102,17 @@ public class Jsonparser : MonoBehaviour {
                 UnityEngine.Debug.LogError(System.String.Format(
                   "Could not resolve all Firebase dependencies: {0}", dependencyStatus));
                 // Firebase Unity SDK is not safe to use here.
-			}
+            }
+        });
         FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://connected-dev-214119.firebaseio.com/");
         auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
 
         StartCoroutine(StartLocationService());
-       
-		});
+        if (PlayerPrefs.GetString("email", "email") != "email" && PlayerPrefs.GetString("password", "password") != "password")
+        {
+            alreadyin.SetActive(true);
+            l.StartLoginProcess();
+        }
     }
     //creates firebase account
 	public void CreateProfile()

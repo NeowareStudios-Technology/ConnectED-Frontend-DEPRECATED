@@ -1,4 +1,9 @@
 {
+<<<<<<< HEAD
 	"process_id" : 31029,
 	"version" : "2018.2.10f1"
+=======
+	"process_id" : 63274,
+	"version" : "2018.2.2f1"
+>>>>>>> parent of 2a7586b5... android build
 }
